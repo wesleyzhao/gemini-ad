@@ -302,27 +302,23 @@
   </section>
 
   <!-- Video Background Demo -->
-  <section id="video" class="demo-section bg-dark"
-           data-hero-video="../assets/videos/google-earth-1.mp4"
-           data-hero-fallback="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop"
-           data-hero-autoplay="true"
-           data-hero-loop="true"
-           data-hero-muted="true">
-    <div class="demo-content">
-      <span class="demo-label">Video Background (with fallback)</span>
+  <section id="video" class="demo-section bg-dark" style="position: relative; overflow: hidden;">
+    <!-- Full-screen background video -->
+    <video autoplay muted loop playsinline style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; transform: translate(-50%, -50%); z-index: 0; object-fit: cover;">
+      <source src="../assets/videos/google-earth-1.mp4" type="video/mp4">
+    </video>
+    <!-- Dark overlay for text readability -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); z-index: 1;"></div>
+
+    <div class="demo-content" style="position: relative; z-index: 2;">
+      <span class="demo-label">Video Background</span>
       <h2>Premium Video</h2>
       <p>Full-screen video backgrounds with automatic fallback to images. Optimized for performance and accessibility.</p>
 
       <div class="code-example">
-        <code>&lt;div data-hero-video="video.mp4"
-     data-hero-fallback="fallback.jpg"
-     data-hero-autoplay="true"
-     data-hero-loop="true"
-     data-hero-muted="true"&gt;
-  &lt;div class="demo-content"&gt;
-    &lt;h1&gt;Video Hero&lt;/h1&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code>
+        <code>&lt;video autoplay muted loop playsinline&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;</code>
       </div>
 
       <p style="margin-top: 2rem; font-size: 0.875rem; opacity: 0.6;">
