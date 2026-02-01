@@ -1,0 +1,1126 @@
+{
+  "timestamp": "2026-02-01T11:44:28.349Z",
+  "date": "2/1/2026",
+  "summary": {
+    "totalResponses": 454,
+    "positiveRate": "30.40%",
+    "negativeRate": "69.60%",
+    "alertCount": 12,
+    "correlationsFound": 11
+  },
+  "feedback": {
+    "overall": {
+      "totalResponses": 454,
+      "positiveCount": 138,
+      "negativeCount": 316,
+      "positiveRate": 30.396475770925107,
+      "negativeRate": 69.60352422907489
+    },
+    "byPage": {
+      "trust.html": {
+        "total": 56,
+        "positive": 14,
+        "negative": 42,
+        "comments": [
+          "Unclear CTA",
+          "Unclear CTA",
+          "Confusing layout",
+          "Too slow to load",
+          "Images take forever to load",
+          "Confusing layout",
+          "Hard to read on mobile",
+          "Hard to read on mobile",
+          "Confusing layout",
+          "Very clear and helpful!",
+          "Not enough information",
+          "Beautiful page",
+          "Great examples",
+          "Not enough information",
+          "Hard to read on mobile",
+          "Beautiful page",
+          "Too slow to load",
+          "Great examples",
+          "Confusing layout",
+          "Confusing layout",
+          "Hard to read on mobile"
+        ],
+        "positiveRate": 25,
+        "negativeRate": 75
+      },
+      "writers.html": {
+        "total": 22,
+        "positive": 6,
+        "negative": 16,
+        "comments": [
+          "Images take forever to load",
+          "Not enough information",
+          "Unclear CTA",
+          "Beautiful page",
+          "Unclear CTA"
+        ],
+        "positiveRate": 27.27272727272727,
+        "negativeRate": 72.72727272727273
+      },
+      "creators.html": {
+        "total": 48,
+        "positive": 14,
+        "negative": 34,
+        "comments": [
+          "Hard to read on mobile",
+          "Confusing layout",
+          "Hard to read on mobile",
+          "Unclear CTA",
+          "Not enough information",
+          "Not enough information",
+          "Confusing layout",
+          "Images take forever to load",
+          "Not enough information",
+          "Images take forever to load",
+          "Exactly what I was looking for",
+          "Not enough information",
+          "Unclear CTA",
+          "Too much text",
+          "Confusing layout",
+          "Easy to understand",
+          "Hard to read on mobile",
+          "Fast loading",
+          "Hard to read on mobile",
+          "Not enough information"
+        ],
+        "positiveRate": 29.166666666666668,
+        "negativeRate": 70.83333333333334
+      },
+      "operators.html": {
+        "total": 15,
+        "positive": 8,
+        "negative": 7,
+        "comments": [
+          "Unclear CTA",
+          "Love the design",
+          "Unclear CTA",
+          "Very clear and helpful!",
+          "Confusing layout"
+        ],
+        "positiveRate": 53.333333333333336,
+        "negativeRate": 46.666666666666664
+      },
+      "automators.html": {
+        "total": 59,
+        "positive": 18,
+        "negative": 41,
+        "comments": [
+          "Unclear CTA",
+          "Great examples",
+          "Hard to read on mobile",
+          "Great examples",
+          "Too much text",
+          "Beautiful page",
+          "Beautiful page",
+          "Fast loading",
+          "Confusing layout",
+          "Very clear and helpful!",
+          "Images take forever to load",
+          "Hard to read on mobile",
+          "Exactly what I was looking for",
+          "Unclear CTA",
+          "Too much text",
+          "Confusing layout",
+          "Hard to read on mobile",
+          "Hard to read on mobile",
+          "Confusing layout",
+          "Hard to read on mobile",
+          "Exactly what I was looking for",
+          "Unclear CTA",
+          "Images take forever to load",
+          "Very clear and helpful!",
+          "Confusing layout",
+          "Love the design",
+          "Too much text"
+        ],
+        "positiveRate": 30.508474576271187,
+        "negativeRate": 69.49152542372882
+      },
+      "workspace.html": {
+        "total": 17,
+        "positive": 7,
+        "negative": 10,
+        "comments": [
+          "Hard to read on mobile",
+          "Love the design",
+          "Not enough information",
+          "Unclear CTA",
+          "Too slow to load",
+          "Great examples"
+        ],
+        "positiveRate": 41.17647058823529,
+        "negativeRate": 58.82352941176471
+      },
+      "research.html": {
+        "total": 49,
+        "positive": 13,
+        "negative": 36,
+        "comments": [
+          "Unclear CTA",
+          "Too slow to load",
+          "Not enough information",
+          "Confusing layout",
+          "Fast loading",
+          "Not enough information",
+          "Too slow to load",
+          "Confusing layout",
+          "Beautiful page",
+          "Hard to read on mobile",
+          "Not enough information",
+          "Hard to read on mobile",
+          "Not enough information",
+          "Too slow to load",
+          "Confusing layout",
+          "Exactly what I was looking for",
+          "Confusing layout",
+          "Too much text",
+          "Beautiful page",
+          "Unclear CTA",
+          "Unclear CTA"
+        ],
+        "positiveRate": 26.53061224489796,
+        "negativeRate": 73.46938775510205
+      },
+      "bundling.html": {
+        "total": 42,
+        "positive": 14,
+        "negative": 28,
+        "comments": [
+          "Hard to read on mobile",
+          "Hard to read on mobile",
+          "Confusing layout",
+          "Too much text",
+          "Beautiful page",
+          "Images take forever to load",
+          "Images take forever to load",
+          "Very clear and helpful!",
+          "Not enough information",
+          "Beautiful page",
+          "Not enough information",
+          "Too slow to load",
+          "Too much text",
+          "Confusing layout",
+          "Too slow to load",
+          "Hard to read on mobile"
+        ],
+        "positiveRate": 33.33333333333333,
+        "negativeRate": 66.66666666666666
+      },
+      "aspirational.html": {
+        "total": 35,
+        "positive": 13,
+        "negative": 22,
+        "comments": [
+          "Easy to understand",
+          "Too much text",
+          "Too slow to load",
+          "Confusing layout",
+          "Hard to read on mobile",
+          "Beautiful page",
+          "Exactly what I was looking for",
+          "Not enough information",
+          "Unclear CTA",
+          "Fast loading",
+          "Beautiful page",
+          "Fast loading",
+          "Images take forever to load",
+          "Beautiful page",
+          "Easy to understand"
+        ],
+        "positiveRate": 37.142857142857146,
+        "negativeRate": 62.857142857142854
+      },
+      "valentines.html": {
+        "total": 52,
+        "positive": 15,
+        "negative": 37,
+        "comments": [
+          "Hard to read on mobile",
+          "Unclear CTA",
+          "Great examples",
+          "Images take forever to load",
+          "Too slow to load",
+          "Unclear CTA",
+          "Hard to read on mobile",
+          "Not enough information",
+          "Too slow to load",
+          "Hard to read on mobile",
+          "Hard to read on mobile",
+          "Fast loading",
+          "Too slow to load",
+          "Too slow to load",
+          "Confusing layout",
+          "Unclear CTA",
+          "Too slow to load",
+          "Hard to read on mobile",
+          "Confusing layout",
+          "Too slow to load",
+          "Love the design",
+          "Too slow to load"
+        ],
+        "positiveRate": 28.846153846153843,
+        "negativeRate": 71.15384615384616
+      },
+      "comparison.html": {
+        "total": 41,
+        "positive": 10,
+        "negative": 31,
+        "comments": [
+          "Hard to read on mobile",
+          "Very clear and helpful!",
+          "Too much text",
+          "Love the design",
+          "Fast loading",
+          "Too much text",
+          "Beautiful page",
+          "Unclear CTA",
+          "Not enough information",
+          "Unclear CTA",
+          "Unclear CTA",
+          "Not enough information",
+          "Easy to understand",
+          "Easy to understand"
+        ],
+        "positiveRate": 24.390243902439025,
+        "negativeRate": 75.60975609756098
+      },
+      "productivity.html": {
+        "total": 18,
+        "positive": 6,
+        "negative": 12,
+        "comments": [
+          "Not enough information",
+          "Not enough information",
+          "Confusing layout",
+          "Exactly what I was looking for",
+          "Not enough information",
+          "Not enough information",
+          "Beautiful page",
+          "Love the design"
+        ],
+        "positiveRate": 33.33333333333333,
+        "negativeRate": 66.66666666666666
+      }
+    },
+    "commonIssues": {
+      "confusing": {
+        "count": 23,
+        "pages": [
+          "trust.html",
+          "creators.html",
+          "operators.html",
+          "automators.html",
+          "research.html",
+          "bundling.html",
+          "aspirational.html",
+          "valentines.html",
+          "productivity.html"
+        ]
+      },
+      "slow": {
+        "count": 16,
+        "pages": [
+          "trust.html",
+          "workspace.html",
+          "research.html",
+          "bundling.html",
+          "aspirational.html",
+          "valentines.html"
+        ]
+      },
+      "load": {
+        "count": 33,
+        "pages": [
+          "trust.html",
+          "writers.html",
+          "creators.html",
+          "automators.html",
+          "workspace.html",
+          "research.html",
+          "bundling.html",
+          "aspirational.html",
+          "valentines.html",
+          "comparison.html"
+        ]
+      },
+      "image": {
+        "count": 10,
+        "pages": [
+          "trust.html",
+          "writers.html",
+          "creators.html",
+          "automators.html",
+          "bundling.html",
+          "aspirational.html",
+          "valentines.html"
+        ]
+      },
+      "hard": {
+        "count": 26,
+        "pages": [
+          "trust.html",
+          "creators.html",
+          "automators.html",
+          "workspace.html",
+          "research.html",
+          "bundling.html",
+          "aspirational.html",
+          "valentines.html",
+          "comparison.html"
+        ]
+      },
+      "mobile": {
+        "count": 26,
+        "pages": [
+          "trust.html",
+          "creators.html",
+          "automators.html",
+          "workspace.html",
+          "research.html",
+          "bundling.html",
+          "aspirational.html",
+          "valentines.html",
+          "comparison.html"
+        ]
+      }
+    },
+    "alerts": [
+      {
+        "severity": "high",
+        "page": "trust.html",
+        "type": "high_negative_feedback",
+        "message": "trust.html has 75.0% negative feedback (42/56 responses)",
+        "negativeRate": 75
+      },
+      {
+        "severity": "high",
+        "page": "writers.html",
+        "type": "high_negative_feedback",
+        "message": "writers.html has 72.7% negative feedback (16/22 responses)",
+        "negativeRate": 72.72727272727273
+      },
+      {
+        "severity": "high",
+        "page": "creators.html",
+        "type": "high_negative_feedback",
+        "message": "creators.html has 70.8% negative feedback (34/48 responses)",
+        "negativeRate": 70.83333333333334
+      },
+      {
+        "severity": "high",
+        "page": "operators.html",
+        "type": "high_negative_feedback",
+        "message": "operators.html has 46.7% negative feedback (7/15 responses)",
+        "negativeRate": 46.666666666666664
+      },
+      {
+        "severity": "high",
+        "page": "automators.html",
+        "type": "high_negative_feedback",
+        "message": "automators.html has 69.5% negative feedback (41/59 responses)",
+        "negativeRate": 69.49152542372882
+      },
+      {
+        "severity": "high",
+        "page": "workspace.html",
+        "type": "high_negative_feedback",
+        "message": "workspace.html has 58.8% negative feedback (10/17 responses)",
+        "negativeRate": 58.82352941176471
+      },
+      {
+        "severity": "high",
+        "page": "research.html",
+        "type": "high_negative_feedback",
+        "message": "research.html has 73.5% negative feedback (36/49 responses)",
+        "negativeRate": 73.46938775510205
+      },
+      {
+        "severity": "high",
+        "page": "bundling.html",
+        "type": "high_negative_feedback",
+        "message": "bundling.html has 66.7% negative feedback (28/42 responses)",
+        "negativeRate": 66.66666666666666
+      },
+      {
+        "severity": "high",
+        "page": "aspirational.html",
+        "type": "high_negative_feedback",
+        "message": "aspirational.html has 62.9% negative feedback (22/35 responses)",
+        "negativeRate": 62.857142857142854
+      },
+      {
+        "severity": "high",
+        "page": "valentines.html",
+        "type": "high_negative_feedback",
+        "message": "valentines.html has 71.2% negative feedback (37/52 responses)",
+        "negativeRate": 71.15384615384616
+      },
+      {
+        "severity": "high",
+        "page": "comparison.html",
+        "type": "high_negative_feedback",
+        "message": "comparison.html has 75.6% negative feedback (31/41 responses)",
+        "negativeRate": 75.60975609756098
+      },
+      {
+        "severity": "high",
+        "page": "productivity.html",
+        "type": "high_negative_feedback",
+        "message": "productivity.html has 66.7% negative feedback (12/18 responses)",
+        "negativeRate": 66.66666666666666
+      }
+    ]
+  },
+  "correlations": [
+    {
+      "page": "trust.html",
+      "feedback": {
+        "negativeRate": 75,
+        "totalResponses": 56
+      },
+      "cwv": {
+        "lcp": 3454,
+        "fcp": 1662,
+        "cls": 0.128,
+        "inp": 216
+      },
+      "insights": [
+        {
+          "type": "performance_feedback_correlation",
+          "confidence": "high",
+          "message": "High negative feedback (75.0%) correlates with slow LCP (3454ms)",
+          "recommendation": "Optimize LCP to improve user satisfaction",
+          "priority": "critical"
+        },
+        {
+          "type": "layout_stability_correlation",
+          "confidence": "medium",
+          "message": "Layout shifts (CLS: 0.128) may contribute to negative feedback",
+          "recommendation": "Fix layout shifts for better UX",
+          "priority": "medium"
+        },
+        {
+          "type": "user_reported_performance",
+          "confidence": "very high",
+          "message": "3 users explicitly mentioned performance issues",
+          "recommendation": "Priority: Address loading speed concerns",
+          "priority": "critical"
+        }
+      ]
+    },
+    {
+      "page": "writers.html",
+      "feedback": {
+        "negativeRate": 72.72727272727273,
+        "totalResponses": 22
+      },
+      "cwv": {
+        "lcp": 3361,
+        "fcp": 1300,
+        "cls": 0.046,
+        "inp": 177
+      },
+      "insights": [
+        {
+          "type": "performance_feedback_correlation",
+          "confidence": "high",
+          "message": "High negative feedback (72.7%) correlates with slow LCP (3361ms)",
+          "recommendation": "Optimize LCP to improve user satisfaction",
+          "priority": "critical"
+        },
+        {
+          "type": "user_reported_performance",
+          "confidence": "very high",
+          "message": "1 users explicitly mentioned performance issues",
+          "recommendation": "Priority: Address loading speed concerns",
+          "priority": "critical"
+        }
+      ]
+    },
+    {
+      "page": "creators.html",
+      "feedback": {
+        "negativeRate": 70.83333333333334,
+        "totalResponses": 48
+      },
+      "cwv": {
+        "lcp": 2401,
+        "fcp": 2349,
+        "cls": 0.105,
+        "inp": 186
+      },
+      "insights": [
+        {
+          "type": "performance_feedback_correlation",
+          "confidence": "high",
+          "message": "Negative feedback may be related to slow FCP (2349ms)",
+          "recommendation": "Improve First Contentful Paint",
+          "priority": "high"
+        },
+        {
+          "type": "layout_stability_correlation",
+          "confidence": "medium",
+          "message": "Layout shifts (CLS: 0.105) may contribute to negative feedback",
+          "recommendation": "Fix layout shifts for better UX",
+          "priority": "medium"
+        },
+        {
+          "type": "user_reported_performance",
+          "confidence": "very high",
+          "message": "3 users explicitly mentioned performance issues",
+          "recommendation": "Priority: Address loading speed concerns",
+          "priority": "critical"
+        }
+      ]
+    },
+    {
+      "page": "operators.html",
+      "feedback": {
+        "negativeRate": 46.666666666666664,
+        "totalResponses": 15
+      },
+      "cwv": {
+        "lcp": 1982,
+        "fcp": 1152,
+        "cls": 0.149,
+        "inp": 161
+      },
+      "insights": [
+        {
+          "type": "layout_stability_correlation",
+          "confidence": "medium",
+          "message": "Layout shifts (CLS: 0.149) may contribute to negative feedback",
+          "recommendation": "Fix layout shifts for better UX",
+          "priority": "medium"
+        }
+      ]
+    },
+    {
+      "page": "automators.html",
+      "feedback": {
+        "negativeRate": 69.49152542372882,
+        "totalResponses": 59
+      },
+      "cwv": {
+        "lcp": 2908,
+        "fcp": 2292,
+        "cls": 0.018,
+        "inp": 150
+      },
+      "insights": [
+        {
+          "type": "performance_feedback_correlation",
+          "confidence": "high",
+          "message": "High negative feedback (69.5%) correlates with slow LCP (2908ms)",
+          "recommendation": "Optimize LCP to improve user satisfaction",
+          "priority": "critical"
+        },
+        {
+          "type": "performance_feedback_correlation",
+          "confidence": "high",
+          "message": "Negative feedback may be related to slow FCP (2292ms)",
+          "recommendation": "Improve First Contentful Paint",
+          "priority": "high"
+        },
+        {
+          "type": "user_reported_performance",
+          "confidence": "very high",
+          "message": "3 users explicitly mentioned performance issues",
+          "recommendation": "Priority: Address loading speed concerns",
+          "priority": "critical"
+        }
+      ]
+    },
+    {
+      "page": "workspace.html",
+      "feedback": {
+        "negativeRate": 58.82352941176471,
+        "totalResponses": 17
+      },
+      "cwv": {
+        "lcp": 2091,
+        "fcp": 2094,
+        "cls": 0.084,
+        "inp": 249
+      },
+      "insights": [
+        {
+          "type": "performance_feedback_correlation",
+          "confidence": "high",
+          "message": "Negative feedback may be related to slow FCP (2094ms)",
+          "recommendation": "Improve First Contentful Paint",
+          "priority": "high"
+        },
+        {
+          "type": "user_reported_performance",
+          "confidence": "very high",
+          "message": "1 users explicitly mentioned performance issues",
+          "recommendation": "Priority: Address loading speed concerns",
+          "priority": "critical"
+        }
+      ]
+    },
+    {
+      "page": "research.html",
+      "feedback": {
+        "negativeRate": 73.46938775510205,
+        "totalResponses": 49
+      },
+      "cwv": {
+        "lcp": 3132,
+        "fcp": 1549,
+        "cls": 0.118,
+        "inp": 214
+      },
+      "insights": [
+        {
+          "type": "performance_feedback_correlation",
+          "confidence": "high",
+          "message": "High negative feedback (73.5%) correlates with slow LCP (3132ms)",
+          "recommendation": "Optimize LCP to improve user satisfaction",
+          "priority": "critical"
+        },
+        {
+          "type": "layout_stability_correlation",
+          "confidence": "medium",
+          "message": "Layout shifts (CLS: 0.118) may contribute to negative feedback",
+          "recommendation": "Fix layout shifts for better UX",
+          "priority": "medium"
+        },
+        {
+          "type": "user_reported_performance",
+          "confidence": "very high",
+          "message": "4 users explicitly mentioned performance issues",
+          "recommendation": "Priority: Address loading speed concerns",
+          "priority": "critical"
+        }
+      ]
+    },
+    {
+      "page": "bundling.html",
+      "feedback": {
+        "negativeRate": 66.66666666666666,
+        "totalResponses": 42
+      },
+      "cwv": {
+        "lcp": 2280,
+        "fcp": 1196,
+        "cls": 0.037,
+        "inp": 106
+      },
+      "insights": [
+        {
+          "type": "user_reported_performance",
+          "confidence": "very high",
+          "message": "4 users explicitly mentioned performance issues",
+          "recommendation": "Priority: Address loading speed concerns",
+          "priority": "critical"
+        }
+      ]
+    },
+    {
+      "page": "aspirational.html",
+      "feedback": {
+        "negativeRate": 62.857142857142854,
+        "totalResponses": 35
+      },
+      "cwv": {
+        "lcp": 1979,
+        "fcp": 2205,
+        "cls": 0.043,
+        "inp": 153
+      },
+      "insights": [
+        {
+          "type": "performance_feedback_correlation",
+          "confidence": "high",
+          "message": "Negative feedback may be related to slow FCP (2205ms)",
+          "recommendation": "Improve First Contentful Paint",
+          "priority": "high"
+        },
+        {
+          "type": "user_reported_performance",
+          "confidence": "very high",
+          "message": "4 users explicitly mentioned performance issues",
+          "recommendation": "Priority: Address loading speed concerns",
+          "priority": "critical"
+        }
+      ]
+    },
+    {
+      "page": "valentines.html",
+      "feedback": {
+        "negativeRate": 71.15384615384616,
+        "totalResponses": 52
+      },
+      "cwv": {
+        "lcp": 2354,
+        "fcp": 1814,
+        "cls": 0.064,
+        "inp": 184
+      },
+      "insights": [
+        {
+          "type": "performance_feedback_correlation",
+          "confidence": "high",
+          "message": "Negative feedback may be related to slow FCP (1814ms)",
+          "recommendation": "Improve First Contentful Paint",
+          "priority": "high"
+        },
+        {
+          "type": "user_reported_performance",
+          "confidence": "very high",
+          "message": "9 users explicitly mentioned performance issues",
+          "recommendation": "Priority: Address loading speed concerns",
+          "priority": "critical"
+        }
+      ]
+    },
+    {
+      "page": "comparison.html",
+      "feedback": {
+        "negativeRate": 75.60975609756098,
+        "totalResponses": 41
+      },
+      "cwv": {
+        "lcp": 3493,
+        "fcp": 2291,
+        "cls": 0.07,
+        "inp": 110
+      },
+      "insights": [
+        {
+          "type": "performance_feedback_correlation",
+          "confidence": "high",
+          "message": "High negative feedback (75.6%) correlates with slow LCP (3493ms)",
+          "recommendation": "Optimize LCP to improve user satisfaction",
+          "priority": "critical"
+        },
+        {
+          "type": "performance_feedback_correlation",
+          "confidence": "high",
+          "message": "Negative feedback may be related to slow FCP (2291ms)",
+          "recommendation": "Improve First Contentful Paint",
+          "priority": "high"
+        },
+        {
+          "type": "user_reported_performance",
+          "confidence": "very high",
+          "message": "1 users explicitly mentioned performance issues",
+          "recommendation": "Priority: Address loading speed concerns",
+          "priority": "critical"
+        }
+      ]
+    }
+  ],
+  "actionItems": [
+    {
+      "priority": "critical",
+      "page": "trust.html",
+      "type": "correlation",
+      "action": "Optimize LCP to improve user satisfaction",
+      "confidence": "high",
+      "source": "cwv_correlation"
+    },
+    {
+      "priority": "critical",
+      "page": "trust.html",
+      "type": "correlation",
+      "action": "Priority: Address loading speed concerns",
+      "confidence": "very high",
+      "source": "cwv_correlation"
+    },
+    {
+      "priority": "critical",
+      "page": "writers.html",
+      "type": "correlation",
+      "action": "Optimize LCP to improve user satisfaction",
+      "confidence": "high",
+      "source": "cwv_correlation"
+    },
+    {
+      "priority": "critical",
+      "page": "writers.html",
+      "type": "correlation",
+      "action": "Priority: Address loading speed concerns",
+      "confidence": "very high",
+      "source": "cwv_correlation"
+    },
+    {
+      "priority": "critical",
+      "page": "creators.html",
+      "type": "correlation",
+      "action": "Priority: Address loading speed concerns",
+      "confidence": "very high",
+      "source": "cwv_correlation"
+    },
+    {
+      "priority": "critical",
+      "page": "automators.html",
+      "type": "correlation",
+      "action": "Optimize LCP to improve user satisfaction",
+      "confidence": "high",
+      "source": "cwv_correlation"
+    },
+    {
+      "priority": "critical",
+      "page": "automators.html",
+      "type": "correlation",
+      "action": "Priority: Address loading speed concerns",
+      "confidence": "very high",
+      "source": "cwv_correlation"
+    },
+    {
+      "priority": "critical",
+      "page": "workspace.html",
+      "type": "correlation",
+      "action": "Priority: Address loading speed concerns",
+      "confidence": "very high",
+      "source": "cwv_correlation"
+    },
+    {
+      "priority": "critical",
+      "page": "research.html",
+      "type": "correlation",
+      "action": "Optimize LCP to improve user satisfaction",
+      "confidence": "high",
+      "source": "cwv_correlation"
+    },
+    {
+      "priority": "critical",
+      "page": "research.html",
+      "type": "correlation",
+      "action": "Priority: Address loading speed concerns",
+      "confidence": "very high",
+      "source": "cwv_correlation"
+    },
+    {
+      "priority": "critical",
+      "page": "bundling.html",
+      "type": "correlation",
+      "action": "Priority: Address loading speed concerns",
+      "confidence": "very high",
+      "source": "cwv_correlation"
+    },
+    {
+      "priority": "critical",
+      "page": "aspirational.html",
+      "type": "correlation",
+      "action": "Priority: Address loading speed concerns",
+      "confidence": "very high",
+      "source": "cwv_correlation"
+    },
+    {
+      "priority": "critical",
+      "page": "valentines.html",
+      "type": "correlation",
+      "action": "Priority: Address loading speed concerns",
+      "confidence": "very high",
+      "source": "cwv_correlation"
+    },
+    {
+      "priority": "critical",
+      "page": "comparison.html",
+      "type": "correlation",
+      "action": "Optimize LCP to improve user satisfaction",
+      "confidence": "high",
+      "source": "cwv_correlation"
+    },
+    {
+      "priority": "critical",
+      "page": "comparison.html",
+      "type": "correlation",
+      "action": "Priority: Address loading speed concerns",
+      "confidence": "very high",
+      "source": "cwv_correlation"
+    },
+    {
+      "priority": "high",
+      "page": "trust.html",
+      "type": "user_feedback",
+      "action": "Investigate trust.html: trust.html has 75.0% negative feedback (42/56 responses)",
+      "source": "feedback_analysis"
+    },
+    {
+      "priority": "high",
+      "page": "writers.html",
+      "type": "user_feedback",
+      "action": "Investigate writers.html: writers.html has 72.7% negative feedback (16/22 responses)",
+      "source": "feedback_analysis"
+    },
+    {
+      "priority": "high",
+      "page": "creators.html",
+      "type": "user_feedback",
+      "action": "Investigate creators.html: creators.html has 70.8% negative feedback (34/48 responses)",
+      "source": "feedback_analysis"
+    },
+    {
+      "priority": "high",
+      "page": "operators.html",
+      "type": "user_feedback",
+      "action": "Investigate operators.html: operators.html has 46.7% negative feedback (7/15 responses)",
+      "source": "feedback_analysis"
+    },
+    {
+      "priority": "high",
+      "page": "automators.html",
+      "type": "user_feedback",
+      "action": "Investigate automators.html: automators.html has 69.5% negative feedback (41/59 responses)",
+      "source": "feedback_analysis"
+    },
+    {
+      "priority": "high",
+      "page": "workspace.html",
+      "type": "user_feedback",
+      "action": "Investigate workspace.html: workspace.html has 58.8% negative feedback (10/17 responses)",
+      "source": "feedback_analysis"
+    },
+    {
+      "priority": "high",
+      "page": "research.html",
+      "type": "user_feedback",
+      "action": "Investigate research.html: research.html has 73.5% negative feedback (36/49 responses)",
+      "source": "feedback_analysis"
+    },
+    {
+      "priority": "high",
+      "page": "bundling.html",
+      "type": "user_feedback",
+      "action": "Investigate bundling.html: bundling.html has 66.7% negative feedback (28/42 responses)",
+      "source": "feedback_analysis"
+    },
+    {
+      "priority": "high",
+      "page": "aspirational.html",
+      "type": "user_feedback",
+      "action": "Investigate aspirational.html: aspirational.html has 62.9% negative feedback (22/35 responses)",
+      "source": "feedback_analysis"
+    },
+    {
+      "priority": "high",
+      "page": "valentines.html",
+      "type": "user_feedback",
+      "action": "Investigate valentines.html: valentines.html has 71.2% negative feedback (37/52 responses)",
+      "source": "feedback_analysis"
+    },
+    {
+      "priority": "high",
+      "page": "comparison.html",
+      "type": "user_feedback",
+      "action": "Investigate comparison.html: comparison.html has 75.6% negative feedback (31/41 responses)",
+      "source": "feedback_analysis"
+    },
+    {
+      "priority": "high",
+      "page": "productivity.html",
+      "type": "user_feedback",
+      "action": "Investigate productivity.html: productivity.html has 66.7% negative feedback (12/18 responses)",
+      "source": "feedback_analysis"
+    },
+    {
+      "priority": "high",
+      "page": "creators.html",
+      "type": "correlation",
+      "action": "Improve First Contentful Paint",
+      "confidence": "high",
+      "source": "cwv_correlation"
+    },
+    {
+      "priority": "high",
+      "page": "automators.html",
+      "type": "correlation",
+      "action": "Improve First Contentful Paint",
+      "confidence": "high",
+      "source": "cwv_correlation"
+    },
+    {
+      "priority": "high",
+      "page": "workspace.html",
+      "type": "correlation",
+      "action": "Improve First Contentful Paint",
+      "confidence": "high",
+      "source": "cwv_correlation"
+    },
+    {
+      "priority": "high",
+      "page": "aspirational.html",
+      "type": "correlation",
+      "action": "Improve First Contentful Paint",
+      "confidence": "high",
+      "source": "cwv_correlation"
+    },
+    {
+      "priority": "high",
+      "page": "valentines.html",
+      "type": "correlation",
+      "action": "Improve First Contentful Paint",
+      "confidence": "high",
+      "source": "cwv_correlation"
+    },
+    {
+      "priority": "high",
+      "page": "comparison.html",
+      "type": "correlation",
+      "action": "Improve First Contentful Paint",
+      "confidence": "high",
+      "source": "cwv_correlation"
+    },
+    {
+      "priority": "medium",
+      "page": "trust.html",
+      "type": "correlation",
+      "action": "Fix layout shifts for better UX",
+      "confidence": "medium",
+      "source": "cwv_correlation"
+    },
+    {
+      "priority": "medium",
+      "page": "creators.html",
+      "type": "correlation",
+      "action": "Fix layout shifts for better UX",
+      "confidence": "medium",
+      "source": "cwv_correlation"
+    },
+    {
+      "priority": "medium",
+      "page": "operators.html",
+      "type": "correlation",
+      "action": "Fix layout shifts for better UX",
+      "confidence": "medium",
+      "source": "cwv_correlation"
+    },
+    {
+      "priority": "medium",
+      "page": "research.html",
+      "type": "correlation",
+      "action": "Fix layout shifts for better UX",
+      "confidence": "medium",
+      "source": "cwv_correlation"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "high",
+      "title": "Address Performance-Related Feedback",
+      "description": "Users are reporting performance issues that correlate with CWV metrics",
+      "action": "Run continuous-optimization.js to apply performance fixes"
+    },
+    {
+      "priority": "medium",
+      "title": "Monitor Feedback Trends",
+      "description": "Track feedback over time to identify emerging issues",
+      "action": "Schedule daily feedback analysis runs"
+    },
+    {
+      "priority": "low",
+      "title": "Improve Feedback Collection",
+      "description": "Increase sample size for more reliable insights",
+      "action": "Consider A/B testing feedback widget placement"
+    }
+  ]
+}

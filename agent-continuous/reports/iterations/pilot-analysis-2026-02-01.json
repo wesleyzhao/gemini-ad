@@ -1,0 +1,155 @@
+{
+  "timestamp": "2026-02-01T13:02:06.562Z",
+  "pilotPages": [
+    "trust-variation-b.html",
+    "apple-style-variation-b.html",
+    "animations-demo.html"
+  ],
+  "results": [
+    {
+      "page": "trust-variation-b.html",
+      "changesApplied": 4,
+      "beforeMetrics": {
+        "avgTimeOnPage": 19,
+        "avgScrollDepth": 48,
+        "avgClicks": "1.9",
+        "conversionRate": "28.0",
+        "bounceRate": "16.0",
+        "engagementRate": "20.0",
+        "qualityScore": 40
+      },
+      "afterMetrics": {
+        "avgTimeOnPage": 22,
+        "avgScrollDepth": 50,
+        "avgClicks": "2.2",
+        "conversionRate": "37.4",
+        "bounceRate": "12.4",
+        "engagementRate": "20.4",
+        "qualityScore": 52
+      },
+      "improvements": {
+        "qualityScore": 12,
+        "conversionRate": 9.399999999999999,
+        "bounceRate": 3.5999999999999996,
+        "engagementRate": 0.3999999999999986,
+        "timeOnPage": 3,
+        "scrollDepth": 2
+      },
+      "effectiveness": {
+        "score": 57.26666666666666,
+        "grade": "D"
+      },
+      "successfulPatterns": [
+        {
+          "type": "Call to Action",
+          "priority": "critical",
+          "changesCount": 4,
+          "impact": "positive"
+        }
+      ]
+    },
+    {
+      "page": "apple-style-variation-b.html",
+      "changesApplied": 0,
+      "beforeMetrics": {
+        "avgTimeOnPage": 31,
+        "avgScrollDepth": 64,
+        "avgClicks": "2.8",
+        "conversionRate": "41.2",
+        "bounceRate": "5.9",
+        "engagementRate": "35.3",
+        "qualityScore": 54
+      },
+      "afterMetrics": {
+        "avgTimeOnPage": 36,
+        "avgScrollDepth": 62,
+        "avgClicks": "3.9",
+        "conversionRate": "51.8",
+        "bounceRate": "4.6",
+        "engagementRate": "36.8",
+        "qualityScore": 70
+      },
+      "improvements": {
+        "qualityScore": 16,
+        "conversionRate": 10.599999999999994,
+        "bounceRate": 1.3000000000000007,
+        "engagementRate": 1.5,
+        "timeOnPage": 5,
+        "scrollDepth": -2
+      },
+      "effectiveness": {
+        "score": 66.53333333333332,
+        "grade": "C"
+      },
+      "successfulPatterns": []
+    },
+    {
+      "page": "animations-demo.html",
+      "changesApplied": 5,
+      "beforeMetrics": {
+        "avgTimeOnPage": 22,
+        "avgScrollDepth": 50,
+        "avgClicks": "1.6",
+        "conversionRate": "10.5",
+        "bounceRate": "10.5",
+        "engagementRate": "47.4",
+        "qualityScore": 43
+      },
+      "afterMetrics": {
+        "avgTimeOnPage": 25,
+        "avgScrollDepth": 52,
+        "avgClicks": "2.2",
+        "conversionRate": "14.0",
+        "bounceRate": "8.7",
+        "engagementRate": "47.7",
+        "qualityScore": 56
+      },
+      "improvements": {
+        "qualityScore": 13,
+        "conversionRate": 3.5,
+        "bounceRate": 1.8000000000000007,
+        "engagementRate": 0.30000000000000426,
+        "timeOnPage": 3,
+        "scrollDepth": 2
+      },
+      "effectiveness": {
+        "score": 39.1,
+        "grade": "F"
+      },
+      "successfulPatterns": [
+        {
+          "type": "Call to Action",
+          "priority": "critical",
+          "changesCount": 5,
+          "impact": "positive"
+        }
+      ]
+    }
+  ],
+  "patterns": {
+    "successful": [
+      {
+        "pattern": "Call to Action",
+        "occurrences": 2,
+        "totalImprovement": 25,
+        "pages": [
+          "trust-variation-b.html",
+          "animations-demo.html"
+        ],
+        "avgImprovement": 12.5
+      }
+    ],
+    "moderate": [],
+    "minimal": []
+  },
+  "recommendations": [
+    {
+      "priority": "high",
+      "action": "Scale \"Call to Action\" improvements",
+      "reason": "Showed 12.5 point improvement across 2 pages",
+      "targetPages": "All similar pages",
+      "expectedImpact": "+10.0 points per page",
+      "effort": "Low (automated)"
+    }
+  ]
+}

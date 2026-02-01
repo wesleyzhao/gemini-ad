@@ -1,0 +1,56 @@
+{
+  "testName": "personalization-urgency-combo",
+  "deployedAt": "2026-02-01T15:26:23.456Z",
+  "config": {
+    "testName": "personalization-urgency-combo",
+    "testPages": [
+      "pages/writers.html",
+      "pages/creators.html",
+      "pages/operators.html",
+      "pages/automators.html"
+    ],
+    "trafficSplit": {
+      "control": 0.33,
+      "variantA": 0.33,
+      "variantB": 0.34
+    },
+    "testDuration": "14 days",
+    "primaryMetric": "conversion_rate",
+    "secondaryMetrics": [
+      "time_on_page",
+      "scroll_depth",
+      "cta_clicks"
+    ]
+  },
+  "patterns": {
+    "personalization": "pattern_personalization_v1",
+    "urgency": "pattern_urgency_v1"
+  },
+  "variants": [
+    {
+      "page": "pages/writers.html",
+      "control": "pages/writers.html",
+      "variantA": "pages/writers-variantA.html",
+      "variantB": "pages/writers-variantB.html"
+    },
+    {
+      "page": "pages/creators.html",
+      "control": "pages/creators.html",
+      "variantA": "pages/creators-variantA.html",
+      "variantB": "pages/creators-variantB.html"
+    },
+    {
+      "page": "pages/operators.html",
+      "control": "pages/operators.html",
+      "variantA": "pages/operators-variantA.html",
+      "variantB": "pages/operators-variantB.html"
+    },
+    {
+      "page": "pages/automators.html",
+      "control": "pages/automators.html",
+      "variantA": "pages/automators-variantA.html",
+      "variantB": "pages/automators-variantB.html"
+    }
+  ],
+  "status": "deployed"
+}

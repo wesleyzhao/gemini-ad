@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini</title>
+    <meta name="description" content="Intelligence. Simplified.">
+    <link rel="stylesheet" href="../assets/css/shared-styles.css">
+    <style>
+        /* Ultra-Minimalist Apple Style */
+        body {
+            background: #000;
+            color: #f5f5f7;
+        }
+
+        .hero-apple {
+            min-height: 100vh;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-apple h1 {
+            font-size: clamp(48px, 10vw, 96px);
+            font-weight: 600;
+            letter-spacing: -0.03em;
+            color: #f5f5f7;
+            margin-bottom: 0.3em;
+            line-height: 1.05;
+        }
+
+        .hero-apple p {
+            font-size: clamp(21px, 3vw, 28px);
+            color: #86868b;
+            margin-bottom: 1.5em;
+            font-weight: 400;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 12px;
+            margin: var(--space-12) 0;
+        }
+
+        .product-tile {
+            aspect-ratio: 1;
+            background: #1d1d1f;
+            border-radius: 28px;
+            padding: var(--space-8);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-tile::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(66, 165, 245, 0.15), transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .product-tile:hover::before {
+            opacity: 1;
+        }
+
+        .product-tile:hover {
+            transform: scale(1.02);
+        }
+
+        .product-tile h3 {
+            font-size: 32px;
+            font-weight: 600;
+            color: #f5f5f7;
+            margin-bottom: 8px;
+        }
+
+        .product-tile p {
+            font-size: 17px;
+            color: #86868b;
+            line-height: 1.4;
+        }
+
+        .price {
+            font-size: 14px;
+            color: #f5f5f7;
+            margin-top: auto;
+        }
+
+        .header-apple {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: saturate(180%) blur(20px);
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+            z-index: var(--z-fixed);
+            height: 48px;
+        }
+
+        .header-apple .container {
+            height: 100%;
+        }
+
+        .header-apple nav a {
+            color: #f5f5f7;
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 0.01em;
+            transition: opacity 0.2s ease;
+        }
+
+        .header-apple nav a:hover {
+            opacity: 0.7;
+        }
+
+        .btn-apple {
+            background: #0071e3;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 980px;
+            font-size: 17px;
+            font-weight: 400;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-apple:hover {
+            background: #0077ed;
+        }
+
+        .btn-apple-secondary {
+            background: transparent;
+            color: #2997ff;
+            border: 1px solid #2997ff;
+        }
+
+        .btn-apple-secondary:hover {
+            background: rgba(41, 151, 255, 0.1);
+        }
+
+        .section-apple {
+            padding: 120px 0;
+            background: #000;
+        }
+
+        .section-light {
+            background: #f5f5f7;
+            color: #1d1d1f;
+        }
+
+        .section-light h2,
+        .section-light h3,
+        .section-light p {
+            color: #1d1d1f;
+        }
+
+        .feature-minimal {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto var(--space-12);
+        }
+
+        .feature-minimal h3 {
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #f5f5f7;
+        }
+
+        .feature-minimal p {
+            font-size: 21px;
+            color: #86868b;
+            line-height: 1.4;
+        }
+
+        .comparison-table {
+            max-width: 980px;
+            margin: var(--space-12) auto;
+            background: #1d1d1f;
+            border-radius: 18px;
+            overflow: hidden;
+        }
+
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 1fr 120px 120px 120px;
+            gap: 24px;
+            padding: 24px;
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .comparison-row:last-child {
+            border-bottom: none;
+        }
+
+        .comparison-header {
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #86868b;
+        }
+
+        .checkmark {
+            color: #30d158;
+            font-size: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-row {
+                grid-template-columns: 1fr 80px 80px 80px;
+                gap: 12px;
+                padding: 16px;
+                font-size: 14px;
+            }
+
+            .header-content nav a:not(.btn-apple) {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .comparison-table {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .comparison-row {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+                gap: 8px;
+                padding: 12px;
+                font-size: 12px;
+            }
+
+            .comparison-header {
+                font-size: 10px;
+            }
+
+            .checkmark {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-apple">
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" style="font-weight: 600; font-size: 1.2rem; color: #f5f5f7;">Gemini</a>
+                <nav style="display: flex; gap: 2rem; align-items: center;">
+                    <a href="#features">Features</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="https://gemini.google.com" class="btn-apple" style="padding: 8px 16px; font-size: 12px;">Try Now</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero hero-apple">
+        <div class="container">
+            <div data-animate="fade-in">
+                <h1>Intelligence.<br>Simplified.</h1>
+                <p class="subtitle">Powerful AI that works everywhere you do. Simple, fast, seamless.</p>
+                <div style="display: flex; gap: 20px; justify-content: center; margin-top: 32px;">
+                    <a href="https://gemini.google.com" class="btn-apple">Get started</a>
+                    <a href="#learn" class="btn-apple btn-apple-secondary">Learn more</a>
+                </div>
+                <p style="font-size: 14px; color: #86868b; margin-top: 24px;">
+                    From $19.99/month
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="section-apple" id="features">
+        <div class="container" style="max-width: 1200px;">
+            <div class="product-grid" data-animate="fade-in">
+                <div class="product-tile">
+                    <div>
+                        <h3>Gemini Basic</h3>
+                        <p>Essential AI for everyday tasks. Fast, accurate, always available.</p>
+                    </div>
+                    <div class="price">Free</div>
+                </div>
+
+                <div class="product-tile">
+                    <div>
+                        <h3>Gemini Advanced</h3>
+                        <p>Next-level intelligence. Extended thinking, deeper analysis, better results.</p>
+                    </div>
+                    <div class="price">$19.99/mo</div>
+                </div>
+
+                <div class="product-tile">
+                    <div>
+                        <h3>Gemini for Teams</h3>
+                        <p>Shared workspaces, collaboration tools, admin controls.</p>
+                    </div>
+                    <div class="price">$29.99/user/mo</div>
+                </div>
+
+                <div class="product-tile">
+                    <div>
+                        <h3>Enterprise</h3>
+                        <p>Custom models, dedicated support, enterprise security.</p>
+                    </div>
+                    <div class="price">Contact sales</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Section 1 -->
+    <section class="section-apple section-light">
+        <div class="container">
+            <div class="feature-minimal" data-animate="fade-in" style="color: #1d1d1f;">
+                <h3 style="color: #1d1d1f;">Writes like you.</h3>
+                <p style="color: #1d1d1f;">Voice adaptation technology learns your style. Every email, document, and message sounds authentically you.</p>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto; aspect-ratio: 16/9; background: #e5e5e7; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 64px;">
+                ✍️
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Section 2 -->
+    <section class="section-apple">
+        <div class="container">
+            <div class="feature-minimal" data-animate="fade-in">
+                <h3>Works everywhere.</h3>
+                <p>Gmail. Docs. Sheets. Slides. Calendar. Seamless integration with every Google app.</p>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto; aspect-ratio: 16/9; background: #1d1d1f; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 64px;">
+                🔗
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Section 3 -->
+    <section class="section-apple section-light">
+        <div class="container">
+            <div class="feature-minimal" data-animate="fade-in">
+                <h3 style="color: #1d1d1f;">Privacy. By design.</h3>
+                <p style="color: #1d1d1f;">Your data stays yours. Enterprise-grade security. Zero training on your content.</p>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto; aspect-ratio: 16/9; background: #e5e5e7; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 64px;">
+                🔒
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="section-apple" id="pricing">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 48px; margin-bottom: 48px; color: #f5f5f7;">Choose your Gemini.</h2>
+
+            <div class="comparison-table" data-animate="fade-in">
+                <div class="comparison-row comparison-header">
+                    <div>Feature</div>
+                    <div style="text-align: center;">Basic</div>
+                    <div style="text-align: center;">Advanced</div>
+                    <div style="text-align: center;">Teams</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div style="color: #f5f5f7;">Response speed</div>
+                    <div style="text-align: center; color: #86868b;">Fast</div>
+                    <div style="text-align: center; color: #f5f5f7;">Faster</div>
+                    <div style="text-align: center; color: #f5f5f7;">Fastest</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div style="color: #f5f5f7;">Context window</div>
+                    <div style="text-align: center; color: #86868b;">8K</div>
+                    <div style="text-align: center; color: #f5f5f7;">128K</div>
+                    <div style="text-align: center; color: #f5f5f7;">1M</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div style="color: #f5f5f7;">Voice adaptation (VO3)</div>
+                    <div style="text-align: center; color: #86868b;">—</div>
+                    <div style="text-align: center;"><span class="checkmark">✓</span></div>
+                    <div style="text-align: center;"><span class="checkmark">✓</span></div>
+                </div>
+
+                <div class="comparison-row">
+                    <div style="color: #f5f5f7;">Advanced reasoning</div>
+                    <div style="text-align: center; color: #86868b;">—</div>
+                    <div style="text-align: center;"><span class="checkmark">✓</span></div>
+                    <div style="text-align: center;"><span class="checkmark">✓</span></div>
+                </div>
+
+                <div class="comparison-row">
+                    <div style="color: #f5f5f7;">Workspace integration</div>
+                    <div style="text-align: center;"><span class="checkmark">✓</span></div>
+                    <div style="text-align: center;"><span class="checkmark">✓</span></div>
+                    <div style="text-align: center;"><span class="checkmark">✓</span></div>
+                </div>
+
+                <div class="comparison-row">
+                    <div style="color: #f5f5f7;">Team collaboration</div>
+                    <div style="text-align: center; color: #86868b;">—</div>
+                    <div style="text-align: center; color: #86868b;">—</div>
+                    <div style="text-align: center;"><span class="checkmark">✓</span></div>
+                </div>
+
+                <div class="comparison-row">
+                    <div style="color: #f5f5f7;">Admin controls</div>
+                    <div style="text-align: center; color: #86868b;">—</div>
+                    <div style="text-align: center; color: #86868b;">—</div>
+                    <div style="text-align: center;"><span class="checkmark">✓</span></div>
+                </div>
+
+                <div class="comparison-row">
+                    <div style="color: #f5f5f7;">Priority support</div>
+                    <div style="text-align: center; color: #86868b;">—</div>
+                    <div style="text-align: center; color: #86868b;">—</div>
+                    <div style="text-align: center;"><span class="checkmark">✓</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple CTA -->
+    <section class="section-apple section-light">
+        <div class="container text-center">
+            <div data-animate="fade-in">
+                <h2 style="font-size: 56px; margin-bottom: 24px; color: #1d1d1f;">Get started today.</h2>
+                <p style="font-size: 21px; color: #1d1d1f; margin-bottom: 32px;">
+                    Free for 14 days. No credit card required.
+                </p>
+                <a href="https://gemini.google.com" class="btn-apple" style="font-size: 17px; padding: 12px 24px;">Try Gemini</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #000; padding: 64px 0; text-align: center; border-top: 0.5px solid rgba(255, 255, 255, 0.1);">
+        <div class="container">
+            <p style="font-size: 12px; color: #86868b; line-height: 1.6;">
+                Copyright © 2024 Google LLC. All rights reserved.<br>
+                <a href="https://policies.google.com/privacy" style="color: #86868b;">Privacy Policy</a> |
+                <a href="https://ai.google/responsibility/principles/" style="color: #86868b;">AI Principles</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/animations.js"></script>
+</body>
+</html>

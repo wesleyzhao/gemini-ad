@@ -1,0 +1,468 @@
+{
+  "timestamp": "2026-02-01T11:55:54.914Z",
+  "avgQualityScore": 45.5,
+  "avgConversionRate": 23.895,
+  "avgBounceRate": 14.559999999999999,
+  "pages": {
+    "creators.html": {
+      "totalSessions": 31,
+      "metrics": {
+        "avgTimeOnPage": 16,
+        "avgScrollDepth": 42,
+        "avgClicks": "1.3",
+        "conversionRate": "19.4",
+        "bounceRate": "25.8",
+        "engagementRate": "25.8"
+      },
+      "qualityScore": 36,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        }
+      ]
+    },
+    "trust.html": {
+      "totalSessions": 26,
+      "metrics": {
+        "avgTimeOnPage": 24,
+        "avgScrollDepth": 52,
+        "avgClicks": "2.7",
+        "conversionRate": "7.7",
+        "bounceRate": "7.7",
+        "engagementRate": "53.8"
+      },
+      "qualityScore": 45,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        },
+        {
+          "type": "warning",
+          "message": "Low conversion rate (7.7%)",
+          "action": "Strengthen CTAs and reduce friction in conversion path"
+        }
+      ]
+    },
+    "index.html": {
+      "totalSessions": 25,
+      "metrics": {
+        "avgTimeOnPage": 23,
+        "avgScrollDepth": 54,
+        "avgClicks": "2.0",
+        "conversionRate": "36.0",
+        "bounceRate": "16.0",
+        "engagementRate": "28.0"
+      },
+      "qualityScore": 47,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        },
+        {
+          "type": "success",
+          "message": "Strong conversion rate (36.0%)",
+          "action": "Scale traffic to this high-performing page"
+        }
+      ]
+    },
+    "operators.html": {
+      "totalSessions": 14,
+      "metrics": {
+        "avgTimeOnPage": 21,
+        "avgScrollDepth": 43,
+        "avgClicks": "1.9",
+        "conversionRate": "14.3",
+        "bounceRate": "28.6",
+        "engagementRate": "50.0"
+      },
+      "qualityScore": 41,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        }
+      ]
+    },
+    "writers.html": {
+      "totalSessions": 22,
+      "metrics": {
+        "avgTimeOnPage": 18,
+        "avgScrollDepth": 43,
+        "avgClicks": "1.6",
+        "conversionRate": "9.1",
+        "bounceRate": "27.3",
+        "engagementRate": "45.5"
+      },
+      "qualityScore": 38,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        },
+        {
+          "type": "warning",
+          "message": "Low conversion rate (9.1%)",
+          "action": "Strengthen CTAs and reduce friction in conversion path"
+        }
+      ]
+    },
+    "operators-variation-b.html": {
+      "totalSessions": 32,
+      "metrics": {
+        "avgTimeOnPage": 21,
+        "avgScrollDepth": 54,
+        "avgClicks": "1.9",
+        "conversionRate": "21.9",
+        "bounceRate": "9.4",
+        "engagementRate": "40.6"
+      },
+      "qualityScore": 46,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        }
+      ]
+    },
+    "creators-variation-b.html": {
+      "totalSessions": 25,
+      "metrics": {
+        "avgTimeOnPage": 31,
+        "avgScrollDepth": 64,
+        "avgClicks": "2.9",
+        "conversionRate": "32.0",
+        "bounceRate": "12.0",
+        "engagementRate": "48.0"
+      },
+      "qualityScore": 53,
+      "grade": "D",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        },
+        {
+          "type": "success",
+          "message": "Strong conversion rate (32.0%)",
+          "action": "Scale traffic to this high-performing page"
+        }
+      ]
+    },
+    "comparison.html": {
+      "totalSessions": 22,
+      "metrics": {
+        "avgTimeOnPage": 27,
+        "avgScrollDepth": 56,
+        "avgClicks": "2.5",
+        "conversionRate": "31.8",
+        "bounceRate": "13.6",
+        "engagementRate": "27.3"
+      },
+      "qualityScore": 46,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        },
+        {
+          "type": "success",
+          "message": "Strong conversion rate (31.8%)",
+          "action": "Scale traffic to this high-performing page"
+        }
+      ]
+    },
+    "animations-demo.html": {
+      "totalSessions": 28,
+      "metrics": {
+        "avgTimeOnPage": 20,
+        "avgScrollDepth": 46,
+        "avgClicks": "2.1",
+        "conversionRate": "14.3",
+        "bounceRate": "28.6",
+        "engagementRate": "42.9"
+      },
+      "qualityScore": 39,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        }
+      ]
+    },
+    "automators.html": {
+      "totalSessions": 30,
+      "metrics": {
+        "avgTimeOnPage": 26,
+        "avgScrollDepth": 59,
+        "avgClicks": "2.6",
+        "conversionRate": "30.0",
+        "bounceRate": "6.7",
+        "engagementRate": "46.7"
+      },
+      "qualityScore": 53,
+      "grade": "D",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        },
+        {
+          "type": "success",
+          "message": "Strong conversion rate (30.0%)",
+          "action": "Scale traffic to this high-performing page"
+        }
+      ]
+    },
+    "trust-variation-b.html": {
+      "totalSessions": 31,
+      "metrics": {
+        "avgTimeOnPage": 29,
+        "avgScrollDepth": 59,
+        "avgClicks": "2.6",
+        "conversionRate": "19.4",
+        "bounceRate": "16.1",
+        "engagementRate": "58.1"
+      },
+      "qualityScore": 50,
+      "grade": "D",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        }
+      ]
+    },
+    "productivity.html": {
+      "totalSessions": 27,
+      "metrics": {
+        "avgTimeOnPage": 21,
+        "avgScrollDepth": 49,
+        "avgClicks": "2.0",
+        "conversionRate": "29.6",
+        "bounceRate": "18.5",
+        "engagementRate": "29.6"
+      },
+      "qualityScore": 44,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        },
+        {
+          "type": "success",
+          "message": "Strong conversion rate (29.6%)",
+          "action": "Scale traffic to this high-performing page"
+        }
+      ]
+    },
+    "apple-style-variation-b.html": {
+      "totalSessions": 26,
+      "metrics": {
+        "avgTimeOnPage": 24,
+        "avgScrollDepth": 57,
+        "avgClicks": "2.4",
+        "conversionRate": "26.9",
+        "bounceRate": "7.7",
+        "engagementRate": "38.5"
+      },
+      "qualityScore": 48,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        },
+        {
+          "type": "success",
+          "message": "Strong conversion rate (26.9%)",
+          "action": "Scale traffic to this high-performing page"
+        }
+      ]
+    },
+    "future.html": {
+      "totalSessions": 25,
+      "metrics": {
+        "avgTimeOnPage": 23,
+        "avgScrollDepth": 54,
+        "avgClicks": "2.2",
+        "conversionRate": "40.0",
+        "bounceRate": "16.0",
+        "engagementRate": "20.0"
+      },
+      "qualityScore": 46,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        },
+        {
+          "type": "success",
+          "message": "Strong conversion rate (40.0%)",
+          "action": "Scale traffic to this high-performing page"
+        }
+      ]
+    },
+    "productivity-variation-b.html": {
+      "totalSessions": 29,
+      "metrics": {
+        "avgTimeOnPage": 27,
+        "avgScrollDepth": 63,
+        "avgClicks": "2.8",
+        "conversionRate": "37.9",
+        "bounceRate": "3.4",
+        "engagementRate": "34.5"
+      },
+      "qualityScore": 53,
+      "grade": "D",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        },
+        {
+          "type": "success",
+          "message": "Strong conversion rate (37.9%)",
+          "action": "Scale traffic to this high-performing page"
+        }
+      ]
+    },
+    "research.html": {
+      "totalSessions": 16,
+      "metrics": {
+        "avgTimeOnPage": 22,
+        "avgScrollDepth": 49,
+        "avgClicks": "2.5",
+        "conversionRate": "18.8",
+        "bounceRate": "6.3",
+        "engagementRate": "31.3"
+      },
+      "qualityScore": 42,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        }
+      ]
+    },
+    "workspace.html": {
+      "totalSessions": 28,
+      "metrics": {
+        "avgTimeOnPage": 23,
+        "avgScrollDepth": 53,
+        "avgClicks": "2.2",
+        "conversionRate": "14.3",
+        "bounceRate": "14.3",
+        "engagementRate": "50.0"
+      },
+      "qualityScore": 45,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        }
+      ]
+    },
+    "apple-style.html": {
+      "totalSessions": 21,
+      "metrics": {
+        "avgTimeOnPage": 22,
+        "avgScrollDepth": 55,
+        "avgClicks": "2.3",
+        "conversionRate": "28.6",
+        "bounceRate": "9.5",
+        "engagementRate": "33.3"
+      },
+      "qualityScore": 47,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        },
+        {
+          "type": "success",
+          "message": "Strong conversion rate (28.6%)",
+          "action": "Scale traffic to this high-performing page"
+        }
+      ]
+    },
+    "writers-variation-b.html": {
+      "totalSessions": 15,
+      "metrics": {
+        "avgTimeOnPage": 18,
+        "avgScrollDepth": 44,
+        "avgClicks": "2.1",
+        "conversionRate": "20.0",
+        "bounceRate": "20.0",
+        "engagementRate": "26.7"
+      },
+      "qualityScore": 38,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        }
+      ]
+    },
+    "valentine.html": {
+      "totalSessions": 27,
+      "metrics": {
+        "avgTimeOnPage": 27,
+        "avgScrollDepth": 64,
+        "avgClicks": "2.8",
+        "conversionRate": "25.9",
+        "bounceRate": "3.7",
+        "engagementRate": "48.1"
+      },
+      "qualityScore": 53,
+      "grade": "D",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        },
+        {
+          "type": "success",
+          "message": "Strong conversion rate (25.9%)",
+          "action": "Scale traffic to this high-performing page"
+        }
+      ]
+    }
+  }
+}

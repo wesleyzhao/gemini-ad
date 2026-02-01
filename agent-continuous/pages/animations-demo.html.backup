@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Video Animations Demo - Apple-Style Motion Design</title>
+    <meta name="description" content="Interactive showcase of Apple-inspired video animations and visual effects for Gemini AI">
+
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="../assets/css/shared-styles.css">
+
+    <!-- Page-Specific Styles -->
+    <style>
+        /* Hero Section with Video Background */
+        .hero-video-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .hero-video-section video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+            max-width: 900px;
+            padding: 0 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.7) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Canvas Sequence Section */
+        .canvas-section {
+            min-height: 300vh;
+            background: #000;
+            position: relative;
+        }
+
+        .canvas-sticky {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #scroll-sequence {
+            width: 100%;
+            height: 100vh;
+            display: block;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        }
+
+        .canvas-description {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: white;
+            z-index: 10;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(20px);
+            border-radius: 16px;
+            max-width: 600px;
+        }
+
+        /* Video Showcase Grid */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            padding: 6rem 2rem;
+            background: var(--bg-primary);
+        }
+
+        .video-card {
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-top: 56.25%; /* 16:9 aspect ratio */
+            background: #000;
+            overflow: hidden;
+        }
+
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-card-content {
+            padding: 2rem;
+        }
+
+        .video-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .video-card p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* SVG Animation Section */
+        .svg-section {
+            padding: 8rem 2rem;
+            background: linear-gradient(180deg, #f7f7f7 0%, #ffffff 100%);
+        }
+
+        .svg-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 4rem auto 0;
+        }
+
+        .svg-item {
+            text-align: center;
+        }
+
+        .svg-item svg {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1.5rem;
+            display: block;
+            stroke: var(--accent-primary);
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .svg-item h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Text Morph Section */
+        .morph-section {
+            padding: 8rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            text-align: center;
+            color: white;
+        }
+
+        .morph-text {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 700;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Feature Showcase with Inline Videos */
+        .feature-showcase {
+            padding: 8rem 2rem;
+            background: var(--bg-primary);
+        }
+
+        .feature-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            max-width: 1400px;
+            margin: 0 auto 8rem;
+            align-items: center;
+        }
+
+        .feature-row:nth-child(even) {
+            direction: rtl;
+        }
+
+        .feature-row:nth-child(even) > * {
+            direction: ltr;
+        }
+
+        .feature-video {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-video video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .feature-text h2 {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .feature-text p {
+            font-size: 1.25rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .feature-row {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .feature-row:nth-child(even) {
+                direction: ltr;
+            }
+
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .svg-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 3rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .svg-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: clamp(2rem, 8vw, 3.5rem);
+            }
+
+            .section-title {
+                font-size: clamp(1.75rem, 6vw, 2.5rem);
+            }
+        }
+
+        /* Loading State */
+        .video-loading {
+            opacity: 0.5;
+            filter: blur(10px);
+            transition: all 0.5s ease;
+        }
+
+        .video-loading.loaded {
+            opacity: 1;
+            filter: blur(0);
+        }
+
+        /* Animation Demo Badge */
+        .demo-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section with Background Video -->
+    <section class="hero hero-video-section">
+        <!-- Hero video loads immediately (above fold, critical) - no lazy loading -->
+        <video class="apple-video" data-autoplay="true" data-loop="true" muted playsinline preload="auto">
+            <!-- Placeholder for future video -->
+            <!-- <source src="../assets/videos/hero-background.mp4" type="video/mp4">
+            <source src="../assets/videos/hero-background.webm" type="video/webm"> -->
+        </video>
+
+        <div class="hero-content" data-animate="fade-in">
+            <span class="demo-badge">Animation Showcase</span>
+            <h1>Motion Meets Intelligence</h1>
+            <p class="subtitle" style="font-size: 1.5rem; margin-bottom: 2rem; opacity: 0.9;">
+                See how Gemini's powerful features come to life through beautiful, Apple-inspired animations and interactions.
+            </p>
+            <a href="#videos" class="btn btn-primary btn-large">Explore Animations</a>
+        </div>
+    </section>
+
+    <!-- Canvas Sequence Animation Section -->
+    <section class="canvas-section">
+        <div class="canvas-sticky">
+            <canvas id="scroll-sequence"
+                    width="1920"
+                    height="1080">
+                <!-- Fallback content -->
+                <div style="text-align: center; padding: 4rem; color: white;">
+                    <h2>Canvas Image Sequence Animation</h2>
+                    <p>Scroll to reveal the animation</p>
+                    <p style="font-size: 0.875rem; opacity: 0.7; margin-top: 1rem;">
+                        Note: This feature requires image sequence frames to be uploaded.<br>
+                        See documentation for setup instructions.
+                    </p>
+                </div>
+            </canvas>
+
+            <div class="canvas-description">
+                <h2 style="margin-bottom: 1rem;">Apple-Style Scroll Animation</h2>
+                <p style="opacity: 0.9;">
+                    As you scroll, each frame of the animation plays in perfect sync with your movement.
+                    This technique is used throughout Apple's product pages for immersive storytelling.
+                </p>
+                <p style="font-size: 0.875rem; opacity: 0.7; margin-top: 1rem;">
+                    <strong>How to use:</strong> Export your animation as a sequence of numbered images (frame-0001.jpg, frame-0002.jpg, etc.),
+                    place them in assets/images/sequence/, and update the canvas data attributes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Grid Showcase -->
+    <section id="videos" class="video-grid">
+        <!-- Autoplay Video Card -->
+        <div class="video-card" data-animate="fade-in" data-delay="0">
+            <div class="video-wrapper">
+                <!-- Lazy load: Only load when scrolled into view -->
+                <video class="apple-video video-loading" data-autoplay="true" data-loop="true" data-lazy-load="true" muted playsinline preload="none">
+                    <!-- Example: Gemini analyzing data -->
+                    <!-- When video is ready, change data-src to src -->
+                    <!-- <source data-src="../assets/videos/gemini-analysis.mp4" type="video/mp4"> -->
+                </video>
+            </div>
+            <div class="video-card-content">
+                <h3>Autoplay on Scroll</h3>
+                <p>
+                    Videos automatically play when they enter the viewport and pause when they leave.
+                    Perfect for capturing attention without being intrusive.
+                </p>
+            </div>
+        </div>
+
+        <!-- Scroll-Synced Video Card -->
+        <div class="video-card" data-animate="fade-in" data-delay="100">
+            <div class="video-wrapper">
+                <!-- Lazy load: Only load when scrolled into view -->
+                <video class="apple-video video-loading" data-scroll-play="true" data-lazy-load="true" muted playsinline preload="none">
+                    <!-- Example: Gemini writing content -->
+                    <!-- <source data-src="../assets/videos/gemini-writing.mp4" type="video/mp4"> -->
+                </video>
+            </div>
+            <div class="video-card-content">
+                <h3>Scroll-Driven Playback</h3>
+                <p>
+                    The video plays in sync with your scroll position, creating an interactive narrative
+                    that responds to user input.
+                </p>
+            </div>
+        </div>
+
+        <!-- Looping Video Card -->
+        <div class="video-card" data-animate="fade-in" data-delay="200">
+            <div class="video-wrapper">
+                <!-- Lazy load: Only load when scrolled into view -->
+                <video class="apple-video video-loading" data-autoplay="true" data-loop="true" data-lazy-load="true" muted playsinline preload="none">
+                    <!-- Example: Gemini integration showcase -->
+                    <!-- <source data-src="../assets/videos/gemini-integration.mp4" type="video/mp4"> -->
+                </video>
+            </div>
+            <div class="video-card-content">
+                <h3>Seamless Loops</h3>
+                <p>
+                    Short looping animations keep the page dynamic and engaging without requiring
+                    user interaction or long video files.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SVG Animation Section -->
+    <section class="svg-section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1rem;">
+                    Animated Graphics
+                </h2>
+                <p style="font-size: 1.25rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto;">
+                    Lightweight SVG animations that draw themselves as they enter the viewport
+                </p>
+            </div>
+
+            <div class="svg-grid">
+                <!-- Search Icon -->
+                <div class="svg-item">
+                    <svg data-animate-draw viewBox="0 0 100 100">
+                        <circle cx="35" cy="35" r="25"/>
+                        <line x1="55" y1="55" x2="80" y2="80"/>
+                    </svg>
+                    <h3>Intelligent Search</h3>
+                    <p style="color: var(--text-secondary);">Find anything, instantly</p>
+                </div>
+
+                <!-- Lightbulb Icon -->
+                <div class="svg-item">
+                    <svg data-animate-draw viewBox="0 0 100 100">
+                        <circle cx="50" cy="35" r="20"/>
+                        <rect x="40" y="55" width="20" height="15" rx="2"/>
+                        <line x1="50" y1="70" x2="50" y2="80"/>
+                        <line x1="40" y1="80" x2="60" y2="80"/>
+                    </svg>
+                    <h3>Creative Ideas</h3>
+                    <p style="color: var(--text-secondary);">Spark innovation</p>
+                </div>
+
+                <!-- Checkmark Icon -->
+                <div class="svg-item">
+                    <svg data-animate-draw viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="35"/>
+                        <polyline points="30,50 45,65 70,35"/>
+                    </svg>
+                    <h3>Verified Results</h3>
+                    <p style="color: var(--text-secondary);">Trustworthy answers</p>
+                </div>
+
+                <!-- Lightning Icon -->
+                <div class="svg-item">
+                    <svg data-animate-draw viewBox="0 0 100 100">
+                        <polyline points="60,20 30,55 50,55 40,80"/>
+                    </svg>
+                    <h3>Lightning Fast</h3>
+                    <p style="color: var(--text-secondary);">Instant responses</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Text Morphing Section -->
+    <section class="morph-section">
+        <div class="container">
+            <h2 style="font-size: 1.5rem; margin-bottom: 2rem; opacity: 0.9;">
+                Gemini helps you
+            </h2>
+            <div class="morph-text"
+                 data-text-morph="Write better|Code faster|Research deeper|Create more|Work smarter">
+                Write better
+            </div>
+            <p style="font-size: 1.25rem; margin-top: 2rem; opacity: 0.8;">
+                Watch the text morph to reveal all the ways Gemini enhances your workflow
+            </p>
+        </div>
+    </section>
+
+    <!-- Feature Showcase with Videos -->
+    <section class="feature-showcase">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 6rem;">
+                <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1rem;">
+                    See Gemini in Action
+                </h2>
+                <p style="font-size: 1.25rem; color: var(--text-secondary);">
+                    Short-form videos that show, not tell
+                </p>
+            </div>
+
+            <!-- Feature 1 -->
+            <div class="feature-row">
+                <div class="feature-video" data-animate="fade-in">
+                    <!-- Lazy load: Below fold feature videos -->
+                    <video class="apple-video" data-autoplay="true" data-loop="true" data-lazy-load="true" muted playsinline preload="none">
+                        <!-- Example: Citations feature -->
+                        <!-- <source data-src="../assets/videos/citations-demo.mp4" type="video/mp4"> -->
+                    </video>
+                </div>
+                <div class="feature-text" data-animate="fade-in" data-delay="200">
+                    <h2>Citations You Can Trust</h2>
+                    <p>
+                        Every answer comes with verifiable sources. See exactly where information comes from
+                        and verify facts in real-time with inline citations.
+                    </p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature-row">
+                <div class="feature-video" data-animate="fade-in">
+                    <!-- Lazy load: Below fold feature videos -->
+                    <video class="apple-video" data-autoplay="true" data-loop="true" data-lazy-load="true" muted playsinline preload="none">
+                        <!-- Example: Workspace integration -->
+                        <!-- <source data-src="../assets/videos/workspace-demo.mp4" type="video/mp4"> -->
+                    </video>
+                </div>
+                <div class="feature-text" data-animate="fade-in" data-delay="200">
+                    <h2>Works With Your Google Apps</h2>
+                    <p>
+                        Seamlessly integrated with Gmail, Docs, Sheets, and Drive. Access Gemini's
+                        intelligence without leaving your workflow.
+                    </p>
+                    <a href="#" class="btn btn-primary">See Integrations</a>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature-row">
+                <div class="feature-video" data-animate="fade-in">
+                    <!-- Lazy load: Below fold feature videos -->
+                    <video class="apple-video" data-autoplay="true" data-loop="true" data-lazy-load="true" muted playsinline preload="none">
+                        <!-- Example: Multimodal capabilities -->
+                        <!-- <source data-src="../assets/videos/multimodal-demo.mp4" type="video/mp4"> -->
+                    </video>
+                </div>
+                <div class="feature-text" data-animate="fade-in" data-delay="200">
+                    <h2>Understand Images & Text</h2>
+                    <p>
+                        Upload images, diagrams, or screenshots and have Gemini analyze, explain,
+                        or extract information instantly.
+                    </p>
+                    <a href="#" class="btn btn-primary">Try It Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation Guide Section -->
+    <section style="padding: 8rem 2rem; background: var(--bg-secondary);">
+        <div class="container" style="max-width: 900px;">
+            <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 2rem; text-align: center;">
+                How to Add Videos to Your Landing Pages
+            </h2>
+
+            <div style="background: var(--bg-primary); padding: 3rem; border-radius: 16px; margin-top: 3rem;">
+                <h3 style="margin-bottom: 1.5rem;">1. Prepare Your Videos</h3>
+                <ul style="line-height: 1.8; color: var(--text-secondary); margin-bottom: 2rem;">
+                    <li>Export videos in MP4 (H.264) and WebM formats for broad compatibility</li>
+                    <li>Keep files under 5MB for fast loading (use compression tools)</li>
+                    <li>Recommended dimensions: 1920x1080 for full-width, 1280x720 for cards</li>
+                    <li>Frame rate: 30fps is sufficient for web</li>
+                    <li>Create seamless loops (end frame matches start frame)</li>
+                </ul>
+
+                <h3 style="margin-bottom: 1.5rem;">2. Add Videos to Your Project</h3>
+                <pre style="background: #f5f5f5; padding: 1.5rem; border-radius: 8px; overflow-x: auto; margin-bottom: 2rem;"><code>&lt;video class="apple-video"
+       data-autoplay="true"
+       data-loop="true"
+       muted
+       playsinline&gt;
+  &lt;source src="assets/videos/demo.mp4" type="video/mp4"&gt;
+  &lt;source src="assets/videos/demo.webm" type="video/webm"&gt;
+&lt;/video&gt;</code></pre>
+
+                <h3 style="margin-bottom: 1.5rem;">3. For Canvas Image Sequences</h3>
+                <ul style="line-height: 1.8; color: var(--text-secondary); margin-bottom: 2rem;">
+                    <li>Export your animation as a sequence (After Effects, Blender, etc.)</li>
+                    <li>Name files: frame-0001.jpg, frame-0002.jpg, etc.</li>
+                    <li>Optimize images (compress to ~50-100KB each)</li>
+                    <li>Place in <code style="background: #f5f5f5; padding: 0.2rem 0.5rem; border-radius: 4px;">assets/images/sequence/</code></li>
+                </ul>
+
+                <h3 style="margin-bottom: 1.5rem;">4. Alternative: Use GIFs or Animated SVGs</h3>
+                <p style="line-height: 1.8; color: var(--text-secondary);">
+                    For simpler animations, optimized GIFs or animated SVGs can provide similar effects
+                    with smaller file sizes and easier implementation.
+                </p>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="https://gemini.google.com" class="btn btn-primary btn-large">Experience Gemini's Speed</a>
+                <p class="text-sm text-secondary mt-4">
+                    Free to try • Lightning-fast responses • No credit card required
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="../assets/js/animations.js"></script>
+    <script src="../assets/js/video-animations.js"></script>
+
+    <script>
+        // Custom initialization for demo page
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add smooth scroll behavior
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // Simulate video loading state
+            setTimeout(() => {
+                document.querySelectorAll('.video-loading').forEach(video => {
+                    video.classList.add('loaded');
+                });
+            }, 500);
+
+            // Add demo message for canvas (since we don't have actual frames yet)
+            const canvas = document.getElementById('scroll-sequence');
+            if (canvas) {
+                const ctx = canvas.getContext('2d');
+
+                // Draw placeholder gradient animation
+                let hue = 220;
+                function drawPlaceholder() {
+                    const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+                    gradient.addColorStop(0, `hsl(${hue}, 70%, 50%)`);
+                    gradient.addColorStop(1, `hsl(${(hue + 60) % 360}, 70%, 50%)`);
+
+                    ctx.fillStyle = gradient;
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                    // Add text
+                    ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+                    ctx.font = '48px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+                    ctx.textAlign = 'center';
+                    ctx.fillText('Scroll to see animation', canvas.width / 2, canvas.height / 2);
+                    ctx.font = '24px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+                    ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
+                    ctx.fillText('Upload image sequence frames to activate', canvas.width / 2, canvas.height / 2 + 50);
+
+                    hue = (hue + 0.2) % 360;
+                    requestAnimationFrame(drawPlaceholder);
+                }
+                drawPlaceholder();
+            }
+        });
+    </script>
+</body>
+</html>

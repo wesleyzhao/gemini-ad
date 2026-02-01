@@ -1,0 +1,152 @@
+{
+  "timestamp": "2026-02-01T13:21:01.521Z",
+  "feature": 62,
+  "summary": {
+    "totalPatterns": 4,
+    "excellentPatterns": 1,
+    "goodPatterns": 0,
+    "moderatePatterns": 0,
+    "lowPatterns": 3,
+    "avgImpact": 3.1,
+    "topImpact": 12.5
+  },
+  "patterns": [
+    {
+      "name": "Call to Action",
+      "status": "proven",
+      "avgImpact": 12.5,
+      "confidence": "High",
+      "confidenceScore": 3,
+      "effectivenessLevel": "excellent",
+      "effectivenessScore": 5,
+      "overallScore": 15,
+      "occurrences": 2,
+      "applicationCount": 0,
+      "appliedPages": 13,
+      "recommendation": "🚀 Highly effective pattern. Apply to all remaining pages immediately.",
+      "lastApplied": "2026-02-01T13:11:36.615Z",
+      "priority": "critical"
+    },
+    {
+      "name": "Shorter hero headlines (max 8 words)",
+      "status": "best-practice",
+      "avgImpact": 0,
+      "confidence": "Medium",
+      "confidenceScore": 2,
+      "effectivenessLevel": "low",
+      "effectivenessScore": 2,
+      "overallScore": 4,
+      "occurrences": 0,
+      "applicationCount": 0,
+      "appliedPages": 13,
+      "recommendation": "⚠️  Low impact. Consider revising or retiring pattern.",
+      "lastApplied": "2026-02-01T13:11:36.615Z",
+      "priority": "low"
+    },
+    {
+      "name": "Action-oriented CTA text",
+      "status": "best-practice",
+      "avgImpact": 0,
+      "confidence": "Medium",
+      "confidenceScore": 2,
+      "effectivenessLevel": "low",
+      "effectivenessScore": 2,
+      "overallScore": 4,
+      "occurrences": 0,
+      "applicationCount": 0,
+      "appliedPages": 13,
+      "recommendation": "⚠️  Low impact. Consider revising or retiring pattern.",
+      "lastApplied": "2026-02-01T13:11:36.615Z",
+      "priority": "low"
+    },
+    {
+      "name": "Trust signals above the fold",
+      "status": "best-practice",
+      "avgImpact": 0,
+      "confidence": "Medium",
+      "confidenceScore": 2,
+      "effectivenessLevel": "low",
+      "effectivenessScore": 2,
+      "overallScore": 4,
+      "occurrences": 0,
+      "applicationCount": 0,
+      "appliedPages": 13,
+      "recommendation": "⚠️  Low impact. Consider revising or retiring pattern.",
+      "lastApplied": "2026-02-01T13:11:36.615Z",
+      "priority": "low"
+    }
+  ],
+  "nextIteration": {
+    "timestamp": "2026-02-01T13:21:01.492Z",
+    "patternsToApply": [
+      {
+        "name": "Call to Action",
+        "avgImpact": 12.5,
+        "priority": "critical",
+        "targetPages": 5
+      }
+    ],
+    "targetPages": [
+      {
+        "name": "writers-variation-b.html",
+        "currentQuality": 31,
+        "currentConversion": 15,
+        "improvementPotential": 12.5
+      },
+      {
+        "name": "comparison.html",
+        "currentQuality": 34,
+        "currentConversion": 7.7,
+        "improvementPotential": 12.5
+      },
+      {
+        "name": "creators.html",
+        "currentQuality": 35,
+        "currentConversion": 18.2,
+        "improvementPotential": 12.5
+      },
+      {
+        "name": "creators-variation-b.html",
+        "currentQuality": 37,
+        "currentConversion": 16,
+        "improvementPotential": 12.5
+      },
+      {
+        "name": "trust-variation-b.html",
+        "currentQuality": 37,
+        "currentConversion": 17.6,
+        "improvementPotential": 12.5
+      }
+    ],
+    "expectedImpact": {
+      "totalPages": 5,
+      "avgImpactPerPage": 12.5,
+      "totalExpectedGain": 62.5,
+      "confidenceLevel": "medium"
+    },
+    "recommendedActions": [
+      {
+        "type": "apply-pattern",
+        "priority": "high",
+        "pattern": "Call to Action",
+        "targetPages": [
+          "writers-variation-b.html",
+          "comparison.html",
+          "creators.html",
+          "creators-variation-b.html",
+          "trust-variation-b.html"
+        ],
+        "expectedImpact": "+62.5 points",
+        "rationale": "Top performing pattern with excellent effectiveness"
+      }
+    ],
+    "scheduledDate": "2026-02-08T13:21:01.493Z"
+  },
+  "systemHealth": {
+    "totalPatterns": 4,
+    "effectivePatterns": 1,
+    "effectivenessRate": 25,
+    "avgImpact": 3.1,
+    "libraryQuality": "excellent"
+  }
+}

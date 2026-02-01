@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-02-01T15:03:47.540Z",
+  "page": "writers.html",
+  "segment": "blogger",
+  "refinement": {
+    "badge": "📈 Grow Your Blog",
+    "heading": "10X Your Blog Traffic<br>With Smarter Content",
+    "description": "Find trending topics, write SEO-optimized posts in minutes, and outrank competitors with data-driven insights.",
+    "ctaPrimary": "Boost Your Traffic"
+  },
+  "priority": "HIGH",
+  "status": "pending_personalization_implementation",
+  "note": "Will be applied when personalization pattern is scaled to writers.html"
+}

@@ -1,0 +1,1101 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Create. | Gemini</title>
+    <meta name="description" content="Everything you need to create. Nothing you don't.">
+      <link rel="preload" href="../assets/css/shared-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="preload" href="../assets/css/shared-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="../assets/css/shared-styles.css"></noscript>
+<style>
+
+/* ============================================
+   MOBILE UX ENHANCEMENTS - Feature #90
+   Target: 95%+ Mobile UX Score
+   ============================================ */
+
+/* Ensure ALL interactive elements meet 48x48px minimum touch target */
+button, a.cta-button, .cta-primary, .cta-secondary, input[type="submit"], input[type="button"] {
+    min-width: 48px !important;
+    min-height: 48px !important;
+    padding: 14px 28px !important;
+}
+
+/* Improve form spacing for mobile */
+input, textarea, select {
+    min-height: 48px !important;
+    padding: 14px 16px !important;
+    margin-bottom: 16px !important;
+    font-size: 16px !important; /* Prevents iOS zoom */
+    border-radius: 8px !important;
+}
+
+/* Ensure legible text on all devices */
+body {
+    font-size: clamp(16px, 1.2vw, 18px) !important;
+}
+
+p, li, span {
+    font-size: clamp(16px, 1.1vw, 18px) !important;
+    line-height: 1.6 !important;
+}
+
+h1 {
+    font-size: clamp(32px, 5vw, 56px) !important;
+}
+
+h2 {
+    font-size: clamp(24px, 3vw, 40px) !important;
+}
+
+h3 {
+    font-size: clamp(20px, 2.5vw, 32px) !important;
+}
+
+/* Mobile-optimized spacing */
+@media (max-width: 768px) {
+    .hero, .section {
+        padding: 60px 20px !important;
+    }
+
+    .container {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    /* Larger tap targets for mobile */
+    nav a, .nav-link {
+        min-height: 48px !important;
+        padding: 12px 16px !important;
+    }
+}
+
+
+/* ============================================
+   ACCESSIBILITY ENHANCEMENTS - Feature #90
+   Target: 95%+ Accessibility Score
+   ============================================ */
+
+/* Enhanced focus indicators */
+*:focus {
+    outline: 3px solid #4285f4 !important;
+    outline-offset: 3px !important;
+}
+
+*:focus:not(:focus-visible) {
+    outline: none !important;
+}
+
+*:focus-visible {
+    outline: 3px solid #4285f4 !important;
+    outline-offset: 3px !important;
+    box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.2) !important;
+}
+
+/* Skip to content link */
+.skip-to-content {
+    position: absolute !important;
+    top: -60px !important;
+    left: 10px !important;
+    background: #000 !important;
+    color: #fff !important;
+    padding: 12px 20px !important;
+    text-decoration: none !important;
+    z-index: 100000 !important;
+    border-radius: 4px !important;
+    font-weight: 600 !important;
+    transition: top 0.2s ease !important;
+}
+
+.skip-to-content:focus {
+    top: 10px !important;
+    outline: 3px solid #fff !important;
+    outline-offset: 2px !important;
+}
+
+/* Ensure sufficient color contrast */
+.text-light {
+    color: #333 !important;
+}
+
+.text-muted {
+    color: #666 !important;
+}
+
+/* Screen reader only text */
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0,0,0,0) !important;
+    white-space: nowrap !important;
+    border-width: 0 !important;
+}
+
+
+/* ============================================
+   PERFORMANCE ENHANCEMENTS - Feature #90
+   Target: 97%+ Performance Score
+   ============================================ */
+
+/* Optimize animations for performance */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Use GPU acceleration for animations */
+[data-animate], .animate-in {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+}
+
+/* Prevent layout shifts */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Critical CSS for fonts */
+@font-face {
+    font-family: 'Inter';
+    font-display: swap;
+    src: local('Inter');
+}
+
+</style>
+
+</head><body>
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>&gt;
+    <style>
+        /* Ultra-Minimal Apple-Style Theme */
+        :root {
+            --minimal-black: #1d1d1f;
+            --minimal-gray: #86868b;
+            --minimal-white: #fbfbfd;
+            --minimal-blue: #0071e3;
+        }
+
+        body {
+            background: var(--minimal-white);
+            color: var(--minimal-black);
+        }
+
+        .hero-minimal {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--minimal-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-minimal::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(0, 113, 227, 0.03), transparent 70%);
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+
+        .minimal-headline {
+            font-size: clamp(3rem, 12vw, 8rem);
+            font-weight: 600;
+            letter-spacing: -0.04em;
+            line-height: 1.05;
+            color: var(--minimal-black);
+            text-align: center;
+            margin-bottom: var(--space-6);
+        }
+
+        .minimal-subhead {
+            font-size: clamp(1.25rem, 3vw, 2rem);
+            font-weight: 400;
+            color: var(--minimal-gray);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto var(--space-8);
+            line-height: 1.4;
+        }
+
+        .minimal-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            font-size: 1.125rem;
+            font-weight: 400;
+            color: var(--minimal-white);
+            background: var(--minimal-blue);
+            border-radius: 980px;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            cursor: pointer;
+        }
+
+        .minimal-cta:hover {
+            background: #0077ed;
+            transform: scale(1.02);
+        }
+
+        .minimal-cta-secondary {
+            color: var(--minimal-blue);
+            background: transparent;
+            margin-left: var(--space-4);
+        }
+
+        .minimal-cta-secondary:hover {
+            background: transparent;
+            text-decoration: underline;
+        }
+
+        .section-minimal {
+            padding: clamp(3rem, 10vw, 8rem) var(--space-4);
+            max-width: 980px;
+            margin: 0 auto;
+        }
+
+        .feature-minimal {
+            margin-bottom: clamp(4rem, 8vw, 8rem);
+            text-align: center;
+        }
+
+        .feature-minimal h2 {
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: var(--space-4);
+            color: var(--minimal-black);
+        }
+
+        .feature-minimal p {
+            font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+            color: var(--minimal-gray);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        .number-minimal {
+            font-size: clamp(4rem, 10vw, 8rem);
+            font-weight: 700;
+            letter-spacing: -0.05em;
+            color: var(--minimal-black);
+            display: block;
+            margin-bottom: var(--space-2);
+        }
+
+        .grid-minimal {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-12);
+            margin: clamp(4rem, 8vw, 8rem) 0;
+        }
+
+        .card-minimal {
+            text-align: center;
+        }
+
+        .card-minimal h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 600;
+            margin-bottom: var(--space-3);
+            color: var(--minimal-black);
+        }
+
+        .card-minimal p {
+            font-size: 1.125rem;
+            color: var(--minimal-gray);
+            line-height: 1.5;
+        }
+
+        .divider-minimal {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--minimal-gray), transparent);
+            opacity: 0.2;
+            margin: clamp(4rem, 8vw, 8rem) 0;
+        }
+
+        .testimonial-minimal {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: clamp(3rem, 6vw, 6rem) var(--space-4);
+        }
+
+        .testimonial-minimal blockquote {
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            font-weight: 400;
+            line-height: 1.4;
+            color: var(--minimal-black);
+            margin-bottom: var(--space-4);
+            font-style: italic;
+        }
+
+        .testimonial-minimal cite {
+            font-size: 1.125rem;
+            color: var(--minimal-gray);
+            font-style: normal;
+        }
+
+        .video-container-minimal {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: clamp(4rem, 8vw, 8rem) auto;
+            aspect-ratio: 16/9;
+            background: var(--minimal-black);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .play-minimal {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .play-minimal:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+            background: white;
+        }
+
+        .play-minimal::before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 24px solid var(--minimal-black);
+            border-top: 14px solid transparent;
+            border-bottom: 14px solid transparent;
+            margin-left: 6px;
+        }
+
+        footer {
+            text-align: center;
+            padding: var(--space-8) var(--space-4);
+            color: var(--minimal-gray);
+            font-size: 0.875rem;
+        }
+
+        footer a {
+            color: var(--minimal-gray);
+            text-decoration: none;
+            margin: 0 var(--space-2);
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Remove default animations for this minimal design */
+        [data-animate] {
+            opacity: 1 !important;
+            transform: none !important;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .minimal-cta-secondary {
+                margin-left: 0;
+                margin-top: var(--space-3);
+            }
+
+            .flex {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+<!-- Google Analytics 4 - Performance Monitoring -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXXXXXXXXX', {
+    'send_page_view': true,
+    'page_path': window.location.pathname,
+    'page_title': document.title,
+    'custom_map': {
+      'dimension1': 'page_variant',
+      'dimension2': 'user_segment',
+      'dimension3': 'scroll_depth'
+    }
+  });
+
+  // CTA Click Tracking
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.cta-button, .cta, [data-cta]').forEach(button => {
+      button.addEventListener('click', function() {
+        gtag('event', 'cta_click', {
+          'cta_location': this.dataset.location || this.className,
+          'cta_text': this.textContent.trim(),
+          'page_variant': document.body.dataset.variant || 'control'
+        });
+      });
+    });
+
+    // Scroll Depth Tracking
+    let scrollDepths = [25, 50, 75, 90, 100];
+    let triggeredDepths = new Set();
+
+    window.addEventListener('scroll', function() {
+      const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+
+      scrollDepths.forEach(depth => {
+        if (scrollPercent >= depth && !triggeredDepths.has(depth)) {
+          triggeredDepths.add(depth);
+          gtag('event', 'scroll_depth', {
+            'scroll_percentage': depth,
+            'page_variant': document.body.dataset.variant || 'control'
+          });
+        }
+      });
+    });
+
+    // Time on Page Tracking
+    let startTime = Date.now();
+    window.addEventListener('beforeunload', function() {
+      const timeSpent = Math.round((Date.now() - startTime) / 1000);
+      gtag('event', 'time_on_page', {
+        'time_seconds': timeSpent,
+        'page_variant': document.body.dataset.variant || 'control'
+      });
+    });
+  });
+</script>
+
+
+<!-- Core Web Vitals Tracking -->
+<script type="module">
+  import {onCLS, onFID, onLCP, onFCP, onTTFB, onINP} from 'https://unpkg.com/web-vitals@3?module';
+
+  function sendToAnalytics({name, value, id, rating}) {
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'web_vitals', {
+        'metric_name': name,
+        'metric_value': Math.round(value),
+        'metric_id': id,
+        'metric_rating': rating,
+        'page_variant': document.body.dataset.variant || 'control'
+      });
+    }
+
+    // Log to console in development
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+      console.log(`[Web Vital] ${name}:`, {
+        value: Math.round(value) + (name === 'CLS' ? '' : 'ms'),
+        rating: rating,
+        id: id
+      });
+    }
+  }
+
+  onCLS(sendToAnalytics);
+  onFID(sendToAnalytics);
+  onLCP(sendToAnalytics);
+  onFCP(sendToAnalytics);
+  onTTFB(sendToAnalytics);
+  onINP(sendToAnalytics);
+</script>
+
+
+  <meta name="theme-color" content="#1a73e8">
+
+  <!-- Preconnect to external domains for faster resource loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://app.tailorhq.ai">
+
+<!-- Core Web Vitals Monitoring -->
+<script>
+(function() {
+  'use strict';
+
+  // Core Web Vitals measurement using PerformanceObserver
+  const vitals = {
+    LCP: null,
+    FID: null,
+    CLS: 0,
+    FCP: null,
+    TTFB: null,
+    INP: null
+  };
+
+  // Largest Contentful Paint (LCP)
+  function measureLCP() {
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        vitals.LCP = Math.round(lastEntry.renderTime || lastEntry.loadTime);
+
+        if (window.gtag) {
+          gtag('event', 'web_vitals', {
+            event_category: 'Web Vitals',
+            event_label: 'LCP',
+            value: vitals.LCP,
+            metric_rating: vitals.LCP <= 2500 ? 'good' : vitals.LCP <= 4000 ? 'needs-improvement' : 'poor',
+            non_interaction: true
+          });
+        }
+      });
+      observer.observe({ type: 'largest-contentful-paint', buffered: true });
+    } catch (e) {
+      console.warn('LCP measurement not supported');
+    }
+  }
+
+  // First Input Delay (FID)
+  function measureFID() {
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          vitals.FID = Math.round(entry.processingStart - entry.startTime);
+
+          if (window.gtag) {
+            gtag('event', 'web_vitals', {
+              event_category: 'Web Vitals',
+              event_label: 'FID',
+              value: vitals.FID,
+              metric_rating: vitals.FID <= 100 ? 'good' : vitals.FID <= 300 ? 'needs-improvement' : 'poor',
+              non_interaction: true
+            });
+          }
+        });
+      });
+      observer.observe({ type: 'first-input', buffered: true });
+    } catch (e) {
+      console.warn('FID measurement not supported');
+    }
+  }
+
+  // Interaction to Next Paint (INP) - New metric replacing FID
+  function measureINP() {
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        let maxDuration = 0;
+
+        entries.forEach((entry) => {
+          const duration = entry.processingEnd - entry.startTime;
+          if (duration > maxDuration) {
+            maxDuration = duration;
+          }
+        });
+
+        vitals.INP = Math.round(maxDuration);
+
+        if (window.gtag && vitals.INP > 0) {
+          gtag('event', 'web_vitals', {
+            event_category: 'Web Vitals',
+            event_label: 'INP',
+            value: vitals.INP,
+            metric_rating: vitals.INP <= 200 ? 'good' : vitals.INP <= 500 ? 'needs-improvement' : 'poor',
+            non_interaction: true
+          });
+        }
+      });
+      observer.observe({ type: 'event', buffered: true, durationThreshold: 16 });
+    } catch (e) {
+      console.warn('INP measurement not supported');
+    }
+  }
+
+  // Cumulative Layout Shift (CLS)
+  function measureCLS() {
+    try {
+      let clsValue = 0;
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
+            vitals.CLS = Math.round(clsValue * 1000) / 1000;
+          }
+        }
+      });
+      observer.observe({ type: 'layout-shift', buffered: true });
+
+      // Report CLS on page unload
+      addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'hidden' && window.gtag) {
+          gtag('event', 'web_vitals', {
+            event_category: 'Web Vitals',
+            event_label: 'CLS',
+            value: Math.round(vitals.CLS * 1000),
+            metric_rating: vitals.CLS <= 0.1 ? 'good' : vitals.CLS <= 0.25 ? 'needs-improvement' : 'poor',
+            non_interaction: true
+          });
+        }
+      });
+    } catch (e) {
+      console.warn('CLS measurement not supported');
+    }
+  }
+
+  // First Contentful Paint (FCP)
+  function measureFCP() {
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.name === 'first-contentful-paint') {
+            vitals.FCP = Math.round(entry.startTime);
+          }
+        });
+      });
+      observer.observe({ type: 'paint', buffered: true });
+    } catch (e) {
+      console.warn('FCP measurement not supported');
+    }
+  }
+
+  // Time to First Byte (TTFB)
+  function measureTTFB() {
+    try {
+      const navEntry = performance.getEntriesByType('navigation')[0];
+      if (navEntry) {
+        vitals.TTFB = Math.round(navEntry.responseStart - navEntry.requestStart);
+      }
+    } catch (e) {
+      console.warn('TTFB measurement not supported');
+    }
+  }
+
+  // Initialize measurements when DOM is ready
+  if (document.readyState === 'complete') {
+    measureLCP();
+    measureFID();
+    measureINP();
+    measureCLS();
+    measureFCP();
+    measureTTFB();
+  } else {
+    addEventListener('load', () => {
+      measureLCP();
+      measureFID();
+      measureINP();
+      measureCLS();
+      measureFCP();
+      measureTTFB();
+    });
+  }
+
+  // Expose vitals for debugging
+  window.__webVitals = vitals;
+})();
+</script>
+  <style id="critical-css">
+/* Critical CSS - Above the fold */
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font-family:'SF Pro Display',-apple-system,BlinkMacSystemFont,'Google Sans','Segoe UI',Roboto,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+header{position:fixed;top:0;left:0;right:0;height:48px;background:#fff;z-index:1000;border-bottom:1px solid #e8eaed}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center}
+.container{max-width:1280px;margin:0 auto;padding:0 24px}
+.btn-primary{display:inline-flex;align-items:center;padding:14px 28px;background:#1a73e8;color:#fff;border:none;border-radius:8px;font-weight:500;cursor:pointer;transition:all .2s}
+</style>
+  <style id="critical-css">
+/* Critical CSS - Above the fold */
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font-family:'SF Pro Display',-apple-system,BlinkMacSystemFont,'Google Sans','Segoe UI',Roboto,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+header{position:fixed;top:0;left:0;right:0;height:48px;background:#fff;z-index:1000;border-bottom:1px solid #e8eaed}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center}
+.container{max-width:1280px;margin:0 auto;padding:0 24px}
+.btn-primary{display:inline-flex;align-items:center;padding:14px 28px;background:#1a73e8;color:#fff;border:none;border-radius:8px;font-weight:500;cursor:pointer;transition:all .2s}
+</style>
+
+
+    <!-- Minimal Header -->
+    <header style="position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(251, 251, 253, 0.8); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0, 0, 0, 0.05); padding: 20px 40px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto;">
+            <a href="../index.html" style="font-weight: 600; font-size: 1.25rem; color: var(--minimal-black); text-decoration: none;">Gemini</a>
+            <a href="https://gemini.google.com" class="minimal-cta" style="padding: 12px 32px; font-size: 1rem; min-height: 48px;">Try Gemini</a>
+        </div>
+    </header>
+
+    <main role="main" id="main-content">
+        <!-- Hero -->
+        <section class="hero-minimal">
+            <div style="position: relative; z-index: 1; padding: 0 var(--space-4);">
+                <h1 class="minimal-headline">Create.</h1>
+                <p class="minimal-subhead">
+                    Everything you need to create. Nothing you don't.
+                </p>
+                <div class="flex gap-4 justify-center" style="margin-top: var(--space-8);">
+                    <a href="https://gemini.google.com" class="minimal-cta" style="min-height: 48px; padding: 12px 32px;">Start Creating</a>
+                    <a href="#features" class="minimal-cta minimal-cta-secondary">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video -->
+        <section class="section-minimal">
+            <div class="video-container-minimal">
+                <div class="play-minimal"></div>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="section-minimal" style="text-align: center;">
+            <div class="grid-minimal">
+                <div class="card-minimal">
+                    <span class="number-minimal">10×</span>
+                    <p>Faster</p>
+                </div>
+                <div class="card-minimal">
+                    <span class="number-minimal">100K</span>
+                    <p>Creators</p>
+                </div>
+                <div class="card-minimal">
+                    <span class="number-minimal">3.2×</span>
+                    <p>More reach</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider-minimal"></div>
+
+        <!-- Features -->
+        <section id="features" class="section-minimal">
+            <div class="feature-minimal">
+                <h2>Ideas to execution.</h2>
+                <p>From concept to final cut in minutes. Not hours. Not days.</p>
+            </div>
+
+            <div class="feature-minimal">
+                <h2>Your voice. Amplified.</h2>
+                <p>Create in your style. Maintain your authenticity. Scale your output.</p>
+            </div>
+
+            <div class="feature-minimal">
+                <h2>Built for creators.</h2>
+                <p>YouTube. TikTok. Instagram. Podcasts. Everything. Everywhere.</p>
+            </div>
+        </section>
+
+        <div class="divider-minimal"></div>
+
+        <!-- Testimonial -->
+        <section class="testimonial-minimal">
+            <blockquote>
+                "I went from posting once a week to daily. My views tripled. I'm actually enjoying creating again."
+            </blockquote>
+            <cite>Marcus Chen, 2.3M subscribers</cite>
+        </section>
+
+        <div class="divider-minimal"></div>
+
+        <!-- Final CTA -->
+        <section class="section-minimal" style="text-align: center;">
+            <h2 style="font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 600; margin-bottom: var(--space-6); letter-spacing: -0.03em;">
+                Stop staring at<br>blank pages.
+            </h2>
+            <p class="minimal-subhead" style="margin-bottom: var(--space-8);">
+                Start creating content your audience loves.
+            </p>
+            <a href="https://gemini.google.com" class="minimal-cta" style="padding: 12px 32px; font-size: 1.25rem; min-height: 48px;">
+                Start Creating Free
+            </a>
+            <p style="margin-top: var(--space-4); font-size: 0.875rem; color: var(--minimal-gray);">
+                Free for 14 days. No credit card required.
+            </p>
+        </section>
+    </main>
+
+    <!-- Minimal Footer -->
+    <footer>
+        <p>
+            <a href="https://ai.google/responsibility/principles/">AI Principles</a>
+            <a href="https://policies.google.com/privacy">Privacy</a>
+            <a href="https://gemini.google.com" style="min-height: 48px; padding: 12px 32px;">Gemini</a>
+        </p>
+        <p style="margin-top: var(--space-2); opacity: 0.6;">© 2026 Google LLC</p>
+    </footer>
+
+    <!-- Minimal animation script -->
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+<!-- User Feedback Widget -->
+<div id="feedback-widget" class="feedback-widget" style="display: none;">
+  <div class="feedback-prompt">Was this page helpful?</div>
+  <div class="feedback-buttons">
+    <button class="feedback-btn" data-rating="yes" aria-label="Yes, this page was helpful">
+      <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+        <path d="M10 1l2.5 5.5L18 7.5l-4 4 1 6-5-2.5-5 2.5 1-6-4-4 5.5-1z" fill="currentColor"></path>
+      </svg>
+      Yes
+    </button>
+    <button class="feedback-btn" data-rating="no" aria-label="No, this page was not helpful">
+      <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+        <circle cx="10" cy="10" r="8" stroke="currentColor" fill="none" stroke-width="2"></circle>
+        <line x1="6" y1="6" x2="14" y2="14" stroke="currentColor" stroke-width="2"></line>
+        <line x1="14" y1="6" x2="6" y2="14" stroke="currentColor" stroke-width="2"></line>
+      </svg>
+      No
+    </button>
+  </div>
+  <div class="feedback-followup" style="display: none;">
+    <textarea placeholder="Tell us more (optional)" maxlength="500" aria-label="Additional feedback"></textarea>
+    <button class="feedback-submit">Send</button>
+    <button class="feedback-skip">Skip</button>
+  </div>
+  <div class="feedback-thanks" style="display: none;">
+    Thank you for your feedback! 🙏
+  </div>
+</div>
+
+<style>
+.feedback-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  padding: 16px 20px;
+  font-size: 14px;
+  max-width: 300px;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+.feedback-prompt {
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.feedback-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.feedback-btn {
+  flex: 1;
+  padding: 8px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+  transition: all 0.2s;
+  font-size: 14px;
+  color: #1a1a1a;
+}
+
+.feedback-btn:hover {
+  background: #f5f5f7;
+  border-color: #1a73e8;
+}
+
+.feedback-btn:focus {
+  outline: 2px solid #1a73e8;
+  outline-offset: 2px;
+}
+
+.feedback-followup textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin: 12px 0 8px;
+  font-family: inherit;
+  font-size: 13px;
+  resize: vertical;
+  min-height: 60px;
+}
+
+.feedback-followup textarea:focus {
+  outline: 2px solid #1a73e8;
+  border-color: #1a73e8;
+}
+
+.feedback-submit,
+.feedback-skip {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  margin-right: 8px;
+  transition: all 0.2s;
+}
+
+.feedback-submit {
+  background: #1a73e8;
+  color: white;
+}
+
+.feedback-submit:hover {
+  background: #1557b0;
+}
+
+.feedback-skip {
+  background: transparent;
+  color: #666;
+}
+
+.feedback-skip:hover {
+  background: #f5f5f7;
+}
+
+.feedback-thanks {
+  color: #1a73e8;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .feedback-widget {
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+    max-width: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .feedback-widget {
+    transition: none;
+  }
+}
+</style>
+
+<script>
+(function() {
+  // Show widget after 10 seconds on page
+  setTimeout(function() {
+    const widget = document.getElementById('feedback-widget');
+    if (widget && !sessionStorage.getItem('feedback_submitted')) {
+      widget.style.display = 'block';
+    }
+  }, 10000);
+
+  const widget = document.getElementById('feedback-widget');
+  if (!widget) return;
+
+  const buttons = widget.querySelectorAll('.feedback-btn');
+  const followup = widget.querySelector('.feedback-followup');
+  const thanks = widget.querySelector('.feedback-thanks');
+  const submitBtn = widget.querySelector('.feedback-submit');
+  const skipBtn = widget.querySelector('.feedback-skip');
+  const textarea = widget.querySelector('textarea');
+
+  let selectedRating = null;
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', function() {
+      selectedRating = this.dataset.rating;
+
+      // Track initial rating
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'feedback_rating', {
+          'rating': selectedRating,
+          'page_variant': document.body.dataset.variant || 'control',
+          'page_path': window.location.pathname
+        });
+      }
+
+      // Show followup
+      widget.querySelector('.feedback-buttons').style.display = 'none';
+      widget.querySelector('.feedback-prompt').textContent = 'Tell us more:';
+      followup.style.display = 'block';
+      textarea.focus();
+    });
+  });
+
+  submitBtn.addEventListener('click', function() {
+    const comment = textarea.value.trim();
+
+    // Track detailed feedback
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'feedback_comment', {
+        'rating': selectedRating,
+        'has_comment': comment.length > 0,
+        'comment_length': comment.length,
+        'page_variant': document.body.dataset.variant || 'control',
+        'page_path': window.location.pathname
+      });
+    }
+
+    // Log feedback (in production, send to backend)
+    console.log('User Feedback:', {
+      rating: selectedRating,
+      comment: comment,
+      page: window.location.pathname,
+      timestamp: new Date().toISOString()
+    });
+
+    sessionStorage.setItem('feedback_submitted', 'true');
+    showThanks();
+  });
+
+  skipBtn.addEventListener('click', function() {
+    sessionStorage.setItem('feedback_submitted', 'true');
+    showThanks();
+  });
+
+  function showThanks() {
+    followup.style.display = 'none';
+    widget.querySelector('.feedback-prompt').style.display = 'none';
+    thanks.style.display = 'block';
+
+    setTimeout(() => {
+      widget.style.opacity = '0';
+      setTimeout(() => widget.style.display = 'none', 300);
+    }, 2000);
+  }
+})();
+</script>
+
+
+
+</body></html>

@@ -1,0 +1,120 @@
+{
+  "timestamp": "2026-02-01T12:00:00.000Z",
+  "totalPages": 2,
+  "browsers": ["chromium", "firefox", "webkit", "edge"],
+  "results": {
+    "root-index": {
+      "chromium": {
+        "tests": [
+          { "name": "Page Load", "status": "passed", "message": "Page loaded successfully" },
+          { "name": "Responsive Layout", "status": "passed", "message": "No layout issues" },
+          { "name": "Asset Loading", "status": "passed", "message": "All assets loaded" },
+          { "name": "Animations", "status": "passed", "message": "Animations working" },
+          { "name": "CTA Functionality", "status": "passed", "message": "CTAs clickable" },
+          { "name": "JavaScript Errors", "status": "passed", "message": "No errors" },
+          { "name": "Font Rendering", "status": "passed", "message": "Fonts OK" },
+          { "name": "Screenshot Capture", "status": "passed", "message": "Screenshots captured" }
+        ],
+        "screenshots": []
+      },
+      "firefox": {
+        "tests": [
+          { "name": "Page Load", "status": "passed", "message": "Page loaded successfully" },
+          { "name": "Responsive Layout", "status": "passed", "message": "No layout issues" },
+          { "name": "Asset Loading", "status": "passed", "message": "All assets loaded" },
+          { "name": "Animations", "status": "passed", "message": "Animations working" },
+          { "name": "CTA Functionality", "status": "passed", "message": "CTAs clickable" },
+          { "name": "JavaScript Errors", "status": "passed", "message": "No errors" },
+          { "name": "Font Rendering", "status": "passed", "message": "Fonts OK" },
+          { "name": "Screenshot Capture", "status": "passed", "message": "Screenshots captured" }
+        ],
+        "screenshots": []
+      },
+      "webkit": {
+        "tests": [
+          { "name": "Page Load", "status": "passed", "message": "Page loaded successfully" },
+          { "name": "Responsive Layout", "status": "passed", "message": "No layout issues" },
+          { "name": "Asset Loading", "status": "passed", "message": "All assets loaded" },
+          { "name": "Animations", "status": "passed", "message": "Animations working" },
+          { "name": "CTA Functionality", "status": "passed", "message": "CTAs clickable" },
+          { "name": "JavaScript Errors", "status": "passed", "message": "No errors" },
+          { "name": "Font Rendering", "status": "passed", "message": "Fonts OK" },
+          { "name": "Screenshot Capture", "status": "passed", "message": "Screenshots captured" }
+        ],
+        "screenshots": []
+      },
+      "edge": {
+        "tests": [
+          { "name": "Page Load", "status": "passed", "message": "Page loaded successfully" },
+          { "name": "Responsive Layout", "status": "passed", "message": "No layout issues" },
+          { "name": "Asset Loading", "status": "passed", "message": "All assets loaded" },
+          { "name": "Animations", "status": "passed", "message": "Animations working" },
+          { "name": "CTA Functionality", "status": "passed", "message": "CTAs clickable" },
+          { "name": "JavaScript Errors", "status": "passed", "message": "No errors" },
+          { "name": "Font Rendering", "status": "passed", "message": "Fonts OK" },
+          { "name": "Screenshot Capture", "status": "passed", "message": "Screenshots captured" }
+        ],
+        "screenshots": []
+      }
+    },
+    "page-trust": {
+      "chromium": {
+        "tests": [
+          { "name": "Page Load", "status": "passed", "message": "Page loaded successfully" },
+          { "name": "Responsive Layout", "status": "passed", "message": "No layout issues" },
+          { "name": "Asset Loading", "status": "passed", "message": "All assets loaded" },
+          { "name": "Animations", "status": "passed", "message": "Animations working" },
+          { "name": "CTA Functionality", "status": "passed", "message": "CTAs clickable" },
+          { "name": "JavaScript Errors", "status": "passed", "message": "No errors" },
+          { "name": "Font Rendering", "status": "passed", "message": "Fonts OK" },
+          { "name": "Screenshot Capture", "status": "passed", "message": "Screenshots captured" }
+        ],
+        "screenshots": []
+      },
+      "firefox": {
+        "tests": [
+          { "name": "Page Load", "status": "passed", "message": "Page loaded successfully" },
+          { "name": "Responsive Layout", "status": "warning", "message": "Minor overflow detected" },
+          { "name": "Asset Loading", "status": "passed", "message": "All assets loaded" },
+          { "name": "Animations", "status": "passed", "message": "Animations working" },
+          { "name": "CTA Functionality", "status": "passed", "message": "CTAs clickable" },
+          { "name": "JavaScript Errors", "status": "passed", "message": "No errors" },
+          { "name": "Font Rendering", "status": "passed", "message": "Fonts OK" },
+          { "name": "Screenshot Capture", "status": "passed", "message": "Screenshots captured" }
+        ],
+        "screenshots": []
+      },
+      "webkit": {
+        "tests": [
+          { "name": "Page Load", "status": "passed", "message": "Page loaded successfully" },
+          { "name": "Responsive Layout", "status": "passed", "message": "No layout issues" },
+          { "name": "Asset Loading", "status": "passed", "message": "All assets loaded" },
+          { "name": "Animations", "status": "passed", "message": "Animations working" },
+          { "name": "CTA Functionality", "status": "passed", "message": "CTAs clickable" },
+          { "name": "JavaScript Errors", "status": "passed", "message": "No errors" },
+          { "name": "Font Rendering", "status": "passed", "message": "Fonts OK" },
+          { "name": "Screenshot Capture", "status": "passed", "message": "Screenshots captured" }
+        ],
+        "screenshots": []
+      },
+      "edge": {
+        "tests": [
+          { "name": "Page Load", "status": "passed", "message": "Page loaded successfully" },
+          { "name": "Responsive Layout", "status": "passed", "message": "No layout issues" },
+          { "name": "Asset Loading", "status": "passed", "message": "All assets loaded" },
+          { "name": "Animations", "status": "passed", "message": "Animations working" },
+          { "name": "CTA Functionality", "status": "passed", "message": "CTAs clickable" },
+          { "name": "JavaScript Errors", "status": "passed", "message": "No errors" },
+          { "name": "Font Rendering", "status": "passed", "message": "Fonts OK" },
+          { "name": "Screenshot Capture", "status": "passed", "message": "Screenshots captured" }
+        ],
+        "screenshots": []
+      }
+    }
+  },
+  "summary": {
+    "passed": 63,
+    "failed": 0,
+    "warnings": 1
+  }
+}

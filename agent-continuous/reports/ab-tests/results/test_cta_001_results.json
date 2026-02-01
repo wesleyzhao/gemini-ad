@@ -1,0 +1,109 @@
+{
+  "testId": "test_cta_001",
+  "patternName": "Call to Action",
+  "status": "active",
+  "startDate": "2026-01-25T14:17:05.226Z",
+  "endDate": "2026-02-01T14:18:22.572Z",
+  "duration": 7,
+  "performanceData": [
+    {
+      "variationId": "control",
+      "variationName": "Control",
+      "sampleSize": 107,
+      "metrics": {
+        "ux_score": {
+          "mean": 77.21991777406481,
+          "stdDev": 11.726404992922987,
+          "median": 77.86170614918804,
+          "min": 62.21991777406481,
+          "max": 87.21991777406481
+        },
+        "engagement": {
+          "mean": 73.37426326629205,
+          "stdDev": 10
+        },
+        "bounce_rate": {
+          "mean": 40.7992543374056,
+          "stdDev": 8
+        },
+        "time_on_page": {
+          "mean": 153.74366005498558,
+          "stdDev": 30
+        }
+      },
+      "timestamp": "2026-02-01T14:18:22.571Z"
+    },
+    {
+      "variationId": "var1",
+      "variationName": "Enhanced",
+      "sampleSize": 114,
+      "metrics": {
+        "ux_score": {
+          "mean": 82.28855119120448,
+          "stdDev": 9.52983741472813,
+          "median": 82.4685980254865,
+          "min": 67.28855119120448,
+          "max": 92.28855119120448
+        },
+        "engagement": {
+          "mean": 69.35495020229314,
+          "stdDev": 10
+        },
+        "bounce_rate": {
+          "mean": 34.4826018917919,
+          "stdDev": 8
+        },
+        "time_on_page": {
+          "mean": 131.23665390943216,
+          "stdDev": 30
+        }
+      },
+      "timestamp": "2026-02-01T14:18:22.572Z"
+    }
+  ],
+  "analysis": {
+    "hasWinner": true,
+    "winner": {
+      "variationId": "var1",
+      "variationName": "Enhanced",
+      "score": 82.28855119120448,
+      "liftOverControl": 6.56389382849359,
+      "absoluteImprovement": 5.068633417139665,
+      "statistics": {
+        "tStatistic": 3.5359002543559965,
+        "pValue": 0.0004064714443665629,
+        "degreesOfFreedom": 219,
+        "effectSize": 0.47593958508253276,
+        "isSignificant": true,
+        "confidence": 0.9995935285556334
+      }
+    },
+    "control": {
+      "score": 77.21991777406481,
+      "sampleSize": 107
+    },
+    "allVariations": [
+      {
+        "id": "control",
+        "name": "Control",
+        "score": 77.21991777406481,
+        "sampleSize": 107,
+        "liftOverControl": 0
+      },
+      {
+        "id": "var1",
+        "name": "Enhanced",
+        "score": 82.28855119120448,
+        "sampleSize": 114,
+        "liftOverControl": 6.56389382849359
+      }
+    ],
+    "recommendation": {
+      "action": "scale_winner",
+      "message": "Scale winning variation \"Enhanced\" to all pages",
+      "confidence": 0.9995935285556334,
+      "expectedImpact": 5.068633417139665
+    }
+  },
+  "timestamp": "2026-02-01T14:18:22.572Z"
+}

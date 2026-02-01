@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini + Google Workspace = Magic</title>
+    <meta name="description" content="AI that knows your docs, emails, and calendar. Deep integration with every Google app.">
+    <link rel="stylesheet" href="../assets/css/shared-styles.css">
+    <style>
+        .hero-workspace {
+            background: radial-gradient(ellipse at top, #e8f0fe, var(--white));
+        }
+
+        .app-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-4);
+            margin: var(--space-8) 0;
+        }
+
+        .app-card {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: var(--space-6);
+            box-shadow: var(--shadow-lg);
+            border-top: 4px solid var(--gemini-blue);
+            transition: all var(--transition-base);
+        }
+
+        .app-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-2xl);
+        }
+
+        .gradient-text-workspace {
+            background: linear-gradient(135deg, #4285f4, #ea4335, #fbbc04, #34a853);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            /* Shared styles handle most mobile responsiveness */
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" style="font-weight: 600; font-size: 1.125rem;">Gemini</a>
+                <nav>
+                    <a href="https://gemini.google.com" class="btn btn-primary btn-small">Try Gemini</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero hero-workspace">
+        <div class="container">
+            <div class="hero-content" data-animate="fade-in">
+                <h1 class="gradient-text-workspace mb-4">AI in Every App You Already Use</h1>
+                <p class="text-xl text-secondary mb-8" style="max-width: 700px; margin: 0 auto;">
+                    Gemini works inside Gmail, Docs, Sheets, and Slides—no switching, no copying. Just better, faster work in the tools you know.
+                </p>
+                <div class="flex gap-4 justify-center mb-8">
+                    <a href="https://gemini.google.com" class="btn btn-primary btn-large">Add to Workspace</a>
+                    <a href="#apps" class="btn btn-secondary btn-large">See All Apps</a>
+                </div>
+                <p class="text-sm text-secondary mt-4">
+                    Works with existing account • One-click setup • 5M+ Workspace users
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-white">
+        <div class="container">
+            <h2 class="text-center mb-12">Works in Every App</h2>
+            <div class="app-showcase">
+                <div class="app-card" style="border-color: #ea4335;">
+                    <h3 class="mb-3">📧 Gmail</h3>
+                    <p class="text-secondary">Smart replies, email summaries, priority inbox sorting</p>
+                </div>
+                <div class="app-card" style="border-color: #4285f4;">
+                    <h3 class="mb-3">📄 Docs</h3>
+                    <p class="text-secondary">Writing assistant, research integration, formatting help</p>
+                </div>
+                <div class="app-card" style="border-color: #34a853;">
+                    <h3 class="mb-3">📊 Sheets</h3>
+                    <p class="text-secondary">Formula generation, data analysis, chart creation</p>
+                </div>
+                <div class="app-card" style="border-color: #fbbc04;">
+                    <h3 class="mb-3">🎨 Slides</h3>
+                    <p class="text-secondary">Design suggestions, speaker notes, brand consistency</p>
+                </div>
+                <div class="app-card" style="border-color: #4285f4;">
+                    <h3 class="mb-3">📅 Calendar</h3>
+                    <p class="text-secondary">Meeting prep, scheduling, agenda generation</p>
+                </div>
+                <div class="app-card" style="border-color: #34a853;">
+                    <h3 class="mb-3">💾 Drive</h3>
+                    <p class="text-secondary">Smart search, file organization, duplicate detection</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-gray-50">
+        <div class="container container-narrow text-center">
+            <h2 class="mb-4">Already Using Workspace?<br>Make It 10x Better.</h2>
+            <p class="text-xl text-secondary mb-8">
+                No migration. No setup. Just add Gemini and watch your productivity soar.
+            </p>
+            <a href="https://gemini.google.com" class="btn btn-primary btn-large">Add Gemini Now</a>
+            <p class="text-sm text-secondary mt-4">
+                No migration required • Works with all Workspace apps • Free trial available
+            </p>
+        </div>
+    </section>
+
+    <footer style="background: var(--white); padding: var(--space-6) 0; text-align: center;">
+        <p class="text-sm text-secondary">
+            Gemini for Google Workspace | <a href="https://policies.google.com/privacy">Privacy</a>
+        </p>
+    </footer>
+
+    <script src="../assets/js/animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+{
+  "pageViews": {
+    "creators.html": 12547,
+    "trust.html": 9832,
+    "writers.html": 8234,
+    "bundle.html": 7621,
+    "workspace.html": 6543
+  },
+  "conversions": {
+    "creators.html": 1254,
+    "trust.html": 1179,
+    "writers.html": 823,
+    "bundle.html": 610,
+    "workspace.html": 524
+  },
+  "avgTimeOnPage": {
+    "creators.html": 142,
+    "trust.html": 156,
+    "writers.html": 128,
+    "bundle.html": 165,
+    "workspace.html": 134
+  },
+  "avgScrollDepth": {
+    "creators.html": 68,
+    "trust.html": 72,
+    "writers.html": 64,
+    "bundle.html": 75,
+    "workspace.html": 66
+  },
+  "coreWebVitals": {
+    "lcp": {
+      "good": 8234,
+      "needsImprovement": 2341,
+      "poor": 876
+    },
+    "fid": {
+      "good": 10234,
+      "needsImprovement": 891,
+      "poor": 326
+    },
+    "cls": {
+      "good": 9876,
+      "needsImprovement": 1234,
+      "poor": 341
+    }
+  },
+  "timestamp": "2026-02-01T15:20:29.139Z",
+  "dateRange": {
+    "start": "2026-01-15T00:00:00.000Z",
+    "end": "2026-02-01T00:00:00.000Z"
+  },
+  "conversionRates": {
+    "creators.html": 9.994420977126007,
+    "trust.html": 11.991456468673718,
+    "writers.html": 9.99514209375759,
+    "bundle.html": 8.004198924025719,
+    "workspace.html": 8.008558765092465
+  },
+  "performanceScores": {
+    "lcp": 71.90638372194567,
+    "fid": 89.3721072395424,
+    "cls": 86.24574272989258,
+    "overall": 82.50807789712688
+  }
+}

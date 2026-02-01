@@ -1,0 +1,825 @@
+{
+  "test_validation": {
+    "variants": {
+      "control": {
+        "impressions": 404,
+        "conversions": 44,
+        "totalTimeOnPage": 580,
+        "totalScrollDepth": 300,
+        "ctaClicks": 4,
+        "events": [
+          {
+            "timestamp": "2026-02-01T15:20:28.912Z",
+            "converted": true
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.914Z",
+            "converted": true
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.916Z",
+            "converted": true
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.918Z",
+            "converted": true
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.920Z",
+            "converted": true
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.922Z",
+            "converted": true
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.925Z",
+            "converted": true
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.926Z",
+            "converted": true
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.928Z",
+            "converted": true
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.930Z",
+            "converted": true
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.932Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.933Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.935Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.936Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.938Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.940Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.941Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.943Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.945Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.948Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.950Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.952Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.954Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.955Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.957Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.960Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.961Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.963Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.965Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.966Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.968Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.970Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.972Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.974Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.976Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.977Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.979Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.981Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.983Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.985Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.987Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.989Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.991Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.993Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.995Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.996Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.998Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.000Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.002Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.004Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.006Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.008Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.010Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.012Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.014Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.016Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.018Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.020Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.021Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.023Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.024Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.027Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.029Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.031Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.034Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.036Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.038Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.040Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.042Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.044Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.046Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.048Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.050Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.052Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.055Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.056Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.058Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.061Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.063Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.064Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.066Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.068Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.070Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.072Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.074Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.076Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.078Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.080Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.082Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.084Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.086Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.088Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.090Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.092Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.094Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.095Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.097Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.099Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.102Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.104Z",
+            "converted": false
+          }
+        ]
+      },
+      "treatment": {
+        "impressions": 400,
+        "conversions": 80,
+        "totalTimeOnPage": 0,
+        "totalScrollDepth": 0,
+        "ctaClicks": 0,
+        "events": [
+          {
+            "timestamp": "2026-02-01T15:20:28.913Z",
+            "converted": true
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.915Z",
+            "converted": true
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.918Z",
+            "converted": true
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.919Z",
+            "converted": true
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.921Z",
+            "converted": true
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.923Z",
+            "converted": true
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.925Z",
+            "converted": true
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.927Z",
+            "converted": true
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.929Z",
+            "converted": true
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.931Z",
+            "converted": true
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.932Z",
+            "converted": true
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.934Z",
+            "converted": true
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.936Z",
+            "converted": true
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.937Z",
+            "converted": true
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.939Z",
+            "converted": true
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.940Z",
+            "converted": true
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.943Z",
+            "converted": true
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.944Z",
+            "converted": true
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.946Z",
+            "converted": true
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.948Z",
+            "converted": true
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.951Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.953Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.955Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.957Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.958Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.960Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.962Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.964Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.965Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.968Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.969Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.971Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.973Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.975Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.976Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.979Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.980Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.982Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.984Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.986Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.988Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.991Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.992Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.994Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.996Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.998Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:28.999Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.001Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.003Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.005Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.007Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.009Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.011Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.013Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.015Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.017Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.019Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.020Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.022Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.024Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.026Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.028Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.030Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.032Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.035Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.037Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.039Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.041Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.042Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.045Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.047Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.049Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.051Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.054Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.055Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.058Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.059Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.062Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.063Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.065Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.067Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.069Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.071Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.073Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.075Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.078Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.079Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.081Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.083Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.085Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.086Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.088Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.091Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.093Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.094Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.096Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.098Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.101Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.103Z",
+            "converted": false
+          },
+          {
+            "timestamp": "2026-02-01T15:20:29.104Z",
+            "converted": false
+          }
+        ]
+      }
+    },
+    "lastUpdated": "2026-02-01T15:20:29.104Z"
+  }
+}

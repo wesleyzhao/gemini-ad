@@ -1,0 +1,65 @@
+{
+  "timestamp": "2026-02-01T14:36:18.306Z",
+  "recommendations": [
+    {
+      "parameter": "minImprovement",
+      "current": 0.05,
+      "recommended": 0.03,
+      "reason": "Lower velocity suggests need for more incremental improvements",
+      "impact": "Enables more patterns to qualify, increasing opportunities"
+    },
+    {
+      "parameter": "minCycleDuration",
+      "current": 7,
+      "recommended": 5,
+      "reason": "High success rate allows shorter cycles for faster iteration",
+      "impact": "Reduces time between optimization cycles"
+    },
+    {
+      "parameter": "strategy",
+      "current": "incremental",
+      "recommended": "exploratory",
+      "reason": "Stagnation detected - need to explore new pattern categories",
+      "impact": "Shifts focus to discovering new optimization opportunities",
+      "action": "Run create-ab-test-variations.js with --explore flag"
+    }
+  ],
+  "analysis": {
+    "trends": {
+      "totalCycles": 11,
+      "successfulCycles": 11,
+      "successRate": 1,
+      "avgImprovement": 0.18181818181818182,
+      "velocity": 0.18181818181818182,
+      "trend": "decelerating",
+      "isStagnant": true,
+      "recentImprovements": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "patterns": {
+      "totalPatterns": 1,
+      "avgSuccessRate": 0.85,
+      "avgImpact": 8.5,
+      "topPatterns": [
+        {
+          "name": "Call to Action",
+          "successRate": 0.85,
+          "avgImpact": 8.5,
+          "applications": 5,
+          "score": 7.225
+        }
+      ]
+    },
+    "learning": {
+      "totalInsights": 4,
+      "recentInsights": 4,
+      "bestPractices": 2,
+      "learningRate": "0.57"
+    }
+  }
+}

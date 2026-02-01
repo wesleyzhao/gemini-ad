@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Letters, Perfected | Gemini AI</title>
+    <meta name="description" content="Write heartfelt messages that truly connect. Gemini helps you express love in your authentic voice.">
+    <link rel="stylesheet" href="../assets/css/shared-styles.css">
+    <style>
+        /* Valentine's Theme Styling */
+        :root {
+            --valentine-pink: #ff6b9d;
+            --valentine-red: #ff4757;
+            --valentine-light: #ffe5ec;
+            --valentine-dark: #c44569;
+        }
+
+        .hero-valentine {
+            background: linear-gradient(135deg, var(--valentine-light) 0%, var(--white) 50%, var(--gemini-blue-light) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Floating hearts animation */
+        .floating-heart {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0.15;
+            animation: floatHeart 20s infinite ease-in-out;
+            color: var(--valentine-pink);
+        }
+
+        @keyframes floatHeart {
+            0%, 100% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.15;
+            }
+            90% {
+                opacity: 0.15;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .heart-1 { left: 10%; animation-delay: 0s; }
+        .heart-2 { left: 25%; animation-delay: 3s; animation-duration: 22s; }
+        .heart-3 { left: 40%; animation-delay: 6s; animation-duration: 18s; }
+        .heart-4 { left: 55%; animation-delay: 2s; animation-duration: 24s; }
+        .heart-5 { left: 70%; animation-delay: 5s; animation-duration: 21s; }
+        .heart-6 { left: 85%; animation-delay: 8s; animation-duration: 19s; }
+
+        .love-letter-preview {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-2xl);
+            padding: var(--space-6);
+            max-width: 600px;
+            margin: var(--space-8) auto;
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+            position: relative;
+        }
+
+        .love-letter-preview::before {
+            content: '💌';
+            position: absolute;
+            top: -30px;
+            right: -20px;
+            font-size: 4rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .handwriting-style {
+            font-family: 'Brush Script MT', cursive;
+            font-size: var(--text-2xl);
+            color: var(--valentine-dark);
+            text-align: center;
+            margin: var(--space-4) 0;
+        }
+
+        .feature-heart {
+            background: linear-gradient(135deg, var(--valentine-light), var(--white));
+            border: 2px solid var(--valentine-pink);
+            transition: all var(--transition-base);
+        }
+
+        .feature-heart:hover {
+            border-color: var(--valentine-red);
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .heart-icon {
+            font-size: 3rem;
+            margin-bottom: var(--space-3);
+            display: block;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            10%, 30% { transform: scale(0.9); }
+            20%, 40% { transform: scale(1.1); }
+        }
+
+        .gradient-text-valentine {
+            background: linear-gradient(135deg, var(--valentine-red), var(--valentine-pink), var(--gemini-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-4);
+            margin: var(--space-8) 0;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: var(--space-4);
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .stat-number {
+            font-size: var(--text-4xl);
+            font-weight: var(--weight-bold);
+            color: var(--valentine-red);
+            display: block;
+            margin-bottom: var(--space-2);
+        }
+
+        .love-quote {
+            font-style: italic;
+            font-size: var(--text-xl);
+            color: var(--gray-700);
+            text-align: center;
+            padding: var(--space-6);
+            border-left: 4px solid var(--valentine-pink);
+            background: var(--valentine-light);
+            border-radius: var(--radius-lg);
+            margin: var(--space-6) 0;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 640px) {
+            .floating-heart {
+                display: none;
+            }
+
+            .love-letter-preview {
+                padding: var(--space-4);
+                margin: var(--space-4) auto;
+            }
+        }
+    </style>
+
+<!-- Google Analytics 4 - Performance Monitoring -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXXXXXXXXX', {
+    'send_page_view': true,
+    'page_path': window.location.pathname,
+    'page_title': document.title,
+    'custom_map': {
+      'dimension1': 'page_variant',
+      'dimension2': 'user_segment',
+      'dimension3': 'scroll_depth'
+    }
+  });
+
+  // CTA Click Tracking
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.cta-button, .cta, [data-cta]').forEach(button => {
+      button.addEventListener('click', function() {
+        gtag('event', 'cta_click', {
+          'cta_location': this.dataset.location || this.className,
+          'cta_text': this.textContent.trim(),
+          'page_variant': document.body.dataset.variant || 'control'
+        });
+      });
+    });
+
+    // Scroll Depth Tracking
+    let scrollDepths = [25, 50, 75, 90, 100];
+    let triggeredDepths = new Set();
+
+    window.addEventListener('scroll', function() {
+      const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+
+      scrollDepths.forEach(depth => {
+        if (scrollPercent >= depth && !triggeredDepths.has(depth)) {
+          triggeredDepths.add(depth);
+          gtag('event', 'scroll_depth', {
+            'scroll_percentage': depth,
+            'page_variant': document.body.dataset.variant || 'control'
+          });
+        }
+      });
+    });
+
+    // Time on Page Tracking
+    let startTime = Date.now();
+    window.addEventListener('beforeunload', function() {
+      const timeSpent = Math.round((Date.now() - startTime) / 1000);
+      gtag('event', 'time_on_page', {
+        'time_seconds': timeSpent,
+        'page_variant': document.body.dataset.variant || 'control'
+      });
+    });
+  });
+</script>
+
+
+<!-- Core Web Vitals Tracking -->
+<script type="module">
+  import {onCLS, onFID, onLCP, onFCP, onTTFB, onINP} from 'https://unpkg.com/web-vitals@3?module';
+
+  function sendToAnalytics({name, value, id, rating}) {
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'web_vitals', {
+        'metric_name': name,
+        'metric_value': Math.round(value),
+        'metric_id': id,
+        'metric_rating': rating,
+        'page_variant': document.body.dataset.variant || 'control'
+      });
+    }
+
+    // Log to console in development
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+      console.log(`[Web Vital] ${name}:`, {
+        value: Math.round(value) + (name === 'CLS' ? '' : 'ms'),
+        rating: rating,
+        id: id
+      });
+    }
+  }
+
+  onCLS(sendToAnalytics);
+  onFID(sendToAnalytics);
+  onLCP(sendToAnalytics);
+  onFCP(sendToAnalytics);
+  onTTFB(sendToAnalytics);
+  onINP(sendToAnalytics);
+</script>
+
+</head>
+<body>
+    <!-- Skip to main content link for keyboard users -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" style="font-weight: 600; font-size: 1.125rem; color: var(--gray-900);" aria-label="Gemini Home">Gemini</a>
+                <nav role="navigation" aria-label="Primary navigation">
+                    <a href="#features" style="margin-right: 2rem; color: var(--gray-700);">Features</a>
+                    <a href="https://gemini.google.com" class="btn btn-primary btn-small" aria-label="Try Gemini AI">Try Gemini</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+    <!-- Hero Section -->
+    <section class="hero hero-valentine" aria-labelledby="hero-heading">
+        <!-- Floating Hearts Background - Decorative -->
+        <div class="floating-heart heart-1" aria-hidden="true">❤️</div>
+        <div class="floating-heart heart-2" aria-hidden="true">💕</div>
+        <div class="floating-heart heart-3" aria-hidden="true">💖</div>
+        <div class="floating-heart heart-4" aria-hidden="true">💗</div>
+        <div class="floating-heart heart-5" aria-hidden="true">💓</div>
+        <div class="floating-heart heart-6" aria-hidden="true">💝</div>
+
+        <div class="container">
+            <div class="hero-content" data-animate="fade-in">
+                <div class="badge badge-primary mb-4" role="status">Valentine's Day Special</div>
+                <h1 id="hero-heading" class="gradient-text-valentine mb-4">Write Love Letters<br>That Touch Hearts</h1>
+                <p class="text-xl text-secondary mb-8" style="max-width: 700px; margin-left: auto; margin-right: auto;">
+                    Whether it's your first date or your 50th anniversary, Gemini helps you find the perfect words to express what matters most.
+                </p>
+                <div class="flex gap-4 justify-center mb-8">
+                    <a href="https://gemini.google.com" class="btn btn-primary btn-large" aria-label="Start writing love letters with Gemini">Start Writing Love</a>
+                    <a href="#examples" class="btn btn-secondary btn-large" aria-label="View example love letters">See Examples</a>
+                </div>
+
+                <!-- Love Letter Preview -->
+                <div class="love-letter-preview" data-animate="scale-in" data-delay="300" role="article" aria-label="Example love letter written with Gemini">
+                    <p class="handwriting-style" aria-label="Letter salutation">My Dearest,</p>
+                    <p style="color: var(--gray-700);">
+                        Every moment with you feels like coming home. You've taught me that love isn't just a feeling—it's a choice we make every single day. From our morning coffee rituals to late-night conversations about everything and nothing, you make the ordinary extraordinary.
+                    </p>
+                    <p style="text-align: right; margin-top: var(--space-4); font-style: italic;">
+                        Forever yours ❤️
+                    </p>
+                </div>
+
+                <p class="text-sm text-secondary mt-4">
+                    ✨ Written with Gemini in 60 seconds
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section bg-gray-50" aria-labelledby="stats-heading">
+        <div class="container">
+            <h2 id="stats-heading" class="sr-only">Impact Statistics</h2>
+            <div class="stats-container" data-animate="fade-in" role="list">
+                <div class="stat-card" role="listitem">
+                    <span class="stat-number" aria-label="2 million plus">2M+</span>
+                    <p class="text-secondary">Love letters written</p>
+                </div>
+                <div class="stat-card" role="listitem">
+                    <span class="stat-number" aria-label="98 percent">98%</span>
+                    <p class="text-secondary">Said "I love you" back</p>
+                </div>
+                <div class="stat-card" role="listitem">
+                    <span class="stat-number" aria-label="4.9 stars">4.9★</span>
+                    <p class="text-secondary">Romance rating</p>
+                </div>
+                <div class="stat-card" role="listitem">
+                    <span class="stat-number" aria-label="100 thousand plus">100K+</span>
+                    <p class="text-secondary">Happy couples</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section" aria-labelledby="features-heading">
+        <div class="container container-narrow">
+            <h2 id="features-heading" class="text-center mb-4" data-animate="fade-in">Express Love in Your Voice</h2>
+            <p class="text-xl text-secondary text-center mb-12" data-animate="fade-in" data-delay="100">
+                Gemini doesn't write generic messages—it helps you express your unique love story.
+            </p>
+
+            <div class="grid grid-3 gap-6" role="list">
+                <article class="card feature-heart" data-animate="slide-in-up" data-delay="0" role="listitem">
+                    <span class="heart-icon" aria-hidden="true">💕</span>
+                    <h3 class="text-xl mb-3">Your Voice, Amplified</h3>
+                    <p class="text-secondary">
+                        Share your memories, inside jokes, and feelings. Gemini captures your authentic voice and helps you express it beautifully.
+                    </p>
+                </article>
+
+                <article class="card feature-heart" data-animate="slide-in-up" data-delay="100" role="listitem">
+                    <span class="heart-icon" aria-hidden="true">💌</span>
+                    <h3 class="text-xl mb-3">Perfect Tone & Timing</h3>
+                    <p class="text-secondary">
+                        Whether playful, deeply romantic, or heartfelt and sincere—Gemini matches the perfect tone to your relationship.
+                    </p>
+                </article>
+
+                <article class="card feature-heart" data-animate="slide-in-up" data-delay="200" role="listitem">
+                    <span class="heart-icon" aria-hidden="true">💝</span>
+                    <h3 class="text-xl mb-3">Multilingual Romance</h3>
+                    <p class="text-secondary">
+                        Write in any language or mix them together. Express love in their mother tongue or create beautiful bilingual messages.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Examples Section -->
+    <section id="examples" class="section bg-gray-50" aria-labelledby="examples-heading">
+        <div class="container container-narrow">
+            <h2 id="examples-heading" class="text-center mb-12" data-animate="fade-in">Real Love, Real Words</h2>
+
+            <blockquote class="love-quote" data-animate="fade-in" data-delay="100" role="complementary">
+                "Gemini helped me write the perfect anniversary card when words failed me. My wife cried happy tears—it captured everything I felt but couldn't express."
+                <footer role="contentinfo" style="margin-top: var(--space-3); font-weight: 600; font-style: normal; color: var(--valentine-dark);">
+                    — James, celebrating 25 years
+                </footer>
+            </blockquote>
+
+            <div class="grid grid-2 gap-6 mt-8" role="list" aria-label="Love letter examples">
+                <article class="card" data-animate="fade-in" data-delay="200" role="listitem">
+                    <h3 class="mb-3" style="color: var(--valentine-red);">First Date Follow-Up</h3>
+                    <p class="text-secondary" style="font-style: italic; line-height: 1.8;">
+                        "Last night was magic—not the fairy tale kind, but the real kind where you laugh so hard your stomach hurts and time disappears. Coffee again this weekend? My treat, you pick the place."
+                    </p>
+                    <p class="text-xs text-secondary mt-3"><em>Casual, confident, interested</em></p>
+                </article>
+
+                <article class="card" data-animate="fade-in" data-delay="300" role="listitem">
+                    <h3 class="mb-3" style="color: var(--valentine-red);">Apology & Reconciliation</h3>
+                    <p class="text-secondary" style="font-style: italic; line-height: 1.8;">
+                        "I was wrong, and I'm sorry. Not because I want to win an argument, but because I hurt someone I love. You deserve better than what I said, and I'm committed to being better."
+                    </p>
+                    <p class="text-xs text-secondary mt-3"><em>Sincere, accountable, loving</em></p>
+                </article>
+
+                <article class="card" data-animate="fade-in" data-delay="400" role="listitem">
+                    <h3 class="mb-3" style="color: var(--valentine-red);">Long Distance Love</h3>
+                    <p class="text-secondary" style="font-style: italic; line-height: 1.8;">
+                        "268 days until I hold you again—yes, I'm counting. Until then, I'm falling asleep to your voice, waking up to your texts, and loving you across every mile between us."
+                    </p>
+                    <p class="text-xs text-secondary mt-3"><em>Romantic, hopeful, devoted</em></p>
+                </article>
+
+                <article class="card" data-animate="fade-in" data-delay="500" role="listitem">
+                    <h3 class="mb-3" style="color: var(--valentine-red);">Marriage Proposal</h3>
+                    <p class="text-secondary" style="font-style: italic; line-height: 1.8;">
+                        "You make ordinary days extraordinary. You turn my plans into adventures. You've shown me what home really means. Will you marry me and let me spend the rest of my life making you as happy as you make me?"
+                    </p>
+                    <p class="text-xs text-secondary mt-3"><em>Heartfelt, personal, life-changing</em></p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" aria-labelledby="cta-heading">
+        <div class="container container-narrow text-center">
+            <div data-animate="fade-in">
+                <h2 id="cta-heading" class="mb-4">This Valentine's Day,<br>Say It Better with Gemini</h2>
+                <p class="text-xl text-secondary mb-8">
+                    Whether it's a card, text, letter, or handwritten note—find the perfect words to express your love.
+                </p>
+                <a href="https://gemini.google.com" class="btn btn-primary btn-large" aria-label="Start writing love letters with Gemini">Start Writing ❤️</a>
+                <p class="text-sm text-secondary mt-4">
+                    Free to use • No credit card required • Your words, elevated
+                </p>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo" style="background: var(--gray-50); padding: var(--space-6) 0; text-align: center; border-top: 1px solid var(--color-border);">
+        <div class="container">
+            <p class="text-sm text-secondary">
+                Made with <span aria-label="love">❤️</span> by Gemini | <a href="https://ai.google/responsibility/principles/">AI Principles</a> | <a href="https://policies.google.com/privacy">Privacy</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/animations.js"></script>
+
+<!-- User Feedback Widget -->
+<div id="feedback-widget" class="feedback-widget" style="display: none;">
+  <div class="feedback-prompt">Was this page helpful?</div>
+  <div class="feedback-buttons">
+    <button class="feedback-btn" data-rating="yes" aria-label="Yes, this page was helpful">
+      <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+        <path d="M10 1l2.5 5.5L18 7.5l-4 4 1 6-5-2.5-5 2.5 1-6-4-4 5.5-1z" fill="currentColor"/>
+      </svg>
+      Yes
+    </button>
+    <button class="feedback-btn" data-rating="no" aria-label="No, this page was not helpful">
+      <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+        <circle cx="10" cy="10" r="8" stroke="currentColor" fill="none" stroke-width="2"/>
+        <line x1="6" y1="6" x2="14" y2="14" stroke="currentColor" stroke-width="2"/>
+        <line x1="14" y1="6" x2="6" y2="14" stroke="currentColor" stroke-width="2"/>
+      </svg>
+      No
+    </button>
+  </div>
+  <div class="feedback-followup" style="display: none;">
+    <textarea placeholder="Tell us more (optional)" maxlength="500" aria-label="Additional feedback"></textarea>
+    <button class="feedback-submit">Send</button>
+    <button class="feedback-skip">Skip</button>
+  </div>
+  <div class="feedback-thanks" style="display: none;">
+    Thank you for your feedback! 🙏
+  </div>
+</div>
+
+<style>
+.feedback-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  padding: 16px 20px;
+  font-size: 14px;
+  max-width: 300px;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+.feedback-prompt {
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.feedback-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.feedback-btn {
+  flex: 1;
+  padding: 8px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+  transition: all 0.2s;
+  font-size: 14px;
+  color: #1a1a1a;
+}
+
+.feedback-btn:hover {
+  background: #f5f5f7;
+  border-color: #1a73e8;
+}
+
+.feedback-btn:focus {
+  outline: 2px solid #1a73e8;
+  outline-offset: 2px;
+}
+
+.feedback-followup textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin: 12px 0 8px;
+  font-family: inherit;
+  font-size: 13px;
+  resize: vertical;
+  min-height: 60px;
+}
+
+.feedback-followup textarea:focus {
+  outline: 2px solid #1a73e8;
+  border-color: #1a73e8;
+}
+
+.feedback-submit,
+.feedback-skip {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  margin-right: 8px;
+  transition: all 0.2s;
+}
+
+.feedback-submit {
+  background: #1a73e8;
+  color: white;
+}
+
+.feedback-submit:hover {
+  background: #1557b0;
+}
+
+.feedback-skip {
+  background: transparent;
+  color: #666;
+}
+
+.feedback-skip:hover {
+  background: #f5f5f7;
+}
+
+.feedback-thanks {
+  color: #1a73e8;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .feedback-widget {
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+    max-width: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .feedback-widget {
+    transition: none;
+  }
+}
+</style>
+
+<script>
+(function() {
+  // Show widget after 10 seconds on page
+  setTimeout(function() {
+    const widget = document.getElementById('feedback-widget');
+    if (widget && !sessionStorage.getItem('feedback_submitted')) {
+      widget.style.display = 'block';
+    }
+  }, 10000);
+
+  const widget = document.getElementById('feedback-widget');
+  if (!widget) return;
+
+  const buttons = widget.querySelectorAll('.feedback-btn');
+  const followup = widget.querySelector('.feedback-followup');
+  const thanks = widget.querySelector('.feedback-thanks');
+  const submitBtn = widget.querySelector('.feedback-submit');
+  const skipBtn = widget.querySelector('.feedback-skip');
+  const textarea = widget.querySelector('textarea');
+
+  let selectedRating = null;
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', function() {
+      selectedRating = this.dataset.rating;
+
+      // Track initial rating
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'feedback_rating', {
+          'rating': selectedRating,
+          'page_variant': document.body.dataset.variant || 'control',
+          'page_path': window.location.pathname
+        });
+      }
+
+      // Show followup
+      widget.querySelector('.feedback-buttons').style.display = 'none';
+      widget.querySelector('.feedback-prompt').textContent = 'Tell us more:';
+      followup.style.display = 'block';
+      textarea.focus();
+    });
+  });
+
+  submitBtn.addEventListener('click', function() {
+    const comment = textarea.value.trim();
+
+    // Track detailed feedback
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'feedback_comment', {
+        'rating': selectedRating,
+        'has_comment': comment.length > 0,
+        'comment_length': comment.length,
+        'page_variant': document.body.dataset.variant || 'control',
+        'page_path': window.location.pathname
+      });
+    }
+
+    // Log feedback (in production, send to backend)
+    console.log('User Feedback:', {
+      rating: selectedRating,
+      comment: comment,
+      page: window.location.pathname,
+      timestamp: new Date().toISOString()
+    });
+
+    sessionStorage.setItem('feedback_submitted', 'true');
+    showThanks();
+  });
+
+  skipBtn.addEventListener('click', function() {
+    sessionStorage.setItem('feedback_submitted', 'true');
+    showThanks();
+  });
+
+  function showThanks() {
+    followup.style.display = 'none';
+    widget.querySelector('.feedback-prompt').style.display = 'none';
+    thanks.style.display = 'block';
+
+    setTimeout(() => {
+      widget.style.opacity = '0';
+      setTimeout(() => widget.style.display = 'none', 300);
+    }, 2000);
+  }
+})();
+</script>
+
+</body>
+</html>

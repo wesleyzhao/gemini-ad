@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boost Productivity with Gemini - Interactive Demos</title>
+    <meta name="description" content="Experience AI-powered productivity tools. Try task management, research assistant, and code generation demos.">
+    <link rel="preload" href="../../assets/css/shared-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../../assets/css/shared-styles.css"></noscript>
+
+    <style>
+        :root {
+            --primary: #667eea;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --border: #e5e7eb;
+            --bg-light: #f9fafb;
+            --text-dark: #111827;
+            --text-secondary: #6b7280;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: white;
+            color: var(--text-dark);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 20px 60px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.75rem;
+            margin: 0 0 16px 0;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin: 0 auto 30px;
+            max-width: 600px;
+            opacity: 0.95;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.25);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .demo-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .demo-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+        }
+
+        .demo-header {
+            padding: 24px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .demo-header h3 {
+            margin: 0 0 8px 0;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .demo-header p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+
+        .demo-body {
+            padding: 24px;
+            min-height: 320px;
+            background: var(--bg-light);
+        }
+
+        .demo-footer {
+            padding: 20px 24px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.875rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5568d3;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--text-dark);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-light);
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Task Manager Demo */
+        .task-input {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .task-input input {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.875rem;
+        }
+
+        .task-input input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .task-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .task-item {
+            background: white;
+            padding: 14px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+
+        .task-item:hover {
+            border-color: var(--primary);
+            box-shadow: 0 2px 8px rgba(102,126,234,0.1);
+        }
+
+        .task-item.priority-high {
+            border-left: 4px solid var(--danger);
+        }
+
+        .task-item.priority-medium {
+            border-left: 4px solid var(--warning);
+        }
+
+        .task-item.priority-low {
+            border-left: 4px solid var(--success);
+        }
+
+        .task-checkbox {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .task-text {
+            flex: 1;
+            font-size: 0.875rem;
+        }
+
+        .task-priority {
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .priority-high { background: #fee2e2; color: #991b1b; }
+        .priority-medium { background: #fef3c7; color: #92400e; }
+        .priority-low { background: #d1fae5; color: #065f46; }
+
+        .ai-badge {
+            background: linear-gradient(135deg, var(--primary), #764ba2);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-size: 0.65rem;
+            font-weight: 700;
+        }
+
+        /* Research Assistant Demo */
+        .search-bar {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .search-bar input {
+            flex: 1;
+            padding: 14px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .search-bar input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .research-results {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .result-item {
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .result-item:last-child {
+            border-bottom: none;
+        }
+
+        .result-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 6px;
+            font-size: 1rem;
+        }
+
+        .result-snippet {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+
+        .result-meta {
+            display: flex;
+            gap: 12px;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .citation-badge {
+            background: #e0e7ff;
+            color: #3730a3;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+
+        /* Code Generation Demo */
+        .code-controls {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+
+        .lang-select {
+            padding: 10px 14px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.875rem;
+            background: white;
+            cursor: pointer;
+        }
+
+        .lang-select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .code-editor {
+            background: #1e1e1e;
+            border-radius: 8px;
+            padding: 16px;
+            font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+            font-size: 0.875rem;
+            color: #d4d4d4;
+            min-height: 200px;
+            max-height: 300px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .code-editor .keyword { color: #569cd6; }
+        .code-editor .string { color: #ce9178; }
+        .code-editor .comment { color: #6a9955; }
+        .code-editor .function { color: #dcdcaa; }
+        .code-editor .number { color: #b5cea8; }
+
+        .code-prompt {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.875rem;
+            margin-bottom: 12px;
+        }
+
+        .code-prompt:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .progress-indicator {
+            width: 100%;
+            height: 3px;
+            background: var(--border);
+            border-radius: 2px;
+            overflow: hidden;
+            margin: 12px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), #764ba2);
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .status-message {
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            margin-top: 12px;
+            display: none;
+        }
+
+        .status-success {
+            background: #d1fae5;
+            color: #065f46;
+            border: 1px solid #6ee7b7;
+        }
+
+        .status-info {
+            background: #dbeafe;
+            color: #1e40af;
+            border: 1px solid #93c5fd;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin: 0 0 16px 0;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 16px 32px;
+            background: white;
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.125rem;
+            transition: all 0.3s;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .demo-grid { grid-template-columns: 1fr; gap: 24px; }
+            .demo-footer { flex-direction: column; }
+            .btn { width: 100%; justify-content: center; }
+            .cta-section h2 { font-size: 1.75rem; }
+        }
+
+        @media (max-width: 480px) {
+            .hero { padding: 80px 16px 40px; }
+            .container { padding: 40px 16px; }
+            .code-controls { flex-direction: column; }
+            .lang-select { width: 100%; }
+        }
+
+        /* Accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            border: 0;
+        }
+
+        *:focus-visible {
+            outline: 3px solid var(--primary);
+            outline-offset: 2px;
+        }
+
+        .loading-spinner {
+            border: 3px solid var(--border);
+            border-top: 3px solid var(--primary);
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body data-test="interactive-demos">
+    <div class="hero">
+        <div class="badge">Try It Live</div>
+        <h1>AI-Powered Productivity</h1>
+        <p>Experience how Gemini transforms your workflow with intelligent automation</p>
+    </div>
+
+    <div class="container">
+        <div class="demo-grid">
+            <!-- Task Manager Demo -->
+            <div class="demo-card">
+                <div class="demo-header">
+                    <h3>AI Task Prioritization</h3>
+                    <p>Smart task management that learns your patterns</p>
+                </div>
+                <div class="demo-body">
+                    <div class="task-input">
+                        <input type="text" id="task-input" placeholder="Add a new task..." aria-label="New task input">
+                        <button class="btn btn-primary" id="add-task" aria-label="Add task">Add</button>
+                    </div>
+                    <ul class="task-list" id="task-list" role="list"></ul>
+                    <div class="status-message status-info" id="task-status"></div>
+                </div>
+                <div class="demo-footer">
+                    <button class="btn btn-primary" id="prioritize-tasks" aria-label="Auto-prioritize tasks">
+                        <span>AI Prioritize</span>
+                    </button>
+                    <button class="btn btn-secondary" id="reset-tasks" aria-label="Reset task demo">Reset</button>
+                </div>
+            </div>
+
+            <!-- Research Assistant Demo -->
+            <div class="demo-card">
+                <div class="demo-header">
+                    <h3>Research with Citations</h3>
+                    <p>AI-powered research with verified sources</p>
+                </div>
+                <div class="demo-body">
+                    <div class="search-bar">
+                        <input type="text" id="search-input" placeholder="What would you like to research?" aria-label="Research query input">
+                        <button class="btn btn-primary" id="search-btn" aria-label="Search">
+                            <span>Search</span>
+                        </button>
+                    </div>
+                    <div class="progress-indicator" id="research-progress" style="display: none;">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <div class="research-results" id="research-results"></div>
+                    <div class="status-message status-success" id="research-status"></div>
+                </div>
+                <div class="demo-footer">
+                    <button class="btn btn-secondary" id="reset-research" aria-label="Reset research demo">Reset</button>
+                </div>
+            </div>
+
+            <!-- Code Generation Demo -->
+            <div class="demo-card">
+                <div class="demo-header">
+                    <h3>AI Code Generator</h3>
+                    <p>Generate code in any language with natural language</p>
+                </div>
+                <div class="demo-body">
+                    <div class="code-controls">
+                        <select class="lang-select" id="lang-select" aria-label="Programming language">
+                            <option value="javascript">JavaScript</option>
+                            <option value="python">Python</option>
+                            <option value="typescript">TypeScript</option>
+                            <option value="go">Go</option>
+                            <option value="rust">Rust</option>
+                        </select>
+                    </div>
+                    <input type="text" class="code-prompt" id="code-prompt" placeholder="Describe what you want to build..." aria-label="Code description">
+                    <div class="progress-indicator" id="code-progress" style="display: none;">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <div class="code-editor" id="code-output" role="region" aria-label="Generated code">
+                        <span class="comment">// Click "Generate Code" to see AI in action</span>
+                    </div>
+                    <div class="status-message status-success" id="code-status"></div>
+                </div>
+                <div class="demo-footer">
+                    <button class="btn btn-primary" id="generate-code" aria-label="Generate code">
+                        Generate Code
+                    </button>
+                    <button class="btn btn-secondary" id="reset-code" aria-label="Reset code demo">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta-section">
+        <h2>Ready to 10x your productivity?</h2>
+        <p style="margin: 0 0 30px 0; font-size: 1.125rem; opacity: 0.95;">Join thousands of professionals saving 20+ hours per week</p>
+        <a href="https://gemini.google.com" class="cta-btn">Start Free Trial</a>
+    </div>
+
+    <script>
+        // State management
+        const demoState = {
+            tasks: { completed: false, count: 0 },
+            research: { completed: false, count: 0 },
+            code: { completed: false, count: 0 }
+        };
+
+        function loadState() {
+            try {
+                const saved = localStorage.getItem('gemini_productivity_demos');
+                if (saved) Object.assign(demoState, JSON.parse(saved));
+            } catch (e) {}
+        }
+
+        function saveState() {
+            try {
+                localStorage.setItem('gemini_productivity_demos', JSON.stringify(demoState));
+            } catch (e) {}
+        }
+
+        function trackEvent(event, data = {}) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', event, { event_category: 'Productivity Demo', ...data });
+            }
+            console.log('Demo Event:', event, data);
+        }
+
+        loadState();
+
+        // Task Manager Demo
+        const taskInput = document.getElementById('task-input');
+        const taskList = document.getElementById('task-list');
+        const taskStatus = document.getElementById('task-status');
+
+        let tasks = [
+            { text: 'Review quarterly reports', priority: null, completed: false },
+            { text: 'Schedule team meeting', priority: null, completed: false },
+            { text: 'Update project documentation', priority: null, completed: false }
+        ];
+
+        function renderTasks() {
+            taskList.innerHTML = tasks.map((task, idx) => `
+                <li class="task-item ${task.priority ? 'priority-' + task.priority : ''}" role="listitem">
+                    <input type="checkbox" class="task-checkbox" data-idx="${idx}" ${task.completed ? 'checked' : ''} aria-label="Task completion checkbox">
+                    <span class="task-text">${task.text}</span>
+                    ${task.priority ? `<span class="task-priority priority-${task.priority}">${task.priority}</span>` : ''}
+                    ${task.priority ? '<span class="ai-badge">AI</span>' : ''}
+                </li>
+            `).join('');
+
+            taskList.querySelectorAll('.task-checkbox').forEach(cb => {
+                cb.addEventListener('change', function() {
+                    tasks[this.dataset.idx].completed = this.checked;
+                    trackEvent('demo_interaction', { demo_type: 'tasks', action: 'complete_task' });
+                });
+            });
+        }
+
+        document.getElementById('add-task').addEventListener('click', () => {
+            const text = taskInput.value.trim();
+            if (text) {
+                tasks.push({ text, priority: null, completed: false });
+                taskInput.value = '';
+                renderTasks();
+                trackEvent('demo_interaction', { demo_type: 'tasks', action: 'add_task' });
+            }
+        });
+
+        taskInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') document.getElementById('add-task').click();
+        });
+
+        document.getElementById('prioritize-tasks').addEventListener('click', () => {
+            trackEvent('demo_start', { demo_type: 'tasks' });
+
+            const priorities = ['high', 'medium', 'low'];
+            tasks.forEach((task, idx) => {
+                setTimeout(() => {
+                    task.priority = priorities[idx % 3];
+                    renderTasks();
+
+                    if (idx === tasks.length - 1) {
+                        taskStatus.textContent = 'Tasks prioritized by AI! High priority items moved to top.';
+                        taskStatus.style.display = 'block';
+                        demoState.tasks.completed = true;
+                        demoState.tasks.count++;
+                        saveState();
+                        trackEvent('demo_complete', { demo_type: 'tasks' });
+                    }
+                }, idx * 300);
+            });
+        });
+
+        document.getElementById('reset-tasks').addEventListener('click', () => {
+            tasks = tasks.map(t => ({ ...t, priority: null, completed: false }));
+            renderTasks();
+            taskStatus.style.display = 'none';
+        });
+
+        renderTasks();
+
+        // Research Assistant Demo
+        const searchInput = document.getElementById('search-input');
+        const searchBtn = document.getElementById('search-btn');
+        const researchResults = document.getElementById('research-results');
+        const researchProgress = document.getElementById('research-progress');
+        const researchStatus = document.getElementById('research-status');
+
+        const mockResults = [
+            {
+                title: 'Latest AI Research Breakthroughs in 2026',
+                snippet: 'Recent advances in artificial intelligence have led to significant improvements in natural language processing, with models now achieving 95% accuracy on complex reasoning tasks.',
+                source: 'Nature AI Research',
+                verified: true
+            },
+            {
+                title: 'Practical Applications of Machine Learning',
+                snippet: 'Machine learning is transforming industries from healthcare to finance, with practical implementations showing 40% efficiency gains in automated decision-making processes.',
+                source: 'MIT Technology Review',
+                verified: true
+            },
+            {
+                title: 'Future of AI Assistants',
+                snippet: 'AI assistants are evolving beyond simple task automation to become collaborative partners in creative and analytical work, fundamentally changing how we approach problem-solving.',
+                source: 'Stanford AI Lab',
+                verified: true
+            }
+        ];
+
+        searchBtn.addEventListener('click', () => {
+            const query = searchInput.value.trim();
+            if (!query) {
+                searchInput.focus();
+                return;
+            }
+
+            trackEvent('demo_start', { demo_type: 'research', query });
+
+            researchResults.innerHTML = '';
+            researchProgress.style.display = 'block';
+            researchStatus.style.display = 'none';
+
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += 10;
+                researchProgress.querySelector('.progress-fill').style.width = progress + '%';
+
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        researchProgress.style.display = 'none';
+                        displayResults();
+                    }, 200);
+                }
+            }, 100);
+        });
+
+        function displayResults() {
+            researchResults.innerHTML = mockResults.map(result => `
+                <div class="result-item">
+                    <div class="result-title">${result.title}</div>
+                    <div class="result-snippet">${result.snippet}</div>
+                    <div class="result-meta">
+                        <span class="citation-badge">Cited</span>
+                        <span>${result.source}</span>
+                        ${result.verified ? '<span>✓ Verified</span>' : ''}
+                    </div>
+                </div>
+            `).join('');
+
+            researchStatus.textContent = 'Research complete! All sources fact-checked and cited.';
+            researchStatus.style.display = 'block';
+            demoState.research.completed = true;
+            demoState.research.count++;
+            saveState();
+            trackEvent('demo_complete', { demo_type: 'research' });
+        }
+
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') searchBtn.click();
+        });
+
+        document.getElementById('reset-research').addEventListener('click', () => {
+            searchInput.value = '';
+            researchResults.innerHTML = '<p style="text-align: center; color: var(--text-secondary); padding: 40px;">Enter a query to start researching</p>';
+            researchStatus.style.display = 'none';
+        });
+
+        researchResults.innerHTML = '<p style="text-align: center; color: var(--text-secondary); padding: 40px;">Enter a query to start researching</p>';
+
+        // Code Generation Demo
+        const langSelect = document.getElementById('lang-select');
+        const codePrompt = document.getElementById('code-prompt');
+        const codeOutput = document.getElementById('code-output');
+        const codeProgress = document.getElementById('code-progress');
+        const codeStatus = document.getElementById('code-status');
+
+        const codeTemplates = {
+            javascript: `<span class="keyword">function</span> <span class="function">fetchUserData</span>(<span class="keyword">userId</span>) {
+  <span class="keyword">return</span> <span class="keyword">fetch</span>(<span class="string">\`/api/users/\${userId}\`</span>)
+    .<span class="function">then</span>(<span class="keyword">response</span> => response.<span class="function">json</span>())
+    .<span class="function">then</span>(<span class="keyword">data</span> => {
+      <span class="comment">// Process user data</span>
+      <span class="keyword">console</span>.<span class="function">log</span>(<span class="string">'User loaded:'</span>, data);
+      <span class="keyword">return</span> data;
+    })
+    .<span class="function">catch</span>(<span class="keyword">error</span> => {
+      <span class="keyword">console</span>.<span class="function">error</span>(<span class="string">'Error:'</span>, error);
+    });
+}`,
+            python: `<span class="keyword">def</span> <span class="function">analyze_data</span>(dataset):
+    <span class="string">"""Analyze dataset and return insights"""</span>
+    <span class="keyword">import</span> pandas <span class="keyword">as</span> pd
+
+    df = pd.<span class="function">DataFrame</span>(dataset)
+
+    <span class="comment"># Calculate statistics</span>
+    stats = {
+        <span class="string">'mean'</span>: df.<span class="function">mean</span>(),
+        <span class="string">'median'</span>: df.<span class="function">median</span>(),
+        <span class="string">'std'</span>: df.<span class="function">std</span>()
+    }
+
+    <span class="keyword">return</span> stats`,
+            typescript: `<span class="keyword">interface</span> User {
+  id: <span class="keyword">number</span>;
+  name: <span class="keyword">string</span>;
+  email: <span class="keyword">string</span>;
+}
+
+<span class="keyword">async function</span> <span class="function">getUser</span>(id: <span class="keyword">number</span>): Promise&lt;User&gt; {
+  <span class="keyword">const</span> response = <span class="keyword">await</span> <span class="function">fetch</span>(<span class="string">\`/api/users/\${id}\`</span>);
+  <span class="keyword">const</span> data = <span class="keyword">await</span> response.<span class="function">json</span>();
+  <span class="keyword">return</span> data <span class="keyword">as</span> User;
+}`,
+            go: `<span class="keyword">package</span> main
+
+<span class="keyword">import</span> (
+    <span class="string">"fmt"</span>
+    <span class="string">"net/http"</span>
+)
+
+<span class="keyword">func</span> <span class="function">handleRequest</span>(w http.ResponseWriter, r *http.Request) {
+    <span class="comment">// Handle HTTP request</span>
+    fmt.<span class="function">Fprintf</span>(w, <span class="string">"Hello, %s!"</span>, r.URL.Path[<span class="number">1</span>:])
+}
+
+<span class="keyword">func</span> <span class="function">main</span>() {
+    http.<span class="function">HandleFunc</span>(<span class="string">"/"</span>, handleRequest)
+    http.<span class="function">ListenAndServe</span>(<span class="string">":8080"</span>, <span class="keyword">nil</span>)
+}`,
+            rust: `<span class="keyword">fn</span> <span class="function">calculate_fibonacci</span>(n: <span class="keyword">u32</span>) -> <span class="keyword">u64</span> {
+    <span class="keyword">match</span> n {
+        <span class="number">0</span> => <span class="number">0</span>,
+        <span class="number">1</span> => <span class="number">1</span>,
+        _ => <span class="function">calculate_fibonacci</span>(n - <span class="number">1</span>) + <span class="function">calculate_fibonacci</span>(n - <span class="number">2</span>)
+    }
+}
+
+<span class="keyword">fn</span> <span class="function">main</span>() {
+    <span class="keyword">let</span> result = <span class="function">calculate_fibonacci</span>(<span class="number">10</span>);
+    <span class="function">println!</span>(<span class="string">"Result: {}"</span>, result);
+}`
+        };
+
+        document.getElementById('generate-code').addEventListener('click', () => {
+            const prompt = codePrompt.value.trim();
+            const lang = langSelect.value;
+
+            if (!prompt) {
+                codePrompt.focus();
+                return;
+            }
+
+            trackEvent('demo_start', { demo_type: 'code', language: lang });
+
+            codeProgress.style.display = 'block';
+            codeStatus.style.display = 'none';
+
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += 5;
+                codeProgress.querySelector('.progress-fill').style.width = progress + '%';
+
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        codeProgress.style.display = 'none';
+                        codeOutput.innerHTML = codeTemplates[lang];
+                        codeStatus.textContent = `Code generated in ${lang}! Ready to use.`;
+                        codeStatus.style.display = 'block';
+                        demoState.code.completed = true;
+                        demoState.code.count++;
+                        saveState();
+                        trackEvent('demo_complete', { demo_type: 'code', language: lang });
+                    }, 200);
+                }
+            }, 40);
+        });
+
+        codePrompt.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') document.getElementById('generate-code').click();
+        });
+
+        document.getElementById('reset-code').addEventListener('click', () => {
+            codePrompt.value = '';
+            codeOutput.innerHTML = '<span class="comment">// Click "Generate Code" to see AI in action</span>';
+            codeStatus.style.display = 'none';
+        });
+
+        // Track page view
+        trackEvent('page_view', { page: 'productivity_demos' });
+
+        // Track session time
+        let sessionStart = Date.now();
+        window.addEventListener('beforeunload', () => {
+            const duration = Math.round((Date.now() - sessionStart) / 1000);
+            trackEvent('interaction_time', { seconds: duration });
+        });
+    </script>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+{
+  "timestamp": "2026-02-01T13:33:26.965Z",
+  "refinements": [
+    {
+      "name": "Call to Action",
+      "originalImpact": "12.5 points",
+      "originalStatus": "proven-excellent",
+      "originalConfidence": "High",
+      "currentImpact": 12.5,
+      "effectivenessLevel": "excellent",
+      "effectivenessScore": 5,
+      "overallScore": 15,
+      "recommendation": "🚀 Highly effective pattern. Apply to all remaining pages immediately.",
+      "action": "promote",
+      "newStatus": "proven-excellent",
+      "priority": "critical",
+      "rationale": "Consistently high impact - prioritize for scaling"
+    },
+    {
+      "name": "Shorter hero headlines (max 8 words)",
+      "originalImpact": "Average 0.0 point improvement",
+      "originalStatus": "under-review",
+      "originalConfidence": "Medium",
+      "currentImpact": 0,
+      "effectivenessLevel": "low",
+      "effectivenessScore": 2,
+      "overallScore": 4,
+      "recommendation": "⚠️  Low impact. Consider revising or retiring pattern.",
+      "action": "retire-or-revise",
+      "newStatus": "under-review",
+      "priority": "low",
+      "rationale": "Low impact - consider retiring or significant revision"
+    },
+    {
+      "name": "Action-oriented CTA text",
+      "originalImpact": "Average 0.0 point improvement",
+      "originalStatus": "under-review",
+      "originalConfidence": "Medium",
+      "currentImpact": 0,
+      "effectivenessLevel": "low",
+      "effectivenessScore": 2,
+      "overallScore": 4,
+      "recommendation": "⚠️  Low impact. Consider revising or retiring pattern.",
+      "action": "retire-or-revise",
+      "newStatus": "under-review",
+      "priority": "low",
+      "rationale": "Low impact - consider retiring or significant revision"
+    },
+    {
+      "name": "Trust signals above the fold",
+      "originalImpact": "Average 0.0 point improvement",
+      "originalStatus": "under-review",
+      "originalConfidence": "Medium",
+      "currentImpact": 0,
+      "effectivenessLevel": "low",
+      "effectivenessScore": 2,
+      "overallScore": 4,
+      "recommendation": "⚠️  Low impact. Consider revising or retiring pattern.",
+      "action": "retire-or-revise",
+      "newStatus": "under-review",
+      "priority": "low",
+      "rationale": "Low impact - consider retiring or significant revision"
+    },
+    {
+      "name": "Top Performer Design Elements",
+      "originalImpact": 16,
+      "originalStatus": "candidate",
+      "originalConfidence": "Low",
+      "action": "needs-validation",
+      "rationale": "No effectiveness data available - needs testing"
+    }
+  ],
+  "newPatterns": [
+    {
+      "name": "Call to Action",
+      "type": "proven",
+      "avgImpact": 12.5,
+      "occurrences": 2,
+      "evidence": "12.5 points",
+      "examples": [],
+      "confidence": "High",
+      "recommendation": "Apply to all similar pages",
+      "status": "validated",
+      "addedAt": "2026-02-01T13:33:26.960Z",
+      "priority": "critical",
+      "application": {
+        "targetPages": "Apply to all similar pages",
+        "effort": "Medium",
+        "expectedImpact": "+12.5 points per page"
+      }
+    },
+    {
+      "name": "Top Performer Design Elements",
+      "type": "emerging",
+      "avgImpact": 16,
+      "occurrences": 1,
+      "evidence": "apple-style-variation-b.html improved by 16 points",
+      "examples": [
+        "apple-style-variation-b.html"
+      ],
+      "confidence": "Low",
+      "recommendation": "Analyze and replicate design elements from top performer",
+      "status": "candidate",
+      "addedAt": "2026-02-01T13:33:26.961Z",
+      "priority": "critical",
+      "application": {
+        "targetPages": "Analyze and replicate design elements from top performer",
+        "effort": "High (manual)",
+        "expectedImpact": "+16 points per page"
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "type": "promote-patterns",
+      "priority": "critical",
+      "patterns": [
+        "Call to Action"
+      ],
+      "action": "Apply these excellent patterns to all remaining pages",
+      "expectedImpact": "+12.5 points",
+      "rationale": "Proven patterns with excellent effectiveness scores"
+    },
+    {
+      "type": "test-new-patterns",
+      "priority": "high",
+      "patterns": [
+        "Call to Action",
+        "Top Performer Design Elements"
+      ],
+      "action": "Run pilot tests on 2-3 pages for each pattern",
+      "expectedImpact": "+28.5 points (if validated)",
+      "rationale": "Emerging patterns show strong potential based on current data"
+    },
+    {
+      "type": "retire-patterns",
+      "priority": "low",
+      "patterns": [
+        "Shorter hero headlines (max 8 words)",
+        "Action-oriented CTA text",
+        "Trust signals above the fold"
+      ],
+      "action": "Remove from active pattern library or significantly revise",
+      "rationale": "Low effectiveness - not worth continued investment"
+    }
+  ],
+  "updatedLibrary": {
+    "version": "2.0",
+    "lastUpdated": "2026-02-01T13:33:26.965Z",
+    "patterns": [
+      {
+        "name": "Call to Action",
+        "avgImpact": "12.5 points",
+        "occurrences": 2,
+        "confidence": "High",
+        "recommendation": "Apply to all similar pages",
+        "status": "proven-excellent",
+        "addedAt": "2026-02-01T13:11:36.615Z",
+        "description": "Call to Action improvements showing consistent 12.5 points improvement",
+        "application": {
+          "targetPages": "All similar pages",
+          "effort": "Low (automated)",
+          "priority": "High"
+        },
+        "priority": "critical",
+        "effectiveness": "excellent",
+        "lastReviewed": "2026-02-01T13:33:26.964Z",
+        "refinementAction": "promote"
+      },
+      {
+        "name": "Shorter hero headlines (max 8 words)",
+        "avgImpact": "Average 0.0 point improvement",
+        "confidence": "Medium",
+        "recommendation": "Apply to All pages",
+        "status": "under-review",
+        "addedAt": "2026-02-01T13:11:36.615Z",
+        "description": "Shorter hero headlines (max 8 words)",
+        "application": {
+          "targetPages": "All pages",
+          "effort": "Low to Medium",
+          "priority": "Medium"
+        },
+        "priority": "low",
+        "effectiveness": "low",
+        "lastReviewed": "2026-02-01T13:33:26.964Z",
+        "refinementAction": "retire-or-revise"
+      },
+      {
+        "name": "Action-oriented CTA text",
+        "avgImpact": "Average 0.0 point improvement",
+        "confidence": "Medium",
+        "recommendation": "Apply to All CTAs",
+        "status": "under-review",
+        "addedAt": "2026-02-01T13:11:36.615Z",
+        "description": "Action-oriented CTA text",
+        "application": {
+          "targetPages": "All CTAs",
+          "effort": "Low to Medium",
+          "priority": "Medium"
+        },
+        "priority": "low",
+        "effectiveness": "low",
+        "lastReviewed": "2026-02-01T13:33:26.964Z",
+        "refinementAction": "retire-or-revise"
+      },
+      {
+        "name": "Trust signals above the fold",
+        "avgImpact": "Average 0.0 point improvement",
+        "confidence": "Medium",
+        "recommendation": "Apply to All landing pages",
+        "status": "under-review",
+        "addedAt": "2026-02-01T13:11:36.615Z",
+        "description": "Trust signals above the fold",
+        "application": {
+          "targetPages": "All landing pages",
+          "effort": "Low to Medium",
+          "priority": "Medium"
+        },
+        "priority": "low",
+        "effectiveness": "low",
+        "lastReviewed": "2026-02-01T13:33:26.964Z",
+        "refinementAction": "retire-or-revise"
+      },
+      {
+        "name": "Top Performer Design Elements",
+        "type": "emerging",
+        "avgImpact": 16,
+        "occurrences": 1,
+        "evidence": "apple-style-variation-b.html improved by 16 points",
+        "examples": [
+          "apple-style-variation-b.html"
+        ],
+        "confidence": "Low",
+        "recommendation": "Analyze and replicate design elements from top performer",
+        "status": "candidate",
+        "addedAt": "2026-02-01T13:28:39.502Z",
+        "application": {
+          "targetPages": "Analyze and replicate design elements from top performer",
+          "effort": "High (manual)",
+          "expectedImpact": "+16 points per page"
+        },
+        "lastReviewed": "2026-02-01T13:33:26.964Z",
+        "refinementAction": "needs-validation"
+      }
+    ],
+    "stats": {
+      "totalPatterns": 5,
+      "provenPatterns": 1,
+      "candidatePatterns": 1,
+      "underReviewPatterns": 3,
+      "avgImpact": 5.7,
+      "highPriorityPatterns": 1
+    }
+  },
+  "summary": {
+    "totalPatternsAnalyzed": 5,
+    "patternsRefined": 5,
+    "newPatternsDiscovered": 2,
+    "recommendationsGenerated": 3,
+    "finalLibrarySize": 5,
+    "avgImpact": 5.7,
+    "highPriorityPatterns": 1
+  }
+}

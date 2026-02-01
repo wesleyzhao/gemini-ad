@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gemini Ads - Explore All Landing Pages</title>
+  <meta name="description" content="Browse all Gemini AI landing pages showcasing trust, workspace integration, creativity tools, and premium features. Choose your perfect entry point.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Gemini Ads - Explore All Landing Pages">
+  <meta property="og:description" content="Browse all Gemini AI landing pages showcasing trust, workspace integration, creativity tools, and premium features.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', {
+      'anonymize_ip': true,
+      'cookie_flags': 'SameSite=None;Secure'
+    });
+  </script>
+
+  <!-- Design System -->
+  <link rel="stylesheet" href="assets/css/design-system.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+
+  <style>
+    /* Index-specific styles */
+    body {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: var(--space-xl) var(--space-md);
+    }
+
+    .index-container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .index-header {
+      text-align: center;
+      margin-bottom: var(--space-2xl);
+      color: var(--color-white);
+    }
+
+    .index-header h1 {
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-weight: 900;
+      margin-bottom: var(--space-md);
+      letter-spacing: -0.03em;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .index-header .subtitle {
+      font-size: clamp(1.125rem, 2vw, 1.5rem);
+      font-weight: 400;
+      opacity: 0.95;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Category sections */
+    .category-section {
+      margin-bottom: var(--space-2xl);
+    }
+
+    .category-title {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--color-white);
+      margin-bottom: var(--space-lg);
+      text-align: center;
+      opacity: 0.95;
+    }
+
+    /* Card grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: var(--space-lg);
+      margin-bottom: var(--space-xl);
+    }
+
+    /* Page card */
+    .page-card {
+      background: var(--color-white);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .page-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    .page-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg,
+        var(--color-gemini-blue),
+        var(--color-gemini-red),
+        var(--color-gemini-yellow),
+        var(--color-gemini-green)
+      );
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .page-card:hover::before {
+      opacity: 1;
+    }
+
+    .page-card-content {
+      padding: var(--space-lg);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page-card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: var(--space-md);
+    }
+
+    .page-number {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--color-gemini-blue);
+      background: rgba(66, 133, 244, 0.1);
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    .page-badge {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--color-white);
+      padding: 4px 10px;
+      border-radius: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .badge-core { background: var(--color-gemini-blue); }
+    .badge-featured { background: var(--color-gemini-red); }
+    .badge-seasonal { background: var(--color-gemini-yellow); color: var(--color-gray-900); }
+    .badge-demo { background: var(--color-gray-500); }
+
+    .page-card h2 {
+      font-size: clamp(1.25rem, 2vw, 1.5rem);
+      font-weight: 700;
+      margin-bottom: var(--space-sm);
+      color: var(--color-gray-900);
+      line-height: 1.3;
+    }
+
+    .page-card-description {
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      color: var(--color-gray-700);
+      margin-bottom: var(--space-md);
+      flex: 1;
+    }
+
+    .page-card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+      margin-bottom: var(--space-md);
+    }
+
+    .meta-tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--color-gray-600);
+      background: var(--color-gray-100);
+      padding: 4px 10px;
+      border-radius: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .page-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: var(--space-md);
+      border-top: 1px solid var(--color-gray-200);
+    }
+
+    .page-card-cta {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--color-gemini-blue);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .page-card-cta svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .page-card:hover .page-card-cta svg {
+      transform: translateX(4px);
+    }
+
+    .page-score {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--color-gray-500);
+    }
+
+    /* Footer */
+    .index-footer {
+      text-align: center;
+      padding: var(--space-2xl) 0;
+      color: var(--color-white);
+    }
+
+    .index-footer p {
+      font-size: 0.9375rem;
+      opacity: 0.9;
+      margin-bottom: var(--space-sm);
+    }
+
+    .index-footer a {
+      color: var(--color-white);
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+      transition: opacity 0.3s ease;
+    }
+
+    .index-footer a:hover {
+      opacity: 0.7;
+    }
+
+    /* Stats bar */
+    .stats-bar {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: var(--space-xl);
+      margin-bottom: var(--space-2xl);
+      padding: var(--space-lg);
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      color: var(--color-white);
+      display: block;
+      line-height: 1;
+      margin-bottom: var(--space-xs);
+    }
+
+    .stat-label {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-white);
+      opacity: 0.9;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      body {
+        padding: var(--space-lg) var(--space-sm);
+      }
+
+      .cards-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+      }
+
+      .stats-bar {
+        gap: var(--space-md);
+      }
+    }
+
+    /* Animation */
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .page-card:nth-child(1) { animation-delay: 0.1s; }
+    .page-card:nth-child(2) { animation-delay: 0.15s; }
+    .page-card:nth-child(3) { animation-delay: 0.2s; }
+    .page-card:nth-child(4) { animation-delay: 0.25s; }
+    .page-card:nth-child(5) { animation-delay: 0.3s; }
+  </style>
+</head>
+<body>
+  <div class="index-container">
+    <!-- Header -->
+    <header class="index-header">
+      <h1>Gemini Ads Collection</h1>
+      <p class="subtitle">
+        Explore 18 beautifully crafted landing pages showcasing Gemini's AI capabilities.
+        Each page targets a specific audience with Apple-inspired design and compelling CTAs.
+      </p>
+    </header>
+
+    <!-- Stats -->
+    <div class="stats-bar">
+      <div class="stat-item">
+        <span class="stat-number">18</span>
+        <span class="stat-label">Landing Pages</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">4</span>
+        <span class="stat-label">Target Segments</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">100%</span>
+        <span class="stat-label">WCAG AA Compliant</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">&lt;2s</span>
+        <span class="stat-label">Load Time</span>
+      </div>
+    </div>
+
+    <!-- Core Landing Pages -->
+    <section class="category-section">
+      <h2 class="category-title">Core Landing Pages</h2>
+      <div class="cards-grid">
+
+        <!-- 1. Think Different -->
+        <a href="pages/think-different.html" class="page-card fade-in-up">
+          <div class="page-card-content">
+            <div class="page-card-header">
+              <span class="page-number">#1</span>
+              <span class="page-badge badge-core">Core</span>
+            </div>
+            <h2>Think Different</h2>
+            <p class="page-card-description">
+              Apple-minimalist aesthetic with floating gem icon. Pure simplicity and premium brand positioning.
+            </p>
+            <div class="page-card-meta">
+              <span class="meta-tag">Apple Aesthetic</span>
+              <span class="meta-tag">Minimalist</span>
+            </div>
+            <div class="page-card-footer">
+              <span class="page-card-cta">
+                View Page
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 2. Apple-Inspired -->
+        <a href="pages/apple-inspired.html" class="page-card fade-in-up">
+          <div class="page-card-content">
+            <div class="page-card-header">
+              <span class="page-number">#2</span>
+              <span class="page-badge badge-core">Core</span>
+            </div>
+            <h2>Apple-Inspired Design</h2>
+            <p class="page-card-description">
+              Ultra-minimalist Apple.com homage with pure black background, rotating Gemini gem, and maximum whitespace.
+            </p>
+            <div class="page-card-meta">
+              <span class="meta-tag">Premium</span>
+              <span class="meta-tag">Minimalist</span>
+            </div>
+            <div class="page-card-footer">
+              <span class="page-card-cta">
+                View Page
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 3. Trust & Citations -->
+        <a href="pages/trust-citations.html" class="page-card fade-in-up">
+          <div class="page-card-content">
+            <div class="page-card-header">
+              <span class="page-number">#3</span>
+              <span class="page-badge badge-core">Core</span>
+            </div>
+            <h2>Trust & Citations</h2>
+            <p class="page-card-description">
+              Split-screen comparison of AI hallucination vs. Gemini truth with citations. Academic aesthetic with verifiable responses.
+            </p>
+            <div class="page-card-meta">
+              <span class="meta-tag">Trust</span>
+              <span class="meta-tag">Research</span>
+            </div>
+            <div class="page-card-footer">
+              <span class="page-card-cta">
+                View Page
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 4. Truth Matters -->
+        <a href="pages/truth-matters.html" class="page-card fade-in-up">
+          <div class="page-card-content">
+            <div class="page-card-header">
+              <span class="page-number">#4</span>
+              <span class="page-badge badge-core">Core</span>
+            </div>
+            <h2>Truth Matters</h2>
+            <p class="page-card-description">
+              Fact-checking emphasis with source verification. Built for researchers and professionals who need accuracy.
+            </p>
+            <div class="page-card-meta">
+              <span class="meta-tag">Accuracy</span>
+              <span class="meta-tag">Verification</span>
+            </div>
+            <div class="page-card-footer">
+              <span class="page-card-cta">
+                View Page
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 5. Workspace Integration -->
+        <a href="pages/workspace-integration.html" class="page-card fade-in-up">
+          <div class="page-card-content">
+            <div class="page-card-header">
+              <span class="page-number">#5</span>
+              <span class="page-badge badge-featured">Featured</span>
+            </div>
+            <h2>Workspace Integration</h2>
+            <p class="page-card-description">
+              Mathematical elegance showcasing infinite possibilities when Gemini integrates with Google Workspace.
+            </p>
+            <div class="page-card-meta">
+              <span class="meta-tag">Workspace</span>
+              <span class="meta-tag">Business</span>
+            </div>
+            <div class="page-card-footer">
+              <span class="page-card-cta">
+                View Page
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 6. Workspace Infinity -->
+        <a href="pages/workspace-infinity.html" class="page-card fade-in-up">
+          <div class="page-card-content">
+            <div class="page-card-header">
+              <span class="page-number">#6</span>
+              <span class="page-badge badge-featured">Featured</span>
+            </div>
+            <h2>Workspace Infinity</h2>
+            <p class="page-card-description">
+              Workspace integration with mathematical theme. Floating app icons and bundling concept.
+            </p>
+            <div class="page-card-meta">
+              <span class="meta-tag">Bundling</span>
+              <span class="meta-tag">Workspace</span>
+            </div>
+            <div class="page-card-footer">
+              <span class="page-card-cta">
+                View Page
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 7. Bundling -->
+        <a href="pages/bundling.html" class="page-card fade-in-up">
+          <div class="page-card-content">
+            <div class="page-card-header">
+              <span class="page-number">#7</span>
+              <span class="page-badge badge-featured">Featured</span>
+            </div>
+            <h2>Product Bundling</h2>
+            <p class="page-card-description">
+              Apple-inspired product bundling page showing Gemini + Workspace value proposition.
+            </p>
+            <div class="page-card-meta">
+              <span class="meta-tag">Bundling</span>
+              <span class="meta-tag">Value</span>
+            </div>
+            <div class="page-card-footer">
+              <span class="page-card-cta">
+                View Page
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 8. Creators Voice Studio -->
+        <a href="pages/creators-voice-studio.html" class="page-card fade-in-up">
+          <div class="page-card-content">
+            <div class="page-card-header">
+              <span class="page-number">#8</span>
+              <span class="page-badge badge-featured">Featured</span>
+            </div>
+            <h2>Voice Studio for Creators</h2>
+            <p class="page-card-description">
+              Showcasing VO3 and Nano Banana for content creators. Multimodal AI tools with sliding panel interface.
+            </p>
+            <div class="page-card-meta">
+              <span class="meta-tag">Creators</span>
+              <span class="meta-tag">VO3</span>
+            </div>
+            <div class="page-card-footer">
+              <span class="page-card-cta">
+                View Page
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Productivity & Tools -->
+    <section class="category-section">
+      <h2 class="category-title">Productivity & Tools</h2>
+      <div class="cards-grid">
+
+        <!-- 9. Email Savior -->
+        <a href="pages/email-savior.html" class="page-card fade-in-up">
+          <div class="page-card-content">
+            <div class="page-card-header">
+              <span class="page-number">#9</span>
+              <span class="page-badge badge-core">Core</span>
+            </div>
+            <h2>Email Savior</h2>
+            <p class="page-card-description">
+              Gmail inbox optimization with zero inbox visualization. Tame your email chaos with AI.
+            </p>
+            <div class="page-card-meta">
+              <span class="meta-tag">Gmail</span>
+              <span class="meta-tag">Productivity</span>
+            </div>
+            <div class="page-card-footer">
+              <span class="page-card-cta">
+                View Page
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 10. Meeting Notes Magic -->
+        <a href="pages/meeting-notes-magic.html" class="page-card fade-in-up">
+          <div class="page-card-content">
+            <div class="page-card-header">
+              <span class="page-number">#10</span>
+              <span class="page-badge badge-core">Core</span>
+            </div>
+            <h2>Meeting Notes Magic</h2>
+            <p class="page-card-description">
+              Google Calendar meeting automation. Never miss action items or follow-ups again.
+            </p>
+            <div class="page-card-meta">
+              <span class="meta-tag">Calendar</span>
+              <span class="meta-tag">Meetings</span>
+            </div>
+            <div class="page-card-footer">
+              <span class="page-card-cta">
+                View Page
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 11. Workflow Wizard -->
+        <a href="pages/workflow-wizard.html" class="page-card fade-in-up">
+          <div class="page-card-content">
+            <div class="page-card-header">
+              <span class="page-number">#11</span>
+              <span class="page-badge badge-core">Core</span>
+            </div>
+            <h2>Workflow Wizard</h2>
+            <p class="page-card-description">
+              Interactive workflow builder with tabbed panels. 4 automation scenarios for power users.
+            </p>
+            <div class="page-card-meta">
+              <span class="meta-tag">Automation</span>
+              <span class="meta-tag">Workflows</span>
+            </div>
+            <div class="page-card-footer">
+              <span class="page-card-cta">
+                View Page
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 12. Secret Weapon -->
+        <a href="pages/secret-weapon.html" class="page-card fade-in-up">
+          <div class="page-card-content">
+            <div class="page-card-header">
+              <span class="page-number">#12</span>
+              <span class="page-badge badge-featured">Featured</span>
+            </div>
+            <h2>Your Secret Weapon</h2>
+            <p class="page-card-description">
+              Brand trust with ecosystem reveal. Discover the hidden power of AI integration.
+            </p>
+            <div class="page-card-meta">
+              <span class="meta-tag">Trust</span>
+              <span class="meta-tag">Brand</span>
+            </div>
+            <div class="page-card-footer">
+              <span class="page-card-cta">
+                View Page
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 13. Pro -->
+        <a href="pages/pro.html" class="page-card fade-in-up">
+          <div class="page-card-content">
+            <div class="page-card-header">
+              <span class="page-number">#13</span>
+              <span class="page-badge badge-featured">Premium</span>
+            </div>
+            <h2>Gemini Pro</h2>
+            <p class="page-card-description">
+              Premium tier with iPhone Pro aesthetic. Advanced features for power users.
+            </p>
+            <div class="page-card-meta">
+              <span class="meta-tag">Premium</span>
+              <span class="meta-tag">Pro</span>
+            </div>
+            <div class="page-card-footer">
+              <span class="page-card-cta">
+                View Page
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 14. Interactive Showcase -->
+        <a href="pages/interactive-showcase.html" class="page-card fade-in-up">
+          <div class="page-card-content">
+            <div class="page-card-header">
+              <span class="page-number">#14</span>
+              <span class="page-badge badge-demo">Showcase</span>
+            </div>
+            <h2>Interactive Showcase</h2>
+            <p class="page-card-description">
+              Component showcase page demonstrating all interactive elements and design patterns.
+            </p>
+            <div class="page-card-meta">
+              <span class="meta-tag">Components</span>
+              <span class="meta-tag">Showcase</span>
+            </div>
+            <div class="page-card-footer">
+              <span class="page-card-cta">
+                View Page
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Demo Pages -->
+    <section class="category-section">
+      <h2 class="category-title">🎨 Interactive Demo Pages</h2>
+      <div class="cards-grid">
+
+        <!-- Apple Animations Demo -->
+        <a href="pages/apple-animations-demo.html" class="page-card fade-in-up">
+          <div class="page-card-content">
+            <div class="page-card-header">
+              <span class="page-number">Demo</span>
+              <span class="page-badge badge-demo">Interactive</span>
+            </div>
+            <h2>Apple Animations Showcase</h2>
+            <p class="page-card-description">
+              Interactive demonstration of Apple-inspired animations including parallax, fade-ins, scale effects, and scroll-triggered transitions.
+            </p>
+            <div class="page-card-meta">
+              <span class="meta-tag">Animations</span>
+              <span class="meta-tag">Demo</span>
+            </div>
+            <div class="page-card-footer">
+              <span class="page-card-cta">
+                View Demo
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Hero Media Demo -->
+        <a href="pages/hero-media-demo.html" class="page-card fade-in-up">
+          <div class="page-card-content">
+            <div class="page-card-header">
+              <span class="page-number">Demo</span>
+              <span class="page-badge badge-demo">Interactive</span>
+            </div>
+            <h2>Hero Media Examples</h2>
+            <p class="page-card-description">
+              Collection of hero section variations including video backgrounds, animated SVGs, and premium visual effects for landing pages.
+            </p>
+            <div class="page-card-meta">
+              <span class="meta-tag">Hero Sections</span>
+              <span class="meta-tag">Media</span>
+            </div>
+            <div class="page-card-footer">
+              <span class="page-card-cta">
+                View Demo
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Micro-Interactions Demo -->
+        <a href="pages/micro-interactions-demo.html" class="page-card fade-in-up">
+          <div class="page-card-content">
+            <div class="page-card-header">
+              <span class="page-number">Demo</span>
+              <span class="page-badge badge-demo">Interactive</span>
+            </div>
+            <h2>Micro-Interactions Library</h2>
+            <p class="page-card-description">
+              50+ interaction patterns including button effects, card animations, form interactions, tooltips, and loading states with 60fps performance.
+            </p>
+            <div class="page-card-meta">
+              <span class="meta-tag">Interactions</span>
+              <span class="meta-tag">UX</span>
+            </div>
+            <div class="page-card-footer">
+              <span class="page-card-cta">
+                View Demo
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- CTA Optimization Demo -->
+        <a href="pages/cta-optimization-demo.html" class="page-card fade-in-up">
+          <div class="page-card-content">
+            <div class="page-card-header">
+              <span class="page-number">Demo</span>
+              <span class="page-badge badge-demo">Interactive</span>
+            </div>
+            <h2>CTA Optimization Examples</h2>
+            <p class="page-card-description">
+              A/B testing variations for call-to-action buttons with different copy, styles, and placements. Includes performance tracking and analytics.
+            </p>
+            <div class="page-card-meta">
+              <span class="meta-tag">CTA</span>
+              <span class="meta-tag">A/B Testing</span>
+            </div>
+            <div class="page-card-footer">
+              <span class="page-card-cta">
+                View Demo
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="index-footer">
+      <p>
+        All pages are GitHub Pages compatible, WCAG AA compliant, and load in under 2 seconds.
+      </p>
+      <p>
+        Built with Apple-inspired design philosophy. Tested with Playwright across multiple devices and browsers.
+      </p>
+      <p style="margin-top: var(--space-lg);">
+        <a href="https://github.com/wesleyzhao/gemini-ad" target="_blank" rel="noopener noreferrer">
+          View on GitHub
+        </a>
+      </p>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/animations.js" defer></script>
+  <script src="assets/js/analytics.js" defer></script>
+</body>
+</html>

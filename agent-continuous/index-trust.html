@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini - AI That Shows Its Work</title>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600&family=Google+Sans+Display:wght@400;500&family=Google+Sans+Text:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Begin Tailor AI Script -->
+    <script src="https://app.tailorhq.ai/script/bw2V2wfsS628LA23lwQDJQ.js" async></script>
+    <!-- End Tailor AI Script -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --google-blue: #1a73e8;
+            --google-blue-hover: #1557b0;
+            --google-green: #1e8e3e;
+            --google-green-light: #e6f4ea;
+            --google-red: #d93025;
+            --google-red-light: #fce8e6;
+            --google-yellow: #f9ab00;
+            --text-primary: #202124;
+            --text-secondary: #5f6368;
+            --text-tertiary: #80868b;
+            --surface: #ffffff;
+            --surface-variant: #f8f9fa;
+            --surface-container: #f1f3f4;
+            --outline: #dadce0;
+            --outline-variant: #e8eaed;
+        }
+
+        body {
+            font-family: 'Google Sans Text', 'Google Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--surface);
+            color: var(--text-primary);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Header */
+        header {
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--outline-variant);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .gemini-icon {
+            width: 32px;
+            height: 32px;
+        }
+
+        .logo-text {
+            font-family: 'Google Sans', sans-serif;
+            font-size: 22px;
+            color: var(--text-primary);
+            font-weight: 400;
+        }
+
+        .header-cta {
+            padding: 10px 24px;
+            background: var(--google-blue);
+            color: white;
+            font-family: 'Google Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            border: none;
+            border-radius: 24px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+
+        .header-cta:hover {
+            background: var(--google-blue-hover);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.12);
+        }
+
+        /* Buttons */
+        .btn-filled {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: var(--google-blue);
+            color: white;
+            font-family: 'Google Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            border: none;
+            border-radius: 24px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-filled:hover {
+            background: var(--google-blue-hover);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.12);
+        }
+
+        .btn-outlined {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 11px 23px;
+            background: transparent;
+            color: var(--google-blue);
+            font-family: 'Google Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            border: 1px solid var(--outline);
+            border-radius: 24px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.2s, border-color 0.2s;
+        }
+
+        .btn-outlined:hover {
+            background: var(--surface-variant);
+            border-color: var(--text-tertiary);
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 80px 24px 96px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-family: 'Google Sans Display', sans-serif;
+            font-size: 52px;
+            font-weight: 400;
+            line-height: 1.15;
+            margin-bottom: 24px;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            line-height: 1.6;
+            max-width: 480px;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 48px;
+        }
+
+        .trust-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .trust-badge svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+
+        /* Chat Demo */
+        .chat-demo {
+            background: var(--surface);
+            border: 1px solid var(--outline);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .chat-message {
+            padding: 20px 24px;
+            display: flex;
+            gap: 16px;
+        }
+
+        .chat-message.user {
+            background: var(--surface-variant);
+            border-bottom: 1px solid var(--outline-variant);
+        }
+
+        .chat-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chat-avatar.user-avatar {
+            background: var(--google-blue);
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .chat-avatar.gemini-avatar {
+            background: transparent;
+        }
+
+        .chat-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .chat-content p {
+            font-size: 15px;
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .chat-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .chat-content ol {
+            margin: 0 0 16px 20px;
+        }
+
+        .chat-content li {
+            font-size: 15px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .citation {
+            color: var(--google-blue);
+            font-size: 11px;
+            font-weight: 500;
+            vertical-align: super;
+            cursor: pointer;
+            text-decoration: none;
+            margin-left: 2px;
+        }
+
+        .citation:hover {
+            text-decoration: underline;
+        }
+
+        .sources-panel {
+            background: var(--surface-variant);
+            border-radius: 12px;
+            padding: 16px;
+            margin-top: 16px;
+        }
+
+        .sources-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .source-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .source-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .source-num {
+            color: var(--text-tertiary);
+            font-weight: 500;
+            flex-shrink: 0;
+        }
+
+        .source-item a {
+            color: var(--google-blue);
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .source-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section styling */
+        .section {
+            padding: 96px 24px;
+        }
+
+        .section-alt {
+            background: var(--surface-variant);
+        }
+
+        .section-container {
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .section-title {
+            font-family: 'Google Sans Display', sans-serif;
+            font-size: 40px;
+            font-weight: 400;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+        }
+
+        /* Problem Cards */
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+
+        .problem-card {
+            background: var(--surface);
+            border: 1px solid var(--outline);
+            border-radius: 12px;
+            padding: 32px 24px;
+            text-align: center;
+        }
+
+        .problem-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .problem-card p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        .problem-stat {
+            text-align: center;
+            padding-top: 24px;
+            border-top: 1px solid var(--outline-variant);
+        }
+
+        .problem-stat p {
+            font-size: 16px;
+            color: var(--text-primary);
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .problem-stat span {
+            font-size: 13px;
+            color: var(--text-tertiary);
+        }
+
+        /* Comparison */
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        .comparison-panel {
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border: 1px solid var(--outline);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .comparison-col {
+            padding: 24px;
+        }
+
+        .comparison-col.negative {
+            background: var(--google-red-light);
+            border-right: 1px solid var(--outline);
+        }
+
+        .comparison-col.positive {
+            background: var(--google-green-light);
+        }
+
+        .comparison-label {
+            font-size: 11px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .comparison-col.negative .comparison-label {
+            color: var(--google-red);
+        }
+
+        .comparison-col.positive .comparison-label {
+            color: var(--google-green);
+        }
+
+        .comparison-text {
+            font-size: 14px;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .comparison-points {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .comparison-point {
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .comparison-col.negative .comparison-point {
+            color: var(--google-red);
+        }
+
+        .comparison-col.positive .comparison-point {
+            color: var(--google-green);
+        }
+
+        .comparison-point svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+
+        .solution-points {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .solution-point h3 {
+            font-family: 'Google Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .solution-point h3 svg {
+            color: var(--google-green);
+            flex-shrink: 0;
+        }
+
+        .solution-point p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-left: 32px;
+        }
+
+        /* Trust Pillars */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .pillar {
+            background: var(--surface);
+            border: 1px solid var(--outline);
+            border-radius: 12px;
+            padding: 32px 24px;
+            text-align: center;
+        }
+
+        .pillar-icon {
+            width: 56px;
+            height: 56px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pillar-icon.green {
+            background: var(--google-green-light);
+            color: var(--google-green);
+        }
+
+        .pillar-icon.blue {
+            background: #e8f0fe;
+            color: var(--google-blue);
+        }
+
+        .pillar-icon.yellow {
+            background: #fef7e0;
+            color: var(--google-yellow);
+        }
+
+        .pillar h3 {
+            font-family: 'Google Sans', sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .pillar > p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .pillar-features {
+            border-top: 1px solid var(--outline-variant);
+            padding-top: 20px;
+            text-align: left;
+        }
+
+        .pillar-feature {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .pillar-feature:last-child {
+            margin-bottom: 0;
+        }
+
+        .pillar-feature svg {
+            width: 16px;
+            height: 16px;
+            color: var(--google-green);
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* Use Cases */
+        .use-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .use-case {
+            background: var(--surface);
+            border: 1px solid var(--outline);
+            border-radius: 12px;
+            padding: 28px 24px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .use-case:hover {
+            border-color: var(--google-blue);
+            box-shadow: 0 1px 3px rgba(26,115,232,0.1);
+        }
+
+        .use-case-icon {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .use-case h3 {
+            font-family: 'Google Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .use-case-example {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 16px;
+            line-height: 1.4;
+        }
+
+        .use-case-features {
+            border-top: 1px solid var(--outline-variant);
+            padding-top: 16px;
+            margin-bottom: 16px;
+        }
+
+        .use-case-feature {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .use-case-feature svg {
+            width: 16px;
+            height: 16px;
+            color: var(--google-green);
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .use-case-anchor {
+            font-size: 12px;
+            color: var(--google-green);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Integration */
+        .integration-layout {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .app-tile {
+            width: 88px;
+            height: 88px;
+            background: var(--surface);
+            border: 1px solid var(--outline);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .app-tile:hover {
+            border-color: var(--text-tertiary);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+
+        .app-tile svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        .app-tile span {
+            font-size: 11px;
+            color: var(--text-secondary);
+        }
+
+        .integration-content h2 {
+            font-family: 'Google Sans Display', sans-serif;
+            font-size: 36px;
+            font-weight: 400;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+
+        .integration-content > p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+
+        .integration-benefits {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .integration-benefit h3 {
+            font-family: 'Google Sans', sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .integration-benefit p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* Testimonials */
+        .testimonials-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 48px;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .testimonial {
+            background: var(--surface);
+            border: 1px solid var(--outline);
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .testimonial blockquote {
+            font-size: 16px;
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .testimonial cite {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-style: normal;
+        }
+
+        .metrics-bar {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            padding: 24px;
+            background: var(--surface);
+            border: 1px solid var(--outline);
+            border-radius: 12px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .metric {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .metric-icon {
+            font-size: 20px;
+        }
+
+        .metric-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        /* FAQ */
+        .faq-list {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--outline-variant);
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: none;
+            border: none;
+            font-family: 'Google Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-primary);
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .faq-question svg {
+            width: 24px;
+            height: 24px;
+            color: var(--text-tertiary);
+            transition: transform 0.2s;
+            flex-shrink: 0;
+        }
+
+        .faq-item.open .faq-question svg {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 200px;
+        }
+
+        .faq-answer p {
+            padding-bottom: 20px;
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            padding: 96px 24px;
+            background: linear-gradient(135deg, #4285f4 0%, #1a73e8 50%, #1557b0 100%);
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-family: 'Google Sans Display', sans-serif;
+            font-size: 40px;
+            font-weight: 400;
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        .final-cta > p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 32px;
+        }
+
+        .btn-white {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 32px;
+            background: white;
+            color: var(--google-blue);
+            font-family: 'Google Sans', sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            border: none;
+            border-radius: 24px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: box-shadow 0.2s;
+        }
+
+        .btn-white:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .cta-subtext {
+            margin-top: 16px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .cta-trust {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .cta-trust svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--surface-variant);
+            padding: 48px 24px 32px;
+            border-top: 1px solid var(--outline-variant);
+        }
+
+        .footer-content {
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 32px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 48px;
+        }
+
+        .footer-column h4 {
+            font-family: 'Google Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-column a:hover {
+            color: var(--text-primary);
+        }
+
+        .footer-bottom {
+            padding-top: 24px;
+            border-top: 1px solid var(--outline-variant);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-copyright {
+            font-size: 13px;
+            color: var(--text-tertiary);
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .footer-logo svg {
+            height: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 48px;
+                padding: 48px 24px 64px;
+            }
+
+            .hero-content {
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 40px;
+            }
+
+            .hero-subtitle {
+                max-width: none;
+            }
+
+            .hero-ctas {
+                justify-content: center;
+            }
+
+            .trust-badges {
+                justify-content: center;
+            }
+
+            .comparison {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .integration-layout {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .app-grid {
+                justify-content: center;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            .integration-content {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 64px 20px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .problem-grid,
+            .pillars-grid,
+            .use-cases-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-col.negative {
+                border-right: none;
+                border-bottom: 1px solid var(--outline);
+            }
+
+            .metrics-bar {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .footer-top {
+                flex-direction: column;
+                gap: 32px;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                gap: 32px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="https://gemini.google.com" class="logo">
+            <svg class="gemini-icon" viewBox="0 0 28 28" fill="none">
+                <path d="M14 0C14 7.732 7.732 14 0 14c7.732 0 14 6.268 14 14 0-7.732 6.268-14 14-14-7.732 0-14-6.268-14-14Z" fill="url(#gemini-gradient)"/>
+                <defs>
+                    <linearGradient id="gemini-gradient" x1="0" y1="14" x2="28" y2="14" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#1a73e8"/>
+                        <stop offset=".5" stop-color="#6c47ff"/>
+                        <stop offset="1" stop-color="#ea4335"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+            <span class="logo-text">Gemini</span>
+        </a>
+        <a href="https://gemini.google.com" class="header-cta">Try Gemini</a>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>AI that shows its work</h1>
+                <p class="hero-subtitle">
+                    Every answer backed by sources you can check. No more wondering if the AI just made it up.
+                </p>
+                <div class="hero-ctas">
+                    <a href="https://gemini.google.com" class="btn-filled">
+                        Try Gemini free
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#how-it-works" class="btn-outlined">Learn more</a>
+                </div>
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#1e8e3e" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        <span>Sources on every answer</span>
+                    </div>
+                    <div class="trust-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
+                        <span>Your data stays private</span>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-demo" id="how-it-works">
+                <div class="chat-message user">
+                    <div class="chat-avatar user-avatar">Y</div>
+                    <div class="chat-content">
+                        <p>What's the most effective treatment for migraines?</p>
+                    </div>
+                </div>
+                <div class="chat-message">
+                    <div class="chat-avatar gemini-avatar">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <path d="M14 0C14 7.732 7.732 14 0 14c7.732 0 14 6.268 14 14 0-7.732 6.268-14 14-14-7.732 0-14-6.268-14-14Z" fill="url(#gem-grad)"/>
+                            <defs><linearGradient id="gem-grad" x1="0" y1="14" x2="28" y2="14"><stop stop-color="#1a73e8"/><stop offset=".5" stop-color="#6c47ff"/><stop offset="1" stop-color="#ea4335"/></linearGradient></defs>
+                        </svg>
+                    </div>
+                    <div class="chat-content">
+                        <p>According to recent clinical guidelines, the most effective acute treatments for migraines include:</p>
+                        <ol>
+                            <li><strong>Triptans</strong> — first-line treatment with 70-80% efficacy<a href="#" class="citation">1</a></li>
+                            <li><strong>NSAIDs</strong> — effective for mild-moderate migraines<a href="#" class="citation">2</a></li>
+                            <li><strong>CGRP inhibitors</strong> — newer class for prevention<a href="#" class="citation">3</a></li>
+                        </ol>
+                        <div class="sources-panel">
+                            <div class="sources-header">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                                </svg>
+                                Sources
+                            </div>
+                            <div class="source-item">
+                                <span class="source-num">1</span>
+                                <span>American Headache Society Guidelines<br><a href="#">headachesociety.org</a></span>
+                            </div>
+                            <div class="source-item">
+                                <span class="source-num">2</span>
+                                <span>Mayo Clinic<br><a href="#">mayoclinic.org</a></span>
+                            </div>
+                            <div class="source-item">
+                                <span class="source-num">3</span>
+                                <span>NEJM (2024)<br><a href="#">nejm.org</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem -->
+        <section class="section section-alt">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">You've probably experienced this</h2>
+                </div>
+                <div class="problem-grid">
+                    <div class="problem-card">
+                        <div class="problem-icon">😰</div>
+                        <p>"The AI gave me a confident answer that turned out to be completely wrong."</p>
+                    </div>
+                    <div class="problem-card">
+                        <div class="problem-icon">🤔</div>
+                        <p>"I spent 20 minutes fact-checking an answer that was correct anyway."</p>
+                    </div>
+                    <div class="problem-card">
+                        <div class="problem-icon">😤</div>
+                        <p>"I cited an AI answer in a meeting. It was completely wrong."</p>
+                    </div>
+                </div>
+                <div class="problem-stat">
+                    <p>22% of AI users cite hallucinations as their #1 concern</p>
+                    <span>Based on consumer survey, n=1,900</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution -->
+        <section class="section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">The difference is transparency</h2>
+                </div>
+                <div class="comparison">
+                    <div class="comparison-grid">
+                        <div class="comparison-col negative">
+                            <div class="comparison-label">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <line x1="15" y1="9" x2="9" y2="15"/>
+                                    <line x1="9" y1="9" x2="15" y2="15"/>
+                                </svg>
+                                Other AI
+                            </div>
+                            <p class="comparison-text">"The Eiffel Tower is 324 meters tall and was built in 1887."</p>
+                            <div class="comparison-points">
+                                <div class="comparison-point">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <line x1="18" y1="6" x2="6" y2="18"/>
+                                        <line x1="6" y1="6" x2="18" y2="18"/>
+                                    </svg>
+                                    No source
+                                </div>
+                                <div class="comparison-point">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <line x1="18" y1="6" x2="6" y2="18"/>
+                                        <line x1="6" y1="6" x2="18" y2="18"/>
+                                    </svg>
+                                    Wrong date (1889)
+                                </div>
+                                <div class="comparison-point">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <line x1="18" y1="6" x2="6" y2="18"/>
+                                        <line x1="6" y1="6" x2="18" y2="18"/>
+                                    </svg>
+                                    No way to verify
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comparison-col positive">
+                            <div class="comparison-label">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                                Gemini
+                            </div>
+                            <p class="comparison-text">"The Eiffel Tower is 330 meters tall (including antennas).<a href="#" class="citation">1</a>"</p>
+                            <div class="comparison-points">
+                                <div class="comparison-point">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                    Wikipedia: verified
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="solution-points">
+                        <div class="solution-point">
+                            <h3>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                                Sources on every factual claim
+                            </h3>
+                            <p>Click any citation to verify. We show our work so you never have to guess.</p>
+                        </div>
+                        <div class="solution-point">
+                            <h3>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                                Real-time information
+                            </h3>
+                            <p>Powered by Google Search — not just training data from years ago.</p>
+                        </div>
+                        <div class="solution-point">
+                            <h3>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                                Clear confidence indicators
+                            </h3>
+                            <p>When we're uncertain, we tell you. No false confidence, no made-up facts.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Pillars -->
+        <section class="section section-alt">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Three reasons to trust Gemini</h2>
+                </div>
+                <div class="pillars-grid">
+                    <div class="pillar">
+                        <div class="pillar-icon green">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                        </div>
+                        <h3>Verified answers</h3>
+                        <p>Every factual claim linked to its source. Click to verify instantly.</p>
+                        <div class="pillar-features">
+                            <div class="pillar-feature">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Citations from authoritative sites</span>
+                            </div>
+                            <div class="pillar-feature">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Direct links to original sources</span>
+                            </div>
+                            <div class="pillar-feature">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Updated in real-time</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pillar">
+                        <div class="pillar-icon blue">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2"/>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                            </svg>
+                        </div>
+                        <h3>Privacy protected</h3>
+                        <p>Your conversations are encrypted and never used to train our models.</p>
+                        <div class="pillar-features">
+                            <div class="pillar-feature">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Enterprise-grade encryption</span>
+                            </div>
+                            <div class="pillar-feature">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>SOC 2 Type II certified</span>
+                            </div>
+                            <div class="pillar-feature">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>GDPR & CCPA compliant</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pillar">
+                        <div class="pillar-icon yellow">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="2" y1="12" x2="22" y2="12"/>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                            </svg>
+                        </div>
+                        <h3>Google's foundation</h3>
+                        <p>Built on 25 years of organizing the world's information responsibly.</p>
+                        <div class="pillar-features">
+                            <div class="pillar-feature">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Powered by Google Search</span>
+                            </div>
+                            <div class="pillar-feature">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Google's AI safety standards</span>
+                            </div>
+                            <div class="pillar-feature">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Continuous improvements</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use Cases -->
+        <section class="section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Trust matters most when stakes are high</h2>
+                    <p class="section-subtitle">For the moments when getting it right isn't optional.</p>
+                </div>
+                <div class="use-cases-grid">
+                    <div class="use-case">
+                        <div class="use-case-icon">🏥</div>
+                        <h3>Health questions</h3>
+                        <p class="use-case-example">"What are the side effects of this medication?"</p>
+                        <div class="use-case-features">
+                            <div class="use-case-feature">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Sources from medical journals</span>
+                            </div>
+                            <div class="use-case-feature">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Links to Mayo Clinic, NIH</span>
+                            </div>
+                            <div class="use-case-feature">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Clear medical disclaimers</span>
+                            </div>
+                        </div>
+                        <div class="use-case-anchor">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                            Peer-reviewed sources
+                        </div>
+                    </div>
+                    <div class="use-case">
+                        <div class="use-case-icon">💰</div>
+                        <h3>Financial research</h3>
+                        <p class="use-case-example">"Compare the fees of these index funds"</p>
+                        <div class="use-case-features">
+                            <div class="use-case-feature">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Data from fund prospectuses</span>
+                            </div>
+                            <div class="use-case-feature">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Links to SEC filings</span>
+                            </div>
+                            <div class="use-case-feature">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Real-time price data</span>
+                            </div>
+                        </div>
+                        <div class="use-case-anchor">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                            Official filings
+                        </div>
+                    </div>
+                    <div class="use-case">
+                        <div class="use-case-icon">💼</div>
+                        <h3>Professional decisions</h3>
+                        <p class="use-case-example">"What are the EU data privacy regulations?"</p>
+                        <div class="use-case-features">
+                            <div class="use-case-feature">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Citations to regulations</span>
+                            </div>
+                            <div class="use-case-feature">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Government sources</span>
+                            </div>
+                            <div class="use-case-feature">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Date-stamped for recency</span>
+                            </div>
+                        </div>
+                        <div class="use-case-anchor">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                            Official bodies
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Integration -->
+        <section class="section section-alt">
+            <div class="section-container">
+                <div class="integration-layout">
+                    <div class="app-grid">
+                        <div class="app-tile">
+                            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="#EA4335"/></svg>
+                            <span>Gmail</span>
+                        </div>
+                        <div class="app-tile">
+                            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13z" fill="#4285F4"/></svg>
+                            <span>Docs</span>
+                        </div>
+                        <div class="app-tile">
+                            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2z" fill="#0F9D58"/></svg>
+                            <span>Sheets</span>
+                        </div>
+                        <div class="app-tile">
+                            <svg viewBox="0 0 24 24"><path d="M19.35 10.04A7.49 7.49 0 0012 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 000 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z" fill="#4285F4"/></svg>
+                            <span>Drive</span>
+                        </div>
+                        <div class="app-tile">
+                            <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z" fill="#4285F4"/></svg>
+                            <span>Calendar</span>
+                        </div>
+                        <div class="app-tile">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#34A853"/></svg>
+                            <span>Maps</span>
+                        </div>
+                    </div>
+                    <div class="integration-content">
+                        <h2>Works where you work</h2>
+                        <p>All the trust and transparency of Gemini, built into the Google tools you already use.</p>
+                        <div class="integration-benefits">
+                            <div class="integration-benefit">
+                                <h3>Context-aware answers</h3>
+                                <p>Gemini understands your emails, docs, and calendar — giving you personalized help with trusted sources.</p>
+                            </div>
+                            <div class="integration-benefit">
+                                <h3>No copy-paste required</h3>
+                                <p>Ask questions about your files directly. Gemini finds and cites the relevant sections.</p>
+                            </div>
+                            <div class="integration-benefit">
+                                <h3>Seamless workflow</h3>
+                                <p>Get trusted answers without leaving the apps you're already in.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Trusted by people who can't afford to be wrong</h2>
+                </div>
+                <div class="testimonials-list">
+                    <div class="testimonial">
+                        <blockquote>"I use Gemini for legal research because I can actually verify every claim before I put it in front of a client. That's not optional in my field."</blockquote>
+                        <cite>— Sarah M., Corporate Attorney</cite>
+                    </div>
+                    <div class="testimonial">
+                        <blockquote>"After getting burned by AI hallucinations twice, I switched to Gemini. The sources feature isn't a nice-to-have — it's the whole point."</blockquote>
+                        <cite>— David K., Financial Analyst</cite>
+                    </div>
+                    <div class="testimonial">
+                        <blockquote>"I recommend Gemini to my students because it teaches them to verify sources — not just accept whatever an AI says."</blockquote>
+                        <cite>— Prof. Jennifer L., University of Michigan</cite>
+                    </div>
+                </div>
+                <div class="metrics-bar">
+                    <div class="metric">
+                        <span class="metric-icon">🌍</span>
+                        <span class="metric-text">2B+ users</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-icon">🔒</span>
+                        <span class="metric-text">SOC 2 Certified</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-icon">📚</span>
+                        <span class="metric-text">10B+ sources</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section section-alt">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Common questions</h2>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How does Gemini's citation system work?
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Every factual claim in Gemini's responses is linked to its source. Click any citation to see the original webpage, document, or publication. We prioritize authoritative sources like government sites, academic journals, and established news organizations.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Is Gemini more accurate than other AI tools?
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Gemini is built on Google Search's index and includes real-time information. But more importantly, you don't have to take our word for it — every answer includes sources you can verify yourself.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What happens when Gemini doesn't know something?
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>When we're uncertain, we say so. Gemini is designed to express confidence levels honestly rather than make up plausible-sounding answers.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How is my data protected?
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Your conversations are encrypted and never used to train our models. We're SOC 2 Type II certified and comply with GDPR and CCPA. Your privacy is a feature, not an afterthought.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Can I use Gemini for professional/medical/legal questions?
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Gemini provides well-sourced information, but we always recommend consulting qualified professionals for important decisions. Our citations help you have more informed conversations with your doctor, lawyer, or advisor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="final-cta">
+            <h2>Ready for AI you can trust?</h2>
+            <p>Join millions who chose transparency over guesswork.</p>
+            <a href="https://gemini.google.com" class="btn-white">
+                Try Gemini free
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+            <p class="cta-subtext">No credit card required</p>
+            <div class="cta-trust">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2"/>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+                Your data stays private
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <svg width="74" height="24" viewBox="0 0 74 24" fill="none">
+                        <path d="M9.24 8.19v2.46h5.88c-.18 1.38-.64 2.39-1.34 3.1-.86.86-2.2 1.8-4.54 1.8-3.62 0-6.45-2.92-6.45-6.54s2.83-6.54 6.45-6.54c1.95 0 3.38.77 4.43 1.76L15.4 2.5C13.94 1.08 11.98 0 9.24 0 4.28 0 .11 4.04.11 9s4.17 9 9.13 9c2.68 0 4.7-.88 6.28-2.52 1.62-1.62 2.13-3.91 2.13-5.75 0-.57-.04-1.1-.13-1.54H9.24z" fill="#4285F4"/>
+                        <path d="M25 6.19c-3.21 0-5.83 2.44-5.83 5.81 0 3.34 2.62 5.81 5.83 5.81s5.83-2.46 5.83-5.81c0-3.37-2.62-5.81-5.83-5.81zm0 9.33c-1.76 0-3.28-1.45-3.28-3.52 0-2.09 1.52-3.52 3.28-3.52s3.28 1.43 3.28 3.52c0 2.07-1.52 3.52-3.28 3.52z" fill="#EA4335"/>
+                        <path d="M53.58 7.49h-.09c-.57-.68-1.67-1.3-3.06-1.3-2.9 0-5.56 2.55-5.56 5.83 0 3.26 2.66 5.79 5.56 5.79 1.39 0 2.49-.62 3.06-1.32h.09v.81c0 2.22-1.19 3.41-3.1 3.41-1.56 0-2.53-1.12-2.93-2.07l-2.22.92c.64 1.54 2.33 3.43 5.15 3.43 2.99 0 5.52-1.76 5.52-6.05V6.49h-2.42v1zm-2.93 8.03c-1.76 0-3.1-1.5-3.1-3.52 0-2.05 1.34-3.54 3.1-3.54 1.74 0 3.1 1.5 3.1 3.54 0 2.03-1.36 3.52-3.1 3.52z" fill="#4285F4"/>
+                        <path d="M38 6.19c-3.21 0-5.83 2.44-5.83 5.81 0 3.34 2.62 5.81 5.83 5.81s5.83-2.46 5.83-5.81c0-3.37-2.62-5.81-5.83-5.81zm0 9.33c-1.76 0-3.28-1.45-3.28-3.52 0-2.09 1.52-3.52 3.28-3.52s3.28 1.43 3.28 3.52c0 2.07-1.52 3.52-3.28 3.52z" fill="#FBBC05"/>
+                        <path d="M58 .24h2.51v17.57H58z" fill="#34A853"/>
+                        <path d="M68.26 15.52c-1.3 0-2.22-.59-2.82-1.76l7.77-3.21-.26-.66c-.48-1.3-1.96-3.7-4.97-3.7-2.99 0-5.48 2.35-5.48 5.81 0 3.26 2.46 5.81 5.76 5.81 2.66 0 4.2-1.63 4.84-2.57l-1.98-1.32c-.66.96-1.56 1.6-2.86 1.6zm-.18-7.15c1.03 0 1.91.53 2.2 1.28l-5.25 2.17c0-2.44 1.73-3.45 3.05-3.45z" fill="#EA4335"/>
+                    </svg>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Products</h4>
+                        <ul>
+                            <li><a href="#">Gemini</a></li>
+                            <li><a href="#">Google One</a></li>
+                            <li><a href="#">Workspace</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Trust & Safety</h4>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Security</a></li>
+                            <li><a href="#">AI Principles</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span class="footer-copyright">&copy; 2026 Google LLC</span>
+                <div style="display: flex; gap: 24px;">
+                    <a href="#" style="color: var(--text-secondary); font-size: 14px; text-decoration: none;">Privacy</a>
+                    <a href="#" style="color: var(--text-secondary); font-size: 14px; text-decoration: none;">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const isOpen = item.classList.contains('open');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                if (!isOpen) item.classList.add('open');
+            });
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+    </script>
+</body>
+</html>

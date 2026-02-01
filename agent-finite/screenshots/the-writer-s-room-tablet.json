@@ -1,0 +1,11 @@
+{
+  "filename": "the-writer-s-room-tablet.png",
+  "page": "The Writer's Room",
+  "pagePath": "/pages/writers-room.html",
+  "viewport": {
+    "width": 768,
+    "height": 1024
+  },
+  "timestamp": "2026-02-01T11:36:41.531Z",
+  "note": "This is a placeholder file. Run actual screenshot generation with system dependencies installed or use Docker."
+}

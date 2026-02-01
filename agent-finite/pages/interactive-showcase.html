@@ -1,0 +1,1141 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Interactive Showcase - Experience AI in Action</title>
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Gemini Interactive Showcase - Experience AI in Action">
+    <meta name="description" content="See Gemini in action. Interactive demos showcase real use cases across writing, research, creativity, and productivity.">
+    <meta name="keywords" content="gemini demo, ai showcase, interactive ai, use cases">
+    <meta name="author" content="Google">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://wesleyzhao.github.io/gemini-ad/pages/interactive-showcase.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wesleyzhao.github.io/gemini-ad/pages/interactive-showcase.html">
+    <meta property="og:title" content="Gemini Interactive Showcase - Experience AI in Action">
+    <meta property="og:description" content="See Gemini in action. Interactive demos showcase real use cases across writing, research, creativity, and productivity.">
+    <meta property="og:image" content="https://wesleyzhao.github.io/gemini-ad/assets/images/og-interactive-showcase.jpg">
+    <meta property="og:site_name" content="Gemini">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://wesleyzhao.github.io/gemini-ad/pages/interactive-showcase.html">
+    <meta name="twitter:title" content="Gemini Interactive Showcase - Experience AI in Action">
+    <meta name="twitter:description" content="See Gemini in action. Interactive demos showcase real use cases across writing, research, creativity, and productivity.">
+    <meta name="twitter:image" content="https://wesleyzhao.github.io/gemini-ad/assets/images/og-interactive-showcase.jpg">
+    <meta name="twitter:site" content="@Google">
+    <meta name="twitter:creator" content="@Google">
+
+    <!-- Additional Meta Tags -->
+    <meta name="theme-color" content="#4285f4">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Gemini">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Gemini Interactive Showcase - Experience AI in Action",
+      "description": "See Gemini in action. Interactive demos showcase real use cases across writing, research, creativity, and productivity.",
+      "url": "https://wesleyzhao.github.io/gemini-ad/pages/interactive-showcase.html",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Gemini",
+        "url": "https://wesleyzhao.github.io/gemini-ad",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Google",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://wesleyzhao.github.io/gemini-ad/assets/images/gemini-logo.png"
+          }
+        }
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://wesleyzhao.github.io/gemini-ad"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Gemini Interactive Showcase - Experience AI in Action",
+            "item": "https://wesleyzhao.github.io/gemini-ad/pages/interactive-showcase.html"
+          }
+        ]
+      },
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "Gemini",
+        "applicationCategory": "ProductivityApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    }
+    </script>
+
+    
+    
+    
+    
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet">
+
+    <!-- Shared Design System -->
+    <link rel="stylesheet" href="../assets/css/design-system.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+
+    <style>
+        :root {
+            --showcase-primary: #1A73E8;
+            --showcase-secondary: #34A853;
+            --showcase-accent: #FBBC04;
+            --showcase-danger: #EA4335;
+            --showcase-purple: #9334E9;
+            --showcase-gradient-start: #667EEA;
+            --showcase-gradient-end: #764BA2;
+            --panel-bg: #F8F9FA;
+            --panel-border: #E8EAED;
+            --highlight-bg: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, var(--showcase-gradient-start) 0%, var(--showcase-gradient-end) 100%);
+            min-height: 100vh;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: var(--spacing-xl) var(--spacing-md);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: clamp(1.125rem, 2vw, 1.5rem);
+            opacity: 0.95;
+            line-height: 1.6;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            gap: var(--spacing-sm);
+        }
+
+        /* Sliding Panel Container */
+        .showcase-container {
+            background: white;
+            padding: var(--spacing-2xl) var(--spacing-md);
+        }
+
+        .showcase-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .showcase-title {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .showcase-title h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--color-text-primary);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .showcase-title p {
+            font-size: 1.25rem;
+            color: var(--color-text-secondary);
+        }
+
+        /* Panel Navigation Tabs */
+        .panel-tabs {
+            display: flex;
+            gap: var(--spacing-xs);
+            margin-bottom: var(--spacing-xl);
+            overflow-x: auto;
+            padding-bottom: var(--spacing-xs);
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .panel-tab {
+            flex: 1;
+            min-width: 140px;
+            padding: var(--spacing-md) var(--spacing-lg);
+            background: var(--panel-bg);
+            border: 2px solid var(--panel-border);
+            border-radius: 16px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .panel-tab::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--showcase-primary), var(--showcase-purple));
+            transform: scaleX(0);
+            transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        .panel-tab.active::before {
+            transform: scaleX(1);
+        }
+
+        .panel-tab.active {
+            background: white;
+            border-color: var(--showcase-primary);
+            box-shadow: 0 8px 24px rgba(26, 115, 232, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .panel-tab:hover:not(.active) {
+            background: white;
+            border-color: var(--showcase-primary);
+            transform: translateY(-2px);
+        }
+
+        .tab-icon {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-xs);
+            display: block;
+        }
+
+        .tab-label {
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: var(--color-text-primary);
+            margin-bottom: 4px;
+        }
+
+        .tab-sublabel {
+            font-size: 0.75rem;
+            color: var(--color-text-secondary);
+        }
+
+        /* Panel Content Area */
+        .panel-content-wrapper {
+            position: relative;
+            min-height: 600px;
+            overflow: hidden;
+            border-radius: 24px;
+            background: var(--panel-bg);
+        }
+
+        .panel-content {
+            display: none;
+            opacity: 0;
+            transform: translateX(40px);
+            transition: all 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        .panel-content.active {
+            display: grid;
+            opacity: 1;
+            transform: translateX(0);
+            animation: slideIn 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .panel-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xl);
+            padding: var(--spacing-xl);
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .panel-grid {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-lg);
+            }
+        }
+
+        /* Demo Visual */
+        .demo-visual {
+            background: white;
+            border-radius: 20px;
+            padding: var(--spacing-xl);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .demo-visual::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(26, 115, 232, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .demo-header {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-lg);
+            padding-bottom: var(--spacing-md);
+            border-bottom: 2px solid var(--panel-border);
+        }
+
+        .demo-icon {
+            font-size: 2.5rem;
+        }
+
+        .demo-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-text-primary);
+        }
+
+        .demo-interface {
+            position: relative;
+            z-index: 1;
+        }
+
+        .chat-message {
+            background: var(--panel-bg);
+            padding: var(--spacing-md);
+            border-radius: 12px;
+            margin-bottom: var(--spacing-md);
+            animation: fadeSlideUp 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) backwards;
+        }
+
+        .chat-message:nth-child(1) { animation-delay: 0.1s; }
+        .chat-message:nth-child(2) { animation-delay: 0.2s; }
+        .chat-message:nth-child(3) { animation-delay: 0.3s; }
+        .chat-message:nth-child(4) { animation-delay: 0.4s; }
+
+        @keyframes fadeSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--showcase-primary);
+            margin-bottom: 6px;
+        }
+
+        .message-text {
+            font-size: 0.9375rem;
+            line-height: 1.6;
+            color: var(--color-text-primary);
+        }
+
+        .gemini-response {
+            background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+            color: white;
+        }
+
+        .gemini-response .message-label {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .gemini-response .message-text {
+            color: white;
+        }
+
+        /* Demo Details */
+        .demo-details {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-lg);
+        }
+
+        .detail-section h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            color: var(--color-text-primary);
+            margin-bottom: var(--spacing-md);
+            line-height: 1.2;
+        }
+
+        .detail-section p {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            color: var(--color-text-secondary);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-md);
+            padding: var(--spacing-md);
+            background: white;
+            border-radius: 12px;
+            border-left: 4px solid var(--showcase-primary);
+            transition: all 0.3s ease;
+        }
+
+        .feature-list li:hover {
+            transform: translateX(8px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .feature-text {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--color-text-primary);
+        }
+
+        .feature-text strong {
+            color: var(--showcase-primary);
+            font-weight: 600;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+
+        .stat-card {
+            background: white;
+            padding: var(--spacing-lg);
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .stat-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--showcase-primary);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--color-text-secondary);
+        }
+
+        /* CTA Section */
+        .panel-cta {
+            text-align: center;
+            margin-top: var(--spacing-xl);
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            padding: var(--spacing-md) var(--spacing-xl);
+            background: linear-gradient(135deg, var(--showcase-primary), var(--showcase-purple));
+            color: white;
+            font-size: 1.125rem;
+            font-weight: 600;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Typing Indicator */
+        .typing-indicator {
+            display: flex;
+            gap: 6px;
+            padding: var(--spacing-sm);
+        }
+
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            animation: typingBounce 1.4s infinite;
+        }
+
+        .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+        .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes typingBounce {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-10px); }
+        }
+
+        /* Code Block Styling */
+        .code-block {
+            background: #1E1E1E;
+            color: #D4D4D4;
+            padding: var(--spacing-md);
+            border-radius: 8px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.875rem;
+            line-height: 1.6;
+            overflow-x: auto;
+            margin: var(--spacing-md) 0;
+        }
+
+        .code-keyword { color: #569CD6; }
+        .code-string { color: #CE9178; }
+        .code-function { color: #DCDCAA; }
+        .code-comment { color: #6A9955; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .panel-tabs {
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+            }
+
+            .panel-tab {
+                min-width: 120px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .cta-button {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .hero {
+                background: white;
+                color: black;
+                min-height: auto;
+            }
+
+            .panel-content {
+                display: block !important;
+                opacity: 1 !important;
+                transform: none !important;
+                page-break-inside: avoid;
+            }
+
+            .showcase-container {
+                background: white;
+            }
+        }
+    </style>
+  
+    <style>
+      .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background: #000;
+        color: #fff;
+        padding: 8px 16px;
+        text-decoration: none;
+        z-index: 100;
+        font-weight: 600;
+        border-radius: 0 0 4px 0;
+      }
+      .skip-link:focus {
+        top: 0;
+      }
+    </style>
+  
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX', {
+    'anonymize_ip': true,
+    'cookie_flags': 'SameSite=None;Secure'
+  });
+</script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+<main id="main-content"><section class="hero">
+        <div class="hero-content">
+            <h1 class="fade-in">See Gemini in Action</h1>
+            <p class="fade-in delay-100">Explore real-world use cases. Experience the power of AI assistance tailored to your workflow.</p>
+            <div class="hero-cta fade-in delay-200">
+                <a href="https://gemini.google.com" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+                    Try Gemini Free
+                </a>
+                <a href="#showcase" class="btn btn-secondary btn-lg">
+                    Explore Demos ↓
+                </a>
+            </div>
+        </div>
+    </section><section id="showcase" class="showcase-container">
+        <div class="showcase-inner">
+            <div class="showcase-title fade-in">
+                <h2>Choose Your Use Case</h2>
+                <p>See how Gemini adapts to different professional needs</p>
+            </div>
+
+            <!-- Panel Navigation Tabs -->
+            <div class="panel-tabs fade-in delay-100">
+                <div class="panel-tab active" data-panel="writing">
+                    <span class="tab-icon">✍️</span>
+                    <div class="tab-label">Content Writing</div>
+                    <div class="tab-sublabel">Blog &amp; Articles</div>
+                </div>
+                <div class="panel-tab" data-panel="research">
+                    <span class="tab-icon">🔍</span>
+                    <div class="tab-label">Research</div>
+                    <div class="tab-sublabel">Citations &amp; Sources</div>
+                </div>
+                <div class="panel-tab" data-panel="coding">
+                    <span class="tab-icon">💻</span>
+                    <div class="tab-label">Code Assistant</div>
+                    <div class="tab-sublabel">Debug &amp; Build</div>
+                </div>
+                <div class="panel-tab" data-panel="workspace">
+                    <span class="tab-icon">📊</span>
+                    <div class="tab-label">Workspace</div>
+                    <div class="tab-sublabel">Gmail &amp; Docs</div>
+                </div>
+                <div class="panel-tab" data-panel="creative">
+                    <span class="tab-icon">🎨</span>
+                    <div class="tab-label">Creative Studio</div>
+                    <div class="tab-sublabel">Ideas &amp; Scripts</div>
+                </div>
+            </div>
+
+            <!-- Panel Content Area -->
+            <div class="panel-content-wrapper">
+                <!-- Writing Panel -->
+                <div class="panel-content active" data-panel="writing">
+                    <div class="panel-grid">
+                        <div class="demo-visual">
+                            <div class="demo-header">
+                                <span class="demo-icon">✍️</span>
+                                <h3 class="demo-title">Blog Writer</h3>
+                            </div>
+                            <div class="demo-interface">
+                                <div class="chat-message">
+                                    <div class="message-label">You</div>
+                                    <div class="message-text">Write an engaging blog post introduction about sustainable living in cities.</div>
+                                </div>
+                                <div class="chat-message gemini-response">
+                                    <div class="message-label">Gemini</div>
+                                    <div class="message-text">
+                                        <p style="margin-bottom: 12px;"><strong>Concrete Jungles, Green Hearts: Making City Life Sustainable</strong></p>
+                                        <p>Urban living doesn't have to mean compromising on sustainability. In fact, cities offer unique opportunities to live greener lives—from rooftop gardens to bike-sharing programs. The modern urbanite is discovering that eco-conscious living isn't just possible in the city; it's becoming the new standard...</p>
+                                        <div class="typing-indicator">
+                                            <span class="typing-dot"></span>
+                                            <span class="typing-dot"></span>
+                                            <span class="typing-dot"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-details">
+                            <div class="detail-section">
+                                <h3>Your Personal Writing Partner</h3>
+                                <p>From blog posts to marketing copy, Gemini helps you craft compelling content that resonates with your audience.</p>
+                                <ul class="feature-list">
+                                    <li>
+                                        <span class="feature-icon">✨</span>
+                                        <span class="feature-text"><strong>Tone Control:</strong> Adjust style from casual to professional instantly</span>
+                                    </li>
+                                    <li>
+                                        <span class="feature-icon">🎯</span>
+                                        <span class="feature-text"><strong>SEO Optimization:</strong> Built-in keyword suggestions and structure</span>
+                                    </li>
+                                    <li>
+                                        <span class="feature-icon">🔄</span>
+                                        <span class="feature-text"><strong>Multiple Drafts:</strong> Generate variations and choose the best</span>
+                                    </li>
+                                    <li>
+                                        <span class="feature-icon">📝</span>
+                                        <span class="feature-text"><strong>Real-time Editing:</strong> Refine and iterate with conversational feedback</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <div class="stat-number">3x</div>
+                                    <div class="stat-label">Faster Writing</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number">40+</div>
+                                    <div class="stat-label">Languages</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Research Panel -->
+                <div class="panel-content" data-panel="research">
+                    <div class="panel-grid">
+                        <div class="demo-visual">
+                            <div class="demo-header">
+                                <span class="demo-icon">🔍</span>
+                                <h3 class="demo-title">Research Assistant</h3>
+                            </div>
+                            <div class="demo-interface">
+                                <div class="chat-message">
+                                    <div class="message-label">You</div>
+                                    <div class="message-text">What are the latest findings on renewable energy efficiency in 2025?</div>
+                                </div>
+                                <div class="chat-message gemini-response">
+                                    <div class="message-label">Gemini</div>
+                                    <div class="message-text">
+                                        <p style="margin-bottom: 12px;">Recent research shows significant advances in renewable energy efficiency:</p>
+                                        <p><strong>Solar Panel Efficiency:</strong> New perovskite-silicon tandem cells achieved 33.9% efficiency in lab tests (Nature Energy, 2025) <sup>[1]</sup></p>
+                                        <p><strong>Wind Turbines:</strong> Offshore installations now operating at 65% capacity factor, up from 45% in 2020 <sup>[2]</sup></p>
+                                        <p><strong>Energy Storage:</strong> Solid-state batteries showing 2x energy density improvements <sup>[3]</sup></p>
+                                    </div>
+                                </div>
+                                <div class="chat-message">
+                                    <div class="message-label">Sources</div>
+                                    <div class="message-text" style="font-size: 0.8125rem;">
+                                        [1] Nature Energy Journal, Jan 2025<br>
+                                        [2] Global Wind Energy Council Report<br>
+                                        [3] Advanced Materials Research
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-details">
+                            <div class="detail-section">
+                                <h3>Research You Can Trust</h3>
+                                <p>Get comprehensive answers backed by real sources. Gemini provides citations so you can verify every claim.</p>
+                                <ul class="feature-list">
+                                    <li>
+                                        <span class="feature-icon">📚</span>
+                                        <span class="feature-text"><strong>Source Citations:</strong> Every fact linked to credible sources</span>
+                                    </li>
+                                    <li>
+                                        <span class="feature-icon">✓</span>
+                                        <span class="feature-text"><strong>Fact Verification:</strong> Reduced hallucinations with Google Search integration</span>
+                                    </li>
+                                    <li>
+                                        <span class="feature-icon">🎓</span>
+                                        <span class="feature-text"><strong>Academic Quality:</strong> Perfect for research papers and reports</span>
+                                    </li>
+                                    <li>
+                                        <span class="feature-icon">🔗</span>
+                                        <span class="feature-text"><strong>Deep Dive:</strong> Follow source links for comprehensive understanding</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <div class="stat-number">95%</div>
+                                    <div class="stat-label">Accuracy Rate</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number">100%</div>
+                                    <div class="stat-label">Cited Sources</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coding Panel -->
+                <div class="panel-content" data-panel="coding">
+                    <div class="panel-grid">
+                        <div class="demo-visual">
+                            <div class="demo-header">
+                                <span class="demo-icon">💻</span>
+                                <h3 class="demo-title">Code Generator</h3>
+                            </div>
+                            <div class="demo-interface">
+                                <div class="chat-message">
+                                    <div class="message-label">You</div>
+                                    <div class="message-text">Create a Python function to validate email addresses with regex.</div>
+                                </div>
+                                <div class="chat-message gemini-response">
+                                    <div class="message-label">Gemini</div>
+                                    <div class="message-text">
+                                        <div class="code-block"><span class="code-keyword">import</span> re
+
+<span class="code-keyword">def</span> <span class="code-function">validate_email</span>(email):
+    <span class="code-comment"># RFC 5322 compliant regex pattern</span>
+    pattern = <span class="code-string">r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'</span>
+    <span class="code-keyword">return</span> bool(re.match(pattern, email))
+
+<span class="code-comment"># Example usage:</span>
+<span class="code-keyword">print</span>(validate_email(<span class="code-string">'user@example.com'</span>))  <span class="code-comment"># True</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-details">
+                            <div class="detail-section">
+                                <h3>Code Smarter, Ship Faster</h3>
+                                <p>From debugging to documentation, Gemini accelerates every stage of development.</p>
+                                <ul class="feature-list">
+                                    <li>
+                                        <span class="feature-icon">⚡</span>
+                                        <span class="feature-text"><strong>Code Generation:</strong> Multiple languages with best practices</span>
+                                    </li>
+                                    <li>
+                                        <span class="feature-icon">🐛</span>
+                                        <span class="feature-text"><strong>Debug Assistant:</strong> Identify and fix errors quickly</span>
+                                    </li>
+                                    <li>
+                                        <span class="feature-icon">📖</span>
+                                        <span class="feature-text"><strong>Documentation:</strong> Auto-generate comments and docs</span>
+                                    </li>
+                                    <li>
+                                        <span class="feature-icon">🔄</span>
+                                        <span class="feature-text"><strong>Code Review:</strong> Suggestions for optimization and security</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <div class="stat-number">20+</div>
+                                    <div class="stat-label">Languages</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number">5x</div>
+                                    <div class="stat-label">Faster Debug</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Workspace Panel -->
+                <div class="panel-content" data-panel="workspace">
+                    <div class="panel-grid">
+                        <div class="demo-visual">
+                            <div class="demo-header">
+                                <span class="demo-icon">📊</span>
+                                <h3 class="demo-title">Workspace Integration</h3>
+                            </div>
+                            <div class="demo-interface">
+                                <div class="chat-message">
+                                    <div class="message-label">You</div>
+                                    <div class="message-text">Summarize my unread emails from this week and create a task list in Google Docs.</div>
+                                </div>
+                                <div class="chat-message gemini-response">
+                                    <div class="message-label">Gemini</div>
+                                    <div class="message-text">
+                                        <p style="margin-bottom: 12px;"><strong>Email Summary (23 unread):</strong></p>
+                                        <p>• <strong>Client Meetings (8):</strong> Q1 review requests from 3 clients<br>
+                                        • <strong>Team Updates (7):</strong> Project X milestone completed<br>
+                                        • <strong>Action Items (5):</strong> Budget approval needed by Friday<br>
+                                        • <strong>Other (3):</strong> Newsletter subscriptions</p>
+                                        <p style="margin-top: 12px;">✓ Created task list in Google Docs: "Weekly Action Items"</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-details">
+                            <div class="detail-section">
+                                <h3>Seamless Google Integration</h3>
+                                <p>Gemini works directly with your existing Google Workspace tools for effortless productivity.</p>
+                                <ul class="feature-list">
+                                    <li>
+                                        <span class="feature-icon">📧</span>
+                                        <span class="feature-text"><strong>Gmail:</strong> Smart summaries, draft replies, and email management</span>
+                                    </li>
+                                    <li>
+                                        <span class="feature-icon">📄</span>
+                                        <span class="feature-text"><strong>Google Docs:</strong> Write, edit, and format documents directly</span>
+                                    </li>
+                                    <li>
+                                        <span class="feature-icon">📅</span>
+                                        <span class="feature-text"><strong>Calendar:</strong> Schedule meetings and manage time intelligently</span>
+                                    </li>
+                                    <li>
+                                        <span class="feature-icon">💾</span>
+                                        <span class="feature-text"><strong>Drive:</strong> Organize, search, and analyze your files</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <div class="stat-number">4</div>
+                                    <div class="stat-label">Core Apps</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number">60%</div>
+                                    <div class="stat-label">Time Saved</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Creative Panel -->
+                <div class="panel-content" data-panel="creative">
+                    <div class="panel-grid">
+                        <div class="demo-visual">
+                            <div class="demo-header">
+                                <span class="demo-icon">🎨</span>
+                                <h3 class="demo-title">Creative Studio</h3>
+                            </div>
+                            <div class="demo-interface">
+                                <div class="chat-message">
+                                    <div class="message-label">You</div>
+                                    <div class="message-text">Brainstorm 5 unique video concepts for a sustainable fashion brand targeting Gen Z.</div>
+                                </div>
+                                <div class="chat-message gemini-response">
+                                    <div class="message-label">Gemini (Nano Banana Mode)</div>
+                                    <div class="message-text">
+                                        <p><strong>1. "Thrift Flip Challenge"</strong> - 60s transformation videos<br>
+                                        <strong>2. "Fashion Carbon Footprint"</strong> - Animated infographic series<br>
+                                        <strong>3. "Behind the Seams"</strong> - Factory tour storytelling<br>
+                                        <strong>4. "Style Swap"</strong> - Influencer clothing exchange<br>
+                                        <strong>5. "Wardrobe Time Capsule"</strong> - Vintage revival content</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-details">
+                            <div class="detail-section">
+                                <h3>Unlock Creative Potential</h3>
+                                <p>From brainstorming to execution, Gemini is your creative collaborator for any project.</p>
+                                <ul class="feature-list">
+                                    <li>
+                                        <span class="feature-icon">💡</span>
+                                        <span class="feature-text"><strong>Rapid Ideation:</strong> Nano Banana generates ideas in seconds</span>
+                                    </li>
+                                    <li>
+                                        <span class="feature-icon">🎬</span>
+                                        <span class="feature-text"><strong>Script Writing:</strong> Video scripts, podcast outlines, storyboards</span>
+                                    </li>
+                                    <li>
+                                        <span class="feature-icon">🎙️</span>
+                                        <span class="feature-text"><strong>Voice Output 3:</strong> Natural narration for your content</span>
+                                    </li>
+                                    <li>
+                                        <span class="feature-icon">🖼️</span>
+                                        <span class="feature-text"><strong>Multimodal:</strong> Analyze images and create visual concepts</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <div class="stat-number">10x</div>
+                                    <div class="stat-label">Faster Ideas</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number">2.5s</div>
+                                    <div class="stat-label">Response Time</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Final CTA -->
+            <div class="panel-cta fade-in">
+                <a href="https://gemini.google.com" target="_blank" rel="noopener" class="cta-button">
+                    Start Using Gemini Free →
+                </a>
+            </div>
+        </div>
+    </section></main>
+    <!-- Hero Section -->
+    
+
+    <!-- Interactive Showcase Section -->
+    
+
+    <!-- JavaScript -->
+    <script src="../assets/js/animations.js"></script>
+    <script>
+        // Panel Switching Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.panel-tab');
+            const panels = document.querySelectorAll('.panel-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const panelId = tab.getAttribute('data-panel');
+
+                    // Remove active class from all tabs and panels
+                    tabs.forEach(t => t.classList.remove('active'));
+                    panels.forEach(p => p.classList.remove('active'));
+
+                    // Add active class to clicked tab and corresponding panel
+                    tab.classList.add('active');
+                    const activePanel = document.querySelector(`.panel-content[data-panel="${panelId}"]`);
+                    if (activePanel) {
+                        activePanel.classList.add('active');
+                    }
+
+                    // Smooth scroll to showcase section on mobile
+                    if (window.innerWidth < 768) {
+                        document.getElementById('showcase').scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Keyboard navigation for tabs
+            tabs.forEach((tab, index) => {
+                tab.setAttribute('role', 'tab');
+                tab.setAttribute('tabindex', index === 0 ? '0' : '-1');
+
+                tab.addEventListener('keydown', (e) => {
+                    let newIndex;
+                    if (e.key === 'ArrowRight') {
+                        newIndex = (index + 1) % tabs.length;
+                        tabs[newIndex].click();
+                        tabs[newIndex].focus();
+                    } else if (e.key === 'ArrowLeft') {
+                        newIndex = (index - 1 + tabs.length) % tabs.length;
+                        tabs[newIndex].click();
+                        tabs[newIndex].focus();
+                    } else if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        tab.click();
+                    }
+                });
+            });
+
+            // Auto-rotate panels every 8 seconds (optional)
+            let autoRotateInterval;
+            const startAutoRotate = () => {
+                autoRotateInterval = setInterval(() => {
+                    const activeTab = document.querySelector('.panel-tab.active');
+                    const allTabs = Array.from(tabs);
+                    const currentIndex = allTabs.indexOf(activeTab);
+                    const nextIndex = (currentIndex + 1) % allTabs.length;
+                    allTabs[nextIndex].click();
+                }, 8000);
+            };
+
+            const stopAutoRotate = () => {
+                clearInterval(autoRotateInterval);
+            };
+
+            // Start auto-rotate
+            // startAutoRotate();
+
+            // Stop auto-rotate on user interaction
+            tabs.forEach(tab => {
+                tab.addEventListener('click', stopAutoRotate);
+            });
+        });
+    </script>
+
+
+
+<!-- Gemini Analytics Tracking -->
+<script src="../assets/js/analytics.js" defer></script>
+</body></html>

@@ -1,0 +1,2857 @@
+{
+  "timestamp": "2026-02-01T13:47:33.131Z",
+  "summary": {
+    "totalSessions": 500,
+    "pagesAnalyzed": 20,
+    "avgQualityScore": 44,
+    "timeWindow": "7 days"
+  },
+  "engagementAnalysis": {
+    "writers-variation-b.html": {
+      "totalSessions": 31,
+      "metrics": {
+        "avgTimeOnPage": 28,
+        "avgScrollDepth": 63,
+        "avgClicks": "2.6",
+        "conversionRate": "12.9",
+        "bounceRate": "0.0",
+        "engagementRate": "74.2"
+      },
+      "qualityScore": 56,
+      "grade": "D",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        }
+      ]
+    },
+    "apple-style.html": {
+      "totalSessions": 26,
+      "metrics": {
+        "avgTimeOnPage": 24,
+        "avgScrollDepth": 50,
+        "avgClicks": "2.3",
+        "conversionRate": "26.9",
+        "bounceRate": "15.4",
+        "engagementRate": "30.8"
+      },
+      "qualityScore": 44,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        },
+        {
+          "type": "success",
+          "message": "Strong conversion rate (26.9%)",
+          "action": "Scale traffic to this high-performing page"
+        }
+      ]
+    },
+    "animations-demo.html": {
+      "totalSessions": 22,
+      "metrics": {
+        "avgTimeOnPage": 24,
+        "avgScrollDepth": 53,
+        "avgClicks": "2.0",
+        "conversionRate": "13.6",
+        "bounceRate": "18.2",
+        "engagementRate": "54.5"
+      },
+      "qualityScore": 45,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        }
+      ]
+    },
+    "research.html": {
+      "totalSessions": 40,
+      "metrics": {
+        "avgTimeOnPage": 22,
+        "avgScrollDepth": 51,
+        "avgClicks": "2.0",
+        "conversionRate": "25.0",
+        "bounceRate": "12.5",
+        "engagementRate": "40.0"
+      },
+      "qualityScore": 46,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        }
+      ]
+    },
+    "workspace.html": {
+      "totalSessions": 30,
+      "metrics": {
+        "avgTimeOnPage": 23,
+        "avgScrollDepth": 52,
+        "avgClicks": "2.4",
+        "conversionRate": "30.0",
+        "bounceRate": "16.7",
+        "engagementRate": "30.0"
+      },
+      "qualityScore": 45,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        },
+        {
+          "type": "success",
+          "message": "Strong conversion rate (30.0%)",
+          "action": "Scale traffic to this high-performing page"
+        }
+      ]
+    },
+    "index.html": {
+      "totalSessions": 30,
+      "metrics": {
+        "avgTimeOnPage": 19,
+        "avgScrollDepth": 47,
+        "avgClicks": "1.9",
+        "conversionRate": "20.0",
+        "bounceRate": "16.7",
+        "engagementRate": "33.3"
+      },
+      "qualityScore": 41,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        }
+      ]
+    },
+    "future.html": {
+      "totalSessions": 26,
+      "metrics": {
+        "avgTimeOnPage": 21,
+        "avgScrollDepth": 48,
+        "avgClicks": "1.8",
+        "conversionRate": "23.1",
+        "bounceRate": "15.4",
+        "engagementRate": "30.8"
+      },
+      "qualityScore": 42,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        }
+      ]
+    },
+    "operators-variation-b.html": {
+      "totalSessions": 23,
+      "metrics": {
+        "avgTimeOnPage": 21,
+        "avgScrollDepth": 47,
+        "avgClicks": "2.1",
+        "conversionRate": "8.7",
+        "bounceRate": "21.7",
+        "engagementRate": "34.8"
+      },
+      "qualityScore": 36,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        },
+        {
+          "type": "warning",
+          "message": "Low conversion rate (8.7%)",
+          "action": "Strengthen CTAs and reduce friction in conversion path"
+        }
+      ]
+    },
+    "operators.html": {
+      "totalSessions": 30,
+      "metrics": {
+        "avgTimeOnPage": 25,
+        "avgScrollDepth": 52,
+        "avgClicks": "2.5",
+        "conversionRate": "16.7",
+        "bounceRate": "10.0",
+        "engagementRate": "40.0"
+      },
+      "qualityScore": 44,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        }
+      ]
+    },
+    "trust-variation-b.html": {
+      "totalSessions": 24,
+      "metrics": {
+        "avgTimeOnPage": 23,
+        "avgScrollDepth": 51,
+        "avgClicks": "2.1",
+        "conversionRate": "33.3",
+        "bounceRate": "20.8",
+        "engagementRate": "20.8"
+      },
+      "qualityScore": 42,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        },
+        {
+          "type": "success",
+          "message": "Strong conversion rate (33.3%)",
+          "action": "Scale traffic to this high-performing page"
+        }
+      ]
+    },
+    "trust.html": {
+      "totalSessions": 27,
+      "metrics": {
+        "avgTimeOnPage": 21,
+        "avgScrollDepth": 49,
+        "avgClicks": "1.7",
+        "conversionRate": "22.2",
+        "bounceRate": "11.1",
+        "engagementRate": "33.3"
+      },
+      "qualityScore": 43,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        }
+      ]
+    },
+    "apple-style-variation-b.html": {
+      "totalSessions": 23,
+      "metrics": {
+        "avgTimeOnPage": 20,
+        "avgScrollDepth": 50,
+        "avgClicks": "2.0",
+        "conversionRate": "13.0",
+        "bounceRate": "17.4",
+        "engagementRate": "43.5"
+      },
+      "qualityScore": 41,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        }
+      ]
+    },
+    "creators.html": {
+      "totalSessions": 20,
+      "metrics": {
+        "avgTimeOnPage": 20,
+        "avgScrollDepth": 50,
+        "avgClicks": "2.3",
+        "conversionRate": "25.0",
+        "bounceRate": "20.0",
+        "engagementRate": "40.0"
+      },
+      "qualityScore": 45,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        }
+      ]
+    },
+    "writers.html": {
+      "totalSessions": 21,
+      "metrics": {
+        "avgTimeOnPage": 24,
+        "avgScrollDepth": 56,
+        "avgClicks": "2.5",
+        "conversionRate": "14.3",
+        "bounceRate": "4.8",
+        "engagementRate": "61.9"
+      },
+      "qualityScore": 51,
+      "grade": "D",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        }
+      ]
+    },
+    "comparison.html": {
+      "totalSessions": 20,
+      "metrics": {
+        "avgTimeOnPage": 28,
+        "avgScrollDepth": 57,
+        "avgClicks": "2.3",
+        "conversionRate": "20.0",
+        "bounceRate": "15.0",
+        "engagementRate": "45.0"
+      },
+      "qualityScore": 46,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        }
+      ]
+    },
+    "productivity.html": {
+      "totalSessions": 22,
+      "metrics": {
+        "avgTimeOnPage": 24,
+        "avgScrollDepth": 54,
+        "avgClicks": "2.1",
+        "conversionRate": "9.1",
+        "bounceRate": "13.6",
+        "engagementRate": "50.0"
+      },
+      "qualityScore": 43,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        },
+        {
+          "type": "warning",
+          "message": "Low conversion rate (9.1%)",
+          "action": "Strengthen CTAs and reduce friction in conversion path"
+        }
+      ]
+    },
+    "creators-variation-b.html": {
+      "totalSessions": 23,
+      "metrics": {
+        "avgTimeOnPage": 21,
+        "avgScrollDepth": 47,
+        "avgClicks": "1.7",
+        "conversionRate": "13.0",
+        "bounceRate": "13.0",
+        "engagementRate": "30.4"
+      },
+      "qualityScore": 38,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        }
+      ]
+    },
+    "automators.html": {
+      "totalSessions": 23,
+      "metrics": {
+        "avgTimeOnPage": 19,
+        "avgScrollDepth": 48,
+        "avgClicks": "1.9",
+        "conversionRate": "26.1",
+        "bounceRate": "21.7",
+        "engagementRate": "26.1"
+      },
+      "qualityScore": 40,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        },
+        {
+          "type": "success",
+          "message": "Strong conversion rate (26.1%)",
+          "action": "Scale traffic to this high-performing page"
+        }
+      ]
+    },
+    "productivity-variation-b.html": {
+      "totalSessions": 17,
+      "metrics": {
+        "avgTimeOnPage": 27,
+        "avgScrollDepth": 59,
+        "avgClicks": "2.2",
+        "conversionRate": "35.3",
+        "bounceRate": "5.9",
+        "engagementRate": "17.6"
+      },
+      "qualityScore": 46,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        },
+        {
+          "type": "success",
+          "message": "Strong conversion rate (35.3%)",
+          "action": "Scale traffic to this high-performing page"
+        }
+      ]
+    },
+    "valentine.html": {
+      "totalSessions": 22,
+      "metrics": {
+        "avgTimeOnPage": 25,
+        "avgScrollDepth": 56,
+        "avgClicks": "2.4",
+        "conversionRate": "13.6",
+        "bounceRate": "9.1",
+        "engagementRate": "50.0"
+      },
+      "qualityScore": 46,
+      "grade": "F",
+      "insights": [
+        {
+          "type": "critical",
+          "message": "Poor engagement quality",
+          "action": "Immediate redesign needed - test new hero and value props"
+        }
+      ]
+    }
+  },
+  "heatmapAnalysis": {
+    "writers-variation-b.html": {
+      "avgScrollDepth": 63,
+      "clickDistribution": {
+        "hero": 81,
+        "features": 18
+      },
+      "totalClicks": 99,
+      "insights": [
+        {
+          "type": "positive",
+          "message": "Strong hero engagement - users clicking primary CTA",
+          "recommendation": "Hero is working well, consider A/B testing variations"
+        }
+      ]
+    },
+    "apple-style.html": {
+      "avgScrollDepth": 50,
+      "clickDistribution": {
+        "hero": 44,
+        "features": 20
+      },
+      "totalClicks": 64,
+      "insights": []
+    },
+    "animations-demo.html": {
+      "avgScrollDepth": 53,
+      "clickDistribution": {
+        "hero": 46,
+        "features": 12
+      },
+      "totalClicks": 58,
+      "insights": [
+        {
+          "type": "positive",
+          "message": "Strong hero engagement - users clicking primary CTA",
+          "recommendation": "Hero is working well, consider A/B testing variations"
+        }
+      ]
+    },
+    "research.html": {
+      "avgScrollDepth": 51,
+      "clickDistribution": {
+        "hero": 64,
+        "features": 35
+      },
+      "totalClicks": 99,
+      "insights": []
+    },
+    "workspace.html": {
+      "avgScrollDepth": 52,
+      "clickDistribution": {
+        "features": 17,
+        "hero": 62
+      },
+      "totalClicks": 79,
+      "insights": [
+        {
+          "type": "positive",
+          "message": "Strong hero engagement - users clicking primary CTA",
+          "recommendation": "Hero is working well, consider A/B testing variations"
+        }
+      ]
+    },
+    "index.html": {
+      "avgScrollDepth": 47,
+      "clickDistribution": {
+        "hero": 52,
+        "features": 17
+      },
+      "totalClicks": 69,
+      "insights": [
+        {
+          "type": "positive",
+          "message": "Strong hero engagement - users clicking primary CTA",
+          "recommendation": "Hero is working well, consider A/B testing variations"
+        }
+      ]
+    },
+    "future.html": {
+      "avgScrollDepth": 48,
+      "clickDistribution": {
+        "hero": 44,
+        "features": 14
+      },
+      "totalClicks": 58,
+      "insights": [
+        {
+          "type": "positive",
+          "message": "Strong hero engagement - users clicking primary CTA",
+          "recommendation": "Hero is working well, consider A/B testing variations"
+        }
+      ]
+    },
+    "operators-variation-b.html": {
+      "avgScrollDepth": 47,
+      "clickDistribution": {
+        "hero": 39,
+        "features": 13
+      },
+      "totalClicks": 52,
+      "insights": [
+        {
+          "type": "positive",
+          "message": "Strong hero engagement - users clicking primary CTA",
+          "recommendation": "Hero is working well, consider A/B testing variations"
+        }
+      ]
+    },
+    "operators.html": {
+      "avgScrollDepth": 52,
+      "clickDistribution": {
+        "hero": 57,
+        "features": 20
+      },
+      "totalClicks": 77,
+      "insights": [
+        {
+          "type": "positive",
+          "message": "Strong hero engagement - users clicking primary CTA",
+          "recommendation": "Hero is working well, consider A/B testing variations"
+        }
+      ]
+    },
+    "trust-variation-b.html": {
+      "avgScrollDepth": 51,
+      "clickDistribution": {
+        "hero": 47,
+        "features": 12
+      },
+      "totalClicks": 59,
+      "insights": [
+        {
+          "type": "positive",
+          "message": "Strong hero engagement - users clicking primary CTA",
+          "recommendation": "Hero is working well, consider A/B testing variations"
+        }
+      ]
+    },
+    "trust.html": {
+      "avgScrollDepth": 49,
+      "clickDistribution": {
+        "hero": 44,
+        "features": 20
+      },
+      "totalClicks": 64,
+      "insights": []
+    },
+    "apple-style-variation-b.html": {
+      "avgScrollDepth": 50,
+      "clickDistribution": {
+        "hero": 39,
+        "features": 16
+      },
+      "totalClicks": 55,
+      "insights": [
+        {
+          "type": "positive",
+          "message": "Strong hero engagement - users clicking primary CTA",
+          "recommendation": "Hero is working well, consider A/B testing variations"
+        }
+      ]
+    },
+    "creators.html": {
+      "avgScrollDepth": 50,
+      "clickDistribution": {
+        "hero": 32,
+        "features": 18
+      },
+      "totalClicks": 50,
+      "insights": []
+    },
+    "writers.html": {
+      "avgScrollDepth": 56,
+      "clickDistribution": {
+        "hero": 48,
+        "features": 12
+      },
+      "totalClicks": 60,
+      "insights": [
+        {
+          "type": "positive",
+          "message": "Strong hero engagement - users clicking primary CTA",
+          "recommendation": "Hero is working well, consider A/B testing variations"
+        }
+      ]
+    },
+    "comparison.html": {
+      "avgScrollDepth": 57,
+      "clickDistribution": {
+        "hero": 44,
+        "features": 15
+      },
+      "totalClicks": 59,
+      "insights": [
+        {
+          "type": "positive",
+          "message": "Strong hero engagement - users clicking primary CTA",
+          "recommendation": "Hero is working well, consider A/B testing variations"
+        }
+      ]
+    },
+    "productivity.html": {
+      "avgScrollDepth": 54,
+      "clickDistribution": {
+        "hero": 42,
+        "features": 17
+      },
+      "totalClicks": 59,
+      "insights": [
+        {
+          "type": "positive",
+          "message": "Strong hero engagement - users clicking primary CTA",
+          "recommendation": "Hero is working well, consider A/B testing variations"
+        }
+      ]
+    },
+    "creators-variation-b.html": {
+      "avgScrollDepth": 47,
+      "clickDistribution": {
+        "hero": 37,
+        "features": 15
+      },
+      "totalClicks": 52,
+      "insights": [
+        {
+          "type": "positive",
+          "message": "Strong hero engagement - users clicking primary CTA",
+          "recommendation": "Hero is working well, consider A/B testing variations"
+        }
+      ]
+    },
+    "automators.html": {
+      "avgScrollDepth": 48,
+      "clickDistribution": {
+        "features": 12,
+        "hero": 40
+      },
+      "totalClicks": 52,
+      "insights": [
+        {
+          "type": "positive",
+          "message": "Strong hero engagement - users clicking primary CTA",
+          "recommendation": "Hero is working well, consider A/B testing variations"
+        }
+      ]
+    },
+    "productivity-variation-b.html": {
+      "avgScrollDepth": 59,
+      "clickDistribution": {
+        "hero": 38,
+        "features": 12
+      },
+      "totalClicks": 50,
+      "insights": [
+        {
+          "type": "positive",
+          "message": "Strong hero engagement - users clicking primary CTA",
+          "recommendation": "Hero is working well, consider A/B testing variations"
+        }
+      ]
+    },
+    "valentine.html": {
+      "avgScrollDepth": 56,
+      "clickDistribution": {
+        "hero": 46,
+        "features": 16
+      },
+      "totalClicks": 62,
+      "insights": [
+        {
+          "type": "positive",
+          "message": "Strong hero engagement - users clicking primary CTA",
+          "recommendation": "Hero is working well, consider A/B testing variations"
+        }
+      ]
+    }
+  },
+  "funnelAnalysis": {
+    "stages": {
+      "landed": {
+        "count": 500,
+        "percentage": 100
+      },
+      "scrolled": {
+        "count": 431,
+        "percentage": "86.2",
+        "dropOff": "13.8"
+      },
+      "interacted": {
+        "count": 368,
+        "percentage": "73.6",
+        "dropOff": "14.6"
+      },
+      "engaged": {
+        "count": 299,
+        "percentage": "59.8",
+        "dropOff": "18.8"
+      },
+      "converted": {
+        "count": 101,
+        "percentage": "20.2",
+        "dropOff": "66.2"
+      }
+    },
+    "insights": []
+  },
+  "journeys": [
+    {
+      "sessionId": "session-1769953653123-0",
+      "page": "writers-variation-b.html",
+      "timestamp": 1769820451789.7942,
+      "behaviorPattern": "interested",
+      "metrics": {
+        "timeOnPage": 24855,
+        "scrollDepth": 60,
+        "clickCount": 2,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653123,
+          "type": "click",
+          "element": "video-play",
+          "position": {
+            "x": 466,
+            "y": 220
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "video-play",
+          "position": {
+            "x": 26,
+            "y": 498
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "nav-link",
+          "position": {
+            "x": 75,
+            "y": 676
+          }
+        }
+      ],
+      "outcome": "considered"
+    },
+    {
+      "sessionId": "session-1769953653124-1",
+      "page": "apple-style.html",
+      "timestamp": 1769578677945.9045,
+      "behaviorPattern": "engaged",
+      "metrics": {
+        "timeOnPage": 58349,
+        "scrollDepth": 83,
+        "clickCount": 3,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "video-play",
+          "position": {
+            "x": 87,
+            "y": 596
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "video-play",
+          "position": {
+            "x": 504,
+            "y": 271
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "hero-link",
+          "position": {
+            "x": 808,
+            "y": 656
+          }
+        },
+        {
+          "timestamp": 1769953656124,
+          "type": "click",
+          "element": "hero-link",
+          "position": {
+            "x": 1077,
+            "y": 125
+          }
+        },
+        {
+          "timestamp": 1769953657124,
+          "type": "click",
+          "element": "feature-card",
+          "position": {
+            "x": 281,
+            "y": 792
+          }
+        }
+      ],
+      "outcome": "engaged-no-convert"
+    },
+    {
+      "sessionId": "session-1769953653124-2",
+      "page": "animations-demo.html",
+      "timestamp": 1769353444456.1758,
+      "behaviorPattern": "engaged",
+      "metrics": {
+        "timeOnPage": 57581,
+        "scrollDepth": 81,
+        "clickCount": 4,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "video-play",
+          "position": {
+            "x": 175,
+            "y": 157
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "feature-card",
+          "position": {
+            "x": 1009,
+            "y": 438
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "hero-link",
+          "position": {
+            "x": 1073,
+            "y": 166
+          }
+        },
+        {
+          "timestamp": 1769953656124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 263,
+            "y": 162
+          }
+        },
+        {
+          "timestamp": 1769953657124,
+          "type": "click",
+          "element": "nav-link",
+          "position": {
+            "x": 881,
+            "y": 286
+          }
+        }
+      ],
+      "outcome": "converted"
+    },
+    {
+      "sessionId": "session-1769953653124-3",
+      "page": "research.html",
+      "timestamp": 1769784757289.1443,
+      "behaviorPattern": "bouncing",
+      "metrics": {
+        "timeOnPage": 2742,
+        "scrollDepth": 8,
+        "clickCount": 0,
+        "rageClicks": 2,
+        "deadClicks": 0
+      },
+      "interactions": [],
+      "outcome": "bounced"
+    },
+    {
+      "sessionId": "session-1769953653124-4",
+      "page": "workspace.html",
+      "timestamp": 1769807708953.2053,
+      "behaviorPattern": "scanning",
+      "metrics": {
+        "timeOnPage": 8081,
+        "scrollDepth": 32,
+        "clickCount": 1,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 329,
+            "y": 653
+          }
+        }
+      ],
+      "outcome": "quick-exit"
+    },
+    {
+      "sessionId": "session-1769953653124-5",
+      "page": "animations-demo.html",
+      "timestamp": 1769709606924.4011,
+      "behaviorPattern": "scanning",
+      "metrics": {
+        "timeOnPage": 12394,
+        "scrollDepth": 40,
+        "clickCount": 0,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "feature-card",
+          "position": {
+            "x": 317,
+            "y": 250
+          }
+        }
+      ],
+      "outcome": "quick-exit"
+    },
+    {
+      "sessionId": "session-1769953653124-6",
+      "page": "index.html",
+      "timestamp": 1769834170283.5242,
+      "behaviorPattern": "engaged",
+      "metrics": {
+        "timeOnPage": 31821,
+        "scrollDepth": 68,
+        "clickCount": 4,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "nav-link",
+          "position": {
+            "x": 444,
+            "y": 328
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 688,
+            "y": 481
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "hero-link",
+          "position": {
+            "x": 139,
+            "y": 18
+          }
+        },
+        {
+          "timestamp": 1769953656124,
+          "type": "click",
+          "element": "nav-link",
+          "position": {
+            "x": 1066,
+            "y": 487
+          }
+        },
+        {
+          "timestamp": 1769953657124,
+          "type": "click",
+          "element": "nav-link",
+          "position": {
+            "x": 190,
+            "y": 634
+          }
+        }
+      ],
+      "outcome": "converted"
+    },
+    {
+      "sessionId": "session-1769953653124-7",
+      "page": "future.html",
+      "timestamp": 1769361381149.7275,
+      "behaviorPattern": "engaged",
+      "metrics": {
+        "timeOnPage": 49342,
+        "scrollDepth": 75,
+        "clickCount": 6,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "video-play",
+          "position": {
+            "x": 616,
+            "y": 392
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "nav-link",
+          "position": {
+            "x": 854,
+            "y": 585
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 1024,
+            "y": 631
+          }
+        },
+        {
+          "timestamp": 1769953656124,
+          "type": "click",
+          "element": "hero-link",
+          "position": {
+            "x": 1070,
+            "y": 322
+          }
+        },
+        {
+          "timestamp": 1769953657124,
+          "type": "click",
+          "element": "hero-link",
+          "position": {
+            "x": 190,
+            "y": 394
+          }
+        }
+      ],
+      "outcome": "converted"
+    },
+    {
+      "sessionId": "session-1769953653124-8",
+      "page": "research.html",
+      "timestamp": 1769687930160.8193,
+      "behaviorPattern": "interested",
+      "metrics": {
+        "timeOnPage": 29649,
+        "scrollDepth": 52,
+        "clickCount": 3,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "video-play",
+          "position": {
+            "x": 834,
+            "y": 351
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 223,
+            "y": 582
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "nav-link",
+          "position": {
+            "x": 691,
+            "y": 574
+          }
+        }
+      ],
+      "outcome": "considered"
+    },
+    {
+      "sessionId": "session-1769953653124-9",
+      "page": "operators-variation-b.html",
+      "timestamp": 1769934804754.077,
+      "behaviorPattern": "interested",
+      "metrics": {
+        "timeOnPage": 23939,
+        "scrollDepth": 54,
+        "clickCount": 2,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "hero-link",
+          "position": {
+            "x": 933,
+            "y": 230
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "hero-link",
+          "position": {
+            "x": 528,
+            "y": 345
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "nav-link",
+          "position": {
+            "x": 269,
+            "y": 355
+          }
+        }
+      ],
+      "outcome": "considered"
+    },
+    {
+      "sessionId": "session-1769953653124-10",
+      "page": "operators.html",
+      "timestamp": 1769406401230.985,
+      "behaviorPattern": "scanning",
+      "metrics": {
+        "timeOnPage": 10478,
+        "scrollDepth": 29,
+        "clickCount": 0,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "video-play",
+          "position": {
+            "x": 1186,
+            "y": 129
+          }
+        }
+      ],
+      "outcome": "quick-exit"
+    },
+    {
+      "sessionId": "session-1769953653124-11",
+      "page": "index.html",
+      "timestamp": 1769656514787.981,
+      "behaviorPattern": "interested",
+      "metrics": {
+        "timeOnPage": 18194,
+        "scrollDepth": 61,
+        "clickCount": 2,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 581,
+            "y": 462
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "feature-card",
+          "position": {
+            "x": 304,
+            "y": 159
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 770,
+            "y": 520
+          }
+        }
+      ],
+      "outcome": "considered"
+    },
+    {
+      "sessionId": "session-1769953653124-12",
+      "page": "operators.html",
+      "timestamp": 1769360979123.5815,
+      "behaviorPattern": "scanning",
+      "metrics": {
+        "timeOnPage": 12465,
+        "scrollDepth": 37,
+        "clickCount": 1,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "nav-link",
+          "position": {
+            "x": 676,
+            "y": 762
+          }
+        }
+      ],
+      "outcome": "quick-exit"
+    },
+    {
+      "sessionId": "session-1769953653124-13",
+      "page": "operators.html",
+      "timestamp": 1769756042405.2468,
+      "behaviorPattern": "scanning",
+      "metrics": {
+        "timeOnPage": 11275,
+        "scrollDepth": 36,
+        "clickCount": 1,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "nav-link",
+          "position": {
+            "x": 489,
+            "y": 381
+          }
+        }
+      ],
+      "outcome": "quick-exit"
+    },
+    {
+      "sessionId": "session-1769953653124-14",
+      "page": "trust-variation-b.html",
+      "timestamp": 1769513381210.1262,
+      "behaviorPattern": "scanning",
+      "metrics": {
+        "timeOnPage": 8589,
+        "scrollDepth": 33,
+        "clickCount": 0,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 425,
+            "y": 2
+          }
+        }
+      ],
+      "outcome": "quick-exit"
+    },
+    {
+      "sessionId": "session-1769953653124-15",
+      "page": "trust.html",
+      "timestamp": 1769798127926.9795,
+      "behaviorPattern": "engaged",
+      "metrics": {
+        "timeOnPage": 32648,
+        "scrollDepth": 94,
+        "clickCount": 3,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "feature-card",
+          "position": {
+            "x": 807,
+            "y": 508
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "nav-link",
+          "position": {
+            "x": 135,
+            "y": 99
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "nav-link",
+          "position": {
+            "x": 157,
+            "y": 753
+          }
+        },
+        {
+          "timestamp": 1769953656124,
+          "type": "click",
+          "element": "video-play",
+          "position": {
+            "x": 408,
+            "y": 754
+          }
+        },
+        {
+          "timestamp": 1769953657124,
+          "type": "click",
+          "element": "nav-link",
+          "position": {
+            "x": 651,
+            "y": 602
+          }
+        }
+      ],
+      "outcome": "converted"
+    },
+    {
+      "sessionId": "session-1769953653124-16",
+      "page": "future.html",
+      "timestamp": 1769833058846.9905,
+      "behaviorPattern": "interested",
+      "metrics": {
+        "timeOnPage": 25140,
+        "scrollDepth": 61,
+        "clickCount": 3,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "hero-link",
+          "position": {
+            "x": 654,
+            "y": 242
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "hero-link",
+          "position": {
+            "x": 363,
+            "y": 528
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 640,
+            "y": 761
+          }
+        }
+      ],
+      "outcome": "considered"
+    },
+    {
+      "sessionId": "session-1769953653124-17",
+      "page": "apple-style-variation-b.html",
+      "timestamp": 1769627671160.5005,
+      "behaviorPattern": "interested",
+      "metrics": {
+        "timeOnPage": 18830,
+        "scrollDepth": 53,
+        "clickCount": 3,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 1179,
+            "y": 44
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 1053,
+            "y": 647
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "video-play",
+          "position": {
+            "x": 744,
+            "y": 759
+          }
+        }
+      ],
+      "outcome": "converted"
+    },
+    {
+      "sessionId": "session-1769953653124-18",
+      "page": "writers-variation-b.html",
+      "timestamp": 1769660358848.1868,
+      "behaviorPattern": "interested",
+      "metrics": {
+        "timeOnPage": 26137,
+        "scrollDepth": 67,
+        "clickCount": 4,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "nav-link",
+          "position": {
+            "x": 850,
+            "y": 292
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "nav-link",
+          "position": {
+            "x": 1035,
+            "y": 692
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "feature-card",
+          "position": {
+            "x": 640,
+            "y": 510
+          }
+        }
+      ],
+      "outcome": "considered"
+    },
+    {
+      "sessionId": "session-1769953653124-19",
+      "page": "writers-variation-b.html",
+      "timestamp": 1769792060883.694,
+      "behaviorPattern": "interested",
+      "metrics": {
+        "timeOnPage": 21702,
+        "scrollDepth": 65,
+        "clickCount": 2,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "hero-link",
+          "position": {
+            "x": 289,
+            "y": 303
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "video-play",
+          "position": {
+            "x": 369,
+            "y": 232
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 935,
+            "y": 381
+          }
+        }
+      ],
+      "outcome": "considered"
+    },
+    {
+      "sessionId": "session-1769953653124-20",
+      "page": "writers-variation-b.html",
+      "timestamp": 1769566682097.5256,
+      "behaviorPattern": "scanning",
+      "metrics": {
+        "timeOnPage": 10624,
+        "scrollDepth": 35,
+        "clickCount": 0,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "nav-link",
+          "position": {
+            "x": 286,
+            "y": 530
+          }
+        }
+      ],
+      "outcome": "quick-exit"
+    },
+    {
+      "sessionId": "session-1769953653124-21",
+      "page": "creators.html",
+      "timestamp": 1769724420164.844,
+      "behaviorPattern": "interested",
+      "metrics": {
+        "timeOnPage": 25276,
+        "scrollDepth": 69,
+        "clickCount": 2,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "video-play",
+          "position": {
+            "x": 696,
+            "y": 424
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "video-play",
+          "position": {
+            "x": 485,
+            "y": 698
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "nav-link",
+          "position": {
+            "x": 113,
+            "y": 47
+          }
+        }
+      ],
+      "outcome": "considered"
+    },
+    {
+      "sessionId": "session-1769953653124-22",
+      "page": "apple-style-variation-b.html",
+      "timestamp": 1769654878845.8254,
+      "behaviorPattern": "interested",
+      "metrics": {
+        "timeOnPage": 30655,
+        "scrollDepth": 49,
+        "clickCount": 3,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 403,
+            "y": 732
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "nav-link",
+          "position": {
+            "x": 706,
+            "y": 12
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "feature-card",
+          "position": {
+            "x": 322,
+            "y": 475
+          }
+        }
+      ],
+      "outcome": "converted"
+    },
+    {
+      "sessionId": "session-1769953653124-23",
+      "page": "writers-variation-b.html",
+      "timestamp": 1769443887984.5015,
+      "behaviorPattern": "interested",
+      "metrics": {
+        "timeOnPage": 18957,
+        "scrollDepth": 67,
+        "clickCount": 4,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "video-play",
+          "position": {
+            "x": 1080,
+            "y": 61
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 583,
+            "y": 154
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "hero-link",
+          "position": {
+            "x": 976,
+            "y": 182
+          }
+        }
+      ],
+      "outcome": "considered"
+    },
+    {
+      "sessionId": "session-1769953653124-24",
+      "page": "writers.html",
+      "timestamp": 1769703130514.0364,
+      "behaviorPattern": "interested",
+      "metrics": {
+        "timeOnPage": 25815,
+        "scrollDepth": 68,
+        "clickCount": 4,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "hero-link",
+          "position": {
+            "x": 686,
+            "y": 463
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "hero-link",
+          "position": {
+            "x": 1137,
+            "y": 467
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "nav-link",
+          "position": {
+            "x": 501,
+            "y": 652
+          }
+        }
+      ],
+      "outcome": "considered"
+    },
+    {
+      "sessionId": "session-1769953653124-25",
+      "page": "operators-variation-b.html",
+      "timestamp": 1769935620144.2876,
+      "behaviorPattern": "engaged",
+      "metrics": {
+        "timeOnPage": 38353,
+        "scrollDepth": 76,
+        "clickCount": 5,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "hero-link",
+          "position": {
+            "x": 446,
+            "y": 706
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 1046,
+            "y": 478
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 708,
+            "y": 166
+          }
+        },
+        {
+          "timestamp": 1769953656124,
+          "type": "click",
+          "element": "nav-link",
+          "position": {
+            "x": 894,
+            "y": 797
+          }
+        },
+        {
+          "timestamp": 1769953657124,
+          "type": "click",
+          "element": "hero-link",
+          "position": {
+            "x": 426,
+            "y": 163
+          }
+        }
+      ],
+      "outcome": "engaged-no-convert"
+    },
+    {
+      "sessionId": "session-1769953653124-26",
+      "page": "workspace.html",
+      "timestamp": 1769352274904.4355,
+      "behaviorPattern": "scanning",
+      "metrics": {
+        "timeOnPage": 9684,
+        "scrollDepth": 35,
+        "clickCount": 0,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "nav-link",
+          "position": {
+            "x": 466,
+            "y": 227
+          }
+        }
+      ],
+      "outcome": "quick-exit"
+    },
+    {
+      "sessionId": "session-1769953653124-27",
+      "page": "workspace.html",
+      "timestamp": 1769643218882.7004,
+      "behaviorPattern": "engaged",
+      "metrics": {
+        "timeOnPage": 37566,
+        "scrollDepth": 97,
+        "clickCount": 3,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "nav-link",
+          "position": {
+            "x": 509,
+            "y": 526
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 46,
+            "y": 103
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "nav-link",
+          "position": {
+            "x": 12,
+            "y": 428
+          }
+        },
+        {
+          "timestamp": 1769953656124,
+          "type": "click",
+          "element": "feature-card",
+          "position": {
+            "x": 656,
+            "y": 376
+          }
+        },
+        {
+          "timestamp": 1769953657124,
+          "type": "click",
+          "element": "feature-card",
+          "position": {
+            "x": 945,
+            "y": 167
+          }
+        }
+      ],
+      "outcome": "converted"
+    },
+    {
+      "sessionId": "session-1769953653124-28",
+      "page": "writers.html",
+      "timestamp": 1769846531011.483,
+      "behaviorPattern": "interested",
+      "metrics": {
+        "timeOnPage": 22809,
+        "scrollDepth": 57,
+        "clickCount": 3,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 429,
+            "y": 308
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 525,
+            "y": 61
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "hero-link",
+          "position": {
+            "x": 623,
+            "y": 268
+          }
+        }
+      ],
+      "outcome": "considered"
+    },
+    {
+      "sessionId": "session-1769953653124-29",
+      "page": "workspace.html",
+      "timestamp": 1769668360364.5312,
+      "behaviorPattern": "engaged",
+      "metrics": {
+        "timeOnPage": 56665,
+        "scrollDepth": 84,
+        "clickCount": 6,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "feature-card",
+          "position": {
+            "x": 446,
+            "y": 340
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "nav-link",
+          "position": {
+            "x": 1059,
+            "y": 374
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "hero-link",
+          "position": {
+            "x": 1019,
+            "y": 518
+          }
+        },
+        {
+          "timestamp": 1769953656124,
+          "type": "click",
+          "element": "feature-card",
+          "position": {
+            "x": 866,
+            "y": 785
+          }
+        },
+        {
+          "timestamp": 1769953657124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 1092,
+            "y": 638
+          }
+        }
+      ],
+      "outcome": "engaged-no-convert"
+    },
+    {
+      "sessionId": "session-1769953653124-30",
+      "page": "comparison.html",
+      "timestamp": 1769549893970.4302,
+      "behaviorPattern": "interested",
+      "metrics": {
+        "timeOnPage": 22335,
+        "scrollDepth": 65,
+        "clickCount": 1,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "video-play",
+          "position": {
+            "x": 752,
+            "y": 283
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "nav-link",
+          "position": {
+            "x": 648,
+            "y": 640
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 420,
+            "y": 309
+          }
+        }
+      ],
+      "outcome": "converted"
+    },
+    {
+      "sessionId": "session-1769953653124-31",
+      "page": "comparison.html",
+      "timestamp": 1769792110088.6157,
+      "behaviorPattern": "engaged",
+      "metrics": {
+        "timeOnPage": 38147,
+        "scrollDepth": 89,
+        "clickCount": 6,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "hero-link",
+          "position": {
+            "x": 12,
+            "y": 290
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "video-play",
+          "position": {
+            "x": 270,
+            "y": 453
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "feature-card",
+          "position": {
+            "x": 548,
+            "y": 54
+          }
+        },
+        {
+          "timestamp": 1769953656124,
+          "type": "click",
+          "element": "feature-card",
+          "position": {
+            "x": 289,
+            "y": 643
+          }
+        },
+        {
+          "timestamp": 1769953657124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 310,
+            "y": 133
+          }
+        }
+      ],
+      "outcome": "converted"
+    },
+    {
+      "sessionId": "session-1769953653124-32",
+      "page": "trust.html",
+      "timestamp": 1769794816097.3972,
+      "behaviorPattern": "interested",
+      "metrics": {
+        "timeOnPage": 23484,
+        "scrollDepth": 55,
+        "clickCount": 3,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "feature-card",
+          "position": {
+            "x": 1046,
+            "y": 356
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 1178,
+            "y": 250
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "video-play",
+          "position": {
+            "x": 1050,
+            "y": 771
+          }
+        }
+      ],
+      "outcome": "considered"
+    },
+    {
+      "sessionId": "session-1769953653124-33",
+      "page": "productivity.html",
+      "timestamp": 1769750628543.476,
+      "behaviorPattern": "interested",
+      "metrics": {
+        "timeOnPage": 20694,
+        "scrollDepth": 65,
+        "clickCount": 3,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "hero-link",
+          "position": {
+            "x": 205,
+            "y": 310
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "hero-link",
+          "position": {
+            "x": 594,
+            "y": 178
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 46,
+            "y": 516
+          }
+        }
+      ],
+      "outcome": "considered"
+    },
+    {
+      "sessionId": "session-1769953653124-34",
+      "page": "writers-variation-b.html",
+      "timestamp": 1769838343838.11,
+      "behaviorPattern": "engaged",
+      "metrics": {
+        "timeOnPage": 42508,
+        "scrollDepth": 88,
+        "clickCount": 6,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "feature-card",
+          "position": {
+            "x": 542,
+            "y": 86
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 914,
+            "y": 403
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "feature-card",
+          "position": {
+            "x": 671,
+            "y": 565
+          }
+        },
+        {
+          "timestamp": 1769953656124,
+          "type": "click",
+          "element": "hero-link",
+          "position": {
+            "x": 612,
+            "y": 578
+          }
+        },
+        {
+          "timestamp": 1769953657124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 1010,
+            "y": 310
+          }
+        }
+      ],
+      "outcome": "engaged-no-convert"
+    },
+    {
+      "sessionId": "session-1769953653124-35",
+      "page": "trust-variation-b.html",
+      "timestamp": 1769951834427.4666,
+      "behaviorPattern": "scanning",
+      "metrics": {
+        "timeOnPage": 10879,
+        "scrollDepth": 30,
+        "clickCount": 0,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 89,
+            "y": 408
+          }
+        }
+      ],
+      "outcome": "quick-exit"
+    },
+    {
+      "sessionId": "session-1769953653124-36",
+      "page": "creators-variation-b.html",
+      "timestamp": 1769423247142.3945,
+      "behaviorPattern": "scanning",
+      "metrics": {
+        "timeOnPage": 7126,
+        "scrollDepth": 34,
+        "clickCount": 1,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "feature-card",
+          "position": {
+            "x": 1094,
+            "y": 87
+          }
+        }
+      ],
+      "outcome": "quick-exit"
+    },
+    {
+      "sessionId": "session-1769953653124-37",
+      "page": "research.html",
+      "timestamp": 1769756501892.3398,
+      "behaviorPattern": "bouncing",
+      "metrics": {
+        "timeOnPage": 3647,
+        "scrollDepth": 9,
+        "clickCount": 0,
+        "rageClicks": 2,
+        "deadClicks": 0
+      },
+      "interactions": [],
+      "outcome": "bounced"
+    },
+    {
+      "sessionId": "session-1769953653124-38",
+      "page": "trust-variation-b.html",
+      "timestamp": 1769848002515.0603,
+      "behaviorPattern": "engaged",
+      "metrics": {
+        "timeOnPage": 31645,
+        "scrollDepth": 85,
+        "clickCount": 5,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "video-play",
+          "position": {
+            "x": 266,
+            "y": 310
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 989,
+            "y": 537
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "hero-link",
+          "position": {
+            "x": 947,
+            "y": 464
+          }
+        },
+        {
+          "timestamp": 1769953656124,
+          "type": "click",
+          "element": "hero-link",
+          "position": {
+            "x": 1194,
+            "y": 245
+          }
+        },
+        {
+          "timestamp": 1769953657124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 1002,
+            "y": 691
+          }
+        }
+      ],
+      "outcome": "converted"
+    },
+    {
+      "sessionId": "session-1769953653124-39",
+      "page": "workspace.html",
+      "timestamp": 1769927199427.0605,
+      "behaviorPattern": "bouncing",
+      "metrics": {
+        "timeOnPage": 3770,
+        "scrollDepth": 8,
+        "clickCount": 0,
+        "rageClicks": 2,
+        "deadClicks": 0
+      },
+      "interactions": [],
+      "outcome": "bounced"
+    },
+    {
+      "sessionId": "session-1769953653124-40",
+      "page": "operators.html",
+      "timestamp": 1769852558511.5015,
+      "behaviorPattern": "engaged",
+      "metrics": {
+        "timeOnPage": 47184,
+        "scrollDepth": 71,
+        "clickCount": 6,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "feature-card",
+          "position": {
+            "x": 34,
+            "y": 558
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "nav-link",
+          "position": {
+            "x": 395,
+            "y": 204
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "nav-link",
+          "position": {
+            "x": 1071,
+            "y": 605
+          }
+        },
+        {
+          "timestamp": 1769953656124,
+          "type": "click",
+          "element": "feature-card",
+          "position": {
+            "x": 516,
+            "y": 720
+          }
+        },
+        {
+          "timestamp": 1769953657124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 826,
+            "y": 268
+          }
+        }
+      ],
+      "outcome": "converted"
+    },
+    {
+      "sessionId": "session-1769953653124-41",
+      "page": "automators.html",
+      "timestamp": 1769423616742.9648,
+      "behaviorPattern": "interested",
+      "metrics": {
+        "timeOnPage": 26643,
+        "scrollDepth": 55,
+        "clickCount": 2,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 566,
+            "y": 622
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 694,
+            "y": 447
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 403,
+            "y": 306
+          }
+        }
+      ],
+      "outcome": "considered"
+    },
+    {
+      "sessionId": "session-1769953653124-42",
+      "page": "apple-style-variation-b.html",
+      "timestamp": 1769604758852.1484,
+      "behaviorPattern": "interested",
+      "metrics": {
+        "timeOnPage": 20022,
+        "scrollDepth": 55,
+        "clickCount": 2,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "feature-card",
+          "position": {
+            "x": 1093,
+            "y": 96
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "video-play",
+          "position": {
+            "x": 46,
+            "y": 781
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "video-play",
+          "position": {
+            "x": 410,
+            "y": 307
+          }
+        }
+      ],
+      "outcome": "considered"
+    },
+    {
+      "sessionId": "session-1769953653124-43",
+      "page": "animations-demo.html",
+      "timestamp": 1769570301675.709,
+      "behaviorPattern": "interested",
+      "metrics": {
+        "timeOnPage": 29644,
+        "scrollDepth": 62,
+        "clickCount": 2,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 166,
+            "y": 79
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "nav-link",
+          "position": {
+            "x": 194,
+            "y": 566
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "nav-link",
+          "position": {
+            "x": 686,
+            "y": 384
+          }
+        }
+      ],
+      "outcome": "considered"
+    },
+    {
+      "sessionId": "session-1769953653124-44",
+      "page": "productivity.html",
+      "timestamp": 1769870794324.781,
+      "behaviorPattern": "interested",
+      "metrics": {
+        "timeOnPage": 21717,
+        "scrollDepth": 60,
+        "clickCount": 4,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 799,
+            "y": 179
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 238,
+            "y": 618
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "hero-link",
+          "position": {
+            "x": 873,
+            "y": 718
+          }
+        }
+      ],
+      "outcome": "considered"
+    },
+    {
+      "sessionId": "session-1769953653124-45",
+      "page": "trust-variation-b.html",
+      "timestamp": 1769932583144.1382,
+      "behaviorPattern": "engaged",
+      "metrics": {
+        "timeOnPage": 33664,
+        "scrollDepth": 98,
+        "clickCount": 3,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "video-play",
+          "position": {
+            "x": 243,
+            "y": 570
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "video-play",
+          "position": {
+            "x": 1057,
+            "y": 653
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "video-play",
+          "position": {
+            "x": 882,
+            "y": 685
+          }
+        },
+        {
+          "timestamp": 1769953656124,
+          "type": "click",
+          "element": "nav-link",
+          "position": {
+            "x": 117,
+            "y": 284
+          }
+        },
+        {
+          "timestamp": 1769953657124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 973,
+            "y": 245
+          }
+        }
+      ],
+      "outcome": "converted"
+    },
+    {
+      "sessionId": "session-1769953653124-46",
+      "page": "writers.html",
+      "timestamp": 1769842686168.5012,
+      "behaviorPattern": "interested",
+      "metrics": {
+        "timeOnPage": 18483,
+        "scrollDepth": 60,
+        "clickCount": 1,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "feature-card",
+          "position": {
+            "x": 737,
+            "y": 109
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "nav-link",
+          "position": {
+            "x": 1177,
+            "y": 750
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 449,
+            "y": 94
+          }
+        }
+      ],
+      "outcome": "considered"
+    },
+    {
+      "sessionId": "session-1769953653124-47",
+      "page": "productivity-variation-b.html",
+      "timestamp": 1769375247269.682,
+      "behaviorPattern": "scanning",
+      "metrics": {
+        "timeOnPage": 12532,
+        "scrollDepth": 35,
+        "clickCount": 0,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "feature-card",
+          "position": {
+            "x": 26,
+            "y": 394
+          }
+        }
+      ],
+      "outcome": "quick-exit"
+    },
+    {
+      "sessionId": "session-1769953653124-48",
+      "page": "research.html",
+      "timestamp": 1769946940230.3958,
+      "behaviorPattern": "interested",
+      "metrics": {
+        "timeOnPage": 24014,
+        "scrollDepth": 55,
+        "clickCount": 3,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "video-play",
+          "position": {
+            "x": 368,
+            "y": 112
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "video-play",
+          "position": {
+            "x": 829,
+            "y": 212
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "video-play",
+          "position": {
+            "x": 339,
+            "y": 551
+          }
+        }
+      ],
+      "outcome": "considered"
+    },
+    {
+      "sessionId": "session-1769953653124-49",
+      "page": "automators.html",
+      "timestamp": 1769451472379.0767,
+      "behaviorPattern": "interested",
+      "metrics": {
+        "timeOnPage": 26050,
+        "scrollDepth": 65,
+        "clickCount": 2,
+        "rageClicks": 0,
+        "deadClicks": 0
+      },
+      "interactions": [
+        {
+          "timestamp": 1769953653124,
+          "type": "click",
+          "element": "cta-button",
+          "position": {
+            "x": 176,
+            "y": 637
+          }
+        },
+        {
+          "timestamp": 1769953654124,
+          "type": "click",
+          "element": "hero-link",
+          "position": {
+            "x": 1140,
+            "y": 513
+          }
+        },
+        {
+          "timestamp": 1769953655124,
+          "type": "click",
+          "element": "hero-link",
+          "position": {
+            "x": 734,
+            "y": 393
+          }
+        }
+      ],
+      "outcome": "considered"
+    }
+  ]
+}

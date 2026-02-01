@@ -1,0 +1,332 @@
+═══════════════════════════════════════════════════════════
+                    SEO AUDIT REPORT                        
+═══════════════════════════════════════════════════════════
+
+📊 Summary:
+   Total Pages: 25
+   ✅ Passed: 25
+   ❌ Failed: 0
+   ⚠️  Total Errors: 0
+   ⚠️  Total Warnings: 9
+
+───────────────────────────────────────────────────────────
+
+⚠️  WARNINGS (9):
+
+   • apple-inspired.html: Title too short (29 chars, recommended: 30-60)
+   • email-savior.html: Description too short (113 chars, recommended: 120-160)
+   • interactive-showcase.html: Description too short (119 chars, recommended: 120-160)
+   • love-letter-to-productivity.html: Description too short (109 chars, recommended: 120-160)
+   • truth-matters.html: Title too short (28 chars, recommended: 30-60)
+   • workflow-wizard.html: Description too short (118 chars, recommended: 120-160)
+   • workspace-infinity.html: Description too short (110 chars, recommended: 120-160)
+   • workspace-integration.html: Description too short (119 chars, recommended: 120-160)
+   • writers-room.html: Description too short (116 chars, recommended: 120-160)
+
+───────────────────────────────────────────────────────────
+
+PAGE DETAILS:
+
+✅ apple-inspired.html
+   Title: Gemini - Intelligence Refined (29 chars)
+   Description: 122 chars
+   H1 count: 1
+   Images with alt: 0/0 (100%)
+   Structured data: Yes
+   Open Graph: 7 tags
+   Twitter Card: 7 tags
+   Canonical: Yes
+   Lang attribute: Yes
+   Issues: 0 errors, 1 warnings
+
+✅ bundling.html
+   Title: Gemini Everything - Your Complete AI Ecosystem (46 chars)
+   Description: 125 chars
+   H1 count: 1
+   Images with alt: 0/0 (100%)
+   Structured data: Yes
+   Open Graph: 7 tags
+   Twitter Card: 7 tags
+   Canonical: Yes
+   Lang attribute: Yes
+   Issues: 0 errors, 0 warnings
+
+✅ business-intelligence.html
+   Title: Gemini for Business Intelligence - Data-Driven Decisions (56 chars)
+   Description: 131 chars
+   H1 count: 1
+   Images with alt: 0/0 (100%)
+   Structured data: Yes
+   Open Graph: 7 tags
+   Twitter Card: 7 tags
+   Canonical: Yes
+   Lang attribute: Yes
+   Issues: 0 errors, 0 warnings
+
+✅ creative-studio.html
+   Title: Gemini Creative Studio - Unleash Your Imagination (49 chars)
+   Description: 120 chars
+   H1 count: 1
+   Images with alt: 0/0 (100%)
+   Structured data: Yes
+   Open Graph: 7 tags
+   Twitter Card: 7 tags
+   Canonical: Yes
+   Lang attribute: Yes
+   Issues: 0 errors, 0 warnings
+
+✅ creators-voice-studio.html
+   Title: Gemini Voice Studio - AI That Sounds Like You (45 chars)
+   Description: 120 chars
+   H1 count: 1
+   Images with alt: 0/0 (100%)
+   Structured data: Yes
+   Open Graph: 7 tags
+   Twitter Card: 7 tags
+   Canonical: Yes
+   Lang attribute: Yes
+   Issues: 0 errors, 0 warnings
+
+✅ developer-tools.html
+   Title: Gemini for Developers - Code Smarter, Ship Faster (49 chars)
+   Description: 124 chars
+   H1 count: 1
+   Images with alt: 0/0 (100%)
+   Structured data: Yes
+   Open Graph: 7 tags
+   Twitter Card: 7 tags
+   Canonical: Yes
+   Lang attribute: Yes
+   Issues: 0 errors, 0 warnings
+
+✅ education-learning.html
+   Title: Gemini for Learning - Your Personal AI Tutor (44 chars)
+   Description: 129 chars
+   H1 count: 1
+   Images with alt: 0/0 (100%)
+   Structured data: Yes
+   Open Graph: 7 tags
+   Twitter Card: 7 tags
+   Canonical: Yes
+   Lang attribute: Yes
+   Issues: 0 errors, 0 warnings
+
+✅ email-savior.html
+   Title: Gemini Email Savior - Inbox Zero, Achieved (42 chars)
+   Description: 113 chars
+   H1 count: 1
+   Images with alt: 0/0 (100%)
+   Structured data: Yes
+   Open Graph: 7 tags
+   Twitter Card: 7 tags
+   Canonical: Yes
+   Lang attribute: Yes
+   Issues: 0 errors, 1 warnings
+
+✅ interactive-showcase.html
+   Title: Gemini Interactive Showcase - Experience AI in Action (53 chars)
+   Description: 119 chars
+   H1 count: 1
+   Images with alt: 0/0 (100%)
+   Structured data: Yes
+   Open Graph: 7 tags
+   Twitter Card: 7 tags
+   Canonical: Yes
+   Lang attribute: Yes
+   Issues: 0 errors, 1 warnings
+
+✅ love-letter-to-productivity.html
+   Title: Gemini - A Love Letter to Productivity (38 chars)
+   Description: 109 chars
+   H1 count: 1
+   Images with alt: 0/0 (100%)
+   Structured data: Yes
+   Open Graph: 7 tags
+   Twitter Card: 7 tags
+   Canonical: Yes
+   Lang attribute: Yes
+   Issues: 0 errors, 1 warnings
+
+✅ meeting-notes-magic.html
+   Title: Gemini Meeting Notes - Never Miss a Detail (42 chars)
+   Description: 131 chars
+   H1 count: 1
+   Images with alt: 0/0 (100%)
+   Structured data: Yes
+   Open Graph: 7 tags
+   Twitter Card: 7 tags
+   Canonical: Yes
+   Lang attribute: Yes
+   Issues: 0 errors, 0 warnings
+
+✅ multimodal-ai.html
+   Title: Gemini Multimodal AI - See, Understand, Create (46 chars)
+   Description: 122 chars
+   H1 count: 1
+   Images with alt: 0/0 (100%)
+   Structured data: Yes
+   Open Graph: 7 tags
+   Twitter Card: 7 tags
+   Canonical: Yes
+   Lang attribute: Yes
+   Issues: 0 errors, 0 warnings
+
+✅ operators-automators.html
+   Title: Gemini for Automation - Work Smarter, Not Harder (48 chars)
+   Description: 126 chars
+   H1 count: 1
+   Images with alt: 0/0 (100%)
+   Structured data: Yes
+   Open Graph: 7 tags
+   Twitter Card: 7 tags
+   Canonical: Yes
+   Lang attribute: Yes
+   Issues: 0 errors, 0 warnings
+
+✅ personal-assistant.html
+   Title: Gemini Personal Assistant - Your AI Chief of Staff (50 chars)
+   Description: 122 chars
+   H1 count: 1
+   Images with alt: 0/0 (100%)
+   Structured data: Yes
+   Open Graph: 7 tags
+   Twitter Card: 7 tags
+   Canonical: Yes
+   Lang attribute: Yes
+   Issues: 0 errors, 0 warnings
+
+✅ pro.html
+   Title: Gemini Pro - Premium AI for Professionals (41 chars)
+   Description: 124 chars
+   H1 count: 1
+   Images with alt: 0/0 (100%)
+   Structured data: Yes
+   Open Graph: 7 tags
+   Twitter Card: 7 tags
+   Canonical: Yes
+   Lang attribute: Yes
+   Issues: 0 errors, 0 warnings
+
+✅ research-assistant.html
+   Title: Gemini Research Assistant - Deep Research, Fast Results (55 chars)
+   Description: 130 chars
+   H1 count: 1
+   Images with alt: 0/0 (100%)
+   Structured data: Yes
+   Open Graph: 7 tags
+   Twitter Card: 7 tags
+   Canonical: Yes
+   Lang attribute: Yes
+   Issues: 0 errors, 0 warnings
+
+✅ secret-weapon.html
+   Title: Gemini - Your Secret Weapon for Success (39 chars)
+   Description: 122 chars
+   H1 count: 1
+   Images with alt: 0/0 (100%)
+   Structured data: Yes
+   Open Graph: 7 tags
+   Twitter Card: 7 tags
+   Canonical: Yes
+   Lang attribute: Yes
+   Issues: 0 errors, 0 warnings
+
+✅ security-privacy.html
+   Title: Gemini Security & Privacy - Google-Grade Protection (51 chars)
+   Description: 138 chars
+   H1 count: 1
+   Images with alt: 0/0 (100%)
+   Structured data: Yes
+   Open Graph: 7 tags
+   Twitter Card: 7 tags
+   Canonical: Yes
+   Lang attribute: Yes
+   Issues: 0 errors, 0 warnings
+
+✅ think-different.html
+   Title: Gemini - Think Different with AI (32 chars)
+   Description: 120 chars
+   H1 count: 1
+   Images with alt: 0/0 (100%)
+   Structured data: Yes
+   Open Graph: 7 tags
+   Twitter Card: 7 tags
+   Canonical: Yes
+   Lang attribute: Yes
+   Issues: 0 errors, 0 warnings
+
+✅ trust-citations.html
+   Title: Gemini Trust & Citations - AI You Can Trust (43 chars)
+   Description: 126 chars
+   H1 count: 1
+   Images with alt: 0/0 (100%)
+   Structured data: Yes
+   Open Graph: 7 tags
+   Twitter Card: 7 tags
+   Canonical: Yes
+   Lang attribute: Yes
+   Issues: 0 errors, 0 warnings
+
+✅ truth-matters.html
+   Title: Gemini - Where Truth Matters (28 chars)
+   Description: 122 chars
+   H1 count: 1
+   Images with alt: 0/0 (100%)
+   Structured data: Yes
+   Open Graph: 7 tags
+   Twitter Card: 7 tags
+   Canonical: Yes
+   Lang attribute: Yes
+   Issues: 0 errors, 1 warnings
+
+✅ workflow-wizard.html
+   Title: Gemini Workflow Wizard - Automate Your Success (46 chars)
+   Description: 118 chars
+   H1 count: 1
+   Images with alt: 0/0 (100%)
+   Structured data: Yes
+   Open Graph: 7 tags
+   Twitter Card: 7 tags
+   Canonical: Yes
+   Lang attribute: Yes
+   Issues: 0 errors, 1 warnings
+
+✅ workspace-infinity.html
+   Title: Gemini Workspace Infinity - Unlimited Integration (49 chars)
+   Description: 110 chars
+   H1 count: 1
+   Images with alt: 0/0 (100%)
+   Structured data: Yes
+   Open Graph: 7 tags
+   Twitter Card: 7 tags
+   Canonical: Yes
+   Lang attribute: Yes
+   Issues: 0 errors, 1 warnings
+
+✅ workspace-integration.html
+   Title: Gemini + Google Workspace - Better Together (43 chars)
+   Description: 119 chars
+   H1 count: 1
+   Images with alt: 0/0 (100%)
+   Structured data: Yes
+   Open Graph: 7 tags
+   Twitter Card: 7 tags
+   Canonical: Yes
+   Lang attribute: Yes
+   Issues: 0 errors, 1 warnings
+
+✅ writers-room.html
+   Title: Gemini Writers Room - Write Better, Faster (42 chars)
+   Description: 116 chars
+   H1 count: 1
+   Images with alt: 0/0 (100%)
+   Structured data: Yes
+   Open Graph: 7 tags
+   Twitter Card: 7 tags
+   Canonical: Yes
+   Lang attribute: Yes
+   Issues: 0 errors, 1 warnings
+
+═══════════════════════════════════════════════════════════
+Report generated: 2026-02-01T12:12:30.085Z
+═══════════════════════════════════════════════════════════

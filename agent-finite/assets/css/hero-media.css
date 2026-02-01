@@ -1,0 +1,540 @@
+/**
+ * Hero Media Styles
+ * Premium video backgrounds and animated SVG graphics
+ * Inspired by Apple.com aesthetics
+ *
+ * @version 1.0.0
+ */
+
+/* ============================================
+   VIDEO BACKGROUNDS
+   ============================================ */
+
+[data-hero-video] {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Video loaded state */
+.hero-video-loaded .hero-video {
+  opacity: 1;
+}
+
+/* Video error state - show fallback */
+.hero-video-error .hero-video {
+  display: none;
+}
+
+/* Video overlay for better text readability */
+.hero-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Gradient overlay utility */
+.hero-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.7;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+
+/* Content above video */
+[data-hero-video] > *:not(.hero-video):not(.hero-video-overlay):not(.hero-gradient-overlay) {
+  position: relative;
+  z-index: 2;
+}
+
+/* ============================================
+   SVG GRAPHICS
+   ============================================ */
+
+[data-hero-svg] {
+  position: relative;
+}
+
+.hero-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+/* SVG loaded state */
+.hero-svg-loaded .hero-svg {
+  opacity: 0.5; /* Default opacity */
+}
+
+/* Content above SVG */
+[data-hero-svg] > *:not(.hero-svg) {
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================
+   CANVAS PARTICLES
+   ============================================ */
+
+.hero-particles-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ============================================
+   HERO SECTION ENHANCEMENTS
+   ============================================ */
+
+/* Hero with media background */
+.hero-with-media {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Ensure hero content is above media */
+.hero-with-media .hero-content {
+  position: relative;
+  z-index: 10;
+}
+
+/* Subtle animation on hero content when media loads */
+.hero-video-loaded .hero-content,
+.hero-svg-loaded .hero-content {
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   RESPONSIVE VIDEO OPTIMIZATION
+   ============================================ */
+
+/* Mobile optimization - hide video on small screens if needed */
+@media (max-width: 768px) {
+  /* Option 1: Keep video but optimize */
+  .hero-video {
+    /* Videos are kept by default for premium feel */
+  }
+
+  /* Option 2: Hide video on mobile (add .hero-video-mobile-hide class) */
+  .hero-video-mobile-hide .hero-video {
+    display: none;
+  }
+
+  .hero-video-mobile-hide {
+    /* Fallback image will show instead */
+    background-size: cover !important;
+    background-position: center !important;
+  }
+}
+
+/* Tablet optimization */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-video {
+    /* Ensure proper scaling on tablets */
+  }
+}
+
+/* Large desktop optimization */
+@media (min-width: 1920px) {
+  .hero-video {
+    min-width: 100%;
+    min-height: 100%;
+  }
+}
+
+/* ============================================
+   REDUCED MOTION SUPPORT
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-video {
+    display: none;
+  }
+
+  .hero-svg {
+    animation: none !important;
+  }
+
+  .hero-svg * {
+    animation: none !important;
+  }
+
+  /* Show fallback image instead */
+  [data-hero-video] {
+    background-size: cover !important;
+    background-position: center !important;
+  }
+
+  /* Disable all hero animations */
+  .hero-with-media .hero-content {
+    animation: none !important;
+  }
+
+  .reduced-motion .hero-video {
+    display: none;
+  }
+
+  .reduced-motion .hero-svg {
+    opacity: 0.3 !important;
+  }
+}
+
+/* ============================================
+   VIDEO CONTROL STYLES
+   ============================================ */
+
+/* Play/pause button (optional) */
+.hero-video-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  display: flex;
+  gap: 10px;
+}
+
+.hero-video-control-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-video-control-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.hero-video-control-btn:active {
+  transform: scale(0.95);
+}
+
+/* ============================================
+   LOADING STATES
+   ============================================ */
+
+/* Skeleton loader for video */
+.hero-video-loading::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.05) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+  z-index: 1;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.hero-video-loaded::before {
+  display: none;
+}
+
+/* ============================================
+   BLEND MODES & EFFECTS
+   ============================================ */
+
+/* Duotone effect */
+.hero-video-duotone .hero-video {
+  filter: grayscale(100%) contrast(1.2);
+  mix-blend-mode: multiply;
+}
+
+.hero-video-duotone::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+  mix-blend-mode: screen;
+  opacity: 0.8;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Black and white effect */
+.hero-video-bw .hero-video {
+  filter: grayscale(100%);
+}
+
+/* Blur effect */
+.hero-video-blur .hero-video {
+  filter: blur(10px);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Zoom effect */
+.hero-video-zoom .hero-video {
+  animation: heroVideoZoom 30s ease-in-out infinite alternate;
+}
+
+@keyframes heroVideoZoom {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+/* Pan effect */
+.hero-video-pan .hero-video {
+  animation: heroVideoPan 60s ease-in-out infinite alternate;
+}
+
+@keyframes heroVideoPan {
+  0% {
+    transform: translate(-50%, -50%) translateX(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateX(-5%);
+  }
+}
+
+/* ============================================
+   SVG ANIMATION PRESETS
+   ============================================ */
+
+/* Floating animation */
+.hero-svg-float {
+  animation: heroSvgFloat 6s ease-in-out infinite;
+}
+
+@keyframes heroSvgFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Rotation animation */
+.hero-svg-rotate {
+  animation: heroSvgRotate 20s linear infinite;
+}
+
+@keyframes heroSvgRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Pulse animation */
+.hero-svg-pulse {
+  animation: heroSvgPulse 4s ease-in-out infinite;
+}
+
+@keyframes heroSvgPulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+/* Fade in/out animation */
+.hero-svg-fade {
+  animation: heroSvgFade 8s ease-in-out infinite;
+}
+
+@keyframes heroSvgFade {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* ============================================
+   PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+
+/* GPU acceleration */
+.hero-video,
+.hero-svg,
+.hero-video-overlay,
+.hero-gradient-overlay {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Remove will-change after animations complete */
+.hero-video-loaded .hero-video,
+.hero-svg-loaded .hero-svg {
+  will-change: auto;
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+  .hero-video,
+  .hero-svg,
+  .hero-particles-canvas {
+    display: none;
+  }
+
+  [data-hero-video],
+  [data-hero-svg] {
+    background: white !important;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+/* Hide decorative media from screen readers */
+.hero-video,
+.hero-svg,
+.hero-particles-canvas {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Focus indicators for controls */
+.hero-video-control-btn:focus {
+  outline: 2px solid #4285f4;
+  outline-offset: 2px;
+}
+
+.hero-video-control-btn:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ============================================
+   DARK MODE SUPPORT
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+  .hero-video-overlay {
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+  }
+
+  .hero-video-control-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .hero-video-control-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+/* Position utilities for SVG */
+.hero-svg-top-left { top: 0; left: 0; width: 50%; height: 50%; }
+.hero-svg-top-right { top: 0; right: 0; left: auto; width: 50%; height: 50%; }
+.hero-svg-bottom-left { bottom: 0; top: auto; left: 0; width: 50%; height: 50%; }
+.hero-svg-bottom-right { bottom: 0; top: auto; right: 0; left: auto; width: 50%; height: 50%; }
+.hero-svg-center { top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60%; height: 60%; }
+
+/* Opacity utilities */
+.hero-media-opacity-10 { opacity: 0.1 !important; }
+.hero-media-opacity-20 { opacity: 0.2 !important; }
+.hero-media-opacity-30 { opacity: 0.3 !important; }
+.hero-media-opacity-40 { opacity: 0.4 !important; }
+.hero-media-opacity-50 { opacity: 0.5 !important; }
+.hero-media-opacity-60 { opacity: 0.6 !important; }
+.hero-media-opacity-70 { opacity: 0.7 !important; }
+.hero-media-opacity-80 { opacity: 0.8 !important; }
+.hero-media-opacity-90 { opacity: 0.9 !important; }
+
+/* Z-index utilities */
+.hero-media-z-0 { z-index: 0 !important; }
+.hero-media-z-1 { z-index: 1 !important; }
+.hero-media-z-2 { z-index: 2 !important; }
+.hero-media-z-10 { z-index: 10 !important; }

@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apple-inspired animation showcase for Gemini - Premium animations and effects">
+  <meta name="keywords" content="Gemini AI, Google AI, Apple animations, premium effects">
+  <meta name="author" content="Gemini Ads">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+
+  <title>Gemini - Premium Animations Demo</title>
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://wesleyzhao.github.io/gemini-ad/pages/apple-animations-demo.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wesleyzhao.github.io/gemini-ad/pages/apple-animations-demo.html">
+  <meta property="og:title" content="Gemini - Premium Animations Demo">
+  <meta property="og:description" content="Experience Apple-inspired animations and effects with Gemini AI">
+  <meta property="og:image" content="https://wesleyzhao.github.io/gemini-ad/assets/images/og-image.jpg">
+  <meta property="og:site_name" content="Gemini Ads">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://wesleyzhao.github.io/gemini-ad/pages/apple-animations-demo.html">
+  <meta name="twitter:title" content="Gemini - Premium Animations Demo">
+  <meta name="twitter:description" content="Experience Apple-inspired animations and effects with Gemini AI">
+  <meta name="twitter:image" content="https://wesleyzhao.github.io/gemini-ad/assets/images/twitter-card.jpg">
+  <meta name="twitter:site" content="@Google">
+  <meta name="twitter:creator" content="@Google">
+
+  <!-- Mobile Optimization -->
+  <meta name="theme-color" content="#4285f4">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Gemini Animations">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/design-system.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/apple-animations.css">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero-title {
+      font-size: clamp(48px, 8vw, 96px);
+      font-weight: 700;
+      margin: 0 0 20px 0;
+      line-height: 1.1;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(20px, 3vw, 32px);
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.7);
+      margin: 0 0 40px 0;
+    }
+
+    /* Parallax Demo */
+    .parallax-demo {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    }
+
+    .parallax-content {
+      position: relative;
+      z-index: 10;
+      max-width: 800px;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .parallax-bg-1 {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(66, 133, 244, 0.3), transparent);
+      filter: blur(60px);
+      top: 20%;
+      left: 10%;
+    }
+
+    .parallax-bg-2 {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(52, 168, 83, 0.3), transparent);
+      filter: blur(80px);
+      bottom: 20%;
+      right: 10%;
+    }
+
+    /* SVG Animation Demo */
+    .svg-demo {
+      padding: 120px 20px;
+      background: #1a1a2e;
+    }
+
+    .svg-demo-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .svg-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 60px;
+      margin-top: 60px;
+    }
+
+    .svg-item {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 40px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Particles Demo */
+    .particles-demo {
+      position: relative;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #16213e;
+    }
+
+    .particles-content {
+      position: relative;
+      z-index: 10;
+      max-width: 800px;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    /* Counter Demo */
+    .counter-demo {
+      padding: 120px 20px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .counter-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: 60px auto 0;
+    }
+
+    .counter-item {
+      text-align: center;
+      padding: 40px 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+    }
+
+    /* Magnetic Button Demo */
+    .magnetic-demo {
+      padding: 120px 20px;
+      background: #0f0f0f;
+      text-align: center;
+    }
+
+    .button-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin-top: 60px;
+    }
+
+    /* Text Reveal Demo */
+    .text-reveal-demo {
+      padding: 120px 20px;
+      background: linear-gradient(135deg, #fc4a1a, #f7b733);
+    }
+
+    .reveal-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .reveal-text {
+      font-size: clamp(32px, 5vw, 64px);
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 40px 0;
+    }
+
+    /* Sequence Demo */
+    .sequence-demo {
+      min-height: 200vh;
+      position: relative;
+      background: #000;
+    }
+
+    /* Section Titles */
+    .section-title {
+      font-size: clamp(36px, 6vw, 72px);
+      font-weight: 700;
+      margin: 0 0 20px 0;
+      line-height: 1.1;
+    }
+
+    .section-subtitle {
+      font-size: clamp(18px, 2.5vw, 24px);
+      color: rgba(255, 255, 255, 0.7);
+      margin: 0 0 40px 0;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      padding: 120px 20px;
+      background: linear-gradient(135deg, #4285f4, #34a853);
+      text-align: center;
+    }
+
+    .cta-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .svg-grid,
+      .counter-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .parallax-bg-1,
+      .parallax-bg-2 {
+        width: 250px;
+        height: 250px;
+      }
+    }
+  </style>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Gemini - Premium Animations Demo",
+    "description": "Experience Apple-inspired animations and effects with Gemini AI",
+    "url": "https://wesleyzhao.github.io/gemini-ad/pages/apple-animations-demo.html"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Gemini Ads",
+    "url": "https://wesleyzhao.github.io/gemini-ad/"
+  }
+  </script>
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX', {
+    'anonymize_ip': true,
+    'cookie_flags': 'SameSite=None;Secure'
+  });
+</script>
+</head>
+<body>
+  <!-- Skip to main content -->
+  <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
+  <main id="main-content">
+    <!-- Hero Section with Particles -->
+    <section class="hero-section">
+      <canvas data-particles data-particle-count="80" data-particle-color="#4285f4"></canvas>
+
+      <div class="hero-content">
+        <h1 class="hero-title" data-text-reveal>Premium Animations</h1>
+        <p class="hero-subtitle">Apple-inspired effects for Gemini</p>
+        <a href="#showcase" class="magnetic-button" data-magnetic="0.4">Explore Now</a>
+      </div>
+    </section>
+
+    <!-- Parallax Demo -->
+    <section class="parallax-demo">
+      <div class="parallax-bg-1" data-parallax="0.3" data-parallax-direction="y"></div>
+      <div class="parallax-bg-2" data-parallax="0.5" data-parallax-direction="y"></div>
+
+      <div class="parallax-content">
+        <h2 class="section-title">Parallax Scrolling</h2>
+        <p class="section-subtitle">Smooth depth and movement as you scroll</p>
+        <p style="font-size: 18px; line-height: 1.6; color: rgba(255,255,255,0.8);">
+          Experience buttery-smooth parallax effects that create depth and dimensionality.
+          Elements move at different speeds to create a sense of space and hierarchy.
+        </p>
+      </div>
+    </section>
+
+    <!-- SVG Animation Demo -->
+    <section class="svg-demo" id="showcase">
+      <div class="svg-demo-content">
+        <h2 class="section-title">Vector Animations</h2>
+        <p class="section-subtitle">Crisp, scalable SVG animations</p>
+
+        <div class="svg-grid">
+          <div class="svg-item" data-showcase-item>
+            <div class="svg-container">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="80"
+                  data-svg-animate
+                  data-svg-duration="2000"
+                  style="stroke: #4285f4;" />
+              </svg>
+            </div>
+            <h3 style="margin-top: 20px; font-size: 24px;">Circle Draw</h3>
+          </div>
+
+          <div class="svg-item" data-showcase-item>
+            <div class="svg-container">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 50,100 L 90,140 L 150,60"
+                  data-svg-animate
+                  data-svg-duration="1500"
+                  data-svg-delay="200"
+                  class="svg-checkmark" />
+              </svg>
+            </div>
+            <h3 style="margin-top: 20px; font-size: 24px;">Checkmark</h3>
+          </div>
+
+          <div class="svg-item" data-showcase-item>
+            <div class="svg-container">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <rect x="40" y="40" width="120" height="120" rx="20"
+                  data-svg-animate
+                  data-svg-duration="2500"
+                  style="stroke: #34a853;" />
+              </svg>
+            </div>
+            <h3 style="margin-top: 20px; font-size: 24px;">Rounded Box</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Showcase Demo -->
+    <section data-showcase style="background: #000; padding: 120px 0;">
+      <div class="showcase-grid">
+        <div class="showcase-card" data-showcase-item>
+          <div style="font-size: 48px; margin-bottom: 20px;">⚡</div>
+          <h3 style="font-size: 28px; margin-bottom: 16px;">Lightning Fast</h3>
+          <p style="color: rgba(255,255,255,0.7); line-height: 1.6;">
+            Gemini processes your requests at incredible speed, delivering answers in milliseconds.
+          </p>
+        </div>
+
+        <div class="showcase-card" data-showcase-item>
+          <div style="font-size: 48px; margin-bottom: 20px;">🎯</div>
+          <h3 style="font-size: 28px; margin-bottom: 16px;">Precision Accuracy</h3>
+          <p style="color: rgba(255,255,255,0.7); line-height: 1.6;">
+            Built on Google's most advanced AI with verified citations and trustworthy sources.
+          </p>
+        </div>
+
+        <div class="showcase-card" data-showcase-item>
+          <div style="font-size: 48px; margin-bottom: 20px;">🔗</div>
+          <h3 style="font-size: 28px; margin-bottom: 16px;">Seamless Integration</h3>
+          <p style="color: rgba(255,255,255,0.7); line-height: 1.6;">
+            Works perfectly with Gmail, Docs, Calendar, and your entire Google Workspace.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Particles Background Demo -->
+    <section class="particles-demo">
+      <canvas data-particles data-particle-count="60" data-particle-color="#34a853"></canvas>
+
+      <div class="particles-content">
+        <h2 class="section-title">Dynamic Particles</h2>
+        <p class="section-subtitle">Interactive canvas-based effects</p>
+        <p style="font-size: 18px; line-height: 1.6; color: rgba(255,255,255,0.8);">
+          Beautiful particle systems that respond to your interactions,
+          creating an immersive and engaging experience.
+        </p>
+      </div>
+    </section>
+
+    <!-- Counter Animation Demo -->
+    <section class="counter-demo">
+      <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+        <h2 class="section-title">By The Numbers</h2>
+        <p class="section-subtitle">Gemini's impressive statistics</p>
+
+        <div class="counter-grid">
+          <div class="counter-item">
+            <div class="animated-counter" data-counter-start="0" data-counter-end="1000000">0</div>
+            <div class="counter-label">Users Worldwide</div>
+          </div>
+
+          <div class="counter-item">
+            <div class="animated-counter" data-counter-start="0" data-counter-end="99">0</div>
+            <div class="counter-label">Accuracy Rate</div>
+          </div>
+
+          <div class="counter-item">
+            <div class="animated-counter" data-counter-start="0" data-counter-end="24">0</div>
+            <div class="counter-label">Hours Available</div>
+          </div>
+
+          <div class="counter-item">
+            <div class="animated-counter" data-counter-start="0" data-counter-end="150">0</div>
+            <div class="counter-label">Languages Supported</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Magnetic Buttons Demo -->
+    <section class="magnetic-demo">
+      <h2 class="section-title">Magnetic Interactions</h2>
+      <p class="section-subtitle">Buttons that follow your cursor</p>
+
+      <div class="button-grid">
+        <a href="#" class="magnetic-button" data-magnetic="0.3" style="background: #4285f4;">Try Gemini</a>
+        <a href="#" class="magnetic-button" data-magnetic="0.4" style="background: #34a853;">Learn More</a>
+        <a href="#" class="magnetic-button" data-magnetic="0.5" style="background: #fbbc04;">Get Started</a>
+        <a href="#" class="magnetic-button" data-magnetic="0.3" style="background: #ea4335;">Contact Us</a>
+      </div>
+    </section>
+
+    <!-- Text Reveal Demo -->
+    <section class="text-reveal-demo">
+      <div class="reveal-content">
+        <h2 class="section-title">Animated Typography</h2>
+        <p class="section-subtitle">Beautiful text reveals</p>
+
+        <p class="reveal-text" data-text-reveal>
+          Elevate your experience with Gemini
+        </p>
+
+        <p style="font-size: 20px; line-height: 1.6; margin-top: 40px;" data-text-reveal>
+          Every detail matters when creating premium experiences
+        </p>
+      </div>
+    </section>
+
+    <!-- Sequence Animation Demo -->
+    <section class="sequence-demo">
+      <div data-sequence data-frame-count="100" data-scroll-distance="2000">
+        <div class="sequence-content">
+          <h2 class="section-title">Scroll Sequences</h2>
+          <p class="section-subtitle">Smooth animations tied to scroll position</p>
+          <p style="font-size: 18px; line-height: 1.6; color: rgba(255,255,255,0.8);">
+            This section animates as you scroll, creating a cinematic experience
+            similar to Apple's product showcases.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="cta-content">
+        <h2 class="section-title" data-text-reveal>Ready to get started?</h2>
+        <p class="section-subtitle">Experience the power of Gemini today</p>
+        <a href="https://gemini.google.com" class="magnetic-button" data-magnetic="0.4"
+           style="background: white; color: #4285f4; font-size: 20px; padding: 20px 48px; margin-top: 20px; display: inline-flex;">
+          Try Gemini Now
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="../assets/js/animations.js"></script>
+  <script src="../assets/js/apple-animations.js"></script>
+
+  <!-- Counter Animation Trigger -->
+  <script>
+    // Trigger counters when they come into view
+    const counters = document.querySelectorAll('.animated-counter');
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.dataset.animated) {
+          const start = parseInt(entry.target.dataset.counterStart) || 0;
+          const end = parseInt(entry.target.dataset.counterEnd) || 100;
+
+          if (typeof AppleAnimations !== 'undefined') {
+            AppleAnimations.animateCounter(entry.target, start, end, 2000);
+          }
+
+          entry.target.dataset.animated = 'true';
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => counterObserver.observe(counter));
+  </script>
+
+<!-- Gemini Analytics Tracking -->
+<script src="../assets/js/analytics.js" defer></script>
+</body>
+</html>

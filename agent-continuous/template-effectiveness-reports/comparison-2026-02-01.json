@@ -1,0 +1,361 @@
+{
+  "generatedAt": "2026-02-01T20:16:21.641Z",
+  "comparisons": [
+    {
+      "category": "cta-optimization",
+      "baseline": {
+        "name": "cta-optimization-baseline",
+        "version": "1.0",
+        "category": "cta-optimization",
+        "created": "2026-01-02T20:16:21.617Z",
+        "metrics": {
+          "conversionRate": 0.12369464125231627,
+          "engagementRate": 0.25807736524857405,
+          "avgTimeOnPage": 49.94857717763791,
+          "scrollDepth": 0.5534843667932341,
+          "bounceRate": 0.5322776217718835,
+          "loadTime": 1.759413579820954,
+          "sessions": 11315,
+          "revenue": 136710.9187646249
+        }
+      },
+      "refined": {
+        "name": "cta-optimization-v2",
+        "version": "2.0",
+        "category": "cta-optimization",
+        "created": "2026-01-18T20:16:21.617Z",
+        "refinedFrom": "cta-optimization-baseline",
+        "metrics": {
+          "conversionRate": 0.16599780691127203,
+          "engagementRate": 0.3168535656440203,
+          "avgTimeOnPage": 57.14941686487596,
+          "scrollDepth": 0.6330887139917586,
+          "bounceRate": 0.3543635472980685,
+          "loadTime": 1.286108516312266,
+          "sessions": 11863,
+          "revenue": 171954.82625691433
+        }
+      },
+      "baselineQuality": {
+        "totalScore": 0.7160954262649878,
+        "breakdown": {
+          "conversion": 0.8246309416821085,
+          "engagement": 0.8602578841619135,
+          "timeOnPage": 1,
+          "scrollDepth": 0.9224739446553902,
+          "bounceRate": -0.3306940544297088,
+          "loadTime": 0.4135288067263486
+        },
+        "grade": "B"
+      },
+      "refinedQuality": {
+        "totalScore": 0.876811007796347,
+        "breakdown": {
+          "conversion": 1,
+          "engagement": 1,
+          "timeOnPage": 1,
+          "scrollDepth": 1.055147856652931,
+          "bounceRate": 0.11409113175482877,
+          "loadTime": 0.5712971612292446
+        },
+        "grade": "A"
+      },
+      "improvements": {
+        "conversionRate": 34.19967528962262,
+        "engagementRate": 22.77464369602285,
+        "avgTimeOnPage": 14.416506123145153,
+        "scrollDepth": 14.382402101026711,
+        "bounceRate": 33.425052490758866,
+        "loadTime": 26.901296485210352,
+        "qualityScore": 22.443319093604597,
+        "revenue": 25.779877577275922
+      }
+    },
+    {
+      "category": "social-proof",
+      "baseline": {
+        "name": "social-proof-baseline",
+        "version": "1.0",
+        "category": "social-proof",
+        "created": "2026-01-02T20:16:21.617Z",
+        "metrics": {
+          "conversionRate": 0.1235566313006025,
+          "engagementRate": 0.2766697068915619,
+          "avgTimeOnPage": 48.6447357081094,
+          "scrollDepth": 0.544131751601596,
+          "bounceRate": 0.482860562334317,
+          "loadTime": 2.443835451262979,
+          "sessions": 11229,
+          "revenue": 140339.27817213043
+        }
+      },
+      "refined": {
+        "name": "social-proof-v2",
+        "version": "2.0",
+        "category": "social-proof",
+        "created": "2026-01-18T20:16:21.617Z",
+        "refinedFrom": "social-proof-baseline",
+        "metrics": {
+          "conversionRate": 0.16023753220805867,
+          "engagementRate": 0.32090602910540794,
+          "avgTimeOnPage": 55.504277273749665,
+          "scrollDepth": 0.627374965082416,
+          "bounceRate": 0.35321988076836874,
+          "loadTime": 1.9147177148234735,
+          "sessions": 13604,
+          "revenue": 199987.61073634692
+        }
+      },
+      "baselineQuality": {
+        "totalScore": 0.7154163494703001,
+        "breakdown": {
+          "conversion": 0.82371087533735,
+          "engagement": 0.9222323563052064,
+          "timeOnPage": 1,
+          "scrollDepth": 0.9068862526693267,
+          "bounceRate": -0.2071514058357924,
+          "loadTime": 0.18538818291234038
+        },
+        "grade": "B"
+      },
+      "refinedQuality": {
+        "totalScore": 0.8547148472510627,
+        "breakdown": {
+          "conversion": 1,
+          "engagement": 1,
+          "timeOnPage": 1,
+          "scrollDepth": 1.0456249418040267,
+          "bounceRate": 0.1169502980790782,
+          "loadTime": 0.36176076172550886
+        },
+        "grade": "A"
+      },
+      "improvements": {
+        "conversionRate": 29.687521034961478,
+        "engagementRate": 15.988856427705711,
+        "avgTimeOnPage": 14.101302979217817,
+        "scrollDepth": 15.298356185942488,
+        "bounceRate": 26.848471728405364,
+        "loadTime": 21.651119602428892,
+        "qualityScore": 19.47096930114895,
+        "revenue": 42.5029495242636
+      }
+    },
+    {
+      "category": "scarcity-urgency",
+      "baseline": {
+        "name": "scarcity-urgency-baseline",
+        "version": "1.0",
+        "category": "scarcity-urgency",
+        "created": "2026-01-02T20:16:21.617Z",
+        "metrics": {
+          "conversionRate": 0.14422885014204195,
+          "engagementRate": 0.3494662977546532,
+          "avgTimeOnPage": 44.43511315295411,
+          "scrollDepth": 0.5334577244437007,
+          "bounceRate": 0.4993742725088528,
+          "loadTime": 1.9301716362407517,
+          "sessions": 10033,
+          "revenue": 138566.33643272566
+        }
+      },
+      "refined": {
+        "name": "scarcity-urgency-v2",
+        "version": "2.0",
+        "category": "scarcity-urgency",
+        "created": "2026-01-18T20:16:21.617Z",
+        "refinedFrom": "scarcity-urgency-baseline",
+        "metrics": {
+          "conversionRate": 0.19744270642756684,
+          "engagementRate": 0.4354919680369199,
+          "avgTimeOnPage": 49.15855601579595,
+          "scrollDepth": 0.6006287458101707,
+          "bounceRate": 0.342073986659513,
+          "loadTime": 1.3986773159916854,
+          "sessions": 12489,
+          "revenue": 178392.45905150275
+        }
+      },
+      "baselineQuality": {
+        "totalScore": 0.7807565525696178,
+        "breakdown": {
+          "conversion": 0.961525667613613,
+          "engagement": 1,
+          "timeOnPage": 0.9874469589545357,
+          "scrollDepth": 0.8890962074061678,
+          "bounceRate": -0.248435681272132,
+          "loadTime": 0.35660945458641613
+        },
+        "grade": "B+"
+      },
+      "refinedQuality": {
+        "totalScore": 0.8680161125879416,
+        "breakdown": {
+          "conversion": 1,
+          "engagement": 1,
+          "timeOnPage": 1,
+          "scrollDepth": 1.0010479096836178,
+          "bounceRate": 0.1448150333512176,
+          "loadTime": 0.5337742280027715
+        },
+        "grade": "A"
+      },
+      "improvements": {
+        "conversionRate": 36.89543127683393,
+        "engagementRate": 24.61629943573615,
+        "avgTimeOnPage": 10.629978248469525,
+        "scrollDepth": 12.591629718459355,
+        "bounceRate": 31.49947734773445,
+        "loadTime": 27.536117009999035,
+        "qualityScore": 11.17628276460006,
+        "revenue": 28.741557036194564
+      }
+    },
+    {
+      "category": "value-clarity",
+      "baseline": {
+        "name": "value-clarity-baseline",
+        "version": "1.0",
+        "category": "value-clarity",
+        "created": "2026-01-02T20:16:21.617Z",
+        "metrics": {
+          "conversionRate": 0.14579192946932407,
+          "engagementRate": 0.29757716900309017,
+          "avgTimeOnPage": 38.966940856697335,
+          "scrollDepth": 0.6078812302193275,
+          "bounceRate": 0.45515371215907374,
+          "loadTime": 2.4368589413110415,
+          "sessions": 11228,
+          "revenue": 126693.19834805296
+        }
+      },
+      "refined": {
+        "name": "value-clarity-v2",
+        "version": "2.0",
+        "category": "value-clarity",
+        "created": "2026-01-18T20:16:21.617Z",
+        "refinedFrom": "value-clarity-baseline",
+        "metrics": {
+          "conversionRate": 0.18371799482981097,
+          "engagementRate": 0.3659838461438392,
+          "avgTimeOnPage": 44.452405169235846,
+          "scrollDepth": 0.673341562058355,
+          "bounceRate": 0.3127159371298137,
+          "loadTime": 1.808464885655458,
+          "sessions": 14556,
+          "revenue": 170497.65041117955
+        }
+      },
+      "baselineQuality": {
+        "totalScore": 0.776811689267728,
+        "breakdown": {
+          "conversion": 0.9719461964621605,
+          "engagement": 0.9919238966769672,
+          "timeOnPage": 0.8659320190377185,
+          "scrollDepth": 1.0131353836988792,
+          "bounceRate": -0.1378842803976843,
+          "loadTime": 0.1877136862296528
+        },
+        "grade": "B+"
+      },
+      "refinedQuality": {
+        "totalScore": 0.8780489272744062,
+        "breakdown": {
+          "conversion": 1,
+          "engagement": 1,
+          "timeOnPage": 0.9878312259830188,
+          "scrollDepth": 1.1222359367639252,
+          "bounceRate": 0.21821015717546577,
+          "loadTime": 0.3971783714481807
+        },
+        "grade": "A"
+      },
+      "improvements": {
+        "conversionRate": 26.013830462725913,
+        "engagementRate": 22.987878193047358,
+        "avgTimeOnPage": 14.077225956000886,
+        "scrollDepth": 10.768605540823993,
+        "bounceRate": 31.294433336287675,
+        "loadTime": 25.787050904042257,
+        "qualityScore": 13.032404044036824,
+        "revenue": 34.57522000730183
+      }
+    },
+    {
+      "category": "friction-reduction",
+      "baseline": {
+        "name": "friction-reduction-baseline",
+        "version": "1.0",
+        "category": "friction-reduction",
+        "created": "2026-01-02T20:16:21.617Z",
+        "metrics": {
+          "conversionRate": 0.12695343571140114,
+          "engagementRate": 0.2877869892068421,
+          "avgTimeOnPage": 40.15644097622869,
+          "scrollDepth": 0.68777656135143,
+          "bounceRate": 0.5388114251663993,
+          "loadTime": 2.388123266569731,
+          "sessions": 12616,
+          "revenue": 141790.20120767463
+        }
+      },
+      "refined": {
+        "name": "friction-reduction-v2",
+        "version": "2.0",
+        "category": "friction-reduction",
+        "created": "2026-01-18T20:16:21.617Z",
+        "refinedFrom": "friction-reduction-baseline",
+        "metrics": {
+          "conversionRate": 0.16118899139018247,
+          "engagementRate": 0.33197389562635315,
+          "avgTimeOnPage": 44.63751443914354,
+          "scrollDepth": 0.8064839929312954,
+          "bounceRate": 0.35757745969225313,
+          "loadTime": 1.6833942004105977,
+          "sessions": 12062,
+          "revenue": 189448.9665301707
+        }
+      },
+      "baselineQuality": {
+        "totalScore": 0.7372568426420593,
+        "breakdown": {
+          "conversion": 0.8463562380760076,
+          "engagement": 0.959289964022807,
+          "timeOnPage": 0.8923653550273042,
+          "scrollDepth": 1.14629426891905,
+          "bounceRate": -0.3470285629159984,
+          "loadTime": 0.20395891114342302
+        },
+        "grade": "B"
+      },
+      "refinedQuality": {
+        "totalScore": 0.9049052080932191,
+        "breakdown": {
+          "conversion": 1,
+          "engagement": 1,
+          "timeOnPage": 0.9919447653143009,
+          "scrollDepth": 1.3441399882188256,
+          "bounceRate": 0.10605635076936726,
+          "loadTime": 0.4388685998631341
+        },
+        "grade": "A+"
+      },
+      "improvements": {
+        "conversionRate": 26.967017857325143,
+        "engagementRate": 15.354032001687354,
+        "avgTimeOnPage": 11.159040378024288,
+        "scrollDepth": 17.25959246802684,
+        "bounceRate": 33.635880200234496,
+        "loadTime": 29.509744158700684,
+        "qualityScore": 22.739479073584352,
+        "revenue": 33.612171304201844
+      }
+    }
+  ],
+  "summary": {
+    "avgConversionImprovement": 30.752695184293817,
+    "avgRevenueImprovement": 33.042355089847554,
+    "avgQualityImprovement": 17.772490855394956,
+    "bestPerformer": "scarcity-urgency"
+  }
+}

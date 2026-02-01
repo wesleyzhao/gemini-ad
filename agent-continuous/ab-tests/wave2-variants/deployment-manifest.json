@@ -1,0 +1,84 @@
+{
+  "timestamp": "2026-02-01T15:52:25.611Z",
+  "wave": 2,
+  "tests": [
+    {
+      "pattern": "Social Proof + Personalization",
+      "predictedLift": "+45%",
+      "variants": [
+        {
+          "basePage": "pages/writers.html",
+          "variantPath": "ab-tests/wave2-variants/social-proof/writers.html",
+          "segment": "Writer"
+        },
+        {
+          "basePage": "pages/creators.html",
+          "variantPath": "ab-tests/wave2-variants/social-proof/creators.html",
+          "segment": "Creator"
+        },
+        {
+          "basePage": "pages/operators.html",
+          "variantPath": "ab-tests/wave2-variants/social-proof/operators.html",
+          "segment": "Operator"
+        },
+        {
+          "basePage": "pages/automators.html",
+          "variantPath": "ab-tests/wave2-variants/social-proof/automators.html",
+          "segment": "Automator"
+        }
+      ]
+    },
+    {
+      "pattern": "Scarcity + Trust Signals",
+      "predictedLift": "+38%",
+      "variants": [
+        {
+          "basePage": "pages/writers.html",
+          "variantPath": "ab-tests/wave2-variants/scarcity-trust/writers.html",
+          "segment": "Writer"
+        },
+        {
+          "basePage": "pages/creators.html",
+          "variantPath": "ab-tests/wave2-variants/scarcity-trust/creators.html",
+          "segment": "Creator"
+        },
+        {
+          "basePage": "pages/operators.html",
+          "variantPath": "ab-tests/wave2-variants/scarcity-trust/operators.html",
+          "segment": "Operator"
+        },
+        {
+          "basePage": "pages/automators.html",
+          "variantPath": "ab-tests/wave2-variants/scarcity-trust/automators.html",
+          "segment": "Automator"
+        }
+      ]
+    },
+    {
+      "pattern": "Mobile-Optimized Combo",
+      "predictedLift": "+50% (mobile)",
+      "variants": [
+        {
+          "basePage": "pages/writers.html",
+          "variantPath": "ab-tests/wave2-variants/mobile-optimized/writers.html",
+          "segment": "Writer"
+        },
+        {
+          "basePage": "pages/creators.html",
+          "variantPath": "ab-tests/wave2-variants/mobile-optimized/creators.html",
+          "segment": "Creator"
+        },
+        {
+          "basePage": "pages/operators.html",
+          "variantPath": "ab-tests/wave2-variants/mobile-optimized/operators.html",
+          "segment": "Operator"
+        },
+        {
+          "basePage": "pages/automators.html",
+          "variantPath": "ab-tests/wave2-variants/mobile-optimized/automators.html",
+          "segment": "Automator"
+        }
+      ]
+    }
+  ]
+}

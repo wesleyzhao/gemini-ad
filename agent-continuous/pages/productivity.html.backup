@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get 20 Hours Back Every Week | Gemini Productivity</title>
+    <meta name="description" content="Stop working harder. Work smarter with AI that saves you 20+ hours weekly.">
+    <link rel="stylesheet" href="../assets/css/shared-styles.css">
+    <style>
+        .hero-productivity {
+            background: linear-gradient(135deg, #dbeafe 0%, var(--white) 100%);
+        }
+
+        .time-savings-viz {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: var(--space-6);
+            align-items: center;
+            background: var(--white);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-8);
+            box-shadow: var(--shadow-xl);
+            max-width: 900px;
+            margin: var(--space-8) auto;
+        }
+
+        .before-bar {
+            height: 200px;
+            background: linear-gradient(180deg, #ef4444, #dc2626);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: var(--text-2xl);
+        }
+
+        .after-bar {
+            height: 80px;
+            background: linear-gradient(180deg, #10b981, #059669);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: var(--text-2xl);
+        }
+
+        .gradient-text-productivity {
+            background: linear-gradient(135deg, #3b82f6, #10b981, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .metric-card {
+            background: linear-gradient(135deg, var(--gemini-blue), #1e40af);
+            color: white;
+            border-radius: var(--radius-xl);
+            padding: var(--space-6);
+            text-align: center;
+            transition: all var(--transition-base);
+        }
+
+        .metric-card:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: var(--shadow-2xl);
+        }
+
+        .metric-value {
+            font-size: var(--text-5xl);
+            font-weight: var(--weight-bold);
+            display: block;
+            margin-bottom: var(--space-2);
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .time-savings-viz {
+                grid-template-columns: 1fr;
+                gap: var(--space-4);
+                padding: var(--space-4);
+            }
+
+            .time-savings-viz > div:nth-child(2) {
+                transform: rotate(90deg);
+                font-size: 2rem;
+                margin: var(--space-2) 0;
+            }
+
+            .before-bar,
+            .after-bar {
+                height: auto;
+                min-height: 80px;
+                padding: var(--space-4);
+            }
+
+            .header-content nav a:not(.btn) {
+                display: none;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .time-savings-viz {
+                padding: var(--space-3);
+            }
+
+            .metric-value {
+                font-size: var(--text-3xl);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" style="font-weight: 600; font-size: 1.125rem;">Gemini</a>
+                <nav>
+                    <a href="#features" style="margin-right: 2rem; color: var(--gray-700);">Features</a>
+                    <a href="https://gemini.google.com" class="btn btn-primary btn-small">Try Gemini</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero hero-productivity">
+        <div class="container">
+            <div class="hero-content" data-animate="fade-in">
+                <div class="badge badge-primary mb-4">Productivity Multiplier</div>
+                <h1 class="gradient-text-productivity mb-4">Get 20 Hours<br>Back Every Week</h1>
+                <p class="text-xl text-secondary mb-8" style="max-width: 700px; margin: 0 auto;">
+                    Stop drowning in busywork. Gemini automates the tasks stealing your time so you can focus on work that actually matters.
+                </p>
+                <div class="flex gap-4 justify-center mb-12">
+                    <a href="https://gemini.google.com" class="btn btn-primary btn-large">Start Saving Time</a>
+                    <a href="#roi" class="btn btn-secondary btn-large">Calculate ROI</a>
+                </div>
+
+                <div class="time-savings-viz" data-animate="scale-in" data-delay="300">
+                    <div>
+                        <h3 class="text-center mb-4">Before Gemini</h3>
+                        <div class="before-bar">40hrs/week</div>
+                        <p class="text-center text-secondary mt-3">Emails, meetings, admin work</p>
+                    </div>
+                    <div style="font-size: 3rem; color: var(--gemini-blue);">→</div>
+                    <div>
+                        <h3 class="text-center mb-4">With Gemini</h3>
+                        <div class="after-bar">16hrs/week</div>
+                        <p class="text-center mt-3" style="color: var(--gemini-green); font-weight: 600;">60% time saved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-white">
+        <div class="container">
+            <div class="grid grid-4 gap-6" data-animate="fade-in">
+                <div class="metric-card">
+                    <span class="metric-value">20hrs</span>
+                    <p>Saved per week</p>
+                </div>
+                <div class="metric-card" style="background: linear-gradient(135deg, #10b981, #059669);">
+                    <span class="metric-value">$52K</span>
+                    <p>Avg. value created</p>
+                </div>
+                <div class="metric-card" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+                    <span class="metric-value">3.2x</span>
+                    <p>Output increase</p>
+                </div>
+                <div class="metric-card" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
+                    <span class="metric-value">85%</span>
+                    <p>Less burnout</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-gray-50">
+        <div class="container container-narrow">
+            <h2 class="text-center mb-12" data-animate="fade-in">Where Your Time Goes</h2>
+            <div class="grid grid-2 gap-6">
+                <div class="card" data-animate="fade-in">
+                    <h4 class="mb-3">📧 Email Management</h4>
+                    <p class="text-secondary mb-2"><strong>Before:</strong> 2 hours/day</p>
+                    <p class="text-secondary mb-2"><strong>After:</strong> 20 minutes/day</p>
+                    <p style="color: #10b981; font-weight: 600;">83% reduction</p>
+                </div>
+                <div class="card" data-animate="fade-in">
+                    <h4 class="mb-3">📝 Meeting Notes</h4>
+                    <p class="text-secondary mb-2"><strong>Before:</strong> 1.5 hours/day</p>
+                    <p class="text-secondary mb-2"><strong>After:</strong> 5 minutes/day</p>
+                    <p style="color: #10b981; font-weight: 600;">94% reduction</p>
+                </div>
+                <div class="card" data-animate="fade-in">
+                    <h4 class="mb-3">📊 Report Writing</h4>
+                    <p class="text-secondary mb-2"><strong>Before:</strong> 4 hours/week</p>
+                    <p class="text-secondary mb-2"><strong>After:</strong> 30 minutes/week</p>
+                    <p style="color: #10b981; font-weight: 600;">87% reduction</p>
+                </div>
+                <div class="card" data-animate="fade-in">
+                    <h4 class="mb-3">🔍 Research & Data</h4>
+                    <p class="text-secondary mb-2"><strong>Before:</strong> 6 hours/week</p>
+                    <p class="text-secondary mb-2"><strong>After:</strong> 1 hour/week</p>
+                    <p style="color: #10b981; font-weight: 600;">83% reduction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container container-narrow text-center">
+            <div data-animate="fade-in">
+                <h2 class="mb-4">Work Smarter.<br>Live Better.</h2>
+                <p class="text-xl text-secondary mb-8">
+                    20 extra hours per week. What would you do with that time?
+                </p>
+                <a href="https://gemini.google.com" class="btn btn-primary btn-large">Get Started Free</a>
+                <p class="text-sm text-secondary mt-4">
+                    14-day free trial • No credit card required • Cancel anytime
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background: var(--gray-50); padding: var(--space-6) 0; text-align: center; border-top: 1px solid var(--color-border);">
+        <div class="container">
+            <p class="text-sm text-secondary">
+                Gemini Productivity | <a href="https://ai.google/responsibility/principles/">AI Principles</a> | <a href="https://policies.google.com/privacy">Privacy</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/animations.js"></script>
+</body>
+</html>

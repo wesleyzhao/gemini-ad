@@ -1,0 +1,109 @@
+{
+  "timestamp": "2026-02-01T20:33:00.398Z",
+  "reportDate": "2/1/2026",
+  "summary": {
+    "totalPages": 13,
+    "pagesOptimized": 0,
+    "coveragePercent": 0,
+    "patternsInLibrary": 5,
+    "productionPatterns": 2,
+    "totalApplications": 8,
+    "activeExperiments": 0
+  },
+  "patterns": {
+    "total": 5,
+    "byStatus": {
+      "production": 2,
+      "testing": 2,
+      "experimental": 1
+    },
+    "byCategory": {
+      "personalization": 1,
+      "urgency": 1,
+      "social_proof": 1,
+      "trust": 1,
+      "scarcity": 1
+    },
+    "topPerformers": [
+      {
+        "name": "Time-Limited Urgency Banner",
+        "category": "urgency",
+        "lift": 18.7,
+        "status": "production",
+        "confidence": 0.94
+      },
+      {
+        "name": "Segment-Specific Personalization",
+        "category": "personalization",
+        "lift": 18.5,
+        "status": "production",
+        "confidence": 0.92
+      },
+      {
+        "name": "Social Proof Testimonials",
+        "category": "social_proof",
+        "lift": 12.3,
+        "status": "testing",
+        "confidence": 0.85
+      },
+      {
+        "name": "Trust Badges and Certifications",
+        "category": "trust",
+        "lift": 8.7,
+        "status": "testing",
+        "confidence": 0.78
+      },
+      {
+        "name": "Limited Availability Messaging",
+        "category": "scarcity",
+        "lift": 6.2,
+        "status": "experimental",
+        "confidence": 0.65
+      }
+    ]
+  },
+  "applications": {},
+  "experiments": {},
+  "performance": {
+    "baseline": {
+      "conversionRate": 0.08,
+      "revenue": 201965998
+    },
+    "current": {
+      "conversionRate": 0.09,
+      "revenue": 232260897.7
+    },
+    "improvement": {
+      "conversionRatePercent": 12.5,
+      "revenueIncrease": 30294899.699999988,
+      "revenuePercent": 14.999999999999991
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "category": "coverage",
+      "recommendation": "Expand pattern application to remaining 13 pages"
+    },
+    {
+      "priority": "HIGH",
+      "category": "patterns",
+      "recommendation": "Continue building pattern library with new experiments"
+    },
+    {
+      "priority": "MEDIUM",
+      "category": "experiments",
+      "recommendation": "Launch more experiments to discover new winning patterns"
+    },
+    {
+      "priority": "MEDIUM",
+      "category": "optimization",
+      "recommendation": "Test pattern combinations for synergistic effects"
+    },
+    {
+      "priority": "LOW",
+      "category": "monitoring",
+      "recommendation": "Continue daily monitoring and data-driven iterations"
+    }
+  ]
+}
