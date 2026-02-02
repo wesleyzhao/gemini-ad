@@ -695,16 +695,23 @@
       line-height: 1.1;
       letter-spacing: -0.03em;
       color: #fff;
-      animation: emailHeaderGlow 3s ease-in-out infinite;
     }
 
-    @keyframes emailHeaderGlow {
-      0%, 100% {
-        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-      }
-      50% {
-        text-shadow: 0 2px 4px rgba(0,0,0,0.3), 0 0 40px rgba(66, 133, 244, 0.3);
-      }
+    /* Character-by-character reveal animation for email header */
+    .email-header-animated {
+      display: inline-block;
+    }
+
+    .email-header-animated span {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .email-header-animated.revealed span {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .email-details p {
@@ -2217,7 +2224,7 @@
           </div>
         </div>
         <div class="email-details">
-          <h3 class="text-reveal">Tame your inbox<br>with Gemini</h3>
+          <h3 class="email-header-animated" data-char-reveal>Tame your inbox<br>with Gemini</h3>
           <p class="text-reveal text-reveal-delay-1">Gemini reads, summarizes, and organizes your emails automatically. Spend less time managing, more time doing.</p>
           <ul class="feature-list">
             <li class="text-reveal text-reveal-delay-2"><span class="feature-check">✓</span> Auto-summarize long threads</li>
@@ -2915,6 +2922,48 @@
     }
 
     initVideoAutoplay();
+
+    // Character-by-character reveal animation (like Apple's "Ready to get started")
+    function initCharReveal() {
+      const elements = document.querySelectorAll('[data-char-reveal]');
+
+      elements.forEach(element => {
+        const html = element.innerHTML;
+        // Split by <br> to preserve line breaks
+        const lines = html.split(/<br\s*\/?>/i);
+        element.innerHTML = '';
+
+        let charIndex = 0;
+        lines.forEach((line, lineIndex) => {
+          const chars = line.split('');
+          chars.forEach(char => {
+            const span = document.createElement('span');
+            span.textContent = char === ' ' ? '\u00A0' : char;
+            span.style.transitionDelay = `${charIndex * 0.03}s`;
+            element.appendChild(span);
+            charIndex++;
+          });
+          // Add line break between lines (but not after last line)
+          if (lineIndex < lines.length - 1) {
+            element.appendChild(document.createElement('br'));
+          }
+        });
+
+        // Observe for scroll into view
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('revealed');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.3 });
+
+        observer.observe(element);
+      });
+    }
+
+    initCharReveal();
   </script>
 </body>
 </html>
