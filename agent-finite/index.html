@@ -6,6 +6,10 @@
   <title>Gemini - Google's Secret Weapon</title>
   <meta name="description" content="Google's Gemini AI - Intelligence for emails, meetings, photos, writing, and truth. Experience the power of AI integrated across Google's ecosystem.">
 
+  <!-- Begin Tailor AI Script -->
+  <script src="https://app.tailorhq.ai/script/bw2V2wfsS628LA23lwQDJQ.js" async></script>
+  <!-- End Tailor AI Script -->
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -647,29 +651,6 @@
       position: relative;
     }
 
-    /* Connection arrow animation */
-    .meetings-demo::after {
-      content: '→';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 24px;
-      color: var(--google-blue);
-      opacity: 0;
-      animation: arrowPulse 2s ease-in-out infinite;
-      z-index: 10;
-      background: white;
-      padding: 8px 12px;
-      border-radius: 50%;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    @keyframes arrowPulse {
-      0%, 100% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
-      50% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-    }
-
     .calendar-panel {
       background: #F8F9FA;
       padding: 24px;
@@ -857,9 +838,29 @@
       padding: 14px;
       margin-bottom: 12px;
       opacity: 0;
-      animation: fadeInRight 0.5s ease forwards;
+      animation: noteAppear 4s ease-in-out infinite;
       position: relative;
       overflow: hidden;
+    }
+
+    /* Staggered timing - appear one after another */
+    .generated-note:nth-child(2) { animation-delay: 0s; }
+    .generated-note:nth-child(3) { animation-delay: 0.4s; }
+    .generated-note:nth-child(4) { animation-delay: 0.8s; }
+
+    @keyframes noteAppear {
+      0% {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+      10%, 80% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      90%, 100% {
+        opacity: 0;
+        transform: translateX(-10px);
+      }
     }
 
     /* Shimmer effect on notes */
@@ -873,28 +874,19 @@
       background: linear-gradient(
         90deg,
         transparent 0%,
-        rgba(66, 133, 244, 0.08) 50%,
+        rgba(66, 133, 244, 0.12) 50%,
         transparent 100%
       );
-      animation: noteShimmer 3s ease-in-out infinite;
+      animation: noteShimmer 2s ease-in-out infinite;
     }
 
-    .generated-note:nth-child(2)::after { animation-delay: 0.3s; }
-    .generated-note:nth-child(3)::after { animation-delay: 0.6s; }
-    .generated-note:nth-child(4)::after { animation-delay: 0.9s; }
+    .generated-note:nth-child(2)::after { animation-delay: 0.2s; }
+    .generated-note:nth-child(3)::after { animation-delay: 0.4s; }
+    .generated-note:nth-child(4)::after { animation-delay: 0.6s; }
 
     @keyframes noteShimmer {
       0% { left: -100%; }
       50%, 100% { left: 100%; }
-    }
-
-    .generated-note:nth-child(2) { animation-delay: 0.3s; }
-    .generated-note:nth-child(3) { animation-delay: 0.6s; }
-    .generated-note:nth-child(4) { animation-delay: 0.9s; }
-
-    @keyframes fadeInRight {
-      from { opacity: 0; transform: translateX(20px); }
-      to { opacity: 1; transform: translateX(0); }
     }
 
     .note-label {
