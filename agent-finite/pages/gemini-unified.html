@@ -617,7 +617,7 @@
     .meetings-demo {
       display: grid;
       grid-template-columns: 1fr 1.2fr;
-      gap: 32px;
+      gap: 0;
       max-width: 1000px;
       margin: 0 auto;
       background: white;
@@ -625,6 +625,30 @@
       box-shadow: var(--shadow-lg);
       overflow: hidden;
       border: 1px solid #E8EAED;
+      position: relative;
+    }
+
+    /* Connection arrow animation */
+    .meetings-demo::after {
+      content: '→';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
+      color: var(--google-blue);
+      opacity: 0;
+      animation: arrowPulse 2s ease-in-out infinite;
+      z-index: 10;
+      background: white;
+      padding: 8px 12px;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    @keyframes arrowPulse {
+      0%, 100% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+      50% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
     }
 
     .calendar-panel {
@@ -656,6 +680,12 @@
 
     .gcal-icon {
       flex-shrink: 0;
+      animation: calendarBounce 3s ease-in-out infinite;
+    }
+
+    @keyframes calendarBounce {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
     }
 
     .calendar-title {
@@ -677,16 +707,34 @@
       padding: 12px;
       margin-bottom: 10px;
       opacity: 0;
-      animation: fadeInLeft 0.5s ease forwards;
+      animation: fadeInLeft 0.5s ease forwards, meetingHighlight 4s ease-in-out infinite;
+      cursor: pointer;
+      transition: all 0.3s ease;
     }
 
-    .meeting-item:nth-child(1) { animation-delay: 0.2s; }
-    .meeting-item:nth-child(2) { animation-delay: 0.4s; border-left-color: var(--google-red); }
-    .meeting-item:nth-child(3) { animation-delay: 0.6s; border-left-color: var(--google-green); }
+    .meeting-item:hover {
+      transform: translateX(4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .meeting-item:nth-child(2) { animation-delay: 0.4s, 1.3s; border-left-color: var(--google-red); }
+    .meeting-item:nth-child(3) { animation-delay: 0.6s, 2.6s; border-left-color: var(--google-green); }
+    .meeting-item:nth-child(4) { animation-delay: 0.8s, 3.9s; border-left-color: var(--google-yellow); }
 
     @keyframes fadeInLeft {
       from { opacity: 0; transform: translateX(-20px); }
       to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes meetingHighlight {
+      0%, 20%, 100% {
+        background: white;
+        box-shadow: none;
+      }
+      10% {
+        background: rgba(66, 133, 244, 0.08);
+        box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
+      }
     }
 
     .meeting-time {
@@ -704,6 +752,19 @@
 
     .notes-panel {
       padding: 24px;
+      position: relative;
+    }
+
+    /* Typing indicator */
+    .notes-panel::before {
+      content: '';
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 40px;
+      height: 20px;
+      display: flex;
+      gap: 4px;
     }
 
     .notes-header {
@@ -713,6 +774,33 @@
       margin-bottom: 20px;
       padding-bottom: 12px;
       border-bottom: 1px solid #E8EAED;
+    }
+
+    /* Typing dots animation */
+    .typing-indicator {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 8px 12px;
+      background: #F0F4FF;
+      border-radius: 12px;
+      margin-top: 8px;
+    }
+
+    .typing-indicator span {
+      width: 6px;
+      height: 6px;
+      background: var(--google-blue);
+      border-radius: 50%;
+      animation: typingDot 1.4s ease-in-out infinite;
+    }
+
+    .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+    .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes typingDot {
+      0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+      30% { transform: translateY(-4px); opacity: 1; }
     }
 
     .gemini-icon {
@@ -1948,6 +2036,11 @@
           <div class="notes-header">
             <div class="gemini-icon">✦</div>
             <span class="notes-title">Gemini Notes</span>
+            <div class="typing-indicator">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
           <div class="generated-note">
             <div class="note-label">Summary</div>
