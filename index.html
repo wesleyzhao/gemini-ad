@@ -689,17 +689,28 @@
     }
 
     .email-details h3 {
-      font-size: clamp(36px, 5vw, 52px);
-      font-weight: 700;
-      margin-bottom: 20px;
-      line-height: 1.15;
-      letter-spacing: -0.02em;
+      font-size: clamp(42px, 6vw, 64px);
+      font-weight: 800;
+      margin-bottom: 24px;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: #fff;
+      animation: emailHeaderGlow 3s ease-in-out infinite;
+    }
+
+    @keyframes emailHeaderGlow {
+      0%, 100% {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      }
+      50% {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3), 0 0 40px rgba(66, 133, 244, 0.3);
+      }
     }
 
     .email-details p {
-      font-size: 18px;
-      color: var(--text-secondary);
-      margin-bottom: 24px;
+      font-size: 19px;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 28px;
       line-height: 1.6;
     }
 
@@ -712,7 +723,8 @@
       align-items: center;
       gap: 12px;
       margin-bottom: 16px;
-      font-size: 16px;
+      font-size: 17px;
+      color: rgba(255,255,255,0.9);
     }
 
     .feature-check {
@@ -2123,7 +2135,7 @@
   </section>
 
   <!-- ===== SECTION 3: EMAIL ===== -->
-  <section class="email-section section-gray">
+  <section class="email-section section-dark">
     <div class="container">
       <div class="email-demo-container">
         <div class="email-visual">
