@@ -251,13 +251,15 @@
       border-radius: 100px;
       transition: all 0.3s ease;
       box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-      animation: ctaPulse 2s ease-in-out infinite;
       position: relative;
     }
 
+    .hero-cta.hero-animate {
+      animation: textReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards, ctaPulse 2s ease-in-out 1s infinite;
+    }
+
     .hero-cta::after {
-      content: '↓';
-      margin-left: 8px;
+      content: ' ↓';
       display: inline-block;
       animation: ctaArrow 1.5s ease-in-out infinite;
     }
@@ -282,6 +284,7 @@
       transform: scale(1.08);
       box-shadow: 0 8px 30px rgba(0,0,0,0.4);
       animation: none;
+      opacity: 1;
     }
 
     .scroll-indicator {
