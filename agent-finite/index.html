@@ -755,18 +755,6 @@
       position: relative;
     }
 
-    /* Typing indicator */
-    .notes-panel::before {
-      content: '';
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      width: 40px;
-      height: 20px;
-      display: flex;
-      gap: 4px;
-    }
-
     .notes-header {
       display: flex;
       align-items: center;
@@ -838,32 +826,32 @@
       padding: 14px;
       margin-bottom: 12px;
       opacity: 0;
-      animation: noteAppear 4s ease-in-out infinite;
+      animation: noteAppear 6s ease-in-out infinite;
       position: relative;
       overflow: hidden;
     }
 
-    /* Staggered timing - appear one after another */
-    .generated-note:nth-child(2) { animation-delay: 0s; }
-    .generated-note:nth-child(3) { animation-delay: 0.4s; }
-    .generated-note:nth-child(4) { animation-delay: 0.8s; }
+    /* Staggered timing - appear one after another quickly */
+    .generated-note:nth-child(2) { animation-delay: 0s; }      /* Summary */
+    .generated-note:nth-child(3) { animation-delay: 0.5s; }    /* Action Items */
+    .generated-note:nth-child(4) { animation-delay: 1s; }      /* Key Decisions */
 
     @keyframes noteAppear {
       0% {
         opacity: 0;
-        transform: translateX(20px);
+        transform: translateX(30px) scale(0.95);
       }
-      10%, 80% {
+      8%, 75% {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateX(0) scale(1);
       }
-      90%, 100% {
+      85%, 100% {
         opacity: 0;
-        transform: translateX(-10px);
+        transform: translateX(-20px) scale(0.95);
       }
     }
 
-    /* Shimmer effect on notes */
+    /* Shimmer effect sweeps across each note */
     .generated-note::after {
       content: '';
       position: absolute;
@@ -874,19 +862,20 @@
       background: linear-gradient(
         90deg,
         transparent 0%,
-        rgba(66, 133, 244, 0.12) 50%,
+        rgba(66, 133, 244, 0.15) 50%,
         transparent 100%
       );
-      animation: noteShimmer 2s ease-in-out infinite;
+      animation: noteShimmer 1.5s ease-in-out infinite;
+      pointer-events: none;
     }
 
-    .generated-note:nth-child(2)::after { animation-delay: 0.2s; }
-    .generated-note:nth-child(3)::after { animation-delay: 0.4s; }
-    .generated-note:nth-child(4)::after { animation-delay: 0.6s; }
+    .generated-note:nth-child(2)::after { animation-delay: 0.3s; }
+    .generated-note:nth-child(3)::after { animation-delay: 0.6s; }
+    .generated-note:nth-child(4)::after { animation-delay: 0.9s; }
 
     @keyframes noteShimmer {
-      0% { left: -100%; }
-      50%, 100% { left: 100%; }
+      0%, 100% { left: -100%; }
+      50% { left: 100%; }
     }
 
     .note-label {
