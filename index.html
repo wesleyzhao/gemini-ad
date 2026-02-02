@@ -1962,12 +1962,18 @@
       font-weight: 900;
       letter-spacing: -0.04em;
       margin-bottom: 16px;
-      background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.8) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-shadow: 0 0 80px rgba(255,255,255,0.3);
-      animation: titleGlow 4s ease-in-out infinite;
+      color: #fff;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      animation: closingTitleGlow 4s ease-in-out infinite;
+    }
+
+    @keyframes closingTitleGlow {
+      0%, 100% {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.2), 0 0 20px rgba(255,255,255,0.1);
+      }
+      50% {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.2), 0 0 40px rgba(255,255,255,0.25);
+      }
     }
 
     .closing-subtitle {
