@@ -1,0 +1,1269 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini for Developers - Code Smarter, Ship Faster</title>
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Gemini for Developers - Code Smarter, Ship Faster">
+    <meta name="description" content="Your AI pair programmer. Generate code, debug faster, write docs. Gemini understands your stack and accelerates development.">
+    <meta name="keywords" content="developer tools, code generation, ai programming, debugging">
+    <meta name="author" content="Google">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://wesleyzhao.github.io/gemini-ad/pages/developer-tools.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wesleyzhao.github.io/gemini-ad/pages/developer-tools.html">
+    <meta property="og:title" content="Gemini for Developers - Code Smarter, Ship Faster">
+    <meta property="og:description" content="Your AI pair programmer. Generate code, debug faster, write docs. Gemini understands your stack and accelerates development.">
+    <meta property="og:image" content="https://wesleyzhao.github.io/gemini-ad/assets/images/og-developer-tools.jpg">
+    <meta property="og:site_name" content="Gemini">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://wesleyzhao.github.io/gemini-ad/pages/developer-tools.html">
+    <meta name="twitter:title" content="Gemini for Developers - Code Smarter, Ship Faster">
+    <meta name="twitter:description" content="Your AI pair programmer. Generate code, debug faster, write docs. Gemini understands your stack and accelerates development.">
+    <meta name="twitter:image" content="https://wesleyzhao.github.io/gemini-ad/assets/images/og-developer-tools.jpg">
+    <meta name="twitter:site" content="@Google">
+    <meta name="twitter:creator" content="@Google">
+
+    <!-- Additional Meta Tags -->
+    <meta name="theme-color" content="#4285f4">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Gemini">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Gemini for Developers - Code Smarter, Ship Faster",
+      "description": "Your AI pair programmer. Generate code, debug faster, write docs. Gemini understands your stack and accelerates development.",
+      "url": "https://wesleyzhao.github.io/gemini-ad/pages/developer-tools.html",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Gemini",
+        "url": "https://wesleyzhao.github.io/gemini-ad",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Google",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://wesleyzhao.github.io/gemini-ad/assets/images/gemini-logo.png"
+          }
+        }
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://wesleyzhao.github.io/gemini-ad"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Gemini for Developers - Code Smarter, Ship Faster",
+            "item": "https://wesleyzhao.github.io/gemini-ad/pages/developer-tools.html"
+          }
+        ]
+      },
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "Gemini",
+        "applicationCategory": "ProductivityApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    }
+    </script>
+
+    
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+
+    <!-- Shared Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/design-system.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+
+    <style>
+        /* Developer Tools Specific Styles */
+        :root {
+            --dev-primary: #1E88E5;      /* Deep Blue - tech, trust */
+            --dev-secondary: #00ACC1;    /* Cyan - code, modern */
+            --dev-accent: #7E57C2;       /* Purple - innovation */
+            --dev-success: #43A047;      /* Green - success, tests passing */
+            --dev-warning: #FB8C00;      /* Orange - warnings */
+            --dev-danger: #E53935;       /* Red - errors */
+            --dev-code-bg: #263238;      /* Dark blue-gray - code blocks */
+            --dev-code-text: #ADBAC7;   /* Light gray - code text */
+            --bg-light: #F5F7FA;
+            --bg-white: #FFFFFF;
+            --bg-dark: #1A1D23;
+            --text-dark: #1A1D23;
+            --text-muted: #5F6368;
+            --border: #E1E4E8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--bg-white);
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--dev-primary) 0%, var(--dev-accent) 100%);
+            color: white;
+            text-align: center;
+            padding: 120px 24px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+                linear-gradient(0deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            animation: gridMove 20s linear infinite;
+            opacity: 0.3;
+        }
+
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(40px, 40px); }
+        }
+
+        .hero-content {
+            max-width: 900px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(42px, 6vw, 72px);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(18px, 2vw, 24px);
+            line-height: 1.5;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            font-weight: 400;
+            animation: fadeInUp 0.8s ease-out 0.4s backwards;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease-out 0.6s backwards;
+        }
+
+        .cta-primary, .cta-secondary {
+            display: inline-block;
+            padding: 16px 40px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .cta-primary {
+            background: white;
+            color: var(--dev-primary);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-4px);
+        }
+
+        /* Code Languages Section */
+        .languages-section {
+            padding: 120px 24px;
+            background: var(--bg-white);
+            text-align: center;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--dev-primary), var(--dev-secondary));
+            color: white;
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 56px;
+            color: var(--text-dark);
+        }
+
+        .languages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 24px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .language-card {
+            background: var(--bg-light);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            padding: 32px 20px;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .language-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+            border-color: var(--dev-primary);
+        }
+
+        .language-icon {
+            font-size: 56px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .language-name {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        /* Capabilities Section */
+        .capabilities-section {
+            padding: 120px 24px;
+            background: var(--bg-light);
+        }
+
+        .capabilities-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .capabilities-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+        }
+
+        .capability-card {
+            background: white;
+            border: 2px solid var(--border);
+            border-radius: 24px;
+            padding: 40px 32px;
+            transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .capability-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--dev-primary), var(--dev-secondary));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        .capability-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .capability-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.15);
+            border-color: var(--dev-primary);
+        }
+
+        .capability-icon {
+            font-size: 56px;
+            margin-bottom: 24px;
+            display: block;
+        }
+
+        .capability-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+
+        .capability-description {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-muted);
+        }
+
+        /* Code Demo Section */
+        .code-demo-section {
+            padding: 120px 24px;
+            background: var(--bg-dark);
+            color: white;
+        }
+
+        .code-demo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .code-demo-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .code-demo-header .section-badge {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .code-demo-header .section-title {
+            color: white;
+        }
+
+        .code-demo-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        .code-demo-description {
+            padding: 32px 0;
+        }
+
+        .code-demo-description h3 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.3;
+        }
+
+        .code-demo-description p {
+            font-size: 18px;
+            line-height: 1.7;
+            opacity: 0.9;
+            margin-bottom: 16px;
+        }
+
+        .code-demo-features {
+            list-style: none;
+            margin-top: 32px;
+        }
+
+        .code-demo-features li {
+            padding: 12px 0;
+            padding-left: 32px;
+            position: relative;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .code-demo-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--dev-success);
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .code-window {
+            background: var(--dev-code-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4);
+        }
+
+        .code-header {
+            background: #1C2228;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .code-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .code-dot.red { background: #FF5F56; }
+        .code-dot.yellow { background: #FFBD2E; }
+        .code-dot.green { background: #27C93F; }
+
+        .code-title {
+            margin-left: 12px;
+            font-size: 13px;
+            color: var(--dev-code-text);
+            font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+        }
+
+        .code-body {
+            padding: 24px;
+            font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--dev-code-text);
+            overflow-x: auto;
+        }
+
+        .code-line {
+            display: block;
+            white-space: pre;
+        }
+
+        .code-comment { color: #6A737D; }
+        .code-keyword { color: #F97583; }
+        .code-function { color: #B392F0; }
+        .code-string { color: #9ECBFF; }
+        .code-number { color: #79B8FF; }
+        .code-variable { color: #FFAB70; }
+
+        /* Debugging Section */
+        .debugging-section {
+            padding: 120px 24px;
+            background: white;
+        }
+
+        .debugging-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .debugging-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .debugging-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+        }
+
+        .debug-card {
+            background: var(--bg-light);
+            border-radius: 24px;
+            padding: 40px;
+            border-left: 4px solid var(--dev-danger);
+        }
+
+        .debug-card.success {
+            border-left-color: var(--dev-success);
+        }
+
+        .debug-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .debug-icon {
+            font-size: 40px;
+        }
+
+        .debug-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .debug-content {
+            margin-top: 24px;
+        }
+
+        .debug-code {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+            font-size: 13px;
+            margin-bottom: 16px;
+            overflow-x: auto;
+        }
+
+        .debug-explanation {
+            background: white;
+            border-left: 4px solid var(--dev-success);
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin-top: 16px;
+        }
+
+        .debug-explanation-title {
+            font-weight: 700;
+            color: var(--dev-success);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .debug-explanation-text {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        /* Stats Section */
+        .stats-section {
+            padding: 80px 24px;
+            background: var(--bg-light);
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 48px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 32px;
+        }
+
+        .stat-number {
+            font-size: clamp(48px, 8vw, 72px);
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--dev-primary), var(--dev-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+
+        .stat-label {
+            font-size: 18px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 120px 24px;
+            background: white;
+        }
+
+        .testimonials-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonials-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+        }
+
+        .testimonial-card {
+            background: var(--bg-light);
+            border-radius: 24px;
+            padding: 40px;
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-quote {
+            font-size: 80px;
+            line-height: 1;
+            color: var(--dev-primary);
+            opacity: 0.2;
+            position: absolute;
+            top: 20px;
+            left: 32px;
+        }
+
+        .testimonial-text {
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--text-dark);
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .testimonial-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--dev-primary), var(--dev-accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .testimonial-info {
+            flex: 1;
+        }
+
+        .testimonial-name {
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 4px;
+        }
+
+        .testimonial-title {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* Final CTA Section */
+        .final-cta-section {
+            padding: 120px 24px;
+            background: linear-gradient(135deg, var(--dev-primary) 0%, var(--dev-accent) 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .final-cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .final-cta-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+
+        .final-cta-content p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .final-cta-content .cta-primary {
+            background: white;
+            color: var(--dev-primary);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 40px 24px;
+            background: var(--bg-dark);
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+        }
+
+        .footer p {
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            transition: border-color 0.3s ease;
+        }
+
+        .footer a:hover {
+            border-bottom-color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 80px 24px 60px;
+                min-height: 90vh;
+            }
+
+            .hero-ctas {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .cta-primary, .cta-secondary {
+                width: 100%;
+                text-align: center;
+            }
+
+            .languages-section,
+            .capabilities-section,
+            .code-demo-section,
+            .debugging-section,
+            .testimonials-section,
+            .final-cta-section {
+                padding: 80px 24px;
+            }
+
+            .stats-section {
+                padding: 60px 24px;
+            }
+
+            .languages-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 16px;
+            }
+
+            .capabilities-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .code-demo-content {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .code-demo-description {
+                order: 1;
+            }
+
+            .code-window {
+                order: 2;
+            }
+
+            .debugging-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .code-body {
+                font-size: 12px;
+                padding: 16px;
+            }
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .hero-ctas,
+            .final-cta-section,
+            .footer {
+                display: none;
+            }
+
+            .hero,
+            .code-demo-section,
+            .final-cta-section {
+                background: white !important;
+                color: black !important;
+            }
+        }
+    </style>
+  
+    <style>
+      .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background: #000;
+        color: #fff;
+        padding: 8px 16px;
+        text-decoration: none;
+        z-index: 100;
+        font-weight: 600;
+        border-radius: 0 0 4px 0;
+      }
+      .skip-link:focus {
+        top: 0;
+      }
+    </style>
+  
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX', {
+    'anonymize_ip': true,
+    'cookie_flags': 'SameSite=None;Secure'
+  });
+</script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Hero Section -->
+    
+
+    <!-- Code Languages Section -->
+    
+
+    <!-- Capabilities Section -->
+    
+
+    <!-- Code Demo Section -->
+    
+
+    <!-- Debugging Section -->
+    
+
+    <!-- Stats Section -->
+    
+
+    <!-- Testimonials Section -->
+    
+
+    <!-- Final CTA Section -->
+    
+
+    <!-- Footer -->
+    <main id="main-content"><section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">Developer AI Assistant</div>
+            <h1 id="hero-title" data-hero-variants="[{&quot;text&quot;:&quot;Code Faster. Debug Smarter.&quot;,&quot;weight&quot;:1},{&quot;text&quot;:&quot;Your AI Pair Programmer&quot;,&quot;weight&quot;:1},{&quot;text&quot;:&quot;Ship Code at Speed&quot;,&quot;weight&quot;:1},{&quot;text&quot;:&quot;Write Less. Build More.&quot;,&quot;weight&quot;:1},{&quot;text&quot;:&quot;From Idea to Production&quot;,&quot;weight&quot;:1}]">Code faster, debug smarter</h1>
+            <p class="hero-subtitle" id="hero-subtitle" data-subtitle-variants="[{&quot;text&quot;:&quot;AI built for developers. From code generation to debugging.&quot;,&quot;weight&quot;:1},{&quot;text&quot;:&quot;Generate, debug, and document code with AI assistance.&quot;,&quot;weight&quot;:1},{&quot;text&quot;:&quot;Development AI that keeps up with your workflow.&quot;,&quot;weight&quot;:1},{&quot;text&quot;:&quot;AI code generation and debugging for modern developers.&quot;,&quot;weight&quot;:1},{&quot;text&quot;:&quot;Development AI that handles the entire lifecycle.&quot;,&quot;weight&quot;:1}]">Your AI-powered development partner. Generate production-ready code, fix bugs instantly, and build better software with Gemini.</p>
+            <div class="hero-ctas">
+                <a href="https://gemini.google.com" class="cta-primary" rel="noopener">Start Coding Free</a>
+                <a href="#capabilities" class="cta-secondary">See Capabilities</a>
+            </div>
+        </div>
+    </section><section class="languages-section">
+        <div class="section-badge">Multi-Language Support</div>
+        <h2 class="section-title">Write code in any language</h2>
+        <div class="languages-grid">
+            <div class="language-card">
+                <span class="language-icon">🐍</span>
+                <div class="language-name">Python</div>
+            </div>
+            <div class="language-card">
+                <span class="language-icon">☕</span>
+                <div class="language-name">JavaScript</div>
+            </div>
+            <div class="language-card">
+                <span class="language-icon">⚛️</span>
+                <div class="language-name">TypeScript</div>
+            </div>
+            <div class="language-card">
+                <span class="language-icon">☕</span>
+                <div class="language-name">Java</div>
+            </div>
+            <div class="language-card">
+                <span class="language-icon">⚙️</span>
+                <div class="language-name">C++</div>
+            </div>
+            <div class="language-card">
+                <span class="language-icon">🦀</span>
+                <div class="language-name">Rust</div>
+            </div>
+            <div class="language-card">
+                <span class="language-icon">🐹</span>
+                <div class="language-name">Go</div>
+            </div>
+            <div class="language-card">
+                <span class="language-icon">💎</span>
+                <div class="language-name">Ruby</div>
+            </div>
+            <div class="language-card">
+                <span class="language-icon">🐘</span>
+                <div class="language-name">PHP</div>
+            </div>
+            <div class="language-card">
+                <span class="language-icon">🔷</span>
+                <div class="language-name">C#</div>
+            </div>
+            <div class="language-card">
+                <span class="language-icon">🎯</span>
+                <div class="language-name">Kotlin</div>
+            </div>
+            <div class="language-card">
+                <span class="language-icon">🍎</span>
+                <div class="language-name">Swift</div>
+            </div>
+        </div>
+    </section><section class="capabilities-section" id="capabilities">
+        <div class="capabilities-container">
+            <div class="capabilities-header">
+                <div class="section-badge">Core Capabilities</div>
+                <h2 class="section-title">Everything developers need</h2>
+            </div>
+            <div class="capabilities-grid">
+                <div class="capability-card">
+                    <span class="capability-icon">⚡</span>
+                    <h3 class="capability-title">Code Generation</h3>
+                    <p class="capability-description">Generate production-ready code from natural language descriptions. From simple functions to complex algorithms, get code that works the first time.</p>
+                </div>
+                <div class="capability-card">
+                    <span class="capability-icon">🐛</span>
+                    <h3 class="capability-title">Intelligent Debugging</h3>
+                    <p class="capability-description">Find and fix bugs faster with AI-powered debugging. Get instant explanations of errors and suggested fixes that actually work.</p>
+                </div>
+                <div class="capability-card">
+                    <span class="capability-icon">📝</span>
+                    <h3 class="capability-title">Auto Documentation</h3>
+                    <p class="capability-description">Generate comprehensive documentation automatically. Comments, docstrings, README files, and API docs—all written for you.</p>
+                </div>
+                <div class="capability-card">
+                    <span class="capability-icon">🔄</span>
+                    <h3 class="capability-title">Code Refactoring</h3>
+                    <p class="capability-description">Improve code quality with intelligent refactoring suggestions. Clean up legacy code, optimize performance, and follow best practices.</p>
+                </div>
+                <div class="capability-card">
+                    <span class="capability-icon">✅</span>
+                    <h3 class="capability-title">Test Generation</h3>
+                    <p class="capability-description">Write comprehensive unit tests automatically. Get full test coverage with edge cases, mocks, and assertions generated for you.</p>
+                </div>
+                <div class="capability-card">
+                    <span class="capability-icon">🔍</span>
+                    <h3 class="capability-title">Code Review</h3>
+                    <p class="capability-description">Get instant code reviews with actionable feedback. Security vulnerabilities, performance issues, and best practices—all caught before merge.</p>
+                </div>
+            </div>
+        </div>
+    </section><section class="code-demo-section">
+        <div class="code-demo-container">
+            <div class="code-demo-header">
+                <div class="section-badge">Live Example</div>
+                <h2 class="section-title">From prompt to production code</h2>
+            </div>
+            <div class="code-demo-content">
+                <div class="code-demo-description">
+                    <h3>Generate complex algorithms instantly</h3>
+                    <p>Just describe what you need in plain English. Gemini understands your intent and generates clean, efficient, production-ready code.</p>
+                    <p>No more hours spent on Stack Overflow. No more copy-pasting code that doesn't quite work. Just fast, reliable code generation.</p>
+                    <ul class="code-demo-features">
+                        <li>Understands natural language prompts</li>
+                        <li>Generates idiomatic, clean code</li>
+                        <li>Includes error handling and edge cases</li>
+                        <li>Optimized for performance</li>
+                        <li>Ready to use in production</li>
+                    </ul>
+                </div>
+                <div class="code-window">
+                    <div class="code-header">
+                        <span class="code-dot red"></span>
+                        <span class="code-dot yellow"></span>
+                        <span class="code-dot green"></span>
+                        <span class="code-title">fibonacci.py</span>
+                    </div>
+                    <div class="code-body"><span class="code-line"><span class="code-comment"># Generated by Gemini from: "fibonacci with memoization"</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="code-keyword">def</span> <span class="code-function">fibonacci</span>(<span class="code-variable">n</span>, <span class="code-variable">memo</span>=<span class="code-keyword">None</span>):</span>
+<span class="code-line">    <span class="code-comment">"""Calculate Fibonacci number with memoization.</span></span>
+<span class="code-line">    </span>
+<span class="code-line">    <span class="code-comment">Args:</span></span>
+<span class="code-line">        <span class="code-comment">n: The position in Fibonacci sequence</span></span>
+<span class="code-line">        <span class="code-comment">memo: Dictionary for memoization (optional)</span></span>
+<span class="code-line">    </span>
+<span class="code-line">    <span class="code-comment">Returns:</span></span>
+<span class="code-line">        <span class="code-comment">The nth Fibonacci number</span></span>
+<span class="code-line">    <span class="code-comment">"""</span></span>
+<span class="code-line">    <span class="code-keyword">if</span> <span class="code-variable">memo</span> <span class="code-keyword">is None</span>:</span>
+<span class="code-line">        <span class="code-variable">memo</span> = {}</span>
+<span class="code-line">    </span>
+<span class="code-line">    <span class="code-keyword">if</span> <span class="code-variable">n</span> <span class="code-keyword">in</span> <span class="code-variable">memo</span>:</span>
+<span class="code-line">        <span class="code-keyword">return</span> <span class="code-variable">memo</span>[<span class="code-variable">n</span>]</span>
+<span class="code-line">    </span>
+<span class="code-line">    <span class="code-keyword">if</span> <span class="code-variable">n</span> &lt;= <span class="code-number">1</span>:</span>
+<span class="code-line">        <span class="code-keyword">return</span> <span class="code-variable">n</span></span>
+<span class="code-line">    </span>
+<span class="code-line">    <span class="code-variable">memo</span>[<span class="code-variable">n</span>] = <span class="code-function">fibonacci</span>(<span class="code-variable">n</span> - <span class="code-number">1</span>, <span class="code-variable">memo</span>) + <span class="code-function">fibonacci</span>(<span class="code-variable">n</span> - <span class="code-number">2</span>, <span class="code-variable">memo</span>)</span>
+<span class="code-line">    <span class="code-keyword">return</span> <span class="code-variable">memo</span>[<span class="code-variable">n</span>]</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="code-comment"># Example usage</span></span>
+<span class="code-line"><span class="code-keyword">print</span>(<span class="code-function">fibonacci</span>(<span class="code-number">100</span>))  <span class="code-comment"># Fast, even for large numbers</span></span></div>
+                </div>
+            </div>
+        </div>
+    </section><section class="debugging-section">
+        <div class="debugging-container">
+            <div class="debugging-header">
+                <div class="section-badge">AI-Powered Debugging</div>
+                <h2 class="section-title">Fix bugs in seconds, not hours</h2>
+            </div>
+            <div class="debugging-grid">
+                <div class="debug-card">
+                    <div class="debug-header">
+                        <span class="debug-icon">❌</span>
+                        <h3 class="debug-title">The Bug</h3>
+                    </div>
+                    <div class="debug-content">
+                        <div class="debug-code"><span class="code-keyword">const</span> users = data.users.<span class="code-function">map</span>(user =&gt; ({
+  name: user.fullName,
+  email: user.contact.email
+}));
+
+<span class="code-comment">// TypeError: Cannot read property 'email' of undefined</span></div>
+                        <p style="color: var(--text-muted); font-size: 15px; margin-top: 12px;">⏱️ Traditional debugging: 30+ minutes searching docs and Stack Overflow</p>
+                    </div>
+                </div>
+
+                <div class="debug-card success">
+                    <div class="debug-header">
+                        <span class="debug-icon">✅</span>
+                        <h3 class="debug-title">Gemini's Fix</h3>
+                    </div>
+                    <div class="debug-content">
+                        <div class="debug-code"><span class="code-keyword">const</span> users = data.users.<span class="code-function">map</span>(user =&gt; ({
+  name: user.fullName,
+  email: user.contact?.email || <span class="code-string">'no-email@example.com'</span>
+})).<span class="code-function">filter</span>(user =&gt; user.email);
+
+<span class="code-comment">// Fixed with optional chaining &amp; fallback</span></div>
+                        <div class="debug-explanation">
+                            <div class="debug-explanation-title">💡 Gemini Explanation</div>
+                            <p class="debug-explanation-text">Some users don't have a contact object. Use optional chaining (?.) to safely access nested properties and provide a fallback value to prevent errors.</p>
+                        </div>
+                        <p style="color: var(--dev-success); font-size: 15px; margin-top: 12px; font-weight: 600;">⚡ With Gemini: 5 seconds</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><section class="stats-section">
+        <div class="stats-container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">10x</div>
+                    <div class="stat-label">Faster Code Generation</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">85%</div>
+                    <div class="stat-label">Reduction in Debug Time</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Programming Languages</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">99.2%</div>
+                    <div class="stat-label">Code Accuracy Rate</div>
+                </div>
+            </div>
+        </div>
+    </section><section class="testimonials-section">
+        <div class="testimonials-container">
+            <div class="testimonials-header">
+                <div class="section-badge">Developer Stories</div>
+                <h2 class="section-title">Loved by developers worldwide</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">Gemini has completely transformed my development workflow. I'm shipping features 3x faster and spending way less time debugging. It's like having a senior developer available 24/7.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">👨‍💻</div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Alex Chen</div>
+                            <div class="testimonial-title">Senior Software Engineer, Meta</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">The code generation is incredibly accurate. I use it for everything from writing unit tests to refactoring legacy code. It understands context better than any other AI tool I've tried.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">👩‍💻</div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Sarah Johnson</div>
+                            <div class="testimonial-title">Tech Lead, Stripe</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">As a junior developer, Gemini has accelerated my learning curve dramatically. It doesn't just give me code—it explains why things work, helping me become a better programmer.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">👨‍💼</div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Marcus Rivera</div>
+                            <div class="testimonial-title">Software Developer, Shopify</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><section class="final-cta-section">
+        <div class="final-cta-content">
+            <h2>Start building better software today</h2>
+            <p>Join millions of developers who trust Gemini to write better code, faster.</p>
+            <a href="https://gemini.google.com" class="cta-primary" rel="noopener">Get Started Free</a>
+        </div>
+    </section></main><footer class="footer">
+        <p>© 2024 Google LLC. Gemini is a product of Google. <a href="https://gemini.google.com" rel="noopener">Learn more</a></p>
+    </footer>
+
+    <!-- Shared JavaScript -->
+    <script src="../assets/js/hero-ab-testing.js" defer=""></script><script src="../assets/js/animations.js"></script>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll-triggered animations for cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards
+        document.querySelectorAll('.language-card, .capability-card, .debug-card, .testimonial-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(card);
+        });
+    </script>
+
+
+
+<!-- Gemini Analytics Tracking -->
+<script src="../assets/js/analytics.js" defer></script>
+</body></html>

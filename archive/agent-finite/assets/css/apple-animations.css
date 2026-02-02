@@ -1,0 +1,504 @@
+/**
+ * Apple-Inspired Animation Styles
+ *
+ * CSS animations and utilities for Apple.com-style effects:
+ * - Smooth transitions
+ * - Elegant easing curves
+ * - Product showcase styles
+ * - Parallax containers
+ * - Video-like sequence animations
+ */
+
+/* ============================================
+   Parallax Elements
+   ============================================ */
+
+[data-parallax] {
+  will-change: transform;
+  transition: transform 0.1s linear;
+}
+
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.parallax-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+}
+
+/* ============================================
+   Product Showcase
+   ============================================ */
+
+[data-showcase] {
+  position: relative;
+  padding: 120px 0;
+}
+
+[data-showcase-item] {
+  opacity: 0;
+  transform: translateY(60px) scale(0.95);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-showcase-item].showcase-active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.showcase-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.showcase-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   SVG Animations
+   ============================================ */
+
+[data-svg-animate] {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  stroke-width: 2;
+  fill: none;
+}
+
+.svg-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.svg-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Animated SVG checkmark */
+.svg-checkmark {
+  stroke: var(--color-success, #34a853);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Animated SVG line */
+.svg-line {
+  stroke: var(--color-primary, #4285f4);
+  stroke-linecap: round;
+}
+
+/* ============================================
+   Canvas Particles
+   ============================================ */
+
+[data-particles] {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.particles-container {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* ============================================
+   Sequence Animations
+   ============================================ */
+
+[data-sequence] {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform, opacity;
+}
+
+.sequence-content {
+  max-width: 800px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* ============================================
+   Magnetic Buttons
+   ============================================ */
+
+[data-magnetic] {
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.magnetic-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  background: var(--color-primary, #4285f4);
+  color: white;
+  border-radius: 100px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.magnetic-button:hover {
+  background: var(--color-primary-dark, #3367d6);
+}
+
+/* ============================================
+   Text Reveal Animations
+   ============================================ */
+
+[data-text-reveal] {
+  overflow: visible;
+}
+
+[data-text-reveal] span {
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ============================================
+   Counter Animations
+   ============================================ */
+
+.animated-counter {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--color-primary, #4285f4);
+  font-variant-numeric: tabular-nums;
+}
+
+.counter-label {
+  font-size: 18px;
+  color: var(--color-text-secondary, rgba(255, 255, 255, 0.7));
+  margin-top: 12px;
+}
+
+/* ============================================
+   Video-Style Hero
+   ============================================ */
+
+.video-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+
+.video-hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.video-hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+.video-hero canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================
+   Animated Gradient Background
+   ============================================ */
+
+.animated-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--gradient-start, #4285f4) 0%,
+    var(--gradient-end, #34a853) 100%
+  );
+  background-size: 200% 200%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ============================================
+   Floating Animation
+   ============================================ */
+
+.floating {
+  animation: floating 6s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* ============================================
+   Pulse Animation
+   ============================================ */
+
+.pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* ============================================
+   Glow Effect
+   ============================================ */
+
+.glow {
+  position: relative;
+  overflow: visible;
+}
+
+.glow::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    var(--glow-color, rgba(66, 133, 244, 0.4)) 0%,
+    transparent 70%
+  );
+  filter: blur(40px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.glow:hover::before {
+  opacity: 1;
+}
+
+/* ============================================
+   Image Sequence Canvas
+   ============================================ */
+
+.image-sequence-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-sequence-container canvas {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+/* ============================================
+   Scroll Progress Indicator
+   ============================================ */
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.scroll-progress-bar {
+  height: 100%;
+  background: var(--color-primary, #4285f4);
+  transform-origin: left;
+  transition: transform 0.1s linear;
+}
+
+/* ============================================
+   3D Transform Cards
+   ============================================ */
+
+.card-3d {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.card-3d-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-style: preserve-3d;
+}
+
+.card-3d:hover .card-3d-inner {
+  transform: rotateY(10deg) rotateX(-5deg);
+}
+
+/* ============================================
+   Shimmer Effect
+   ============================================ */
+
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 100%
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* ============================================
+   Responsive Adjustments
+   ============================================ */
+
+@media (max-width: 768px) {
+  [data-showcase] {
+    padding: 80px 0;
+  }
+
+  .showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .showcase-card {
+    padding: 30px;
+  }
+
+  .animated-counter {
+    font-size: 48px;
+  }
+
+  .video-hero {
+    height: 60vh;
+  }
+}
+
+/* ============================================
+   Performance Optimizations
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  [data-parallax],
+  [data-sequence] {
+    transform: none !important;
+  }
+}
+
+/* GPU acceleration hints */
+[data-parallax],
+[data-sequence],
+[data-magnetic],
+.showcase-card,
+.card-3d-inner {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}

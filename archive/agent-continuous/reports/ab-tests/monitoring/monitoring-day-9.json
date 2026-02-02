@@ -1,0 +1,376 @@
+{
+  "testName": "personalization-urgency-combo",
+  "date": "2026-02-01T15:29:20.389Z",
+  "day": 9,
+  "totalDays": 14,
+  "summary": {
+    "winner": "variantB",
+    "lift": 67.1,
+    "confidence": 99.9,
+    "significant": true,
+    "readyToScale": true
+  },
+  "control": {
+    "views": 8251,
+    "conversions": 427,
+    "timeOnPage": 306.40000000000003,
+    "scrollDepth": 535.9999999999999,
+    "avgTimeOnPage": "34.0",
+    "avgScrollDepth": "59.6",
+    "conversionRate": 5.18,
+    "confidenceInterval": {
+      "lower": "4.70",
+      "upper": "5.65",
+      "rate": "5.18"
+    }
+  },
+  "variantA": {
+    "views": 8370,
+    "conversions": 504,
+    "timeOnPage": 373.1,
+    "scrollDepth": 591.5,
+    "avgTimeOnPage": "41.5",
+    "avgScrollDepth": "65.7",
+    "conversionRate": 6.02,
+    "confidenceInterval": {
+      "lower": "5.51",
+      "upper": "6.53",
+      "rate": "6.02"
+    },
+    "lift": 16.4,
+    "significance": {
+      "chiSquare": "5.31",
+      "pValue": 0.05,
+      "confidence": "95.0",
+      "significant": true
+    }
+  },
+  "variantB": {
+    "views": 8186,
+    "conversions": 708,
+    "timeOnPage": 468.70000000000005,
+    "scrollDepth": 713,
+    "avgTimeOnPage": "52.1",
+    "avgScrollDepth": "79.2",
+    "conversionRate": 8.65,
+    "confidenceInterval": {
+      "lower": "8.04",
+      "upper": "9.26",
+      "rate": "8.65"
+    },
+    "lift": 67.1,
+    "significance": {
+      "chiSquare": "71.81",
+      "pValue": 0.001,
+      "confidence": "99.9",
+      "significant": true
+    }
+  },
+  "coreWebVitals": {
+    "lcp": "2.0",
+    "fid": 56,
+    "cls": "0.06",
+    "lcpGood": true,
+    "fidGood": true,
+    "clsGood": true
+  },
+  "dailyData": [
+    {
+      "day": 1,
+      "daysRemaining": 13,
+      "control": {
+        "views": 985,
+        "conversions": 48,
+        "conversionRate": "4.87",
+        "avgTimeOnPage": "33.7",
+        "avgScrollDepth": "57.6"
+      },
+      "variantA": {
+        "views": 862,
+        "conversions": 53,
+        "conversionRate": "6.15",
+        "avgTimeOnPage": "44.1",
+        "avgScrollDepth": "64.5"
+      },
+      "variantB": {
+        "views": 884,
+        "conversions": 73,
+        "conversionRate": "8.26",
+        "avgTimeOnPage": "49.3",
+        "avgScrollDepth": "80.0"
+      },
+      "coreWebVitals": {
+        "lcp": "2.1",
+        "fid": 40,
+        "cls": "0.10",
+        "lcpGood": true,
+        "fidGood": true,
+        "clsGood": false
+      }
+    },
+    {
+      "day": 2,
+      "daysRemaining": 12,
+      "control": {
+        "views": 920,
+        "conversions": 49,
+        "conversionRate": "5.33",
+        "avgTimeOnPage": "37.8",
+        "avgScrollDepth": "59.9"
+      },
+      "variantA": {
+        "views": 932,
+        "conversions": 56,
+        "conversionRate": "6.01",
+        "avgTimeOnPage": "45.5",
+        "avgScrollDepth": "63.6"
+      },
+      "variantB": {
+        "views": 918,
+        "conversions": 81,
+        "conversionRate": "8.82",
+        "avgTimeOnPage": "54.3",
+        "avgScrollDepth": "80.7"
+      },
+      "coreWebVitals": {
+        "lcp": "1.9",
+        "fid": 36,
+        "cls": "0.06",
+        "lcpGood": true,
+        "fidGood": true,
+        "clsGood": true
+      }
+    },
+    {
+      "day": 3,
+      "daysRemaining": 11,
+      "control": {
+        "views": 893,
+        "conversions": 47,
+        "conversionRate": "5.26",
+        "avgTimeOnPage": "36.2",
+        "avgScrollDepth": "59.3"
+      },
+      "variantA": {
+        "views": 961,
+        "conversions": 56,
+        "conversionRate": "5.83",
+        "avgTimeOnPage": "35.0",
+        "avgScrollDepth": "63.0"
+      },
+      "variantB": {
+        "views": 906,
+        "conversions": 79,
+        "conversionRate": "8.72",
+        "avgTimeOnPage": "55.7",
+        "avgScrollDepth": "84.9"
+      },
+      "coreWebVitals": {
+        "lcp": "2.1",
+        "fid": 51,
+        "cls": "0.09",
+        "lcpGood": true,
+        "fidGood": true,
+        "clsGood": true
+      }
+    },
+    {
+      "day": 4,
+      "daysRemaining": 10,
+      "control": {
+        "views": 875,
+        "conversions": 45,
+        "conversionRate": "5.14",
+        "avgTimeOnPage": "33.2",
+        "avgScrollDepth": "56.7"
+      },
+      "variantA": {
+        "views": 920,
+        "conversions": 58,
+        "conversionRate": "6.30",
+        "avgTimeOnPage": "37.2",
+        "avgScrollDepth": "71.1"
+      },
+      "variantB": {
+        "views": 927,
+        "conversions": 77,
+        "conversionRate": "8.31",
+        "avgTimeOnPage": "54.5",
+        "avgScrollDepth": "79.5"
+      },
+      "coreWebVitals": {
+        "lcp": "2.2",
+        "fid": 49,
+        "cls": "0.10",
+        "lcpGood": true,
+        "fidGood": true,
+        "clsGood": false
+      }
+    },
+    {
+      "day": 5,
+      "daysRemaining": 9,
+      "control": {
+        "views": 940,
+        "conversions": 48,
+        "conversionRate": "5.11",
+        "avgTimeOnPage": "34.9",
+        "avgScrollDepth": "64.7"
+      },
+      "variantA": {
+        "views": 952,
+        "conversions": 58,
+        "conversionRate": "6.09",
+        "avgTimeOnPage": "39.9",
+        "avgScrollDepth": "68.2"
+      },
+      "variantB": {
+        "views": 861,
+        "conversions": 71,
+        "conversionRate": "8.25",
+        "avgTimeOnPage": "55.0",
+        "avgScrollDepth": "84.2"
+      },
+      "coreWebVitals": {
+        "lcp": "2.1",
+        "fid": 53,
+        "cls": "0.07",
+        "lcpGood": true,
+        "fidGood": true,
+        "clsGood": true
+      }
+    },
+    {
+      "day": 6,
+      "daysRemaining": 8,
+      "control": {
+        "views": 959,
+        "conversions": 50,
+        "conversionRate": "5.21",
+        "avgTimeOnPage": "29.3",
+        "avgScrollDepth": "59.9"
+      },
+      "variantA": {
+        "views": 974,
+        "conversions": 59,
+        "conversionRate": "6.06",
+        "avgTimeOnPage": "45.2",
+        "avgScrollDepth": "63.5"
+      },
+      "variantB": {
+        "views": 879,
+        "conversions": 79,
+        "conversionRate": "8.99",
+        "avgTimeOnPage": "43.6",
+        "avgScrollDepth": "73.4"
+      },
+      "coreWebVitals": {
+        "lcp": "2.1",
+        "fid": 57,
+        "cls": "0.09",
+        "lcpGood": true,
+        "fidGood": true,
+        "clsGood": true
+      }
+    },
+    {
+      "day": 7,
+      "daysRemaining": 7,
+      "control": {
+        "views": 860,
+        "conversions": 46,
+        "conversionRate": "5.35",
+        "avgTimeOnPage": "30.8",
+        "avgScrollDepth": "66.1"
+      },
+      "variantA": {
+        "views": 894,
+        "conversions": 54,
+        "conversionRate": "6.04",
+        "avgTimeOnPage": "43.9",
+        "avgScrollDepth": "62.3"
+      },
+      "variantB": {
+        "views": 870,
+        "conversions": 77,
+        "conversionRate": "8.85",
+        "avgTimeOnPage": "53.8",
+        "avgScrollDepth": "74.2"
+      },
+      "coreWebVitals": {
+        "lcp": "2.1",
+        "fid": 49,
+        "cls": "0.07",
+        "lcpGood": true,
+        "fidGood": true,
+        "clsGood": true
+      }
+    },
+    {
+      "day": 8,
+      "daysRemaining": 6,
+      "control": {
+        "views": 904,
+        "conversions": 48,
+        "conversionRate": "5.31",
+        "avgTimeOnPage": "35.7",
+        "avgScrollDepth": "55.2"
+      },
+      "variantA": {
+        "views": 891,
+        "conversions": 52,
+        "conversionRate": "5.84",
+        "avgTimeOnPage": "37.1",
+        "avgScrollDepth": "64.8"
+      },
+      "variantB": {
+        "views": 986,
+        "conversions": 88,
+        "conversionRate": "8.92",
+        "avgTimeOnPage": "53.5",
+        "avgScrollDepth": "79.3"
+      },
+      "coreWebVitals": {
+        "lcp": "2.2",
+        "fid": 44,
+        "cls": "0.11",
+        "lcpGood": true,
+        "fidGood": true,
+        "clsGood": false
+      }
+    },
+    {
+      "day": 9,
+      "daysRemaining": 5,
+      "control": {
+        "views": 915,
+        "conversions": 46,
+        "conversionRate": "5.03",
+        "avgTimeOnPage": "34.8",
+        "avgScrollDepth": "56.6"
+      },
+      "variantA": {
+        "views": 984,
+        "conversions": 58,
+        "conversionRate": "5.89",
+        "avgTimeOnPage": "45.2",
+        "avgScrollDepth": "70.5"
+      },
+      "variantB": {
+        "views": 955,
+        "conversions": 83,
+        "conversionRate": "8.69",
+        "avgTimeOnPage": "49.0",
+        "avgScrollDepth": "76.8"
+      },
+      "coreWebVitals": {
+        "lcp": "2.0",
+        "fid": 56,
+        "cls": "0.06",
+        "lcpGood": true,
+        "fidGood": true,
+        "clsGood": true
+      }
+    }
+  ]
+}

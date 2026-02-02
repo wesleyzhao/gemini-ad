@@ -1,0 +1,32 @@
+{
+  "original": {
+    "duration": 86400,
+    "message": "⏰ Early Access Ending Soon • {countdown} Remaining • {spots} Spots Left",
+    "spotsStart": 47,
+    "spotsDecrement": "gradual"
+  },
+  "shortUrgency": {
+    "duration": 43200,
+    "message": "🔥 Limited Time Offer • {countdown} Left • Only {spots} Spots Remaining",
+    "spotsStart": 23,
+    "spotsDecrement": "gradual"
+  },
+  "extendedDeadline": {
+    "duration": 172800,
+    "message": "⏰ Special Access Period • {countdown} Remaining • {spots} Spots Available",
+    "spotsStart": 97,
+    "spotsDecrement": "slow"
+  },
+  "exclusivityFocus": {
+    "duration": 86400,
+    "message": "🌟 Exclusive Beta Access • {spots} Spots Left • Reserve Yours Now",
+    "spotsStart": 35,
+    "spotsDecrement": "fast"
+  },
+  "socialProof": {
+    "duration": 86400,
+    "message": "🔥 Join 12,847 Early Users • {countdown} Left • {spots} Spots Remaining",
+    "spotsStart": 41,
+    "spotsDecrement": "gradual"
+  }
+}

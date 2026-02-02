@@ -1,0 +1,1326 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Gemini - Advanced AI for Everyone</title>
+    <meta name="description" content="Intelligence. Simplified. Discover all the powerful features that make Gemini the smartest choice for AI.">
+      <link rel="preload" href="../assets/css/shared-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="preload" href="../assets/css/shared-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="../assets/css/shared-styles.css"></noscript></head><body>&gt;
+    <style>
+        /* Rich Content Apple Style - Variation B */
+        body {
+            background: #000;
+            color: #f5f5f7;
+        }
+
+        .hero-apple {
+            min-height: 100vh;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-apple h1 {
+            font-size: clamp(48px, 10vw, 96px);
+            font-weight: 600;
+            letter-spacing: -0.03em;
+            color: #f5f5f7;
+            margin-bottom: 0.3em;
+            line-height: 1.05;
+        }
+
+        .hero-apple p {
+            font-size: clamp(21px, 3vw, 28px);
+            color: #86868b;
+            margin-bottom: 1.5em;
+            font-weight: 400;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 12px;
+            margin: var(--space-12) 0;
+        }
+
+        .product-tile {
+            aspect-ratio: 1;
+            background: #1d1d1f;
+            border-radius: 28px;
+            padding: var(--space-8);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-tile::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(66, 165, 245, 0.15), transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .product-tile:hover::before {
+            opacity: 1;
+        }
+
+        .product-tile:hover {
+            transform: scale(1.02);
+        }
+
+        .product-tile h3 {
+            font-size: 32px;
+            font-weight: 600;
+            color: #f5f5f7;
+            margin-bottom: 8px;
+        }
+
+        .product-tile p {
+            font-size: 17px;
+            color: #86868b;
+            line-height: 1.4;
+        }
+
+        .price {
+            font-size: 14px;
+            color: #f5f5f7;
+            margin-top: auto;
+        }
+
+        .header-apple {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: saturate(180%) blur(20px);
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+            z-index: var(--z-fixed);
+            height: 48px;
+        }
+
+        .header-apple .container {
+            height: 100%;
+        }
+
+        .header-apple nav a {
+            color: #f5f5f7;
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 0.01em;
+            transition: opacity 0.2s ease;
+        }
+
+        .header-apple nav a:hover {
+            opacity: 0.7;
+        }
+
+        .btn-apple {
+            background: #0071e3;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 980px;
+            font-size: 17px;
+            font-weight: 400;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-apple:hover {
+            background: #0077ed;
+        }
+
+        .btn-apple-secondary {
+            background: transparent;
+            color: #2997ff;
+            border: 1px solid #2997ff;
+        }
+
+        .btn-apple-secondary:hover {
+            background: rgba(41, 151, 255, 0.1);
+        }
+
+        .section-apple {
+            padding: 120px 0;
+            background: #000;
+        }
+
+        .section-light {
+            background: #f5f5f7;
+            color: #1d1d1f;
+        }
+
+        .section-light h2,
+        .section-light h3,
+        .section-light p {
+            color: #1d1d1f;
+        }
+
+        .feature-minimal {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto var(--space-12);
+        }
+
+        .feature-minimal h3 {
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #f5f5f7;
+        }
+
+        .feature-minimal p {
+            font-size: 21px;
+            color: #86868b;
+            line-height: 1.4;
+        }
+
+        /* Rich content additions */
+        .feature-detail {
+            max-width: 980px;
+            margin: 48px auto;
+            padding: 48px;
+            background: rgba(29, 29, 31, 0.5);
+            border-radius: 18px;
+            backdrop-filter: blur(20px);
+        }
+
+        .feature-detail h4 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #f5f5f7;
+            margin-bottom: 16px;
+        }
+
+        .feature-detail p {
+            font-size: 17px;
+            color: #86868b;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .feature-detail ul {
+            list-style: none;
+            padding: 0;
+            margin: 24px 0;
+        }
+
+        .feature-detail li {
+            font-size: 17px;
+            color: #f5f5f7;
+            padding: 12px 0;
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .feature-detail li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-detail li::before {
+            content: '✓';
+            color: #30d158;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            margin: 48px 0;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 56px;
+            font-weight: 600;
+            color: #2997ff;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 17px;
+            color: #86868b;
+        }
+
+        .comparison-table {
+            max-width: 980px;
+            margin: var(--space-12) auto;
+            background: #1d1d1f;
+            border-radius: 18px;
+            overflow: hidden;
+        }
+
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 1fr 120px 120px 120px;
+            gap: 24px;
+            padding: 24px;
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .comparison-row:last-child {
+            border-bottom: none;
+        }
+
+        .comparison-header {
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #86868b;
+        }
+
+        .checkmark {
+            color: #30d158;
+            font-size: 20px;
+        }
+
+        .testimonial {
+            max-width: 800px;
+            margin: 48px auto;
+            text-align: center;
+            padding: 48px;
+            background: rgba(29, 29, 31, 0.5);
+            border-radius: 18px;
+            backdrop-filter: blur(20px);
+        }
+
+        .testimonial-quote {
+            font-size: 24px;
+            font-style: italic;
+            color: #f5f5f7;
+            line-height: 1.5;
+            margin-bottom: 24px;
+        }
+
+        .testimonial-author {
+            font-size: 17px;
+            color: #86868b;
+        }
+
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-row {
+                grid-template-columns: 1fr 80px 80px 80px;
+                gap: 12px;
+                padding: 16px;
+                font-size: 14px;
+            }
+
+            .header-content nav a:not(.btn-apple) {
+                display: none;
+            }
+
+            .feature-detail {
+                padding: 32px 24px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 24px;
+            }
+
+            .stat-number {
+                font-size: 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .comparison-table {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .comparison-row {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+                gap: 8px;
+                padding: 12px;
+                font-size: 12px;
+            }
+
+            .comparison-header {
+                font-size: 10px;
+            }
+
+            .checkmark {
+                font-size: 16px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+<!-- Google Analytics 4 - Performance Monitoring -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXXXXXXXXX', {
+    'send_page_view': true,
+    'page_path': window.location.pathname,
+    'page_title': document.title,
+    'custom_map': {
+      'dimension1': 'page_variant',
+      'dimension2': 'user_segment',
+      'dimension3': 'scroll_depth'
+    }
+  });
+
+  // CTA Click Tracking
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.cta-button, .cta, [data-cta]').forEach(button => {
+      button.addEventListener('click', function() {
+        gtag('event', 'cta_click', {
+          'cta_location': this.dataset.location || this.className,
+          'cta_text': this.textContent.trim(),
+          'page_variant': document.body.dataset.variant || 'control'
+        });
+      });
+    });
+
+    // Scroll Depth Tracking
+    let scrollDepths = [25, 50, 75, 90, 100];
+    let triggeredDepths = new Set();
+
+    window.addEventListener('scroll', function() {
+      const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+
+      scrollDepths.forEach(depth => {
+        if (scrollPercent >= depth && !triggeredDepths.has(depth)) {
+          triggeredDepths.add(depth);
+          gtag('event', 'scroll_depth', {
+            'scroll_percentage': depth,
+            'page_variant': document.body.dataset.variant || 'control'
+          });
+        }
+      });
+    });
+
+    // Time on Page Tracking
+    let startTime = Date.now();
+    window.addEventListener('beforeunload', function() {
+      const timeSpent = Math.round((Date.now() - startTime) / 1000);
+      gtag('event', 'time_on_page', {
+        'time_seconds': timeSpent,
+        'page_variant': document.body.dataset.variant || 'control'
+      });
+    });
+  });
+</script>
+
+
+<!-- Core Web Vitals Tracking -->
+<script type="module">
+  import {onCLS, onFID, onLCP, onFCP, onTTFB, onINP} from 'https://unpkg.com/web-vitals@3?module';
+
+  function sendToAnalytics({name, value, id, rating}) {
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'web_vitals', {
+        'metric_name': name,
+        'metric_value': Math.round(value),
+        'metric_id': id,
+        'metric_rating': rating,
+        'page_variant': document.body.dataset.variant || 'control'
+      });
+    }
+
+    // Log to console in development
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+      console.log(`[Web Vital] ${name}:`, {
+        value: Math.round(value) + (name === 'CLS' ? '' : 'ms'),
+        rating: rating,
+        id: id
+      });
+    }
+  }
+
+  onCLS(sendToAnalytics);
+  onFID(sendToAnalytics);
+  onLCP(sendToAnalytics);
+  onFCP(sendToAnalytics);
+  onTTFB(sendToAnalytics);
+  onINP(sendToAnalytics);
+</script>
+
+
+  <meta name="theme-color" content="#1a73e8">
+
+  <!-- Preconnect to external domains for faster resource loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://app.tailorhq.ai">
+
+<!-- Core Web Vitals Monitoring -->
+<script>
+(function() {
+  'use strict';
+
+  // Core Web Vitals measurement using PerformanceObserver
+  const vitals = {
+    LCP: null,
+    FID: null,
+    CLS: 0,
+    FCP: null,
+    TTFB: null,
+    INP: null
+  };
+
+  // Largest Contentful Paint (LCP)
+  function measureLCP() {
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        vitals.LCP = Math.round(lastEntry.renderTime || lastEntry.loadTime);
+
+        if (window.gtag) {
+          gtag('event', 'web_vitals', {
+            event_category: 'Web Vitals',
+            event_label: 'LCP',
+            value: vitals.LCP,
+            metric_rating: vitals.LCP <= 2500 ? 'good' : vitals.LCP <= 4000 ? 'needs-improvement' : 'poor',
+            non_interaction: true
+          });
+        }
+      });
+      observer.observe({ type: 'largest-contentful-paint', buffered: true });
+    } catch (e) {
+      console.warn('LCP measurement not supported');
+    }
+  }
+
+  // First Input Delay (FID)
+  function measureFID() {
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          vitals.FID = Math.round(entry.processingStart - entry.startTime);
+
+          if (window.gtag) {
+            gtag('event', 'web_vitals', {
+              event_category: 'Web Vitals',
+              event_label: 'FID',
+              value: vitals.FID,
+              metric_rating: vitals.FID <= 100 ? 'good' : vitals.FID <= 300 ? 'needs-improvement' : 'poor',
+              non_interaction: true
+            });
+          }
+        });
+      });
+      observer.observe({ type: 'first-input', buffered: true });
+    } catch (e) {
+      console.warn('FID measurement not supported');
+    }
+  }
+
+  // Interaction to Next Paint (INP) - New metric replacing FID
+  function measureINP() {
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        let maxDuration = 0;
+
+        entries.forEach((entry) => {
+          const duration = entry.processingEnd - entry.startTime;
+          if (duration > maxDuration) {
+            maxDuration = duration;
+          }
+        });
+
+        vitals.INP = Math.round(maxDuration);
+
+        if (window.gtag && vitals.INP > 0) {
+          gtag('event', 'web_vitals', {
+            event_category: 'Web Vitals',
+            event_label: 'INP',
+            value: vitals.INP,
+            metric_rating: vitals.INP <= 200 ? 'good' : vitals.INP <= 500 ? 'needs-improvement' : 'poor',
+            non_interaction: true
+          });
+        }
+      });
+      observer.observe({ type: 'event', buffered: true, durationThreshold: 16 });
+    } catch (e) {
+      console.warn('INP measurement not supported');
+    }
+  }
+
+  // Cumulative Layout Shift (CLS)
+  function measureCLS() {
+    try {
+      let clsValue = 0;
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
+            vitals.CLS = Math.round(clsValue * 1000) / 1000;
+          }
+        }
+      });
+      observer.observe({ type: 'layout-shift', buffered: true });
+
+      // Report CLS on page unload
+      addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'hidden' && window.gtag) {
+          gtag('event', 'web_vitals', {
+            event_category: 'Web Vitals',
+            event_label: 'CLS',
+            value: Math.round(vitals.CLS * 1000),
+            metric_rating: vitals.CLS <= 0.1 ? 'good' : vitals.CLS <= 0.25 ? 'needs-improvement' : 'poor',
+            non_interaction: true
+          });
+        }
+      });
+    } catch (e) {
+      console.warn('CLS measurement not supported');
+    }
+  }
+
+  // First Contentful Paint (FCP)
+  function measureFCP() {
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.name === 'first-contentful-paint') {
+            vitals.FCP = Math.round(entry.startTime);
+          }
+        });
+      });
+      observer.observe({ type: 'paint', buffered: true });
+    } catch (e) {
+      console.warn('FCP measurement not supported');
+    }
+  }
+
+  // Time to First Byte (TTFB)
+  function measureTTFB() {
+    try {
+      const navEntry = performance.getEntriesByType('navigation')[0];
+      if (navEntry) {
+        vitals.TTFB = Math.round(navEntry.responseStart - navEntry.requestStart);
+      }
+    } catch (e) {
+      console.warn('TTFB measurement not supported');
+    }
+  }
+
+  // Initialize measurements when DOM is ready
+  if (document.readyState === 'complete') {
+    measureLCP();
+    measureFID();
+    measureINP();
+    measureCLS();
+    measureFCP();
+    measureTTFB();
+  } else {
+    addEventListener('load', () => {
+      measureLCP();
+      measureFID();
+      measureINP();
+      measureCLS();
+      measureFCP();
+      measureTTFB();
+    });
+  }
+
+  // Expose vitals for debugging
+  window.__webVitals = vitals;
+})();
+</script>
+  <style id="critical-css">
+/* Critical CSS - Above the fold */
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font-family:'SF Pro Display',-apple-system,BlinkMacSystemFont,'Google Sans','Segoe UI',Roboto,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+header{position:fixed;top:0;left:0;right:0;height:48px;background:#fff;z-index:1000;border-bottom:1px solid #e8eaed}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center}
+.container{max-width:1280px;margin:0 auto;padding:0 24px}
+.btn-primary{display:inline-flex;align-items:center;padding:14px 28px;background:#1a73e8;color:#fff;border:none;border-radius:8px;font-weight:500;cursor:pointer;transition:all .2s}
+</style>
+  <style id="critical-css">
+/* Critical CSS - Above the fold */
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font-family:'SF Pro Display',-apple-system,BlinkMacSystemFont,'Google Sans','Segoe UI',Roboto,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+header{position:fixed;top:0;left:0;right:0;height:48px;background:#fff;z-index:1000;border-bottom:1px solid #e8eaed}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center}
+.container{max-width:1280px;margin:0 auto;padding:0 24px}
+.btn-primary{display:inline-flex;align-items:center;padding:14px 28px;background:#1a73e8;color:#fff;border:none;border-radius:8px;font-weight:500;cursor:pointer;transition:all .2s}
+</style>
+
+
+    <!-- Skip to main content link for keyboard users -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header-apple">
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" style="font-weight: 600; font-size: 1.2rem; color: #f5f5f7;">Gemini</a>
+                <nav style="display: flex; gap: 2rem; align-items: center;">
+                    <a href="#features">Features</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="https://gemini.google.com" class="btn-apple" style="padding: 12px 32px; font-size: 12px; min-height: 48px;">Start Free</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+
+    <!-- Hero Section -->
+    <section class="hero hero-apple" aria-labelledby="hero-heading">
+        <div class="container">
+            <div data-animate="fade-in">
+                <h1>Intelligence.<br>Simplified.</h1>
+                <p class="subtitle">The most advanced AI, designed to fit seamlessly into your workflow. Powerful features, simple interface, trusted by millions.</p>
+                <div style="display: flex; gap: 20px; justify-content: center; margin-top: 32px;">
+                    <a href="https://gemini.google.com" class="btn-apple" style="min-height: 48px; padding: 12px 32px;">Start free</a>
+                    <a href="#learn" class="btn-apple btn-apple-secondary">See features</a>
+                </div>
+                <p style="font-size: 14px; color: #86868b; margin-top: 24px;">
+                    Free 14-day trial • No credit card required • From $19.99/month
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section-apple">
+        <div class="container">
+            <div class="stats-grid" data-animate="fade-in">
+                <div class="stat">
+                    <div class="stat-number">10M+</div>
+                    <div class="stat-label">Active users</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">Accuracy rate</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">128K</div>
+                    <div class="stat-label">Token context</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">20hrs</div>
+                    <div class="stat-label">Saved per week</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="section-apple" id="features">
+        <div class="container" style="max-width: 1200px;">
+            <h2 style="text-align: center; font-size: 48px; margin-bottom: 48px; color: #f5f5f7;">Choose your plan.</h2>
+            <div class="product-grid" data-animate="fade-in">
+                <div class="product-tile">
+                    <div>
+                        <h3>Gemini Basic</h3>
+                        <p>Essential AI for everyday tasks. Fast responses, accurate answers, Google Workspace integration.</p>
+                    </div>
+                    <div class="price">Free forever</div>
+                </div>
+
+                <div class="product-tile">
+                    <div>
+                        <h3>Gemini Advanced</h3>
+                        <p>Premium intelligence with extended context, voice adaptation (VO3), advanced reasoning, and priority support.</p>
+                    </div>
+                    <div class="price">$19.99/mo</div>
+                </div>
+
+                <div class="product-tile">
+                    <div>
+                        <h3>Gemini for Teams</h3>
+                        <p>Collaborative workspaces, team admin controls, shared projects, and enhanced security features.</p>
+                    </div>
+                    <div class="price">$29.99/user/mo</div>
+                </div>
+
+                <div class="product-tile">
+                    <div>
+                        <h3>Enterprise</h3>
+                        <p>Custom AI models, dedicated support team, enterprise SLAs, advanced security, and compliance.</p>
+                    </div>
+                    <div class="price">Contact sales</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Section 1 - Voice Adaptation -->
+    <section class="section-apple section-light">
+        <div class="container">
+            <div class="feature-minimal" data-animate="fade-in" style="color: #1d1d1f;">
+                <h3 style="color: #1d1d1f;">Writes like you.</h3>
+                <p style="color: #1d1d1f;">Advanced voice adaptation technology learns your unique writing style and tone.</p>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto; aspect-ratio: 16/9; background: #e5e5e7; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 64px;">
+                ✍️
+            </div>
+
+            <div class="feature-detail" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(0, 0, 0, 0.1);">
+                <h4 style="color: #1d1d1f;">VO3 Voice Technology</h4>
+                <p style="color: #1d1d1f;">Our proprietary VO3 (Voice Optimization 3.0) learns from your writing patterns to produce content that sounds authentically you.</p>
+                <ul>
+                    <li style="color: #1d1d1f; border-bottom-color: rgba(0, 0, 0, 0.1);">
+                        <span style="color: #1d1d1f;">Adapts to your tone, style, and vocabulary</span>
+                    </li>
+                    <li style="color: #1d1d1f; border-bottom-color: rgba(0, 0, 0, 0.1);">
+                        <span style="color: #1d1d1f;">Maintains consistency across all content</span>
+                    </li>
+                    <li style="color: #1d1d1f; border-bottom-color: rgba(0, 0, 0, 0.1);">
+                        <span style="color: #1d1d1f;">Works in emails, documents, and messages</span>
+                    </li>
+                    <li style="color: #1d1d1f;">
+                        <span style="color: #1d1d1f;">Privacy-first: learns locally, never shares</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Section 2 - Integration -->
+    <section class="section-apple">
+        <div class="container">
+            <div class="feature-minimal" data-animate="fade-in">
+                <h3>Works everywhere.</h3>
+                <p>Native integration with every tool in your Google Workspace.</p>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto; aspect-ratio: 16/9; background: #1d1d1f; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 64px;">
+                🔗
+            </div>
+
+            <div class="feature-detail">
+                <h4>Seamless Workspace Integration</h4>
+                <p>Gemini works natively across Gmail, Docs, Sheets, Slides, Calendar, and more. No switching tabs, no copy-pasting.</p>
+                <ul>
+                    <li>Draft emails directly in Gmail with AI assistance</li>
+                    <li>Generate slides and presentations in Google Slides</li>
+                    <li>Analyze data and create formulas in Sheets</li>
+                    <li>Schedule meetings intelligently in Calendar</li>
+                    <li>Collaborate in real-time with your team</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Section 3 - Advanced Reasoning -->
+    <section class="section-apple section-light">
+        <div class="container">
+            <div class="feature-minimal" data-animate="fade-in">
+                <h3 style="color: #1d1d1f;">Thinks deeper.</h3>
+                <p style="color: #1d1d1f;">Advanced reasoning capabilities handle complex problems with multi-step analysis.</p>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto; aspect-ratio: 16/9; background: #e5e5e7; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 64px;">
+                🧠
+            </div>
+
+            <div class="feature-detail" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(0, 0, 0, 0.1);">
+                <h4 style="color: #1d1d1f;">128K Token Context Window</h4>
+                <p style="color: #1d1d1f;">Process entire documents, analyze lengthy conversations, and maintain context across complex projects.</p>
+                <ul>
+                    <li style="color: #1d1d1f; border-bottom-color: rgba(0, 0, 0, 0.1);">
+                        <span style="color: #1d1d1f;">Analyze documents up to 500 pages</span>
+                    </li>
+                    <li style="color: #1d1d1f; border-bottom-color: rgba(0, 0, 0, 0.1);">
+                        <span style="color: #1d1d1f;">Remember full conversation history</span>
+                    </li>
+                    <li style="color: #1d1d1f; border-bottom-color: rgba(0, 0, 0, 0.1);">
+                        <span style="color: #1d1d1f;">Multi-step reasoning for complex problems</span>
+                    </li>
+                    <li style="color: #1d1d1f;">
+                        <span style="color: #1d1d1f;">Faster processing than competitors</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Section 4 - Citations & Trust -->
+    <section class="section-apple">
+        <div class="container">
+            <div class="feature-minimal" data-animate="fade-in">
+                <h3>Facts, not fiction.</h3>
+                <p>Every answer comes with citations. Verify sources instantly.</p>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto; aspect-ratio: 16/9; background: #1d1d1f; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 64px;">
+                📚
+            </div>
+
+            <div class="feature-detail">
+                <h4>Citation-First Accuracy</h4>
+                <p>Unlike other AI models, Gemini provides verifiable sources for every factual claim, reducing hallucinations by 95%.</p>
+                <ul>
+                    <li>Automatic source citation for all facts</li>
+                    <li>Direct links to original sources</li>
+                    <li>Fact-checking against trusted databases</li>
+                    <li>Transparency in information sourcing</li>
+                    <li>Academic-grade accuracy standards</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Section 5 - Privacy -->
+    <section class="section-apple section-light">
+        <div class="container">
+            <div class="feature-minimal" data-animate="fade-in">
+                <h3 style="color: #1d1d1f;">Privacy. By design.</h3>
+                <p style="color: #1d1d1f;">Enterprise-grade security. Your data stays yours. Always.</p>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto; aspect-ratio: 16/9; background: #e5e5e7; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 64px;">
+                🔒
+            </div>
+
+            <div class="feature-detail" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(0, 0, 0, 0.1);">
+                <h4 style="color: #1d1d1f;">Zero Training on Your Data</h4>
+                <p style="color: #1d1d1f;">Your conversations, documents, and data are never used to train our models. Complete privacy guaranteed.</p>
+                <ul>
+                    <li style="color: #1d1d1f; border-bottom-color: rgba(0, 0, 0, 0.1);">
+                        <span style="color: #1d1d1f;">SOC 2 Type II certified security</span>
+                    </li>
+                    <li style="color: #1d1d1f; border-bottom-color: rgba(0, 0, 0, 0.1);">
+                        <span style="color: #1d1d1f;">GDPR and CCPA compliant</span>
+                    </li>
+                    <li style="color: #1d1d1f; border-bottom-color: rgba(0, 0, 0, 0.1);">
+                        <span style="color: #1d1d1f;">End-to-end encryption</span>
+                    </li>
+                    <li style="color: #1d1d1f;">
+                        <span style="color: #1d1d1f;">Data residency options available</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Section 6 - Speed -->
+    <section class="section-apple">
+        <div class="container">
+            <div class="feature-minimal" data-animate="fade-in">
+                <h3>Lightning fast.</h3>
+                <p>Responses in milliseconds, not seconds. Optimized for speed.</p>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto; aspect-ratio: 16/9; background: #1d1d1f; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 64px;">
+                ⚡
+            </div>
+
+            <div class="feature-detail">
+                <h4>Optimized Performance</h4>
+                <p>Built on Google's cutting-edge TPU infrastructure for maximum speed and efficiency.</p>
+                <ul>
+                    <li>Average response time: 800ms</li>
+                    <li>3x faster than GPT-4</li>
+                    <li>2x faster than Claude</li>
+                    <li>99.9% uptime SLA for Enterprise</li>
+                    <li>Global edge network for low latency</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="section-apple section-light">
+        <div class="container">
+            <div class="testimonial" style="background: rgba(0, 0, 0, 0.03);">
+                <div class="testimonial-quote" style="color: #1d1d1f;">
+                    "Gemini has completely transformed how our team works. The voice adaptation feature alone saves us 10 hours per week on content creation."
+                </div>
+                <div class="testimonial-author" style="color: #1d1d1f;">
+                    Sarah Chen, Content Director at TechCorp
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="section-apple" id="pricing">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 48px; margin-bottom: 24px; color: #f5f5f7;">Choose your Gemini.</h2>
+            <p style="text-align: center; font-size: 21px; color: #86868b; margin-bottom: 48px;">All plans include core AI features. Upgrade for advanced capabilities.</p>
+
+            <div class="comparison-table" data-animate="fade-in">
+                <div class="comparison-row comparison-header">
+                    <div>Feature</div>
+                    <div style="text-align: center;">Basic</div>
+                    <div style="text-align: center;">Advanced</div>
+                    <div style="text-align: center;">Teams</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div style="color: #f5f5f7;">Response speed</div>
+                    <div style="text-align: center; color: #86868b;">Fast</div>
+                    <div style="text-align: center; color: #f5f5f7;">Faster</div>
+                    <div style="text-align: center; color: #f5f5f7;">Fastest</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div style="color: #f5f5f7;">Context window</div>
+                    <div style="text-align: center; color: #86868b;">8K</div>
+                    <div style="text-align: center; color: #f5f5f7;">128K</div>
+                    <div style="text-align: center; color: #f5f5f7;">1M</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div style="color: #f5f5f7;">Voice adaptation (VO3)</div>
+                    <div style="text-align: center; color: #86868b;">—</div>
+                    <div style="text-align: center;"><span class="checkmark">✓</span></div>
+                    <div style="text-align: center;"><span class="checkmark">✓</span></div>
+                </div>
+
+                <div class="comparison-row">
+                    <div style="color: #f5f5f7;">Advanced reasoning</div>
+                    <div style="text-align: center; color: #86868b;">—</div>
+                    <div style="text-align: center;"><span class="checkmark">✓</span></div>
+                    <div style="text-align: center;"><span class="checkmark">✓</span></div>
+                </div>
+
+                <div class="comparison-row">
+                    <div style="color: #f5f5f7;">Citation tracking</div>
+                    <div style="text-align: center;"><span class="checkmark">✓</span></div>
+                    <div style="text-align: center;"><span class="checkmark">✓</span></div>
+                    <div style="text-align: center;"><span class="checkmark">✓</span></div>
+                </div>
+
+                <div class="comparison-row">
+                    <div style="color: #f5f5f7;">Workspace integration</div>
+                    <div style="text-align: center;"><span class="checkmark">✓</span></div>
+                    <div style="text-align: center;"><span class="checkmark">✓</span></div>
+                    <div style="text-align: center;"><span class="checkmark">✓</span></div>
+                </div>
+
+                <div class="comparison-row">
+                    <div style="color: #f5f5f7;">Team collaboration</div>
+                    <div style="text-align: center; color: #86868b;">—</div>
+                    <div style="text-align: center; color: #86868b;">—</div>
+                    <div style="text-align: center;"><span class="checkmark">✓</span></div>
+                </div>
+
+                <div class="comparison-row">
+                    <div style="color: #f5f5f7;">Admin controls</div>
+                    <div style="text-align: center; color: #86868b;">—</div>
+                    <div style="text-align: center; color: #86868b;">—</div>
+                    <div style="text-align: center;"><span class="checkmark">✓</span></div>
+                </div>
+
+                <div class="comparison-row">
+                    <div style="color: #f5f5f7;">Priority support</div>
+                    <div style="text-align: center; color: #86868b;">—</div>
+                    <div style="text-align: center; color: #86868b;">—</div>
+                    <div style="text-align: center;"><span class="checkmark">✓</span></div>
+                </div>
+
+                <div class="comparison-row">
+                    <div style="color: #f5f5f7;">Custom models</div>
+                    <div style="text-align: center; color: #86868b;">—</div>
+                    <div style="text-align: center; color: #86868b;">—</div>
+                    <div style="text-align: center; color: #86868b;">Enterprise only</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple CTA -->
+    <section class="section-apple section-light">
+        <div class="container text-center">
+            <div data-animate="fade-in">
+                <h2 style="font-size: 56px; margin-bottom: 24px; color: #1d1d1f;">Start your free trial.</h2>
+                <p style="font-size: 21px; color: #1d1d1f; margin-bottom: 16px;">
+                    14 days of Gemini Advanced. No credit card required.
+                </p>
+                <p style="font-size: 17px; color: #86868b; margin-bottom: 32px;">
+                    Join 10 million users who trust Gemini for their AI needs.
+                </p>
+                <a href="https://gemini.google.com" class="btn-apple" style="font-size: 17px; padding: 12px 32px; min-height: 48px;">Start free</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    </main>
+
+    <footer role="contentinfo" style="background: #000; padding: 64px 0; text-align: center; border-top: 0.5px solid rgba(255, 255, 255, 0.1);">
+        <div class="container">
+            <p style="font-size: 12px; color: #86868b; line-height: 1.6;">
+                Copyright © 2024 Google LLC. All rights reserved.<br>
+                <a href="https://policies.google.com/privacy" style="color: #86868b;">Privacy Policy</a> |
+                <a href="https://ai.google/responsibility/principles/" style="color: #86868b;">AI Principles</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/animations.js" defer=""></script>
+
+<!-- User Feedback Widget -->
+<div id="feedback-widget" class="feedback-widget" style="display: none;">
+  <div class="feedback-prompt">Was this page helpful?</div>
+  <div class="feedback-buttons">
+    <button class="feedback-btn" data-rating="yes" aria-label="Yes, this page was helpful">
+      <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+        <path d="M10 1l2.5 5.5L18 7.5l-4 4 1 6-5-2.5-5 2.5 1-6-4-4 5.5-1z" fill="currentColor"></path>
+      </svg>
+      Yes
+    </button>
+    <button class="feedback-btn" data-rating="no" aria-label="No, this page was not helpful">
+      <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+        <circle cx="10" cy="10" r="8" stroke="currentColor" fill="none" stroke-width="2"></circle>
+        <line x1="6" y1="6" x2="14" y2="14" stroke="currentColor" stroke-width="2"></line>
+        <line x1="14" y1="6" x2="6" y2="14" stroke="currentColor" stroke-width="2"></line>
+      </svg>
+      No
+    </button>
+  </div>
+  <div class="feedback-followup" style="display: none;">
+    <textarea placeholder="Tell us more (optional)" maxlength="500" aria-label="Additional feedback"></textarea>
+    <button class="feedback-submit">Send</button>
+    <button class="feedback-skip">Skip</button>
+  </div>
+  <div class="feedback-thanks" style="display: none;">
+    Thank you for your feedback! 🙏
+  </div>
+</div>
+
+<style>
+.feedback-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  padding: 16px 20px;
+  font-size: 14px;
+  max-width: 300px;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+.feedback-prompt {
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.feedback-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.feedback-btn {
+  flex: 1;
+  padding: 8px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+  transition: all 0.2s;
+  font-size: 14px;
+  color: #1a1a1a;
+}
+
+.feedback-btn:hover {
+  background: #f5f5f7;
+  border-color: #1a73e8;
+}
+
+.feedback-btn:focus {
+  outline: 2px solid #1a73e8;
+  outline-offset: 2px;
+}
+
+.feedback-followup textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin: 12px 0 8px;
+  font-family: inherit;
+  font-size: 13px;
+  resize: vertical;
+  min-height: 60px;
+}
+
+.feedback-followup textarea:focus {
+  outline: 2px solid #1a73e8;
+  border-color: #1a73e8;
+}
+
+.feedback-submit,
+.feedback-skip {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  margin-right: 8px;
+  transition: all 0.2s;
+}
+
+.feedback-submit {
+  background: #1a73e8;
+  color: white;
+}
+
+.feedback-submit:hover {
+  background: #1557b0;
+}
+
+.feedback-skip {
+  background: transparent;
+  color: #666;
+}
+
+.feedback-skip:hover {
+  background: #f5f5f7;
+}
+
+.feedback-thanks {
+  color: #1a73e8;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .feedback-widget {
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+    max-width: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .feedback-widget {
+    transition: none;
+  }
+}
+</style>
+
+<script>
+(function() {
+  // Show widget after 10 seconds on page
+  setTimeout(function() {
+    const widget = document.getElementById('feedback-widget');
+    if (widget && !sessionStorage.getItem('feedback_submitted')) {
+      widget.style.display = 'block';
+    }
+  }, 10000);
+
+  const widget = document.getElementById('feedback-widget');
+  if (!widget) return;
+
+  const buttons = widget.querySelectorAll('.feedback-btn');
+  const followup = widget.querySelector('.feedback-followup');
+  const thanks = widget.querySelector('.feedback-thanks');
+  const submitBtn = widget.querySelector('.feedback-submit');
+  const skipBtn = widget.querySelector('.feedback-skip');
+  const textarea = widget.querySelector('textarea');
+
+  let selectedRating = null;
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', function() {
+      selectedRating = this.dataset.rating;
+
+      // Track initial rating
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'feedback_rating', {
+          'rating': selectedRating,
+          'page_variant': document.body.dataset.variant || 'control',
+          'page_path': window.location.pathname
+        });
+      }
+
+      // Show followup
+      widget.querySelector('.feedback-buttons').style.display = 'none';
+      widget.querySelector('.feedback-prompt').textContent = 'Tell us more:';
+      followup.style.display = 'block';
+      textarea.focus();
+    });
+  });
+
+  submitBtn.addEventListener('click', function() {
+    const comment = textarea.value.trim();
+
+    // Track detailed feedback
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'feedback_comment', {
+        'rating': selectedRating,
+        'has_comment': comment.length > 0,
+        'comment_length': comment.length,
+        'page_variant': document.body.dataset.variant || 'control',
+        'page_path': window.location.pathname
+      });
+    }
+
+    // Log feedback (in production, send to backend)
+    console.log('User Feedback:', {
+      rating: selectedRating,
+      comment: comment,
+      page: window.location.pathname,
+      timestamp: new Date().toISOString()
+    });
+
+    sessionStorage.setItem('feedback_submitted', 'true');
+    showThanks();
+  });
+
+  skipBtn.addEventListener('click', function() {
+    sessionStorage.setItem('feedback_submitted', 'true');
+    showThanks();
+  });
+
+  function showThanks() {
+    followup.style.display = 'none';
+    widget.querySelector('.feedback-prompt').style.display = 'none';
+    thanks.style.display = 'block';
+
+    setTimeout(() => {
+      widget.style.opacity = '0';
+      setTimeout(() => widget.style.display = 'none', 300);
+    }, 2000);
+  }
+})();
+</script>
+
+
+
+</body></html>

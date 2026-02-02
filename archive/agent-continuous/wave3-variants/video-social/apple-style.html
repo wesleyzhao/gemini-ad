@@ -1,0 +1,1437 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gemini</title>
+    <meta name="description" content="Intelligence. Simplified.">
+      <link rel="preload" href="../../assets/css/shared-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="preload" href="../../assets/css/shared-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="../../assets/css/shared-styles.css"></noscript>
+
+  <style data-pattern="video-social">
+    /* Video Hero Section Styles */
+    .video-hero-container {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      background: #000;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .video-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .video-background video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .video-background video.loaded {
+      opacity: 1;
+    }
+
+    .video-poster {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-color: #1d1d1f;
+      z-index: 0;
+    }
+
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%);
+      z-index: 2;
+    }
+
+    .video-content {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+      color: #f5f5f7;
+      max-width: 900px;
+      padding: 0 24px;
+    }
+
+    .video-content h1 {
+      font-size: clamp(48px, 10vw, 96px);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.3em;
+      line-height: 1.05;
+    }
+
+    .video-content p {
+      font-size: clamp(21px, 3vw, 28px);
+      color: rgba(245,245,247,0.9);
+      margin-bottom: 1.5em;
+      font-weight: 400;
+    }
+
+    /* Video Controls */
+    .video-controls {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 4;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(20px);
+      padding: 12px 20px;
+      border-radius: 50px;
+      transition: opacity 0.3s ease;
+    }
+
+    .video-controls.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .control-btn {
+      background: none;
+      border: none;
+      color: #f5f5f7;
+      cursor: pointer;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease;
+      border-radius: 50%;
+    }
+
+    .control-btn:hover {
+      transform: scale(1.1);
+      background: rgba(255,255,255,0.1);
+    }
+
+    .control-btn svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    .progress-bar {
+      width: 150px;
+      height: 4px;
+      background: rgba(255,255,255,0.3);
+      border-radius: 2px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: #fff;
+      border-radius: 2px;
+      width: 0%;
+      transition: width 0.1s linear;
+    }
+
+    .video-time {
+      font-size: 12px;
+      color: rgba(245,245,247,0.8);
+      min-width: 45px;
+      text-align: center;
+      font-family: 'SF Mono', 'Monaco', monospace;
+    }
+
+    /* Testimonial Overlays */
+    .testimonial-overlay {
+      position: absolute;
+      bottom: 120px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100%);
+      z-index: 5;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(20px);
+      padding: 20px 24px;
+      border-radius: 16px;
+      max-width: 500px;
+      width: 90%;
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+
+    .testimonial-overlay.active {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    .testimonial-overlay.exit {
+      transform: translateX(-50%) translateY(100%);
+      opacity: 0;
+    }
+
+    .testimonial-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .testimonial-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .testimonial-info {
+      flex: 1;
+    }
+
+    .testimonial-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: #f5f5f7;
+      margin-bottom: 2px;
+    }
+
+    .testimonial-role {
+      font-size: 12px;
+      color: rgba(245,245,247,0.6);
+    }
+
+    .testimonial-close {
+      background: none;
+      border: none;
+      color: rgba(245,245,247,0.6);
+      cursor: pointer;
+      padding: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.2s ease;
+    }
+
+    .testimonial-close:hover {
+      color: #f5f5f7;
+    }
+
+    .testimonial-quote {
+      font-size: 14px;
+      line-height: 1.6;
+      color: rgba(245,245,247,0.9);
+      font-style: italic;
+    }
+
+    /* Social Proof Stats Bar */
+    .social-proof-stats-bar {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.9);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      z-index: 9999;
+      padding: 12px 20px;
+      transform: translateY(-100%);
+      animation: slideDownStats 0.6s ease-out 1s forwards;
+    }
+
+    @keyframes slideDownStats {
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    .stats-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .stat-icon {
+      font-size: 20px;
+    }
+
+    .stat-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .stat-number {
+      font-size: 18px;
+      font-weight: 700;
+      color: #f5f5f7;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      color: rgba(245,245,247,0.6);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Testimonial Carousel */
+    .testimonial-carousel {
+      padding: 80px 0;
+      background: #000;
+    }
+
+    .carousel-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .carousel-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .carousel-header h2 {
+      font-size: 48px;
+      font-weight: 600;
+      color: #f5f5f7;
+      margin-bottom: 16px;
+    }
+
+    .carousel-header p {
+      font-size: 21px;
+      color: #86868b;
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 24px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding: 8px 0;
+    }
+
+    .carousel-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .carousel-card {
+      min-width: 350px;
+      scroll-snap-align: start;
+      background: #1d1d1f;
+      border-radius: 18px;
+      padding: 32px;
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .carousel-card:hover {
+      border-color: rgba(255,255,255,0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+
+    .carousel-quote {
+      font-size: 16px;
+      line-height: 1.6;
+      color: rgba(245,245,247,0.9);
+      font-style: italic;
+      margin-bottom: 24px;
+    }
+
+    .carousel-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .carousel-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    .carousel-author-info .name {
+      font-weight: 600;
+      color: #f5f5f7;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .carousel-author-info .role {
+      font-size: 14px;
+      color: #86868b;
+    }
+
+    .carousel-rating {
+      display: flex;
+      gap: 4px;
+      margin-top: 16px;
+      color: #ffd700;
+      font-size: 16px;
+    }
+
+    /* Trust Indicators */
+    .trust-indicators {
+      padding: 60px 0;
+      background: #0a0a0a;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .trust-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 32px;
+      text-align: center;
+    }
+
+    .trust-item {
+      padding: 24px;
+    }
+
+    .trust-icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .trust-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #f5f5f7;
+      margin-bottom: 8px;
+    }
+
+    .trust-description {
+      font-size: 14px;
+      color: #86868b;
+      line-height: 1.6;
+    }
+
+    /* Mobile Optimizations */
+    @media (max-width: 768px) {
+      .social-proof-stats-bar {
+        top: 45px;
+        padding: 8px 12px;
+      }
+
+      .stats-content {
+        gap: 16px;
+      }
+
+      .stat-item {
+        gap: 6px;
+      }
+
+      .stat-icon {
+        font-size: 16px;
+      }
+
+      .stat-number {
+        font-size: 14px;
+      }
+
+      .stat-label {
+        font-size: 9px;
+      }
+
+      .video-controls {
+        bottom: 20px;
+        padding: 8px 16px;
+        gap: 12px;
+      }
+
+      .progress-bar {
+        width: 100px;
+      }
+
+      .testimonial-overlay {
+        bottom: 90px;
+        padding: 16px 20px;
+      }
+
+      .carousel-card {
+        min-width: 280px;
+        padding: 24px;
+      }
+
+      .carousel-header h2 {
+        font-size: 32px;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
+    /* Lazy loading optimization */
+    video[loading="lazy"] {
+      background: #1d1d1f;
+    }
+  </style>
+
+  <style>
+    /* Ultra-Minimalist Apple Style */
+    body {
+        background: #000;
+        color: #f5f5f7;
+        padding-top: 0 !important;
+    }
+
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 12px;
+        margin: var(--space-12) 0;
+    }
+
+    .product-tile {
+        aspect-ratio: 1;
+        background: #1d1d1f;
+        border-radius: 28px;
+        padding: var(--space-8);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .product-tile::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 50% 50%, rgba(66, 165, 245, 0.15), transparent 70%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .product-tile:hover::before {
+        opacity: 1;
+    }
+
+    .product-tile:hover {
+        transform: scale(1.02);
+    }
+
+    .product-tile h3 {
+        font-size: 32px;
+        font-weight: 600;
+        color: #f5f5f7;
+        margin-bottom: 8px;
+    }
+
+    .product-tile p {
+        font-size: 17px;
+        color: #86868b;
+        line-height: 1.4;
+    }
+
+    .price {
+        font-size: 14px;
+        color: #f5f5f7;
+        margin-top: auto;
+    }
+
+    .header-apple {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: saturate(180%) blur(20px);
+        border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+        z-index: 10000;
+        height: 48px;
+    }
+
+    .header-apple .container {
+        height: 100%;
+    }
+
+    .header-apple nav a {
+        color: #f5f5f7;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        transition: opacity 0.2s ease;
+    }
+
+    .header-apple nav a:hover {
+        opacity: 0.7;
+    }
+
+    .btn-apple {
+        background: #0071e3;
+        color: #fff;
+        padding: 12px 24px;
+        border-radius: 980px;
+        font-size: 17px;
+        font-weight: 400;
+        border: none;
+        cursor: pointer;
+        transition: background 0.2s ease;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .btn-apple:hover {
+        background: #0077ed;
+    }
+
+    .btn-apple-secondary {
+        background: transparent;
+        color: #2997ff;
+        border: 1px solid #2997ff;
+    }
+
+    .btn-apple-secondary:hover {
+        background: rgba(41, 151, 255, 0.1);
+    }
+
+    .section-apple {
+        padding: 120px 0;
+        background: #000;
+    }
+
+    .section-light {
+        background: #f5f5f7;
+        color: #1d1d1f;
+    }
+
+    .section-light h2,
+    .section-light h3,
+    .section-light p {
+        color: #1d1d1f;
+    }
+
+    .feature-minimal {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto var(--space-12);
+    }
+
+    .feature-minimal h3 {
+        font-size: 48px;
+        font-weight: 600;
+        margin-bottom: 16px;
+        color: #f5f5f7;
+    }
+
+    .feature-minimal p {
+        font-size: 21px;
+        color: #86868b;
+        line-height: 1.4;
+    }
+
+    .comparison-table {
+        max-width: 980px;
+        margin: var(--space-12) auto;
+        background: #1d1d1f;
+        border-radius: 18px;
+        overflow: hidden;
+    }
+
+    .comparison-row {
+        display: grid;
+        grid-template-columns: 1fr 120px 120px 120px;
+        gap: 24px;
+        padding: 24px;
+        border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .comparison-row:last-child {
+        border-bottom: none;
+    }
+
+    .comparison-header {
+        font-weight: 600;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #86868b;
+    }
+
+    .checkmark {
+        color: #30d158;
+        font-size: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .product-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .comparison-row {
+            grid-template-columns: 1fr 80px 80px 80px;
+            gap: 12px;
+            padding: 16px;
+            font-size: 14px;
+        }
+
+        .header-content nav a:not(.btn-apple) {
+            display: none;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .comparison-table {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .comparison-row {
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 8px;
+            padding: 12px;
+            font-size: 12px;
+        }
+
+        .comparison-header {
+            font-size: 10px;
+        }
+
+        .checkmark {
+            font-size: 16px;
+        }
+    }
+</style>
+
+<!-- Google Analytics 4 - Performance Monitoring with Video Events -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXXXXXXXXX', {
+    'send_page_view': true,
+    'page_path': window.location.pathname,
+    'page_title': document.title,
+    'custom_map': {
+      'dimension1': 'page_variant',
+      'dimension2': 'user_segment',
+      'dimension3': 'scroll_depth'
+    }
+  });
+
+  // Video Event Tracking
+  document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('hero-video');
+
+    if (video) {
+      // Video play tracking
+      video.addEventListener('play', function() {
+        gtag('event', 'video_play', {
+          'event_category': 'Video Engagement',
+          'event_label': 'Hero Video',
+          'page_variant': 'video-social'
+        });
+      });
+
+      // Video pause tracking
+      video.addEventListener('pause', function() {
+        gtag('event', 'video_pause', {
+          'event_category': 'Video Engagement',
+          'event_label': 'Hero Video',
+          'video_current_time': Math.round(video.currentTime),
+          'page_variant': 'video-social'
+        });
+      });
+
+      // Video completion tracking
+      video.addEventListener('ended', function() {
+        gtag('event', 'video_complete', {
+          'event_category': 'Video Engagement',
+          'event_label': 'Hero Video',
+          'page_variant': 'video-social'
+        });
+      });
+
+      // Video progress milestones (25%, 50%, 75%)
+      let milestones = {25: false, 50: false, 75: false};
+      video.addEventListener('timeupdate', function() {
+        const percent = (video.currentTime / video.duration) * 100;
+
+        Object.keys(milestones).forEach(milestone => {
+          if (percent >= milestone && !milestones[milestone]) {
+            milestones[milestone] = true;
+            gtag('event', 'video_progress', {
+              'event_category': 'Video Engagement',
+              'event_label': 'Hero Video',
+              'video_percent': milestone,
+              'page_variant': 'video-social'
+            });
+          }
+        });
+      });
+
+      // Track unmute events
+      const unmuteBtn = document.getElementById('unmute-btn');
+      if (unmuteBtn) {
+        unmuteBtn.addEventListener('click', function() {
+          gtag('event', 'video_unmute', {
+            'event_category': 'Video Engagement',
+            'event_label': 'Hero Video',
+            'page_variant': 'video-social'
+          });
+        });
+      }
+    }
+
+    // CTA Click Tracking
+    document.querySelectorAll('.cta-button, .cta, [data-cta]').forEach(button => {
+      button.addEventListener('click', function() {
+        gtag('event', 'cta_click', {
+          'cta_location': this.dataset.location || this.className,
+          'cta_text': this.textContent.trim(),
+          'page_variant': 'video-social'
+        });
+      });
+    });
+
+    // Scroll Depth Tracking
+    let scrollDepths = [25, 50, 75, 90, 100];
+    let triggeredDepths = new Set();
+
+    window.addEventListener('scroll', function() {
+      const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+
+      scrollDepths.forEach(depth => {
+        if (scrollPercent >= depth && !triggeredDepths.has(depth)) {
+          triggeredDepths.add(depth);
+          gtag('event', 'scroll_depth', {
+            'scroll_percentage': depth,
+            'page_variant': 'video-social'
+          });
+        }
+      });
+    });
+  });
+</script>
+
+<!-- Core Web Vitals Tracking -->
+<script type="module">
+  import {onCLS, onFID, onLCP, onFCP, onTTFB, onINP} from 'https://unpkg.com/web-vitals@3?module';
+
+  function sendToAnalytics({name, value, id, rating}) {
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'web_vitals', {
+        'metric_name': name,
+        'metric_value': Math.round(value),
+        'metric_id': id,
+        'metric_rating': rating,
+        'page_variant': 'video-social'
+      });
+    }
+  }
+
+  onCLS(sendToAnalytics);
+  onFID(sendToAnalytics);
+  onLCP(sendToAnalytics);
+  onFCP(sendToAnalytics);
+  onTTFB(sendToAnalytics);
+  onINP(sendToAnalytics);
+</script>
+
+  <meta name="theme-color" content="#1a73e8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://storage.googleapis.com">
+</head>
+<body data-test="video-social">
+
+<!-- Header -->
+<header class="header-apple">
+    <div class="container">
+        <div class="header-content">
+            <a href="../../index.html" style="font-weight: 600; font-size: 1.2rem; color: #f5f5f7;">Gemini</a>
+            <nav style="display: flex; gap: 2rem; align-items: center;">
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="https://gemini.google.com" class="btn-apple" style="padding: 12px 32px; font-size: 12px; min-height: 48px;">Try Gemini</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<!-- Social Proof Stats Bar -->
+<div class="social-proof-stats-bar">
+  <div class="stats-content">
+    <div class="stat-item">
+      <span class="stat-icon">👥</span>
+      <div class="stat-text">
+        <span class="stat-number">2.5M+</span>
+        <span class="stat-label">Active Users</span>
+      </div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-icon">⭐</span>
+      <div class="stat-text">
+        <span class="stat-number">4.9/5</span>
+        <span class="stat-label">User Rating</span>
+      </div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-icon">💯</span>
+      <div class="stat-text">
+        <span class="stat-number">98%</span>
+        <span class="stat-label">Recommend</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main id="main-content" role="main">
+
+<!-- Video Hero Section -->
+<section class="video-hero-container" aria-labelledby="hero-heading">
+    <!-- Video Background with Poster -->
+    <div class="video-poster" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%221920%22 height=%221080%22%3E%3Crect fill=%22%231d1d1f%22 width=%221920%22 height=%221080%22/%3E%3C/svg%3E');"></div>
+
+    <div class="video-background">
+      <video
+        id="hero-video"
+        playsinline
+        muted
+        autoplay
+        loop
+        loading="lazy"
+        poster="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%221920%22 height=%221080%22%3E%3Crect fill=%22%231d1d1f%22 width=%221920%22 height=%221080%22/%3E%3C/svg%3E"
+        aria-label="Gemini AI demonstration video">
+        <source src="https://storage.googleapis.com/gemini-ads/demo-video-15s.mp4" type="video/mp4">
+        <source src="https://storage.googleapis.com/gemini-ads/demo-video-15s.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="video-overlay"></div>
+
+    <!-- Video Content -->
+    <div class="video-content">
+        <h1 id="hero-heading">Intelligence.<br>Simplified.</h1>
+        <p>Powerful AI that works everywhere you do. Simple, fast, seamless.</p>
+        <div style="display: flex; gap: 20px; justify-content: center; margin-top: 32px;">
+            <a href="https://gemini.google.com" class="btn-apple" style="min-height: 48px; padding: 12px 32px;" data-cta="hero-primary">Get started</a>
+            <a href="#learn" class="btn-apple btn-apple-secondary">Learn more</a>
+        </div>
+        <p style="font-size: 14px; color: rgba(245,245,247,0.7); margin-top: 24px;">
+            From $19.99/month
+        </p>
+    </div>
+
+    <!-- Video Controls -->
+    <div class="video-controls" id="video-controls">
+      <button class="control-btn" id="play-pause-btn" aria-label="Play/Pause video">
+        <svg id="play-icon" viewBox="0 0 24 24" style="display: none;">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+        <svg id="pause-icon" viewBox="0 0 24 24">
+          <path d="M6 4h4v16H6zM14 4h4v16h-4z"/>
+        </svg>
+      </button>
+
+      <div class="progress-bar" id="progress-bar" role="progressbar" aria-label="Video progress">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+
+      <span class="video-time" id="video-time">0:00</span>
+
+      <button class="control-btn" id="unmute-btn" aria-label="Unmute video">
+        <svg id="muted-icon" viewBox="0 0 24 24">
+          <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+        </svg>
+        <svg id="unmuted-icon" viewBox="0 0 24 24" style="display: none;">
+          <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Testimonial Overlays (appear at key moments) -->
+    <div class="testimonial-overlay" id="testimonial-1" data-show-at="5">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar">SK</div>
+        <div class="testimonial-info">
+          <div class="testimonial-name">Sarah Kim</div>
+          <div class="testimonial-role">Product Manager</div>
+        </div>
+        <button class="testimonial-close" onclick="this.parentElement.parentElement.classList.remove('active')" aria-label="Close testimonial">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          </svg>
+        </button>
+      </div>
+      <p class="testimonial-quote">
+        "Gemini cut my research time from hours to minutes. It's like having a brilliant assistant who never sleeps."
+      </p>
+    </div>
+
+    <div class="testimonial-overlay" id="testimonial-2" data-show-at="12">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar">MC</div>
+        <div class="testimonial-info">
+          <div class="testimonial-name">Marcus Chen</div>
+          <div class="testimonial-role">Software Engineer</div>
+        </div>
+        <button class="testimonial-close" onclick="this.parentElement.parentElement.classList.remove('active')" aria-label="Close testimonial">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          </svg>
+        </button>
+      </div>
+      <p class="testimonial-quote">
+        "Best AI tool I've used. Period. The code suggestions are eerily accurate."
+      </p>
+    </div>
+
+    <div class="testimonial-overlay" id="testimonial-3" data-show-at="20">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar">EP</div>
+        <div class="testimonial-info">
+          <div class="testimonial-name">Elena Petrov</div>
+          <div class="testimonial-role">Content Creator</div>
+        </div>
+        <button class="testimonial-close" onclick="this.parentElement.parentElement.classList.remove('active')" aria-label="Close testimonial">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          </svg>
+        </button>
+      </div>
+      <p class="testimonial-quote">
+        "My writing improved 10x. Gemini helps me find the perfect words every time."
+      </p>
+    </div>
+</section>
+
+<!-- Product Grid -->
+<section class="section-apple" id="features">
+    <div class="container" style="max-width: 1200px;">
+        <div class="product-grid" data-animate="fade-in">
+            <div class="product-tile">
+                <div>
+                    <h3>Gemini Basic</h3>
+                    <p>Essential AI for everyday tasks. Fast, accurate, always available.</p>
+                </div>
+                <div class="price">Free</div>
+            </div>
+
+            <div class="product-tile">
+                <div>
+                    <h3>Gemini Advanced</h3>
+                    <p>Next-level intelligence. Extended thinking, deeper analysis, better results.</p>
+                </div>
+                <div class="price">$19.99/mo</div>
+            </div>
+
+            <div class="product-tile">
+                <div>
+                    <h3>Gemini for Teams</h3>
+                    <p>Shared workspaces, collaboration tools, admin controls.</p>
+                </div>
+                <div class="price">$29.99/user/mo</div>
+            </div>
+
+            <div class="product-tile">
+                <div>
+                    <h3>Enterprise</h3>
+                    <p>Custom models, dedicated support, enterprise security.</p>
+                </div>
+                <div class="price">Contact sales</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonial Carousel -->
+<section class="testimonial-carousel">
+  <div class="carousel-container">
+    <div class="carousel-header">
+      <h2>Loved by millions worldwide</h2>
+      <p>See what people are saying about Gemini</p>
+    </div>
+
+    <div class="carousel-track">
+      <div class="carousel-card">
+        <p class="carousel-quote">
+          "Gemini has completely transformed how I work. What used to take me hours now takes minutes. The AI is incredibly intuitive."
+        </p>
+        <div class="carousel-author">
+          <div class="carousel-avatar">JD</div>
+          <div class="carousel-author-info">
+            <span class="name">Jessica Davis</span>
+            <span class="role">Marketing Director</span>
+          </div>
+        </div>
+        <div class="carousel-rating">⭐⭐⭐⭐⭐</div>
+      </div>
+
+      <div class="carousel-card">
+        <p class="carousel-quote">
+          "As a developer, I'm amazed by Gemini's code understanding. It's like pair programming with someone who knows every language."
+        </p>
+        <div class="carousel-author">
+          <div class="carousel-avatar">RT</div>
+          <div class="carousel-author-info">
+            <span class="name">Raj Thakur</span>
+            <span class="role">Senior Developer</span>
+          </div>
+        </div>
+        <div class="carousel-rating">⭐⭐⭐⭐⭐</div>
+      </div>
+
+      <div class="carousel-card">
+        <p class="carousel-quote">
+          "I was skeptical about AI assistants, but Gemini won me over in the first week. It's now essential to my daily workflow."
+        </p>
+        <div class="carousel-author">
+          <div class="carousel-avatar">AM</div>
+          <div class="carousel-author-info">
+            <span class="name">Anna Miller</span>
+            <span class="role">UX Designer</span>
+          </div>
+        </div>
+        <div class="carousel-rating">⭐⭐⭐⭐⭐</div>
+      </div>
+
+      <div class="carousel-card">
+        <p class="carousel-quote">
+          "The multilingual support is outstanding. I work with teams across 5 countries, and Gemini makes communication seamless."
+        </p>
+        <div class="carousel-author">
+          <div class="carousel-avatar">LG</div>
+          <div class="carousel-author-info">
+            <span class="name">Luis Garcia</span>
+            <span class="role">Project Manager</span>
+          </div>
+        </div>
+        <div class="carousel-rating">⭐⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust Indicators -->
+<section class="trust-indicators">
+  <div class="trust-grid">
+    <div class="trust-item">
+      <span class="trust-icon">🔒</span>
+      <h3 class="trust-title">Enterprise Security</h3>
+      <p class="trust-description">Bank-level encryption and SOC 2 compliance. Your data is always protected.</p>
+    </div>
+
+    <div class="trust-item">
+      <span class="trust-icon">⚡</span>
+      <h3 class="trust-title">99.9% Uptime</h3>
+      <p class="trust-description">Always available when you need it. Backed by Google's infrastructure.</p>
+    </div>
+
+    <div class="trust-item">
+      <span class="trust-icon">🌍</span>
+      <h3 class="trust-title">100+ Languages</h3>
+      <p class="trust-description">Work in any language. Translate instantly. Connect globally.</p>
+    </div>
+
+    <div class="trust-item">
+      <span class="trust-icon">🎯</span>
+      <h3 class="trust-title">Privacy First</h3>
+      <p class="trust-description">Your conversations aren't used for training. What you share stays private.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Feature Section 1 -->
+<section class="section-apple section-light">
+    <div class="container">
+        <div class="feature-minimal" data-animate="fade-in" style="color: #1d1d1f;">
+            <h3 style="color: #1d1d1f;">Writes like you.</h3>
+            <p style="color: #1d1d1f;">Voice adaptation technology learns your style. Every email, document, and message sounds authentically you.</p>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto; aspect-ratio: 16/9; background: #e5e5e7; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 64px;">
+            ✍️
+        </div>
+    </div>
+</section>
+
+<!-- Comparison Table -->
+<section class="section-apple" id="pricing">
+    <div class="container">
+        <h2 style="text-align: center; font-size: 48px; margin-bottom: 48px; color: #f5f5f7;">Choose your Gemini.</h2>
+
+        <div class="comparison-table" data-animate="fade-in">
+            <div class="comparison-row comparison-header">
+                <div>Feature</div>
+                <div style="text-align: center;">Basic</div>
+                <div style="text-align: center;">Advanced</div>
+                <div style="text-align: center;">Teams</div>
+            </div>
+
+            <div class="comparison-row">
+                <div style="color: #f5f5f7;">Response speed</div>
+                <div style="text-align: center; color: #86868b;">Fast</div>
+                <div style="text-align: center; color: #f5f5f7;">Faster</div>
+                <div style="text-align: center; color: #f5f5f7;">Fastest</div>
+            </div>
+
+            <div class="comparison-row">
+                <div style="color: #f5f5f7;">Context window</div>
+                <div style="text-align: center; color: #86868b;">8K</div>
+                <div style="text-align: center; color: #f5f5f7;">128K</div>
+                <div style="text-align: center; color: #f5f5f7;">1M</div>
+            </div>
+
+            <div class="comparison-row">
+                <div style="color: #f5f5f7;">Voice adaptation (VO3)</div>
+                <div style="text-align: center; color: #86868b;">—</div>
+                <div style="text-align: center;"><span class="checkmark">✓</span></div>
+                <div style="text-align: center;"><span class="checkmark">✓</span></div>
+            </div>
+
+            <div class="comparison-row">
+                <div style="color: #f5f5f7;">Advanced reasoning</div>
+                <div style="text-align: center; color: #86868b;">—</div>
+                <div style="text-align: center;"><span class="checkmark">✓</span></div>
+                <div style="text-align: center;"><span class="checkmark">✓</span></div>
+            </div>
+
+            <div class="comparison-row">
+                <div style="color: #f5f5f7;">Workspace integration</div>
+                <div style="text-align: center;"><span class="checkmark">✓</span></div>
+                <div style="text-align: center;"><span class="checkmark">✓</span></div>
+                <div style="text-align: center;"><span class="checkmark">✓</span></div>
+            </div>
+
+            <div class="comparison-row">
+                <div style="color: #f5f5f7;">Team collaboration</div>
+                <div style="text-align: center; color: #86868b;">—</div>
+                <div style="text-align: center; color: #86868b;">—</div>
+                <div style="text-align: center;"><span class="checkmark">✓</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Simple CTA -->
+<section class="section-apple section-light">
+    <div class="container text-center">
+        <div data-animate="fade-in">
+            <h2 style="font-size: 56px; margin-bottom: 24px; color: #1d1d1f;">Get started today.</h2>
+            <p style="font-size: 21px; color: #1d1d1f; margin-bottom: 32px;">
+                Free for 14 days. No credit card required.
+            </p>
+            <a href="https://gemini.google.com" class="btn-apple" style="font-size: 17px; padding: 12px 32px; min-height: 48px;" data-cta="footer-primary">Try Gemini</a>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer role="contentinfo" style="background: #000; padding: 64px 0; text-align: center; border-top: 0.5px solid rgba(255, 255, 255, 0.1);">
+    <div class="container">
+        <p style="font-size: 12px; color: #86868b; line-height: 1.6;">
+            Copyright © 2024 Google LLC. All rights reserved.<br>
+            <a href="https://policies.google.com/privacy" style="color: #86868b;">Privacy Policy</a> |
+            <a href="https://ai.google/responsibility/principles/" style="color: #86868b;">AI Principles</a>
+        </p>
+    </div>
+</footer>
+
+<script src="../../assets/js/animations.js" defer></script>
+
+<!-- Video & Testimonial Overlay Control Script -->
+<script>
+(function() {
+  'use strict';
+
+  const video = document.getElementById('hero-video');
+  const playPauseBtn = document.getElementById('play-pause-btn');
+  const playIcon = document.getElementById('play-icon');
+  const pauseIcon = document.getElementById('pause-icon');
+  const unmuteBtn = document.getElementById('unmute-btn');
+  const mutedIcon = document.getElementById('muted-icon');
+  const unmutedIcon = document.getElementById('unmuted-icon');
+  const progressBar = document.getElementById('progress-bar');
+  const progressFill = document.getElementById('progress-fill');
+  const videoTime = document.getElementById('video-time');
+  const controls = document.getElementById('video-controls');
+
+  // Show loaded class when video can play
+  video.addEventListener('canplay', function() {
+    video.classList.add('loaded');
+  });
+
+  // Play/Pause functionality
+  playPauseBtn.addEventListener('click', function() {
+    if (video.paused) {
+      video.play();
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = 'block';
+    } else {
+      video.pause();
+      playIcon.style.display = 'block';
+      pauseIcon.style.display = 'none';
+    }
+  });
+
+  // Unmute functionality
+  unmuteBtn.addEventListener('click', function() {
+    video.muted = !video.muted;
+    if (video.muted) {
+      mutedIcon.style.display = 'block';
+      unmutedIcon.style.display = 'none';
+    } else {
+      mutedIcon.style.display = 'none';
+      unmutedIcon.style.display = 'block';
+    }
+  });
+
+  // Progress bar update
+  video.addEventListener('timeupdate', function() {
+    const percent = (video.currentTime / video.duration) * 100;
+    progressFill.style.width = percent + '%';
+
+    const minutes = Math.floor(video.currentTime / 60);
+    const seconds = Math.floor(video.currentTime % 60);
+    videoTime.textContent = minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+  });
+
+  // Progress bar click to seek
+  progressBar.addEventListener('click', function(e) {
+    const rect = progressBar.getBoundingClientRect();
+    const percent = (e.clientX - rect.left) / rect.width;
+    video.currentTime = percent * video.duration;
+  });
+
+  // Testimonial overlay timing
+  const testimonials = document.querySelectorAll('.testimonial-overlay');
+  let activeTestimonial = null;
+  let shownTestimonials = new Set();
+
+  video.addEventListener('timeupdate', function() {
+    const currentTime = Math.floor(video.currentTime);
+
+    testimonials.forEach(testimonial => {
+      const showAt = parseInt(testimonial.dataset.showAt);
+      const testimonialId = testimonial.id;
+
+      if (currentTime === showAt && !shownTestimonials.has(testimonialId)) {
+        // Hide current active testimonial
+        if (activeTestimonial) {
+          activeTestimonial.classList.remove('active');
+          activeTestimonial.classList.add('exit');
+        }
+
+        // Show new testimonial
+        testimonial.classList.remove('exit');
+        testimonial.classList.add('active');
+        activeTestimonial = testimonial;
+        shownTestimonials.add(testimonialId);
+
+        // Auto-hide after 4 seconds
+        setTimeout(() => {
+          if (testimonial.classList.contains('active')) {
+            testimonial.classList.remove('active');
+            testimonial.classList.add('exit');
+          }
+        }, 4000);
+      }
+    });
+  });
+
+  // Reset testimonials when video loops
+  video.addEventListener('ended', function() {
+    shownTestimonials.clear();
+    testimonials.forEach(t => {
+      t.classList.remove('active', 'exit');
+    });
+    activeTestimonial = null;
+  });
+
+  // Hide controls after 3 seconds of inactivity
+  let hideControlsTimeout;
+  const videoContainer = document.querySelector('.video-hero-container');
+
+  function resetControlsTimeout() {
+    clearTimeout(hideControlsTimeout);
+    controls.classList.remove('hidden');
+    hideControlsTimeout = setTimeout(() => {
+      controls.classList.add('hidden');
+    }, 3000);
+  }
+
+  videoContainer.addEventListener('mousemove', resetControlsTimeout);
+  videoContainer.addEventListener('touchstart', resetControlsTimeout);
+
+  // Initial timeout
+  resetControlsTimeout();
+
+  // Lazy loading optimization - start loading video when in viewport
+  if ('IntersectionObserver' in window) {
+    const videoObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (video.readyState < 3) { // HAVE_FUTURE_DATA
+            video.load();
+          }
+          videoObserver.unobserve(video);
+        }
+      });
+    }, { threshold: 0.25 });
+
+    videoObserver.observe(video);
+  }
+})();
+</script>
+
+</body></html>

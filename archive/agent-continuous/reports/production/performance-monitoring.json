@@ -1,0 +1,16 @@
+{
+  "summary": {
+    "overallHealth": {
+      "status": "good",
+      "averageScore": 78.5
+    },
+    "patterns": {
+      "total": 5,
+      "production": 3,
+      "pilot": 2
+    }
+  },
+  "regressions": [],
+  "alerts": [],
+  "timestamp": "2026-02-01T14:17:05.226Z"
+}

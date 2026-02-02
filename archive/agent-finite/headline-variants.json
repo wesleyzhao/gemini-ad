@@ -1,0 +1,484 @@
+{
+  "headline_variants": {
+    "apple-inspired.html": {
+      "page_name": "Apple-Inspired Minimalist",
+      "current_headline": "AI that thinks<br>with you.",
+      "current_subtitle": "Effortlessly brilliant. Remarkably simple.",
+      "variants": [
+        {
+          "headline": "AI that thinks<br>with you.",
+          "subtitle": "Effortlessly brilliant. Remarkably simple.",
+          "rationale": "Original - elegant, minimal, Apple-like phrasing"
+        },
+        {
+          "headline": "Intelligence<br>amplified.",
+          "subtitle": "Your thoughts, supercharged.",
+          "rationale": "Shorter, punchier. Emphasizes enhancement over partnership"
+        },
+        {
+          "headline": "Think bigger.<br>Work smarter.",
+          "subtitle": "AI that elevates everything you do.",
+          "rationale": "Action-oriented. Appeals to productivity mindset"
+        },
+        {
+          "headline": "Beyond AI.<br>Pure genius.",
+          "subtitle": "Brilliance made effortless.",
+          "rationale": "Bold claim, aspirational positioning"
+        },
+        {
+          "headline": "Your mind,<br>enhanced.",
+          "subtitle": "Intelligence that adapts to you.",
+          "rationale": "Personal connection, emphasizes customization"
+        }
+      ]
+    },
+    "trust-citations.html": {
+      "page_name": "Trust & Citations",
+      "current_headline": "Trust Every Answer",
+      "current_subtitle": "Meet the AI that shows its work. Every response comes with citations, verified sources,",
+      "variants": [
+        {
+          "headline": "Trust Every Answer",
+          "subtitle": "AI that shows its work. Every response backed by verified sources.",
+          "rationale": "Original - direct trust message"
+        },
+        {
+          "headline": "Truth You Can Verify",
+          "subtitle": "Citations for every claim. Sources for every fact.",
+          "rationale": "Emphasizes verification capability"
+        },
+        {
+          "headline": "Never Wonder If It's True",
+          "subtitle": "Built-in fact-checking. Automatic source citations.",
+          "rationale": "Addresses user pain point directly"
+        },
+        {
+          "headline": "The AI That Proves Itself",
+          "subtitle": "See the sources behind every answer.",
+          "rationale": "Confidence-building, transparency focus"
+        },
+        {
+          "headline": "Facts, Not Fiction",
+          "subtitle": "Real citations. Verified sources. Zero hallucinations.",
+          "rationale": "Strong differentiator vs competitors"
+        }
+      ]
+    },
+    "workspace-integration.html": {
+      "page_name": "Google Workspace Integration",
+      "current_headline": "Your Workspace, Supercharged",
+      "current_subtitle": "Gemini lives where you work. Seamlessly integrated with Gmail, Docs, Sheets, and Drive.",
+      "variants": [
+        {
+          "headline": "Your Workspace, Supercharged",
+          "subtitle": "Gemini lives where you work. Seamlessly integrated with Gmail, Docs, Sheets, and Drive.",
+          "rationale": "Original - emphasizes enhancement"
+        },
+        {
+          "headline": "AI Built for Google Workspace",
+          "subtitle": "Native integration with every tool you already use.",
+          "rationale": "Platform-specific positioning"
+        },
+        {
+          "headline": "Work Smarter in Gmail, Docs & More",
+          "subtitle": "AI assistance exactly where you need it.",
+          "rationale": "Specific app mentions, outcome focused"
+        },
+        {
+          "headline": "Your Tools. Amplified.",
+          "subtitle": "Gemini works inside Gmail, Docs, Sheets, Calendar, and Drive.",
+          "rationale": "Simple, direct, comprehensive"
+        },
+        {
+          "headline": "Stop Switching Apps",
+          "subtitle": "AI that lives in your workspace, not outside it.",
+          "rationale": "Pain point focused, convenience angle"
+        }
+      ]
+    },
+    "creators-voice-studio.html": {
+      "page_name": "Creators & Voice Studio",
+      "current_headline": "Create Without Limits",
+      "current_subtitle": "From voice to vision. Gemini empowers creators with multimodal AI.",
+      "variants": [
+        {
+          "headline": "Create Without Limits",
+          "subtitle": "From voice to vision. Gemini empowers creators with multimodal AI.",
+          "rationale": "Original - freedom focused"
+        },
+        {
+          "headline": "Your Creative Co-Pilot",
+          "subtitle": "Voice, video, images - all in one AI.",
+          "rationale": "Partnership framing, multimodal emphasis"
+        },
+        {
+          "headline": "Speak. Create. Inspire.",
+          "subtitle": "Voice-powered creation for the modern creator.",
+          "rationale": "Action sequence, voice feature highlight"
+        },
+        {
+          "headline": "Ideas Come to Life",
+          "subtitle": "Multimodal AI that understands your creative vision.",
+          "rationale": "Outcome focused, understanding emphasis"
+        },
+        {
+          "headline": "Voice Meets Vision",
+          "subtitle": "Create faster with AI that sees, hears, and understands.",
+          "rationale": "Alliterative, comprehensive capability statement"
+        }
+      ]
+    },
+    "operators-automators.html": {
+      "page_name": "Operators & Automators",
+      "current_headline": "Automate Everything",
+      "current_subtitle": "Built for operators. Designed for automation. Gemini handles your workflows.",
+      "variants": [
+        {
+          "headline": "Automate Everything",
+          "subtitle": "Built for operators. Designed for automation. Gemini handles your workflows.",
+          "rationale": "Original - comprehensive automation promise"
+        },
+        {
+          "headline": "Your Automation Engine",
+          "subtitle": "Connect, orchestrate, and automate your entire workflow.",
+          "rationale": "Tool positioning, comprehensive coverage"
+        },
+        {
+          "headline": "Work Less. Achieve More.",
+          "subtitle": "AI that automates the repetitive so you focus on what matters.",
+          "rationale": "Benefit focused, clear value prop"
+        },
+        {
+          "headline": "Workflows That Run Themselves",
+          "subtitle": "Intelligent automation for power users.",
+          "rationale": "Autonomous positioning, target audience specific"
+        },
+        {
+          "headline": "Stop Doing. Start Orchestrating.",
+          "subtitle": "Advanced automation for operators who think bigger.",
+          "rationale": "Aspirational, strategic positioning"
+        }
+      ]
+    },
+    "research-assistant.html": {
+      "page_name": "Research Assistant",
+      "current_headline": "Research That Goes Deeper",
+      "current_subtitle": "Academic-grade research with citations. Gemini finds what others miss.",
+      "variants": [
+        {
+          "headline": "Research That Goes Deeper",
+          "subtitle": "Academic-grade research with citations. Gemini finds what others miss.",
+          "rationale": "Original - depth and quality focus"
+        },
+        {
+          "headline": "Your Research Partner",
+          "subtitle": "Deep analysis. Verified sources. Academic citations.",
+          "rationale": "Partnership framing, triple benefit"
+        },
+        {
+          "headline": "Beyond Surface-Level Answers",
+          "subtitle": "Research AI built for depth, not just speed.",
+          "rationale": "Differentiator vs competitors"
+        },
+        {
+          "headline": "Find What Others Can't",
+          "subtitle": "Research capabilities that uncover hidden insights.",
+          "rationale": "Unique value prop, discovery angle"
+        },
+        {
+          "headline": "Academic-Grade Intelligence",
+          "subtitle": "Citations included. Sources verified. Research you can trust.",
+          "rationale": "Quality positioning, trust building"
+        }
+      ]
+    },
+    "multimodal-ai.html": {
+      "page_name": "Multimodal AI",
+      "current_headline": "See, Hear, Understand",
+      "current_subtitle": "Multimodal AI that processes images, video, audio, and text.",
+      "variants": [
+        {
+          "headline": "See, Hear, Understand",
+          "subtitle": "Multimodal AI that processes images, video, audio, and text.",
+          "rationale": "Original - capability sequence"
+        },
+        {
+          "headline": "AI That Understands Everything",
+          "subtitle": "Images, video, audio, text - all in one conversation.",
+          "rationale": "Comprehensive capability statement"
+        },
+        {
+          "headline": "Beyond Text",
+          "subtitle": "The AI that truly sees and hears.",
+          "rationale": "Differentiator, sensory focus"
+        },
+        {
+          "headline": "Your Multimodal Mind",
+          "subtitle": "Process the world like you do - through sight, sound, and text.",
+          "rationale": "Human analogy, natural interaction"
+        },
+        {
+          "headline": "Upload Anything. Get Answers.",
+          "subtitle": "Image analysis, document processing, and video understanding.",
+          "rationale": "Action oriented, clear use cases"
+        }
+      ]
+    },
+    "personal-assistant.html": {
+      "page_name": "Personal Assistant",
+      "current_headline": "Your Personal AI",
+      "current_subtitle": "From morning coffee to midnight deadlines, Gemini keeps you organized.",
+      "variants": [
+        {
+          "headline": "Your Personal AI",
+          "subtitle": "From morning coffee to midnight deadlines, Gemini keeps you organized.",
+          "rationale": "Original - personal connection, time span"
+        },
+        {
+          "headline": "Life, Organized",
+          "subtitle": "Your AI assistant for everything, everywhere.",
+          "rationale": "Simple outcome, comprehensive coverage"
+        },
+        {
+          "headline": "Never Miss a Beat",
+          "subtitle": "Scheduling, reminders, tasks - handled automatically.",
+          "rationale": "Reliability focus, specific features"
+        },
+        {
+          "headline": "Your Day, Managed",
+          "subtitle": "AI that keeps your life running smoothly.",
+          "rationale": "Control focus, smooth operation"
+        },
+        {
+          "headline": "Stress Less. Do More.",
+          "subtitle": "Personal AI that handles the details while you focus on life.",
+          "rationale": "Emotional benefit, delegation angle"
+        }
+      ]
+    },
+    "developer-tools.html": {
+      "page_name": "Developer Tools",
+      "current_headline": "Code Faster. Debug Smarter.",
+      "current_subtitle": "AI built for developers. From code generation to debugging.",
+      "variants": [
+        {
+          "headline": "Code Faster. Debug Smarter.",
+          "subtitle": "AI built for developers. From code generation to debugging.",
+          "rationale": "Original - dual benefit, developer specific"
+        },
+        {
+          "headline": "Your AI Pair Programmer",
+          "subtitle": "Generate, debug, and document code with AI assistance.",
+          "rationale": "Partnership metaphor, triple capability"
+        },
+        {
+          "headline": "Ship Code at Speed",
+          "subtitle": "Development AI that keeps up with your workflow.",
+          "rationale": "Velocity focus, workflow integration"
+        },
+        {
+          "headline": "Write Less. Build More.",
+          "subtitle": "AI code generation and debugging for modern developers.",
+          "rationale": "Efficiency angle, modern positioning"
+        },
+        {
+          "headline": "From Idea to Production",
+          "subtitle": "Development AI that handles the entire lifecycle.",
+          "rationale": "Comprehensive coverage, end-to-end"
+        }
+      ]
+    },
+    "business-intelligence.html": {
+      "page_name": "Business Intelligence",
+      "current_headline": "Insights That Drive Decisions",
+      "current_subtitle": "Business intelligence powered by AI. Turn data into action.",
+      "variants": [
+        {
+          "headline": "Insights That Drive Decisions",
+          "subtitle": "Business intelligence powered by AI. Turn data into action.",
+          "rationale": "Original - outcome focused"
+        },
+        {
+          "headline": "Data Made Clear",
+          "subtitle": "AI that transforms numbers into strategy.",
+          "rationale": "Clarity focus, transformation narrative"
+        },
+        {
+          "headline": "See What Others Miss",
+          "subtitle": "Business intelligence that uncovers hidden opportunities.",
+          "rationale": "Competitive advantage angle"
+        },
+        {
+          "headline": "Your Strategic Advantage",
+          "subtitle": "AI-powered analysis for better business decisions.",
+          "rationale": "Competitive positioning, decision support"
+        },
+        {
+          "headline": "From Data to Decisions",
+          "subtitle": "Business intelligence that actually drives results.",
+          "rationale": "Process narrative, results focus"
+        }
+      ]
+    },
+    "education-learning.html": {
+      "page_name": "Education & Learning",
+      "current_headline": "Learn Anything, Master Everything",
+      "current_subtitle": "Your AI tutor that adapts to your learning style.",
+      "variants": [
+        {
+          "headline": "Learn Anything, Master Everything",
+          "subtitle": "Your AI tutor that adapts to your learning style.",
+          "rationale": "Original - comprehensive capability"
+        },
+        {
+          "headline": "Your Personal Tutor",
+          "subtitle": "AI that explains concepts at your pace, in your style.",
+          "rationale": "Personal connection, customization"
+        },
+        {
+          "headline": "Understanding Made Easy",
+          "subtitle": "Complex topics explained simply, clearly, perfectly.",
+          "rationale": "Simplification benefit, confidence building"
+        },
+        {
+          "headline": "Study Smarter, Not Harder",
+          "subtitle": "AI tutoring that accelerates learning.",
+          "rationale": "Efficiency angle, acceleration benefit"
+        },
+        {
+          "headline": "Every Question Answered",
+          "subtitle": "Patient AI tutoring for students of all ages.",
+          "rationale": "Availability promise, broad audience"
+        }
+      ]
+    },
+    "creative-studio.html": {
+      "page_name": "Creative Studio",
+      "current_headline": "Ideas Amplified",
+      "current_subtitle": "Creative AI for writers, designers, and dreamers.",
+      "variants": [
+        {
+          "headline": "Ideas Amplified",
+          "subtitle": "Creative AI for writers, designers, and dreamers.",
+          "rationale": "Original - enhancement focus, broad creative audience"
+        },
+        {
+          "headline": "Create Without Limits",
+          "subtitle": "AI that turns inspiration into execution.",
+          "rationale": "Freedom positioning, transformation narrative"
+        },
+        {
+          "headline": "Your Creative Partner",
+          "subtitle": "Brainstorm, design, and create with AI assistance.",
+          "rationale": "Partnership framing, process coverage"
+        },
+        {
+          "headline": "Imagination Unleashed",
+          "subtitle": "Creative tools powered by advanced AI.",
+          "rationale": "Freedom angle, capability focus"
+        },
+        {
+          "headline": "From Concept to Creation",
+          "subtitle": "AI that helps you bring every idea to life.",
+          "rationale": "Process narrative, realization focus"
+        }
+      ]
+    },
+    "security-privacy.html": {
+      "page_name": "Security & Privacy",
+      "current_headline": "AI You Can Trust",
+      "current_subtitle": "Enterprise-grade security. Google-level privacy. Your data stays yours.",
+      "variants": [
+        {
+          "headline": "AI You Can Trust",
+          "subtitle": "Enterprise-grade security. Google-level privacy. Your data stays yours.",
+          "rationale": "Original - trust focus, triple assurance"
+        },
+        {
+          "headline": "Private by Design",
+          "subtitle": "Security and privacy built into every interaction.",
+          "rationale": "Built-in positioning, foundational approach"
+        },
+        {
+          "headline": "Your Data, Protected",
+          "subtitle": "Google's security infrastructure protecting your AI conversations.",
+          "rationale": "Protection focus, brand trust leverage"
+        },
+        {
+          "headline": "Security Without Compromise",
+          "subtitle": "Enterprise protection. Personal privacy. No trade-offs.",
+          "rationale": "No compromise positioning, dual benefit"
+        },
+        {
+          "headline": "Trust Google's AI",
+          "subtitle": "The same security that protects billions, now protecting your AI.",
+          "rationale": "Brand leverage, scale trust transfer"
+        }
+      ]
+    },
+    "love-letter-to-productivity.html": {
+      "page_name": "Valentine's Day - Love Letter",
+      "current_headline": "Love at First Prompt",
+      "current_subtitle": "This Valentine's Day, fall in love with productivity.",
+      "variants": [
+        {
+          "headline": "Love at First Prompt",
+          "subtitle": "This Valentine's Day, fall in love with productivity.",
+          "rationale": "Original - Valentine's theme, wordplay"
+        },
+        {
+          "headline": "Your Perfect Match",
+          "subtitle": "AI that completes you (and your work).",
+          "rationale": "Romantic metaphor, completion theme"
+        },
+        {
+          "headline": "A Love Letter to Your Time",
+          "subtitle": "This Valentine's, spend less time working and more time living.",
+          "rationale": "Time value, life balance focus"
+        },
+        {
+          "headline": "Productivity Worth Loving",
+          "subtitle": "AI that makes work feel like romance.",
+          "rationale": "Emotional positioning, experience focus"
+        },
+        {
+          "headline": "Swipe Right on AI",
+          "subtitle": "The perfect match for your workflow.",
+          "rationale": "Modern dating metaphor, workflow fit"
+        }
+      ]
+    },
+    "writers-room.html": {
+      "page_name": "Writers' Room",
+      "current_headline": "Write With Confidence",
+      "current_subtitle": "AI for writers who demand excellence.",
+      "variants": [
+        {
+          "headline": "Write With Confidence",
+          "subtitle": "AI for writers who demand excellence.",
+          "rationale": "Original - confidence building, quality focus"
+        },
+        {
+          "headline": "Your Writing Partner",
+          "subtitle": "From first draft to final polish, AI that understands craft.",
+          "rationale": "Partnership framing, process coverage"
+        },
+        {
+          "headline": "Every Word Matters",
+          "subtitle": "Writing AI that respects the craft.",
+          "rationale": "Precision focus, craft respect"
+        },
+        {
+          "headline": "Unleash Your Voice",
+          "subtitle": "AI that enhances, not replaces, your writing.",
+          "rationale": "Authenticity focus, enhancement positioning"
+        },
+        {
+          "headline": "Writer's Block, Solved",
+          "subtitle": "Creative assistance when you need it most.",
+          "rationale": "Pain point solution, availability focus"
+        }
+      ]
+    }
+  }
+}

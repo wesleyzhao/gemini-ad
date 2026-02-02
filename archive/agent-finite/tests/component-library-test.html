@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Component Library Test - Gemini Ads</title>
+  <link rel="stylesheet" href="../assets/css/design-system.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <style>
+    body {
+      padding-top: 80px; /* Account for fixed navbar */
+    }
+    .test-section {
+      margin: var(--space-16) 0;
+      padding: var(--space-8);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-lg);
+    }
+    .test-section-title {
+      font-size: var(--font-size-h3);
+      font-weight: var(--font-weight-bold);
+      margin-bottom: var(--space-6);
+      color: var(--color-text-primary);
+      border-bottom: 2px solid var(--color-primary);
+      padding-bottom: var(--space-2);
+    }
+    .component-showcase {
+      margin: var(--space-6) 0;
+      padding: var(--space-4);
+      background: var(--color-background-secondary);
+      border-radius: var(--radius-md);
+    }
+    .component-label {
+      font-size: var(--font-size-body-sm);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-3);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="#" class="navbar-logo">
+        <span>✨</span>
+        Gemini
+      </a>
+      <ul class="navbar-menu">
+        <li class="navbar-menu-item"><a href="#buttons" class="navbar-link">Buttons</a></li>
+        <li class="navbar-menu-item"><a href="#cards" class="navbar-link">Cards</a></li>
+        <li class="navbar-menu-item"><a href="#heroes" class="navbar-link">Heroes</a></li>
+        <li class="navbar-menu-item"><a href="#ctas" class="navbar-link">CTAs</a></li>
+      </ul>
+      <div class="navbar-cta">
+        <a href="#" class="btn btn-primary btn-sm">Get Started</a>
+      </div>
+      <button class="navbar-toggle" aria-label="Toggle menu">
+        <span class="navbar-toggle-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="section-centered">
+    <h1 style="font-size: var(--font-size-hero); font-weight: var(--font-weight-bold); margin: var(--space-12) 0 var(--space-6); text-align: center;">
+      Component Library Test
+    </h1>
+    <p style="text-align: center; font-size: var(--font-size-h5); color: var(--color-text-secondary); margin-bottom: var(--space-16);">
+      Testing all reusable components from components.css
+    </p>
+
+    <!-- ========== BUTTONS ========== -->
+    <section id="buttons" class="test-section">
+      <h2 class="test-section-title">Buttons</h2>
+
+      <div class="component-showcase">
+        <p class="component-label">Button Variants</p>
+        <div class="btn-group">
+          <button class="btn btn-primary">Primary Button</button>
+          <button class="btn btn-secondary">Secondary Button</button>
+          <button class="btn btn-tertiary">Tertiary Button</button>
+          <button class="btn btn-ghost">Ghost Button</button>
+          <button class="btn btn-gemini">Gemini Button</button>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <p class="component-label">Button Sizes</p>
+        <div class="btn-group">
+          <button class="btn btn-primary btn-sm">Small</button>
+          <button class="btn btn-primary btn-md">Medium</button>
+          <button class="btn btn-primary btn-lg">Large</button>
+          <button class="btn btn-primary btn-xl">Extra Large</button>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <p class="component-label">Button States</p>
+        <div class="btn-group">
+          <button class="btn btn-primary">Normal</button>
+          <button class="btn btn-primary" disabled>Disabled</button>
+          <button class="btn btn-primary btn-loading">Loading</button>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <p class="component-label">Block Button</p>
+        <button class="btn btn-primary btn-block">Full Width Button</button>
+      </div>
+    </section>
+
+    <!-- ========== CARDS ========== -->
+    <section id="cards" class="test-section">
+      <h2 class="test-section-title">Cards</h2>
+
+      <div class="component-showcase">
+        <p class="component-label">Product Cards</p>
+        <div class="card-grid">
+          <div class="card-product">
+            <div style="width: 100%; aspect-ratio: 16/9; background: linear-gradient(135deg, var(--color-primary), var(--color-gemini));"></div>
+            <div class="card-product-content">
+              <h3 class="card-product-title">Gemini Pro</h3>
+              <p class="card-product-description">Advanced AI for complex tasks with multimodal capabilities and deep reasoning.</p>
+              <div class="card-product-cta">
+                <a href="#" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-product">
+            <div style="width: 100%; aspect-ratio: 16/9; background: linear-gradient(135deg, var(--color-gemini), var(--color-gemini-dark));"></div>
+            <div class="card-product-content">
+              <h3 class="card-product-title">Gemini Ultra</h3>
+              <p class="card-product-description">Most capable AI model for the most complex tasks and challenges.</p>
+              <div class="card-product-cta">
+                <a href="#" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <p class="component-label">Feature Cards</p>
+        <div class="card-grid">
+          <div class="card-feature">
+            <div class="card-feature-icon">🎯</div>
+            <h3 class="card-feature-title">Precise Answers</h3>
+            <p class="card-feature-description">Get accurate responses with citations and source verification.</p>
+          </div>
+
+          <div class="card-feature">
+            <div class="card-feature-icon">⚡</div>
+            <h3 class="card-feature-title">Lightning Fast</h3>
+            <p class="card-feature-description">Experience instant responses powered by Google's infrastructure.</p>
+          </div>
+
+          <div class="card-feature">
+            <div class="card-feature-icon">🔒</div>
+            <h3 class="card-feature-title">Secure & Private</h3>
+            <p class="card-feature-description">Your data is protected with enterprise-grade security.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <p class="component-label">Testimonial Card</p>
+        <div class="card-testimonial">
+          <p class="card-testimonial-quote">
+            Gemini has completely transformed how I approach research and writing. The citation features give me confidence in every answer.
+          </p>
+          <div class="card-testimonial-author">
+            <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--color-primary);"></div>
+            <div class="card-testimonial-info">
+              <div class="card-testimonial-name">Sarah Johnson</div>
+              <div class="card-testimonial-role">Research Analyst</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <p class="component-label">Stat Cards</p>
+        <div class="card-grid">
+          <div class="card-stat">
+            <div class="card-stat-value">99.9%</div>
+            <div class="card-stat-label">Accuracy Rate</div>
+          </div>
+
+          <div class="card-stat">
+            <div class="card-stat-value">10M+</div>
+            <div class="card-stat-label">Active Users</div>
+          </div>
+
+          <div class="card-stat">
+            <div class="card-stat-value">50+</div>
+            <div class="card-stat-label">Languages</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== HERO SECTIONS ========== -->
+    <section id="heroes" class="test-section">
+      <h2 class="test-section-title">Hero Sections</h2>
+
+      <div class="component-showcase">
+        <p class="component-label">Full-Bleed Hero (Scaled Down)</p>
+        <div class="hero-fullbleed" style="min-height: 400px;">
+          <div class="hero-fullbleed-content">
+            <h1 class="hero-fullbleed-headline" style="font-size: var(--font-size-h1);">Meet Gemini</h1>
+            <p class="hero-fullbleed-subheadline" style="font-size: var(--font-size-h5);">AI that understands you better</p>
+            <div class="hero-fullbleed-cta">
+              <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+              <a href="#" class="btn btn-secondary btn-lg">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <p class="component-label">Split Hero (Scaled Down)</p>
+        <div class="hero-split" style="min-height: auto; padding: var(--space-8);">
+          <div class="hero-split-content">
+            <h2 class="hero-split-headline" style="font-size: var(--font-size-h2);">AI-Powered Productivity</h2>
+            <p class="hero-split-description">Transform your workflow with intelligent assistance that learns from you.</p>
+            <a href="#" class="btn btn-primary">Explore Features</a>
+          </div>
+          <div style="width: 100%; aspect-ratio: 4/3; background: linear-gradient(135deg, var(--color-primary), var(--color-gemini)); border-radius: var(--radius-2xl);"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CTAs ========== -->
+    <section id="ctas" class="test-section">
+      <h2 class="test-section-title">Call-to-Action Components</h2>
+
+      <div class="component-showcase">
+        <p class="component-label">Inline CTA</p>
+        <p style="font-size: var(--font-size-body); color: var(--color-text-secondary); margin-bottom: var(--space-4);">
+          Discover how Gemini can help you work smarter. <a href="#" class="cta-inline">Learn more</a>
+        </p>
+      </div>
+
+      <div class="component-showcase">
+        <p class="component-label">Banner CTA</p>
+        <div class="cta-banner">
+          <h2 class="cta-banner-headline">Ready to transform your workflow?</h2>
+          <p class="cta-banner-description">Join millions of users who trust Gemini for their daily tasks.</p>
+          <div class="cta-banner-buttons">
+            <a href="#" class="btn btn-primary btn-lg">Start Free Trial</a>
+            <a href="#" class="btn btn-secondary btn-lg">View Pricing</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <p class="component-label">Section CTA</p>
+        <div class="cta-section">
+          <p class="cta-section-eyebrow">Get Started Today</p>
+          <h2 class="cta-section-headline">Experience the Future of AI</h2>
+          <p class="cta-section-description">No credit card required. Start using Gemini in seconds.</p>
+          <a href="#" class="btn btn-gemini btn-lg">Try Gemini Free</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== BADGES & TAGS ========== -->
+    <section id="badges" class="test-section">
+      <h2 class="test-section-title">Badges & Tags</h2>
+
+      <div class="component-showcase">
+        <p class="component-label">Badges</p>
+        <div style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
+          <span class="badge badge-primary">Primary</span>
+          <span class="badge badge-success">Success</span>
+          <span class="badge badge-warning">Warning</span>
+          <span class="badge badge-error">Error</span>
+          <span class="badge badge-trust">Trusted</span>
+          <span class="badge badge-verified">Verified</span>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <p class="component-label">Tags</p>
+        <div style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
+          <span class="tag">AI</span>
+          <span class="tag">Machine Learning</span>
+          <span class="tag">Google</span>
+          <span class="tag">Productivity</span>
+        </div>
+      </div>
+
+      <div class="component-showcase">
+        <p class="component-label">Trust Indicators</p>
+        <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+          <span class="trust-indicator">
+            <span class="trust-indicator-icon">✓</span>
+            Verified Source
+          </span>
+          <span class="citation-badge">Citation: Nature Journal, 2024</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FORMS ========== -->
+    <section id="forms" class="test-section">
+      <h2 class="test-section-title">Form Elements</h2>
+
+      <div class="component-showcase">
+        <form>
+          <div class="form-group">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" id="email" class="form-input" placeholder="you@example.com">
+            <span class="form-help">We'll never share your email.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" class="form-textarea" placeholder="Tell us what you think..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="country" class="form-label">Country</label>
+            <select id="country" class="form-select">
+              <option>United States</option>
+              <option>United Kingdom</option>
+              <option>Canada</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-checkbox">
+            <input type="checkbox" id="subscribe">
+            <label for="subscribe">Subscribe to newsletter</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ========== FEATURE SECTIONS ========== -->
+    <section id="features" class="test-section">
+      <h2 class="test-section-title">Feature Sections</h2>
+
+      <div class="component-showcase">
+        <p class="component-label">Feature Showcase</p>
+        <div class="feature-showcase">
+          <h2 class="feature-showcase-title">Powered by Google AI</h2>
+          <p class="feature-showcase-subtitle">Experience the next generation of artificial intelligence</p>
+          <div style="width: 100%; max-width: 600px; aspect-ratio: 16/9; background: linear-gradient(135deg, var(--color-primary), var(--color-gemini)); border-radius: var(--radius-xl); margin: 0 auto;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== UTILITIES ========== -->
+    <section id="utilities" class="test-section">
+      <h2 class="test-section-title">Utility Components</h2>
+
+      <div class="component-showcase">
+        <p class="component-label">Dividers</p>
+        <p>Content above</p>
+        <hr class="divider">
+        <p>Content below</p>
+      </div>
+
+      <div class="component-showcase">
+        <p class="component-label">Loading Spinner</p>
+        <div class="spinner"></div>
+      </div>
+
+      <div class="component-showcase">
+        <p class="component-label">Breadcrumbs</p>
+        <nav class="breadcrumbs">
+          <a href="#" class="breadcrumb-link">Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <a href="#" class="breadcrumb-link">Products</a>
+          <span class="breadcrumb-separator">/</span>
+          <span class="breadcrumb-current">Gemini Pro</span>
+        </nav>
+      </div>
+    </section>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div>
+          <h3 class="footer-column-title">Product</h3>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Features</a></li>
+            <li><a href="#" class="footer-link">Pricing</a></li>
+            <li><a href="#" class="footer-link">Enterprise</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-column-title">Company</h3>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">About</a></li>
+            <li><a href="#" class="footer-link">Blog</a></li>
+            <li><a href="#" class="footer-link">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-column-title">Resources</h3>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Documentation</a></li>
+            <li><a href="#" class="footer-link">Support</a></li>
+            <li><a href="#" class="footer-link">Community</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2024 Gemini. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="#" class="footer-social-link" aria-label="Twitter">𝕏</a>
+          <a href="#" class="footer-social-link" aria-label="LinkedIn">in</a>
+          <a href="#" class="footer-social-link" aria-label="GitHub">GH</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.querySelector('.navbar-toggle')?.addEventListener('click', () => {
+      document.querySelector('.navbar-menu')?.classList.toggle('active');
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar?.classList.add('navbar-scrolled');
+      } else {
+        navbar?.classList.remove('navbar-scrolled');
+      }
+    });
+  </script>
+</body>
+</html>

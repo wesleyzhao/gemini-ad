@@ -1,0 +1,11 @@
+{
+  "filename": "workspace-infinity-large-desktop.png",
+  "page": "Workspace Infinity",
+  "pagePath": "/pages/workspace-infinity.html",
+  "viewport": {
+    "width": 2560,
+    "height": 1440
+  },
+  "timestamp": "2026-02-01T11:36:41.542Z",
+  "note": "This is a placeholder file. Run actual screenshot generation with system dependencies installed or use Docker."
+}

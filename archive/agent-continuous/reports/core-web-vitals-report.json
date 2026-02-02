@@ -1,0 +1,351 @@
+{
+  "generated": "2026-02-01T11:12:36.460Z",
+  "budgets": {
+    "LCP": {
+      "good": 2500,
+      "needsWork": 4000
+    },
+    "FID": {
+      "good": 100,
+      "needsWork": 300
+    },
+    "CLS": {
+      "good": 0.1,
+      "needsWork": 0.25
+    },
+    "FCP": {
+      "good": 1800,
+      "needsWork": 3000
+    },
+    "TTFB": {
+      "good": 800,
+      "needsWork": 1800
+    },
+    "TBT": {
+      "good": 200,
+      "needsWork": 600
+    }
+  },
+  "analysis": [
+    {
+      "file": "animations-demo.html",
+      "issues": 4,
+      "issuesList": [
+        "Missing preconnect for external resources",
+        "Missing font-display:swap on Google Fonts",
+        "No preload hints for critical resources",
+        "No Core Web Vitals monitoring"
+      ],
+      "externalRequests": 3,
+      "inlineCSSSize": "9 KB"
+    },
+    {
+      "file": "apple-style-variation-b.html",
+      "issues": 4,
+      "issuesList": [
+        "Missing preconnect for external resources",
+        "Missing font-display:swap on Google Fonts",
+        "No preload hints for critical resources",
+        "No Core Web Vitals monitoring"
+      ],
+      "externalRequests": 7,
+      "inlineCSSSize": "10 KB"
+    },
+    {
+      "file": "apple-style.html",
+      "issues": 4,
+      "issuesList": [
+        "Missing preconnect for external resources",
+        "Missing font-display:swap on Google Fonts",
+        "No preload hints for critical resources",
+        "No Core Web Vitals monitoring"
+      ],
+      "externalRequests": 7,
+      "inlineCSSSize": "8 KB"
+    },
+    {
+      "file": "automators.html",
+      "issues": 4,
+      "issuesList": [
+        "Missing preconnect for external resources",
+        "Missing font-display:swap on Google Fonts",
+        "No preload hints for critical resources",
+        "No Core Web Vitals monitoring"
+      ],
+      "externalRequests": 7,
+      "inlineCSSSize": "7 KB"
+    },
+    {
+      "file": "comparison.html",
+      "issues": 4,
+      "issuesList": [
+        "Missing preconnect for external resources",
+        "Missing font-display:swap on Google Fonts",
+        "No preload hints for critical resources",
+        "No Core Web Vitals monitoring"
+      ],
+      "externalRequests": 5,
+      "inlineCSSSize": "4 KB"
+    },
+    {
+      "file": "creators-variation-b.html",
+      "issues": 4,
+      "issuesList": [
+        "Missing preconnect for external resources",
+        "Missing font-display:swap on Google Fonts",
+        "No preload hints for critical resources",
+        "No Core Web Vitals monitoring"
+      ],
+      "externalRequests": 8,
+      "inlineCSSSize": "9 KB"
+    },
+    {
+      "file": "creators.html",
+      "issues": 4,
+      "issuesList": [
+        "Missing preconnect for external resources",
+        "Missing font-display:swap on Google Fonts",
+        "No preload hints for critical resources",
+        "No Core Web Vitals monitoring"
+      ],
+      "externalRequests": 7,
+      "inlineCSSSize": "9 KB"
+    },
+    {
+      "file": "future.html",
+      "issues": 4,
+      "issuesList": [
+        "Missing preconnect for external resources",
+        "Missing font-display:swap on Google Fonts",
+        "No preload hints for critical resources",
+        "No Core Web Vitals monitoring"
+      ],
+      "externalRequests": 7,
+      "inlineCSSSize": "5 KB"
+    },
+    {
+      "file": "index.html",
+      "issues": 4,
+      "issuesList": [
+        "Missing preconnect for external resources",
+        "Missing font-display:swap on Google Fonts",
+        "No preload hints for critical resources",
+        "No Core Web Vitals monitoring"
+      ],
+      "externalRequests": 3,
+      "inlineCSSSize": "4 KB"
+    },
+    {
+      "file": "operators-variation-b.html",
+      "issues": 4,
+      "issuesList": [
+        "Missing preconnect for external resources",
+        "Missing font-display:swap on Google Fonts",
+        "No preload hints for critical resources",
+        "No Core Web Vitals monitoring"
+      ],
+      "externalRequests": 7,
+      "inlineCSSSize": "8 KB"
+    },
+    {
+      "file": "operators.html",
+      "issues": 4,
+      "issuesList": [
+        "Missing preconnect for external resources",
+        "Missing font-display:swap on Google Fonts",
+        "No preload hints for critical resources",
+        "No Core Web Vitals monitoring"
+      ],
+      "externalRequests": 7,
+      "inlineCSSSize": "6 KB"
+    },
+    {
+      "file": "productivity-variation-b.html",
+      "issues": 4,
+      "issuesList": [
+        "Missing preconnect for external resources",
+        "Missing font-display:swap on Google Fonts",
+        "No preload hints for critical resources",
+        "No Core Web Vitals monitoring"
+      ],
+      "externalRequests": 8,
+      "inlineCSSSize": "8 KB"
+    },
+    {
+      "file": "productivity.html",
+      "issues": 4,
+      "issuesList": [
+        "Missing preconnect for external resources",
+        "Missing font-display:swap on Google Fonts",
+        "No preload hints for critical resources",
+        "No Core Web Vitals monitoring"
+      ],
+      "externalRequests": 7,
+      "inlineCSSSize": "5 KB"
+    },
+    {
+      "file": "research.html",
+      "issues": 4,
+      "issuesList": [
+        "Missing preconnect for external resources",
+        "Missing font-display:swap on Google Fonts",
+        "No preload hints for critical resources",
+        "No Core Web Vitals monitoring"
+      ],
+      "externalRequests": 7,
+      "inlineCSSSize": "6 KB"
+    },
+    {
+      "file": "trust-variation-b.html",
+      "issues": 4,
+      "issuesList": [
+        "Missing preconnect for external resources",
+        "Missing font-display:swap on Google Fonts",
+        "No preload hints for critical resources",
+        "No Core Web Vitals monitoring"
+      ],
+      "externalRequests": 7,
+      "inlineCSSSize": "8 KB"
+    },
+    {
+      "file": "trust.html",
+      "issues": 4,
+      "issuesList": [
+        "Missing preconnect for external resources",
+        "Missing font-display:swap on Google Fonts",
+        "No preload hints for critical resources",
+        "No Core Web Vitals monitoring"
+      ],
+      "externalRequests": 7,
+      "inlineCSSSize": "6 KB"
+    },
+    {
+      "file": "valentine.html",
+      "issues": 4,
+      "issuesList": [
+        "Missing preconnect for external resources",
+        "Missing font-display:swap on Google Fonts",
+        "No preload hints for critical resources",
+        "No Core Web Vitals monitoring"
+      ],
+      "externalRequests": 7,
+      "inlineCSSSize": "7 KB"
+    },
+    {
+      "file": "workspace.html",
+      "issues": 4,
+      "issuesList": [
+        "Missing preconnect for external resources",
+        "Missing font-display:swap on Google Fonts",
+        "No preload hints for critical resources",
+        "No Core Web Vitals monitoring"
+      ],
+      "externalRequests": 6,
+      "inlineCSSSize": "3 KB"
+    },
+    {
+      "file": "writers-variation-b.html",
+      "issues": 4,
+      "issuesList": [
+        "Missing preconnect for external resources",
+        "Missing font-display:swap on Google Fonts",
+        "No preload hints for critical resources",
+        "No Core Web Vitals monitoring"
+      ],
+      "externalRequests": 7,
+      "inlineCSSSize": "7 KB"
+    },
+    {
+      "file": "writers.html",
+      "issues": 4,
+      "issuesList": [
+        "Missing preconnect for external resources",
+        "Missing font-display:swap on Google Fonts",
+        "No preload hints for critical resources",
+        "No Core Web Vitals monitoring"
+      ],
+      "externalRequests": 7,
+      "inlineCSSSize": "7 KB"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "metric": "LCP",
+      "issue": "Optimize Largest Contentful Paint",
+      "actions": [
+        "Preload hero images or use CSS gradients",
+        "Inline critical CSS for above-fold content",
+        "Use CDN for faster asset delivery",
+        "Optimize font loading with font-display:swap",
+        "Minimize render-blocking resources"
+      ]
+    },
+    {
+      "priority": "HIGH",
+      "metric": "CLS",
+      "issue": "Prevent Cumulative Layout Shift",
+      "actions": [
+        "Add explicit width/height to all images",
+        "Reserve space for dynamic content",
+        "Avoid inserting content above existing content",
+        "Use CSS aspect-ratio for responsive images",
+        "Preload fonts to avoid FOIT/FOUT"
+      ]
+    },
+    {
+      "priority": "MEDIUM",
+      "metric": "FID/INP",
+      "issue": "Optimize First Input Delay & Interaction",
+      "actions": [
+        "Defer non-critical JavaScript",
+        "Split long tasks into smaller chunks",
+        "Use web workers for heavy computation",
+        "Minimize main thread work",
+        "Optimize event handlers"
+      ]
+    },
+    {
+      "priority": "MEDIUM",
+      "metric": "FCP",
+      "issue": "Improve First Contentful Paint",
+      "actions": [
+        "Reduce server response time (TTFB)",
+        "Eliminate render-blocking resources",
+        "Minify CSS and JavaScript",
+        "Use HTTP/2 for multiplexing",
+        "Enable text compression (gzip/brotli)"
+      ]
+    }
+  ],
+  "performanceBudgets": {
+    "description": "Maximum allowed values for production",
+    "budgets": {
+      "LCP": {
+        "good": 2500,
+        "needsWork": 4000
+      },
+      "FID": {
+        "good": 100,
+        "needsWork": 300
+      },
+      "CLS": {
+        "good": 0.1,
+        "needsWork": 0.25
+      },
+      "FCP": {
+        "good": 1800,
+        "needsWork": 3000
+      },
+      "TTFB": {
+        "good": 800,
+        "needsWork": 1800
+      },
+      "TBT": {
+        "good": 200,
+        "needsWork": 600
+      }
+    },
+    "enforcement": "Monitor via Lighthouse CI and GitHub Actions"
+  }
+}

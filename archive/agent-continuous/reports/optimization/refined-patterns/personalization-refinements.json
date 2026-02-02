@@ -1,0 +1,74 @@
+{
+  "writers": {
+    "fiction-writer": {
+      "original": {
+        "badge": "✍️ Perfect for Fiction Writers",
+        "heading": "Write Stories That<br>Captivate Readers",
+        "description": "From plot development to character arcs—Gemini helps you craft compelling narratives with AI-powered writing assistance.",
+        "ctaPrimary": "Start Writing"
+      },
+      "refinedA": {
+        "badge": "✍️ For Storytellers",
+        "heading": "Bring Your Stories<br>To Life Faster",
+        "description": "Beat writer's block, develop rich characters, and maintain consistency across chapters with intelligent writing support.",
+        "ctaPrimary": "Start Your Story"
+      },
+      "refinedB": {
+        "badge": "✍️ Master Your Craft",
+        "heading": "Write Like a Pro<br>With AI Assistance",
+        "description": "Professional-quality narrative development, dialogue refinement, and world-building tools at your fingertips.",
+        "ctaPrimary": "Elevate Your Writing"
+      }
+    },
+    "blogger": {
+      "original": {
+        "badge": "📝 Perfect for Bloggers",
+        "heading": "Create Blog Posts<br>That Drive Traffic",
+        "description": "Research topics, optimize SEO, and write engaging content that ranks higher and converts better.",
+        "ctaPrimary": "Start Blogging"
+      },
+      "refinedA": {
+        "badge": "📈 Grow Your Blog",
+        "heading": "10X Your Blog Traffic<br>With Smarter Content",
+        "description": "Find trending topics, write SEO-optimized posts in minutes, and outrank competitors with data-driven insights.",
+        "ctaPrimary": "Boost Your Traffic"
+      },
+      "refinedB": {
+        "badge": "💰 Monetize Faster",
+        "heading": "Turn Your Blog<br>Into Income",
+        "description": "Create high-converting content, optimize for affiliate marketing, and build an audience that generates revenue.",
+        "ctaPrimary": "Start Earning"
+      },
+      "refinedC": {
+        "badge": "⚡ Blog Faster",
+        "heading": "Publish Daily Without<br>Burning Out",
+        "description": "Write engaging posts 5x faster with AI assistance. Never run out of ideas. Stay consistent without sacrificing quality.",
+        "ctaPrimary": "Write Faster"
+      }
+    },
+    "business-writer": {
+      "original": {
+        "badge": "💼 Perfect for Business Writers",
+        "heading": "Write Professional<br>Business Content",
+        "description": "Create reports, proposals, and documentation with clarity and precision using AI-powered business writing tools.",
+        "ctaPrimary": "Write Better"
+      },
+      "refinedA": {
+        "badge": "📊 Business Excellence",
+        "heading": "Write Documents<br>That Close Deals",
+        "description": "Create compelling proposals, executive summaries, and reports that impress stakeholders and drive results.",
+        "ctaPrimary": "Win More Business"
+      }
+    }
+  },
+  "creators": {
+    "video-creator-alt": {
+      "refinedA": {
+        "badge": "🎬 For YouTubers",
+        "heading": "Hit 100K Subscribers<br>Faster",
+        "description": "Script viral videos, optimize titles and thumbnails, and analyze what works—all with AI that understands YouTube.",
+        "ctaPrimary": "Grow Your Channel"
+      }
+    }
+  }
+}

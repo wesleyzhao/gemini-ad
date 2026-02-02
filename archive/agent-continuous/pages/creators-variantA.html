@@ -1,0 +1,1381 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Create Faster, Create Better | Gemini for Creators</title>
+    <meta name="description" content="From concept to final cut in minutes. Gemini with Nano Banana helps video creators ideate, script, and optimize content.">
+      <link rel="preload" href="../assets/css/shared-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="preload" href="../assets/css/shared-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="../assets/css/shared-styles.css"></noscript>
+<style>
+
+/* ============================================
+   MOBILE UX ENHANCEMENTS - Feature #90
+   Target: 95%+ Mobile UX Score
+   ============================================ */
+
+/* Ensure ALL interactive elements meet 48x48px minimum touch target */
+button, a.cta-button, .cta-primary, .cta-secondary, input[type="submit"], input[type="button"] {
+    min-width: 48px !important;
+    min-height: 48px !important;
+    padding: 14px 28px !important;
+}
+
+/* Improve form spacing for mobile */
+input, textarea, select {
+    min-height: 48px !important;
+    padding: 14px 16px !important;
+    margin-bottom: 16px !important;
+    font-size: 16px !important; /* Prevents iOS zoom */
+    border-radius: 8px !important;
+}
+
+/* Ensure legible text on all devices */
+body {
+    font-size: clamp(16px, 1.2vw, 18px) !important;
+}
+
+p, li, span {
+    font-size: clamp(16px, 1.1vw, 18px) !important;
+    line-height: 1.6 !important;
+}
+
+h1 {
+    font-size: clamp(32px, 5vw, 56px) !important;
+}
+
+h2 {
+    font-size: clamp(24px, 3vw, 40px) !important;
+}
+
+h3 {
+    font-size: clamp(20px, 2.5vw, 32px) !important;
+}
+
+/* Mobile-optimized spacing */
+@media (max-width: 768px) {
+    .hero, .section {
+        padding: 60px 20px !important;
+    }
+
+    .container {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    /* Larger tap targets for mobile */
+    nav a, .nav-link {
+        min-height: 48px !important;
+        padding: 12px 16px !important;
+    }
+}
+
+
+/* ============================================
+   ACCESSIBILITY ENHANCEMENTS - Feature #90
+   Target: 95%+ Accessibility Score
+   ============================================ */
+
+/* Enhanced focus indicators */
+*:focus {
+    outline: 3px solid #4285f4 !important;
+    outline-offset: 3px !important;
+}
+
+*:focus:not(:focus-visible) {
+    outline: none !important;
+}
+
+*:focus-visible {
+    outline: 3px solid #4285f4 !important;
+    outline-offset: 3px !important;
+    box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.2) !important;
+}
+
+/* Skip to content link */
+.skip-to-content {
+    position: absolute !important;
+    top: -60px !important;
+    left: 10px !important;
+    background: #000 !important;
+    color: #fff !important;
+    padding: 12px 20px !important;
+    text-decoration: none !important;
+    z-index: 100000 !important;
+    border-radius: 4px !important;
+    font-weight: 600 !important;
+    transition: top 0.2s ease !important;
+}
+
+.skip-to-content:focus {
+    top: 10px !important;
+    outline: 3px solid #fff !important;
+    outline-offset: 2px !important;
+}
+
+/* Ensure sufficient color contrast */
+.text-light {
+    color: #333 !important;
+}
+
+.text-muted {
+    color: #666 !important;
+}
+
+/* Screen reader only text */
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0,0,0,0) !important;
+    white-space: nowrap !important;
+    border-width: 0 !important;
+}
+
+
+/* ============================================
+   PERFORMANCE ENHANCEMENTS - Feature #90
+   Target: 97%+ Performance Score
+   ============================================ */
+
+/* Optimize animations for performance */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Use GPU acceleration for animations */
+[data-animate], .animate-in {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+}
+
+/* Prevent layout shifts */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Critical CSS for fonts */
+@font-face {
+    font-family: 'Inter';
+    font-display: swap;
+    src: local('Inter');
+}
+
+</style>
+
+</head><body data-ab-test="personalization-urgency-combo" data-variant="variantA">&gt;
+    <style>
+        /* Creator's Theme - Visual & Dynamic */
+        :root {
+            --creator-purple: #8b5cf6;
+            --creator-pink: #ec4899;
+            --creator-orange: #f97316;
+            --creator-cyan: #06b6d4;
+            --creator-gradient: linear-gradient(135deg, var(--creator-purple), var(--creator-pink), var(--creator-orange));
+        }
+
+        .hero-creators {
+            background: radial-gradient(ellipse at top, var(--gemini-blue-light), var(--white));
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Animated Gradient Background */
+        .gradient-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.3;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .orb-1 {
+            width: 400px;
+            height: 400px;
+            background: var(--creator-purple);
+            top: -100px;
+            left: -100px;
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            width: 350px;
+            height: 350px;
+            background: var(--creator-pink);
+            top: 50%;
+            right: -100px;
+            animation-delay: 5s;
+        }
+
+        .orb-3 {
+            width: 300px;
+            height: 300px;
+            background: var(--creator-cyan);
+            bottom: -100px;
+            left: 30%;
+            animation-delay: 10s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(50px, -50px) scale(1.1); }
+            66% { transform: translate(-30px, 30px) scale(0.9); }
+        }
+
+        .video-showcase {
+            background: var(--gray-900);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-2);
+            box-shadow: var(--shadow-2xl);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-placeholder {
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all var(--transition-base);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+        }
+
+        .play-icon {
+            width: 0;
+            height: 0;
+            border-left: 24px solid var(--gray-900);
+            border-top: 16px solid transparent;
+            border-bottom: 16px solid transparent;
+            margin-left: 6px;
+        }
+
+        .creator-stat {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: var(--space-6);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-base);
+        }
+
+        .creator-stat:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .stat-icon {
+            font-size: 3rem;
+            margin-bottom: var(--space-3);
+            display: block;
+        }
+
+        .stat-value {
+            font-size: var(--text-4xl);
+            font-weight: var(--weight-bold);
+            background: var(--creator-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            margin-bottom: var(--space-2);
+        }
+
+        .workflow-step {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-5);
+            border-left: 4px solid var(--creator-purple);
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+
+        .workflow-step::before {
+            content: attr(data-step);
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: var(--creator-gradient);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: var(--weight-bold);
+            box-shadow: var(--shadow-md);
+        }
+
+        .feature-creator {
+            background: linear-gradient(135deg, var(--white), var(--gray-50));
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+            transition: all var(--transition-base);
+        }
+
+        .feature-creator::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: var(--radius-xl);
+            background: var(--creator-gradient);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity var(--transition-base);
+        }
+
+        .feature-creator:hover::before {
+            opacity: 1;
+        }
+
+        .feature-creator:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .gradient-text-creator {
+            background: var(--creator-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: var(--space-8);
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--creator-gradient);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: var(--space-6);
+            padding-left: var(--space-4);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -42px;
+            top: 8px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--white);
+            border: 3px solid var(--creator-purple);
+            box-shadow: var(--shadow-md);
+        }
+
+        .content-type-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 16px;
+            border-radius: var(--radius-full);
+            font-size: var(--text-sm);
+            font-weight: var(--weight-medium);
+            margin: 4px;
+            transition: all var(--transition-base);
+            cursor: pointer;
+        }
+
+        .badge-youtube {
+            background: #ff0000;
+            color: white;
+        }
+
+        .badge-tiktok {
+            background: #000000;
+            color: white;
+        }
+
+        .badge-instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: white;
+        }
+
+        .badge-podcast {
+            background: #9b59b6;
+            color: white;
+        }
+
+        .content-type-badge:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            /* Shared styles handle most mobile responsiveness */
+        }
+    </style>
+
+<!-- Google Analytics 4 - Performance Monitoring -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXXXXXXXXX', {
+    'send_page_view': true,
+    'page_path': window.location.pathname,
+    'page_title': document.title,
+    'custom_map': {
+      'dimension1': 'page_variant',
+      'dimension2': 'user_segment',
+      'dimension3': 'scroll_depth'
+    }
+  });
+
+  // CTA Click Tracking
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.cta-button, .cta, [data-cta]').forEach(button => {
+      button.addEventListener('click', function() {
+        gtag('event', 'cta_click', {
+          'cta_location': this.dataset.location || this.className,
+          'cta_text': this.textContent.trim(),
+          'page_variant': document.body.dataset.variant || 'control'
+        });
+      });
+    });
+
+    // Scroll Depth Tracking
+    let scrollDepths = [25, 50, 75, 90, 100];
+    let triggeredDepths = new Set();
+
+    window.addEventListener('scroll', function() {
+      const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+
+      scrollDepths.forEach(depth => {
+        if (scrollPercent >= depth && !triggeredDepths.has(depth)) {
+          triggeredDepths.add(depth);
+          gtag('event', 'scroll_depth', {
+            'scroll_percentage': depth,
+            'page_variant': document.body.dataset.variant || 'control'
+          });
+        }
+      });
+    });
+
+    // Time on Page Tracking
+    let startTime = Date.now();
+    window.addEventListener('beforeunload', function() {
+      const timeSpent = Math.round((Date.now() - startTime) / 1000);
+      gtag('event', 'time_on_page', {
+        'time_seconds': timeSpent,
+        'page_variant': document.body.dataset.variant || 'control'
+      });
+    });
+  });
+</script>
+
+
+<!-- Core Web Vitals Tracking -->
+<script type="module">
+  import {onCLS, onFID, onLCP, onFCP, onTTFB, onINP} from 'https://unpkg.com/web-vitals@3?module';
+
+  function sendToAnalytics({name, value, id, rating}) {
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'web_vitals', {
+        'metric_name': name,
+        'metric_value': Math.round(value),
+        'metric_id': id,
+        'metric_rating': rating,
+        'page_variant': document.body.dataset.variant || 'control'
+      });
+    }
+
+    // Log to console in development
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+      console.log(`[Web Vital] ${name}:`, {
+        value: Math.round(value) + (name === 'CLS' ? '' : 'ms'),
+        rating: rating,
+        id: id
+      });
+    }
+  }
+
+  onCLS(sendToAnalytics);
+  onFID(sendToAnalytics);
+  onLCP(sendToAnalytics);
+  onFCP(sendToAnalytics);
+  onTTFB(sendToAnalytics);
+  onINP(sendToAnalytics);
+</script>
+
+
+  <meta name="theme-color" content="#1a73e8">
+
+  <!-- Preconnect to external domains for faster resource loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://app.tailorhq.ai">
+
+<!-- Core Web Vitals Monitoring -->
+<script>
+(function() {
+  'use strict';
+
+  // Core Web Vitals measurement using PerformanceObserver
+  const vitals = {
+    LCP: null,
+    FID: null,
+    CLS: 0,
+    FCP: null,
+    TTFB: null,
+    INP: null
+  };
+
+  // Largest Contentful Paint (LCP)
+  function measureLCP() {
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        vitals.LCP = Math.round(lastEntry.renderTime || lastEntry.loadTime);
+
+        if (window.gtag) {
+          gtag('event', 'web_vitals', {
+            event_category: 'Web Vitals',
+            event_label: 'LCP',
+            value: vitals.LCP,
+            metric_rating: vitals.LCP <= 2500 ? 'good' : vitals.LCP <= 4000 ? 'needs-improvement' : 'poor',
+            non_interaction: true
+          });
+        }
+      });
+      observer.observe({ type: 'largest-contentful-paint', buffered: true });
+    } catch (e) {
+      console.warn('LCP measurement not supported');
+    }
+  }
+
+  // First Input Delay (FID)
+  function measureFID() {
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          vitals.FID = Math.round(entry.processingStart - entry.startTime);
+
+          if (window.gtag) {
+            gtag('event', 'web_vitals', {
+              event_category: 'Web Vitals',
+              event_label: 'FID',
+              value: vitals.FID,
+              metric_rating: vitals.FID <= 100 ? 'good' : vitals.FID <= 300 ? 'needs-improvement' : 'poor',
+              non_interaction: true
+            });
+          }
+        });
+      });
+      observer.observe({ type: 'first-input', buffered: true });
+    } catch (e) {
+      console.warn('FID measurement not supported');
+    }
+  }
+
+  // Interaction to Next Paint (INP) - New metric replacing FID
+  function measureINP() {
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        let maxDuration = 0;
+
+        entries.forEach((entry) => {
+          const duration = entry.processingEnd - entry.startTime;
+          if (duration > maxDuration) {
+            maxDuration = duration;
+          }
+        });
+
+        vitals.INP = Math.round(maxDuration);
+
+        if (window.gtag && vitals.INP > 0) {
+          gtag('event', 'web_vitals', {
+            event_category: 'Web Vitals',
+            event_label: 'INP',
+            value: vitals.INP,
+            metric_rating: vitals.INP <= 200 ? 'good' : vitals.INP <= 500 ? 'needs-improvement' : 'poor',
+            non_interaction: true
+          });
+        }
+      });
+      observer.observe({ type: 'event', buffered: true, durationThreshold: 16 });
+    } catch (e) {
+      console.warn('INP measurement not supported');
+    }
+  }
+
+  // Cumulative Layout Shift (CLS)
+  function measureCLS() {
+    try {
+      let clsValue = 0;
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
+            vitals.CLS = Math.round(clsValue * 1000) / 1000;
+          }
+        }
+      });
+      observer.observe({ type: 'layout-shift', buffered: true });
+
+      // Report CLS on page unload
+      addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'hidden' && window.gtag) {
+          gtag('event', 'web_vitals', {
+            event_category: 'Web Vitals',
+            event_label: 'CLS',
+            value: Math.round(vitals.CLS * 1000),
+            metric_rating: vitals.CLS <= 0.1 ? 'good' : vitals.CLS <= 0.25 ? 'needs-improvement' : 'poor',
+            non_interaction: true
+          });
+        }
+      });
+    } catch (e) {
+      console.warn('CLS measurement not supported');
+    }
+  }
+
+  // First Contentful Paint (FCP)
+  function measureFCP() {
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.name === 'first-contentful-paint') {
+            vitals.FCP = Math.round(entry.startTime);
+          }
+        });
+      });
+      observer.observe({ type: 'paint', buffered: true });
+    } catch (e) {
+      console.warn('FCP measurement not supported');
+    }
+  }
+
+  // Time to First Byte (TTFB)
+  function measureTTFB() {
+    try {
+      const navEntry = performance.getEntriesByType('navigation')[0];
+      if (navEntry) {
+        vitals.TTFB = Math.round(navEntry.responseStart - navEntry.requestStart);
+      }
+    } catch (e) {
+      console.warn('TTFB measurement not supported');
+    }
+  }
+
+  // Initialize measurements when DOM is ready
+  if (document.readyState === 'complete') {
+    measureLCP();
+    measureFID();
+    measureINP();
+    measureCLS();
+    measureFCP();
+    measureTTFB();
+  } else {
+    addEventListener('load', () => {
+      measureLCP();
+      measureFID();
+      measureINP();
+      measureCLS();
+      measureFCP();
+      measureTTFB();
+    });
+  }
+
+  // Expose vitals for debugging
+  window.__webVitals = vitals;
+})();
+</script>
+  <style id="critical-css">
+/* Critical CSS - Above the fold */
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font-family:'SF Pro Display',-apple-system,BlinkMacSystemFont,'Google Sans','Segoe UI',Roboto,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+header{position:fixed;top:0;left:0;right:0;height:48px;background:#fff;z-index:1000;border-bottom:1px solid #e8eaed}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center}
+.container{max-width:1280px;margin:0 auto;padding:0 24px}
+.btn-primary{display:inline-flex;align-items:center;padding:14px 28px;background:#1a73e8;color:#fff;border:none;border-radius:8px;font-weight:500;cursor:pointer;transition:all .2s}
+</style>
+  <style id="critical-css">
+/* Critical CSS - Above the fold */
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font-family:'SF Pro Display',-apple-system,BlinkMacSystemFont,'Google Sans','Segoe UI',Roboto,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+header{position:fixed;top:0;left:0;right:0;height:48px;background:#fff;z-index:1000;border-bottom:1px solid #e8eaed}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center}
+.container{max-width:1280px;margin:0 auto;padding:0 24px}
+.btn-primary{display:inline-flex;align-items:center;padding:14px 28px;background:#1a73e8;color:#fff;border:none;border-radius:8px;font-weight:500;cursor:pointer;transition:all .2s}
+</style>
+
+  <!-- Preload fonts to reduce CLS -->
+  <!-- <link rel="preload" as="font" href="/fonts/font.woff2" crossorigin> -->
+
+  <!-- Consider: Add media="print" onload="this.media='all'" to defer non-critical CSS -->
+
+  <!-- TODO: Inline critical CSS here for FCP optimization -->
+  <!-- <style data-critical-css-inline></style> -->
+
+
+    <!-- Skip to main content link for keyboard users -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" style="font-weight: 600; font-size: 1.125rem; color: var(--gray-900);" aria-label="Gemini Home">Gemini</a>
+                <nav role="navigation" aria-label="Primary navigation">
+                    <a href="#features" style="margin-right: 2rem; color: var(--gray-700);">Features</a>
+                    <a href="https://gemini.google.com" class="btn btn-primary btn-small" aria-label="Try Gemini AI" style="min-height: 48px; padding: 12px 32px; font-size: 16px; font-weight: 600;">Try Gemini</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+
+    <!-- Hero Section -->
+    <section class="hero hero-creators" aria-labelledby="hero-heading">
+        <!-- Animated Background Orbs -->
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="hero-content" data-animate="fade-in">
+                <div class="badge badge-primary mb-4">Powered by Nano Banana</div>
+                <h1 data-pattern="personalization">Turn Ideas Into Reality</h1>
+                <p class="text-xl text-secondary mb-8" style="max-width: 700px; margin-left: auto; margin-right: auto;">
+                    From viral TikToks to long-form YouTube—Gemini handles ideation, scripting, optimization, and analytics so you can focus on creating.
+                </p>
+                <div class="flex gap-4 justify-center mb-8">
+                    <a href="https://gemini.google.com" class="btn btn-primary btn-large" aria-label="Start Creating" style="min-height: 48px; padding: 12px 32px; font-size: 16px; font-weight: 600;">Start Creating</a>
+                    <a href="#workflow" class="btn btn-secondary btn-large" aria-label="See the Workflow" style="min-height: 48px; padding: 12px 32px; font-size: 16px; font-weight: 600;">See the Workflow</a>
+                </div>
+                <p class="text-sm text-secondary mt-4">
+                    Free for creators • No credit card required • Join 100K+ creators
+                </p>
+
+                <!-- Platform Badges -->
+                <div style="text-align: center; margin-bottom: var(--space-8);">
+                    <p class="text-sm text-secondary mb-3">Optimized for every platform:</p>
+                    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 8px;">
+                        <span class="content-type-badge badge-youtube">YouTube</span>
+                        <span class="content-type-badge badge-tiktok">TikTok</span>
+                        <span class="content-type-badge badge-instagram">Instagram</span>
+                        <span class="content-type-badge badge-podcast">Podcasts</span>
+                    </div>
+                </div>
+
+                <!-- Video Showcase -->
+                <div class="video-showcase" data-animate="scale-in" data-delay="300" style="max-width: 900px; margin: 0 auto;">
+                    <div class="video-placeholder">
+                        <div class="play-button">
+                            <div class="play-icon"></div>
+                        </div>
+                        <div style="position: absolute; top: 20px; left: 20px; background: rgba(0,0,0,0.8); color: white; padding: 8px 16px; border-radius: var(--radius-full); font-size: var(--text-sm); backdrop-filter: blur(10px);">
+                            🔴 Live Demo
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section bg-gray-50">
+        <div class="container">
+            <div class="grid grid-4 gap-6" data-animate="fade-in">
+                <div class="creator-stat">
+                    <span class="stat-icon">⚡</span>
+                    <span class="stat-value">10x</span>
+                    <p class="text-secondary">Faster scripting</p>
+                </div>
+                <div class="creator-stat">
+                    <span class="stat-icon">📈</span>
+                    <span class="stat-value">3.2x</span>
+                    <p class="text-secondary">More engagement</p>
+                </div>
+                <div class="creator-stat">
+                    <span class="stat-icon">💰</span>
+                    <span class="stat-value">$50K+</span>
+                    <p class="text-secondary">Avg. creator revenue</p>
+                </div>
+                <div class="creator-stat">
+                    <span class="stat-icon">⏱️</span>
+                    <span class="stat-value">15hrs</span>
+                    <p class="text-secondary">Saved per week</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow Section -->
+    <section id="workflow" class="section">
+        <div class="container container-narrow">
+            <h2 class="text-center mb-4" data-animate="fade-in" id="your-complete-content-workflow-heading">Your Complete Content Workflow</h2>
+            <p class="text-xl text-secondary text-center mb-12" data-animate="fade-in" data-delay="100">
+                From blank page to published video in hours, not days
+            </p>
+
+            <div class="timeline">
+                <div class="timeline-item" data-animate="slide-in-up" data-delay="0">
+                    <div class="workflow-step" data-step="1">
+                        <h3 class="text-xl mb-3">Ideation &amp; Research</h3>
+                        <p class="text-secondary mb-3">
+                            "What's trending in sustainable fashion?" → Get 20 video ideas with titles, hooks, and trend analysis.
+                        </p>
+                        <ul class="text-secondary" style="list-style: none; padding: 0;">
+                            <li>✓ Viral trend analysis</li>
+                            <li>✓ Competitor gap identification</li>
+                            <li>✓ Keyword optimization</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-animate="slide-in-up" data-delay="100">
+                    <div class="workflow-step" data-step="2">
+                        <h3 class="text-xl mb-3">Script Writing</h3>
+                        <p class="text-secondary mb-3">
+                            Generate platform-optimized scripts with hooks, B-roll callouts, and retention strategies.
+                        </p>
+                        <ul class="text-secondary" style="list-style: none; padding: 0;">
+                            <li>✓ Hook optimization (3-second rule)</li>
+                            <li>✓ Retention markers</li>
+                            <li>✓ CTA placement</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-animate="slide-in-up" data-delay="200">
+                    <div class="workflow-step" data-step="3">
+                        <h3 class="text-xl mb-3">Visual Planning</h3>
+                        <p class="text-secondary mb-3">
+                            Shot lists, B-roll suggestions, thumbnail concepts—all generated automatically.
+                        </p>
+                        <ul class="text-secondary" style="list-style: none; padding: 0;">
+                            <li>✓ Thumbnail A/B testing ideas</li>
+                            <li>✓ Shot list generation</li>
+                            <li>✓ Color grading suggestions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-animate="slide-in-up" data-delay="300">
+                    <div class="workflow-step" data-step="4">
+                        <h3 class="text-xl mb-3">Optimization &amp; Publishing</h3>
+                        <p class="text-secondary mb-3">
+                            SEO-optimized titles, descriptions, tags, and posting schedules for maximum reach.
+                        </p>
+                        <ul class="text-secondary" style="list-style: none; padding: 0;">
+                            <li>✓ Multi-platform formatting</li>
+                            <li>✓ SEO optimization</li>
+                            <li>✓ Best time to post</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section bg-gray-50">
+        <div class="container container-narrow">
+            <h2 class="text-center mb-12" data-animate="fade-in" id="everything-creators-need-heading">Everything Creators Need</h2>
+
+            <div class="grid grid-3 gap-6" role="list">
+                <article class="card feature-creator" data-animate="slide-in-up" data-delay="0" role="listitem">
+                    <div style="font-size: 3rem; margin-bottom: var(--space-3);" aria-hidden="true">🎬</div>
+                    <h3 class="text-xl mb-3">Script to Screen</h3>
+                    <p class="text-secondary">
+                        Generate complete video scripts with hooks, transitions, and B-roll callouts in your unique voice.
+                    </p>
+                </article></div>
+
+                <article class="card feature-creator" data-animate="slide-in-up" data-delay="100" role="listitem">
+                    <div style="font-size: 3rem; margin-bottom: var(--space-3);" aria-hidden="true">🎨</div>
+                    <h3 class="text-xl mb-3">Thumbnail Concepts</h3>
+                    <p class="text-secondary">
+                        AI-powered thumbnail ideas based on CTR analysis. Test concepts before you design.
+                    </p>
+                </article></div>
+
+                <article class="card feature-creator" data-animate="slide-in-up" data-delay="200" role="listitem">
+                    <div style="font-size: 3rem; margin-bottom: var(--space-3);" aria-hidden="true">📊</div>
+                    <h3 class="text-xl mb-3">Analytics Insights</h3>
+                    <p class="text-secondary">
+                        Upload analytics, get actionable insights. "Your retention drops at 2:15—add a pattern interrupt."
+                    </p>
+                
+
+                <article class="card feature-creator" data-animate="slide-in-up" data-delay="300" role="listitem">
+                    <div style="font-size: 3rem; margin-bottom: var(--space-3);" aria-hidden="true">🔄</div>
+                    <h3 class="text-xl mb-3">Content Repurposing</h3>
+                    <p class="text-secondary">
+                        Turn one YouTube video into 10 TikToks, 20 Instagram posts, and a full Twitter thread.
+                    </p>
+                
+
+                <article class="card feature-creator" data-animate="slide-in-up" data-delay="400" role="listitem">
+                    <div style="font-size: 3rem; margin-bottom: var(--space-3);" aria-hidden="true">🎙️</div>
+                    <h3 class="text-xl mb-3">Podcast Production</h3>
+                    <p class="text-secondary">
+                        Episode outlines, guest questions, show notes, and social clips—all automated.
+                    </p>
+                
+
+                <article class="card feature-creator" data-animate="slide-in-up" data-delay="500" role="listitem">
+                    <div style="font-size: 3rem; margin-bottom: var(--space-3);" aria-hidden="true">🌍</div>
+                    <h3 class="text-xl mb-3">Global Reach</h3>
+                    <p class="text-secondary">
+                        Translate and localize content for international audiences while maintaining your voice.
+                    </p>
+                </article>
+            
+        
+    </article></article></article></section>
+
+    <!-- Creator Testimonials -->
+    <section class="section">
+        <div class="container container-narrow">
+            <h2 id="trusted-by-top-creators-heading" class="text-center mb-12" data-animate="fade-in">Trusted by Top Creators</h2>
+
+            <div class="grid grid-2 gap-6" role="list">
+                <article class="card" data-animate="fade-in" data-delay="100" role="listitem">
+                    <div style="display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-4);">
+                        <div style="width: 60px; height: 60px; border-radius: 50%; background: var(--creator-gradient); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white; font-weight: bold;">
+                            MC
+                        </div>
+                        <div>
+                            <div style="font-weight: 600;">Marcus Chen</div>
+                            <div class="text-sm text-secondary">2.3M YouTube subscribers</div>
+                        </div>
+                    </div>
+                    <p class="text-secondary" style="line-height: 1.8;">
+                        "I went from posting once a week to daily because Gemini handles all the grunt work. My views tripled and I'm actually enjoying the creative process again."
+                    </p>
+                </article></div>
+
+                <article class="card" data-animate="fade-in" data-delay="200" role="listitem">
+                    <div style="display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-4);">
+                        <div style="width: 60px; height: 60px; border-radius: 50%; background: var(--creator-gradient); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white; font-weight: bold;">
+                            SP
+                        </div>
+                        <div>
+                            <div style="font-weight: 600;">Sofia Patel</div>
+                            <div class="text-sm text-secondary">1.8M TikTok followers</div>
+                        </div>
+                    </div>
+                    <p class="text-secondary" style="line-height: 1.8;">
+                        "Gemini's trend analysis is scary good. It predicted my viral video three days before it blew up. Now I use it for every single post."
+                    </p>
+                </article>
+            </div>
+        
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section bg-gray-50">
+        <div class="container container-narrow text-center">
+            <div data-animate="fade-in">
+                <h2 class="mb-4">Join 100K+ Creators<br>Making Better Content</h2>
+                <p class="text-xl text-secondary mb-8">
+                    Stop staring at blank pages. Start creating content your audience loves.
+                </p>
+                <a href="https://gemini.google.com" class="btn btn-primary btn-large" aria-label="Start Creating Free" style="min-height: 48px; padding: 12px 32px; font-size: 16px; font-weight: 600;">Start Creating Free</a>
+                <p class="text-sm text-secondary mt-4">
+                    Free for 14 days • No credit card required • Cancel anytime
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    </main>
+
+    <footer role="contentinfo" style="background: var(--white); padding: var(--space-6) 0; text-align: center; border-top: 1px solid var(--color-border);">
+        <div class="container">
+            <p class="text-sm text-secondary">
+                Powered by Gemini with Nano Banana | <a href="https://ai.google/responsibility/principles/">AI Principles</a> | <a href="https://policies.google.com/privacy">Privacy</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/animations.js" defer=""></script>
+    <script src="../assets/js/ab-test-router.js"></script>
+
+<!-- User Feedback Widget -->
+<div id="feedback-widget" class="feedback-widget" style="display: none;">
+  <div class="feedback-prompt">Was this page helpful?</div>
+  <div class="feedback-buttons">
+    <button class="feedback-btn" data-rating="yes" aria-label="Yes, this page was helpful">
+      <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+        <path d="M10 1l2.5 5.5L18 7.5l-4 4 1 6-5-2.5-5 2.5 1-6-4-4 5.5-1z" fill="currentColor"></path>
+      </svg>
+      Yes
+    </button>
+    <button class="feedback-btn" data-rating="no" aria-label="No, this page was not helpful">
+      <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+        <circle cx="10" cy="10" r="8" stroke="currentColor" fill="none" stroke-width="2"></circle>
+        <line x1="6" y1="6" x2="14" y2="14" stroke="currentColor" stroke-width="2"></line>
+        <line x1="14" y1="6" x2="6" y2="14" stroke="currentColor" stroke-width="2"></line>
+      </svg>
+      No
+    </button>
+  </div>
+  <div class="feedback-followup" style="display: none;">
+    <textarea placeholder="Tell us more (optional)" maxlength="500" aria-label="Additional feedback"></textarea>
+    <button class="feedback-submit">Send</button>
+    <button class="feedback-skip">Skip</button>
+  </div>
+  <div class="feedback-thanks" style="display: none;">
+    Thank you for your feedback! 🙏
+  </div>
+</div>
+
+<style>
+.feedback-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  padding: 16px 20px;
+  font-size: 14px;
+  max-width: 300px;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+.feedback-prompt {
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.feedback-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.feedback-btn {
+  flex: 1;
+  padding: 8px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+  transition: all 0.2s;
+  font-size: 14px;
+  color: #1a1a1a;
+}
+
+.feedback-btn:hover {
+  background: #f5f5f7;
+  border-color: #1a73e8;
+}
+
+.feedback-btn:focus {
+  outline: 2px solid #1a73e8;
+  outline-offset: 2px;
+}
+
+.feedback-followup textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin: 12px 0 8px;
+  font-family: inherit;
+  font-size: 13px;
+  resize: vertical;
+  min-height: 60px;
+}
+
+.feedback-followup textarea:focus {
+  outline: 2px solid #1a73e8;
+  border-color: #1a73e8;
+}
+
+.feedback-submit,
+.feedback-skip {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  margin-right: 8px;
+  transition: all 0.2s;
+}
+
+.feedback-submit {
+  background: #1a73e8;
+  color: white;
+}
+
+.feedback-submit:hover {
+  background: #1557b0;
+}
+
+.feedback-skip {
+  background: transparent;
+  color: #666;
+}
+
+.feedback-skip:hover {
+  background: #f5f5f7;
+}
+
+.feedback-thanks {
+  color: #1a73e8;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .feedback-widget {
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+    max-width: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .feedback-widget {
+    transition: none;
+  }
+}
+</style>
+
+<script>
+(function() {
+  // Show widget after 10 seconds on page
+  setTimeout(function() {
+    const widget = document.getElementById('feedback-widget');
+    if (widget && !sessionStorage.getItem('feedback_submitted')) {
+      widget.style.display = 'block';
+    }
+  }, 10000);
+
+  const widget = document.getElementById('feedback-widget');
+  if (!widget) return;
+
+  const buttons = widget.querySelectorAll('.feedback-btn');
+  const followup = widget.querySelector('.feedback-followup');
+  const thanks = widget.querySelector('.feedback-thanks');
+  const submitBtn = widget.querySelector('.feedback-submit');
+  const skipBtn = widget.querySelector('.feedback-skip');
+  const textarea = widget.querySelector('textarea');
+
+  let selectedRating = null;
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', function() {
+      selectedRating = this.dataset.rating;
+
+      // Track initial rating
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'feedback_rating', {
+          'rating': selectedRating,
+          'page_variant': document.body.dataset.variant || 'control',
+          'page_path': window.location.pathname
+        });
+      }
+
+      // Show followup
+      widget.querySelector('.feedback-buttons').style.display = 'none';
+      widget.querySelector('.feedback-prompt').textContent = 'Tell us more:';
+      followup.style.display = 'block';
+      textarea.focus();
+    });
+  });
+
+  submitBtn.addEventListener('click', function() {
+    const comment = textarea.value.trim();
+
+    // Track detailed feedback
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'feedback_comment', {
+        'rating': selectedRating,
+        'has_comment': comment.length > 0,
+        'comment_length': comment.length,
+        'page_variant': document.body.dataset.variant || 'control',
+        'page_path': window.location.pathname
+      });
+    }
+
+    // Log feedback (in production, send to backend)
+    console.log('User Feedback:', {
+      rating: selectedRating,
+      comment: comment,
+      page: window.location.pathname,
+      timestamp: new Date().toISOString()
+    });
+
+    sessionStorage.setItem('feedback_submitted', 'true');
+    showThanks();
+  });
+
+  skipBtn.addEventListener('click', function() {
+    sessionStorage.setItem('feedback_submitted', 'true');
+    showThanks();
+  });
+
+  function showThanks() {
+    followup.style.display = 'none';
+    widget.querySelector('.feedback-prompt').style.display = 'none';
+    thanks.style.display = 'block';
+
+    setTimeout(() => {
+      widget.style.opacity = '0';
+      setTimeout(() => widget.style.display = 'none', 300);
+    }, 2000);
+  }
+})();
+</script>
+
+
+
+
+    <script>
+    // Personalization Pattern (Auto-scaled from exploratory testing)
+    const personalizationRules = {
+      "video-creator": {
+            "badge": "🎥 Perfect for Video Creators",
+            "heading": "Create Videos That<br>Captivate Your Audience",
+            "description": "Generate scripts, brainstorm concepts, and refine your video content with AI that understands storytelling and audience engagement.",
+            "ctaPrimary": "Start Creating Videos"
+      },
+      "designer": {
+            "badge": "🎨 Perfect for Designers",
+            "heading": "Design With AI-Powered<br>Creative Intelligence",
+            "description": "From concept to execution, Gemini helps you explore design possibilities, refine your ideas, and deliver stunning visual work faster.",
+            "ctaPrimary": "Start Designing"
+      },
+      "musician": {
+            "badge": "🎵 Perfect for Musicians",
+            "heading": "Compose Music With<br>Intelligent Assistance",
+            "description": "Explore melodies, write lyrics, and develop musical concepts with an AI collaborator that understands rhythm, harmony, and creative expression.",
+            "ctaPrimary": "Start Composing"
+      },
+      "artist": {
+            "badge": "✨ Perfect for Artists",
+            "heading": "Bring Your Artistic Vision<br>To Life With AI",
+            "description": "Generate ideas, explore techniques, and push creative boundaries with AI that understands artistic vision and creative process.",
+            "ctaPrimary": "Start Creating Art"
+      },
+      "default": {
+            "badge": "🎨 Powered by Nano Banana",
+            "heading": "Create Faster.<br>Create Better.",
+            "description": "From viral TikToks to long-form YouTube—Gemini handles ideation, scripting, optimization, and analytics so you can focus on creating.",
+            "ctaPrimary": "Start Creating"
+      }
+};
+
+    function getUserSegment() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const segment = urlParams.get('segment');
+        return segment && personalizationRules[segment] ? segment : 'default';
+    }
+
+    function applyPersonalization() {
+        const segment = getUserSegment();
+        const rules = personalizationRules[segment];
+
+        // Apply personalization
+        const badge = document.querySelector('[data-personalize="badge"]');
+        const heading = document.querySelector('[data-personalize="heading"]');
+        const description = document.querySelector('[data-personalize="description"]');
+        const ctaPrimary = document.querySelector('[data-personalize="cta-primary"]');
+
+        if (badge && rules.badge) badge.textContent = rules.badge;
+        if (heading && rules.heading) heading.innerHTML = rules.heading;
+        if (description && rules.description) description.innerHTML = rules.description;
+        if (ctaPrimary && rules.ctaPrimary) ctaPrimary.textContent = rules.ctaPrimary;
+
+        // Track personalization event
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'personalization_applied', {
+                'segment': segment,
+                'page': 'creators'
+            });
+        }
+    }
+
+    // Apply personalization on load
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', applyPersonalization);
+    } else {
+        applyPersonalization();
+    }
+    </script>
+
+  <script>
+    // Track A/B test variant
+    (function() {
+      const variant = 'variantA';
+      const testName = 'personalization-urgency-combo';
+
+      // Store in localStorage for consistency
+      localStorage.setItem('ab_test_' + testName, variant);
+
+      // Track page view with variant
+      if (window.gtag) {
+        gtag('event', 'page_view', {
+          'ab_test': testName,
+          'variant': variant
+        });
+      }
+
+      console.log('[A/B Test] personalization-urgency-combo - Variant:', variant);
+    })();
+  </script>
+</body></html>

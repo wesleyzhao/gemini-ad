@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try Gemini Workspace Features - Interactive Demos</title>
+    <meta name="description" content="Experience Google Workspace integration with live interactive demos. Try document collaboration, calendar scheduling, and email assistance.">
+    <link rel="preload" href="../../assets/css/shared-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../../assets/css/shared-styles.css"></noscript>
+
+    <style>
+        /* Interactive Demo Styles */
+        :root {
+            --demo-primary: #4285f4;
+            --demo-success: #0f9d58;
+            --demo-warning: #f4b400;
+            --demo-border: #e0e0e0;
+            --demo-bg: #f8f9fa;
+            --demo-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        body {
+            font-family: 'Google Sans', 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #fff;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 20px 60px;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            margin: 0 0 20px 0;
+            font-weight: 700;
+        }
+
+        .hero-section p {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .demo-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .demo-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .demo-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .demo-header {
+            padding: 24px;
+            border-bottom: 1px solid var(--demo-border);
+        }
+
+        .demo-header h3 {
+            margin: 0 0 8px 0;
+            font-size: 1.5rem;
+            color: #202124;
+        }
+
+        .demo-header p {
+            margin: 0;
+            color: #5f6368;
+            font-size: 0.875rem;
+        }
+
+        .demo-window {
+            background: var(--demo-bg);
+            padding: 20px;
+            min-height: 300px;
+            position: relative;
+        }
+
+        .demo-controls {
+            padding: 20px;
+            border-top: 1px solid var(--demo-border);
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .demo-btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.875rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .demo-btn-primary {
+            background: var(--demo-primary);
+            color: white;
+        }
+
+        .demo-btn-primary:hover {
+            background: #3367d6;
+            transform: scale(1.02);
+        }
+
+        .demo-btn-secondary {
+            background: white;
+            color: #5f6368;
+            border: 1px solid var(--demo-border);
+        }
+
+        .demo-btn-secondary:hover {
+            background: #f8f9fa;
+        }
+
+        .demo-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Document Collaboration Demo */
+        .doc-editor {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: var(--demo-shadow);
+            min-height: 250px;
+        }
+
+        .doc-toolbar {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--demo-border);
+        }
+
+        .doc-tool {
+            padding: 6px 12px;
+            border: 1px solid var(--demo-border);
+            border-radius: 4px;
+            background: white;
+            cursor: pointer;
+            font-size: 0.875rem;
+        }
+
+        .doc-content {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #202124;
+            outline: none;
+            min-height: 150px;
+        }
+
+        .doc-content[contenteditable="true"]:focus {
+            outline: 2px solid var(--demo-primary);
+            outline-offset: 4px;
+            border-radius: 4px;
+        }
+
+        .ai-suggestion {
+            background: #e8f0fe;
+            border-left: 4px solid var(--demo-primary);
+            padding: 12px;
+            margin: 12px 0;
+            border-radius: 4px;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-10px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .typing-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 8px 12px;
+            background: #f1f3f4;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            color: #5f6368;
+        }
+
+        .typing-indicator span {
+            width: 6px;
+            height: 6px;
+            background: #5f6368;
+            border-radius: 50%;
+            animation: bounce 1.4s infinite;
+        }
+
+        .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+        .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes bounce {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-4px); }
+        }
+
+        /* Calendar Demo */
+        .calendar-view {
+            background: white;
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: var(--demo-shadow);
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--demo-border);
+        }
+
+        .time-slot {
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid var(--demo-border);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .time-slot:hover {
+            background: #f8f9fa;
+            border-color: var(--demo-primary);
+        }
+
+        .time-slot.available {
+            background: #e6f4ea;
+            border-color: var(--demo-success);
+        }
+
+        .time-slot.suggested {
+            background: #e8f0fe;
+            border-color: var(--demo-primary);
+            position: relative;
+        }
+
+        .time-slot.suggested::after {
+            content: "AI Suggested";
+            position: absolute;
+            top: -8px;
+            right: 8px;
+            background: var(--demo-primary);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        /* Email Assistant Demo */
+        .email-composer {
+            background: white;
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: var(--demo-shadow);
+        }
+
+        .email-field {
+            margin-bottom: 12px;
+        }
+
+        .email-field label {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #5f6368;
+            margin-bottom: 4px;
+        }
+
+        .email-field input,
+        .email-field textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--demo-border);
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-family: inherit;
+        }
+
+        .email-field input:focus,
+        .email-field textarea:focus {
+            outline: 2px solid var(--demo-primary);
+            border-color: transparent;
+        }
+
+        .email-field textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .smart-compose-chip {
+            display: inline-block;
+            background: #e8f0fe;
+            color: var(--demo-primary);
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 0.75rem;
+            margin: 4px;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .smart-compose-chip:hover {
+            background: var(--demo-primary);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 4px;
+            background: var(--demo-border);
+            border-radius: 2px;
+            overflow: hidden;
+            margin-top: 12px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--demo-primary);
+            transition: width 0.3s ease;
+        }
+
+        .demo-status {
+            margin-top: 12px;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            display: none;
+        }
+
+        .demo-status.success {
+            background: #e6f4ea;
+            color: #137333;
+            border: 1px solid #81c995;
+        }
+
+        .demo-status.info {
+            background: #e8f0fe;
+            color: #1967d2;
+            border: 1px solid #8ab4f8;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin: 0 0 20px 0;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 16px 32px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.125rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            .hero-section h1 { font-size: 2rem; }
+            .hero-section p { font-size: 1rem; }
+            .demo-grid { grid-template-columns: 1fr; gap: 30px; }
+            .demo-controls { flex-direction: column; }
+            .demo-btn { width: 100%; justify-content: center; }
+            .cta-section h2 { font-size: 1.75rem; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-section { padding: 80px 16px 40px; }
+            .container { padding: 40px 16px; }
+            .doc-toolbar { flex-wrap: wrap; }
+        }
+
+        /* Accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Keyboard Navigation */
+        *:focus-visible {
+            outline: 2px solid var(--demo-primary);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body data-test="interactive-demos">
+    <div class="hero-section">
+        <div class="demo-badge">Interactive Demo</div>
+        <h1>Experience Gemini + Google Workspace</h1>
+        <p>Try real features with interactive demos. No signup required.</p>
+    </div>
+
+    <div class="container">
+        <div class="demo-grid">
+            <!-- Demo 1: Live Document Collaboration -->
+            <div class="demo-card">
+                <div class="demo-header">
+                    <h3>Document Collaboration</h3>
+                    <p>See how Gemini assists with real-time editing and suggestions</p>
+                </div>
+                <div class="demo-window">
+                    <div class="doc-editor">
+                        <div class="doc-toolbar" role="toolbar" aria-label="Document formatting tools">
+                            <button class="doc-tool" aria-label="Bold">B</button>
+                            <button class="doc-tool" aria-label="Italic">I</button>
+                            <button class="doc-tool" aria-label="Underline">U</button>
+                            <button class="doc-tool" aria-label="Insert link">Link</button>
+                        </div>
+                        <div class="doc-content" contenteditable="true" id="doc-content" role="textbox" aria-label="Document content">
+                            Start typing to see AI suggestions...
+                        </div>
+                        <div id="doc-typing" style="margin-top: 12px; display: none;">
+                            <div class="typing-indicator">
+                                Gemini is suggesting
+                                <span></span><span></span><span></span>
+                            </div>
+                        </div>
+                        <div id="doc-suggestion"></div>
+                    </div>
+                    <div class="progress-bar" id="doc-progress" style="display: none;">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <div class="demo-status" id="doc-status"></div>
+                </div>
+                <div class="demo-controls">
+                    <button class="demo-btn demo-btn-primary" id="doc-try" aria-label="Try document collaboration">
+                        <span>Try It Yourself</span>
+                    </button>
+                    <button class="demo-btn demo-btn-secondary" id="doc-reset" aria-label="Reset document demo">
+                        Reset Demo
+                    </button>
+                </div>
+            </div>
+
+            <!-- Demo 2: Calendar Integration -->
+            <div class="demo-card">
+                <div class="demo-header">
+                    <h3>Smart Calendar Scheduling</h3>
+                    <p>AI finds the perfect meeting time for everyone</p>
+                </div>
+                <div class="demo-window">
+                    <div class="calendar-view">
+                        <div class="calendar-header">
+                            <h4 style="margin: 0; font-size: 1rem;">Available Times - Tuesday, Feb 4</h4>
+                            <span style="font-size: 0.75rem; color: #5f6368;">3 participants</span>
+                        </div>
+                        <div id="calendar-slots"></div>
+                    </div>
+                    <div class="progress-bar" id="cal-progress" style="display: none;">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <div class="demo-status" id="cal-status"></div>
+                </div>
+                <div class="demo-controls">
+                    <button class="demo-btn demo-btn-primary" id="cal-find" aria-label="Find best meeting time">
+                        Find Best Time
+                    </button>
+                    <button class="demo-btn demo-btn-secondary" id="cal-reset" aria-label="Reset calendar demo">
+                        Reset Demo
+                    </button>
+                </div>
+            </div>
+
+            <!-- Demo 3: Email Assistant -->
+            <div class="demo-card">
+                <div class="demo-header">
+                    <h3>Email Smart Compose</h3>
+                    <p>Get intelligent response suggestions as you type</p>
+                </div>
+                <div class="demo-window">
+                    <div class="email-composer">
+                        <div class="email-field">
+                            <label for="email-to">To:</label>
+                            <input type="text" id="email-to" placeholder="colleague@example.com" aria-label="Email recipient">
+                        </div>
+                        <div class="email-field">
+                            <label for="email-subject">Subject:</label>
+                            <input type="text" id="email-subject" placeholder="Project update" aria-label="Email subject">
+                        </div>
+                        <div class="email-field">
+                            <label for="email-body">Message:</label>
+                            <textarea id="email-body" placeholder="Start typing and Gemini will suggest completions..." aria-label="Email body"></textarea>
+                        </div>
+                        <div id="email-suggestions" style="margin-top: 8px;"></div>
+                    </div>
+                    <div class="progress-bar" id="email-progress" style="display: none;">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <div class="demo-status" id="email-status"></div>
+                </div>
+                <div class="demo-controls">
+                    <button class="demo-btn demo-btn-primary" id="email-compose" aria-label="Get smart compose suggestions">
+                        Get Smart Suggestions
+                    </button>
+                    <button class="demo-btn demo-btn-secondary" id="email-reset" aria-label="Reset email demo">
+                        Reset Demo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta-section">
+        <h2>Ready to supercharge your workspace?</h2>
+        <p style="margin: 0 0 30px 0; font-size: 1.125rem; opacity: 0.95;">Join millions using Gemini with Google Workspace</p>
+        <a href="https://gemini.google.com" class="cta-btn">Start Free Trial</a>
+    </div>
+
+    <script>
+        // Demo State Management
+        const demoState = {
+            doc: { completed: false, interactions: 0 },
+            calendar: { completed: false, interactions: 0 },
+            email: { completed: false, interactions: 0 }
+        };
+
+        // Load state from localStorage
+        try {
+            const saved = localStorage.getItem('gemini_demo_state');
+            if (saved) Object.assign(demoState, JSON.parse(saved));
+        } catch (e) { console.log('Demo state init'); }
+
+        function saveState() {
+            try {
+                localStorage.setItem('gemini_demo_state', JSON.stringify(demoState));
+            } catch (e) { console.log('Demo state save error'); }
+        }
+
+        // Analytics tracking
+        function trackDemo(event, data = {}) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', event, {
+                    event_category: 'Interactive Demo',
+                    ...data
+                });
+            }
+            console.log('Demo Event:', event, data);
+        }
+
+        // Document Collaboration Demo
+        const docContent = document.getElementById('doc-content');
+        const docSuggestion = document.getElementById('doc-suggestion');
+        const docTyping = document.getElementById('doc-typing');
+        const docStatus = document.getElementById('doc-status');
+        const docProgress = document.getElementById('doc-progress');
+
+        let docTypingTimer;
+        const suggestions = [
+            "I'd like to propose a new approach to our quarterly planning process that focuses on data-driven decision making.",
+            "Our team has completed the initial research phase and identified three key opportunities for growth.",
+            "Following up on our conversation, here are the action items we discussed for the next sprint."
+        ];
+
+        document.getElementById('doc-try').addEventListener('click', function() {
+            trackDemo('demo_start', { demo_type: 'document' });
+            demoState.doc.interactions++;
+
+            docContent.innerHTML = '';
+            docContent.focus();
+            docStatus.style.display = 'none';
+
+            const instruction = document.createElement('div');
+            instruction.className = 'ai-suggestion';
+            instruction.innerHTML = '<strong>Try typing:</strong> "I'd like to propose..." and watch Gemini complete your thought.';
+            docSuggestion.innerHTML = '';
+            docSuggestion.appendChild(instruction);
+        });
+
+        docContent.addEventListener('input', function() {
+            clearTimeout(docTypingTimer);
+            docTyping.style.display = 'none';
+
+            const text = this.textContent.trim();
+
+            if (text.length > 10) {
+                trackDemo('demo_interaction', { demo_type: 'document', text_length: text.length });
+
+                docTypingTimer = setTimeout(() => {
+                    docTyping.style.display = 'block';
+
+                    setTimeout(() => {
+                        docTyping.style.display = 'none';
+
+                        const suggestion = suggestions[Math.floor(Math.random() * suggestions.length)];
+                        const suggestionEl = document.createElement('div');
+                        suggestionEl.className = 'ai-suggestion';
+                        suggestionEl.innerHTML = `<strong>Gemini suggests:</strong> ${suggestion}`;
+
+                        const acceptBtn = document.createElement('button');
+                        acceptBtn.className = 'demo-btn demo-btn-primary';
+                        acceptBtn.style.marginTop = '8px';
+                        acceptBtn.textContent = 'Accept Suggestion';
+                        acceptBtn.onclick = () => {
+                            docContent.innerHTML = suggestion;
+                            showDocSuccess();
+                        };
+
+                        suggestionEl.appendChild(acceptBtn);
+                        docSuggestion.innerHTML = '';
+                        docSuggestion.appendChild(suggestionEl);
+                    }, 1500);
+                }, 1000);
+            }
+        });
+
+        function showDocSuccess() {
+            docStatus.className = 'demo-status success';
+            docStatus.textContent = 'Suggestion applied! Time saved: ~5 minutes';
+            docStatus.style.display = 'block';
+            demoState.doc.completed = true;
+            saveState();
+            trackDemo('demo_complete', { demo_type: 'document' });
+        }
+
+        document.getElementById('doc-reset').addEventListener('click', function() {
+            docContent.innerHTML = 'Start typing to see AI suggestions...';
+            docSuggestion.innerHTML = '';
+            docStatus.style.display = 'none';
+            docTyping.style.display = 'none';
+        });
+
+        // Calendar Demo
+        const calSlots = document.getElementById('calendar-slots');
+        const calStatus = document.getElementById('cal-status');
+        const calProgress = document.getElementById('cal-progress');
+
+        const timeSlots = [
+            { time: '9:00 AM - 9:30 AM', available: false },
+            { time: '10:00 AM - 10:30 AM', available: true, suggested: true },
+            { time: '11:00 AM - 11:30 AM', available: false },
+            { time: '2:00 PM - 2:30 PM', available: true, suggested: false },
+            { time: '3:30 PM - 4:00 PM', available: true, suggested: false }
+        ];
+
+        function renderCalendar() {
+            calSlots.innerHTML = timeSlots.map((slot, idx) => `
+                <div class="time-slot ${slot.available ? 'available' : ''} ${slot.suggested ? 'suggested' : ''}"
+                     data-index="${idx}"
+                     role="button"
+                     tabindex="0"
+                     aria-label="${slot.time} - ${slot.available ? 'Available' : 'Unavailable'}">
+                    <strong>${slot.time}</strong>
+                    <div style="font-size: 0.75rem; color: #5f6368; margin-top: 4px;">
+                        ${slot.available ? 'All participants free' : 'Conflicts detected'}
+                    </div>
+                </div>
+            `).join('');
+
+            calSlots.querySelectorAll('.time-slot').forEach(slot => {
+                slot.addEventListener('click', selectTimeSlot);
+                slot.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        selectTimeSlot.call(slot);
+                    }
+                });
+            });
+        }
+
+        function selectTimeSlot() {
+            const idx = this.dataset.index;
+            const slot = timeSlots[idx];
+
+            if (slot.available) {
+                trackDemo('demo_interaction', { demo_type: 'calendar', time: slot.time });
+                calStatus.className = 'demo-status success';
+                calStatus.textContent = `Meeting scheduled for ${slot.time}. Invites sent to 3 participants.`;
+                calStatus.style.display = 'block';
+                demoState.calendar.completed = true;
+                demoState.calendar.interactions++;
+                saveState();
+                trackDemo('demo_complete', { demo_type: 'calendar' });
+            }
+        }
+
+        document.getElementById('cal-find').addEventListener('click', function() {
+            trackDemo('demo_start', { demo_type: 'calendar' });
+            calStatus.style.display = 'none';
+            calProgress.style.display = 'block';
+
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += 25;
+                calProgress.querySelector('.progress-fill').style.width = progress + '%';
+
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        calProgress.style.display = 'none';
+                        renderCalendar();
+                        calStatus.className = 'demo-status info';
+                        calStatus.textContent = 'AI analyzed 3 calendars and found the best times. Click a suggested slot to schedule.';
+                        calStatus.style.display = 'block';
+                    }, 300);
+                }
+            }, 200);
+        });
+
+        document.getElementById('cal-reset').addEventListener('click', function() {
+            calSlots.innerHTML = '<p style="color: #5f6368; text-align: center; padding: 40px;">Click "Find Best Time" to start</p>';
+            calStatus.style.display = 'none';
+            calProgress.style.display = 'none';
+        });
+
+        // Initialize calendar
+        calSlots.innerHTML = '<p style="color: #5f6368; text-align: center; padding: 40px;">Click "Find Best Time" to start</p>';
+
+        // Email Assistant Demo
+        const emailBody = document.getElementById('email-body');
+        const emailSuggestions = document.getElementById('email-suggestions');
+        const emailStatus = document.getElementById('email-status');
+        const emailProgress = document.getElementById('email-progress');
+
+        const smartSuggestions = [
+            "Thanks for reaching out!",
+            "I'll review this by end of day.",
+            "Let's schedule a quick call to discuss.",
+            "Great work on the presentation!",
+            "I've shared this with the team."
+        ];
+
+        document.getElementById('email-compose').addEventListener('click', function() {
+            trackDemo('demo_start', { demo_type: 'email' });
+            demoState.email.interactions++;
+
+            emailProgress.style.display = 'block';
+            emailSuggestions.innerHTML = '';
+            emailStatus.style.display = 'none';
+
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += 20;
+                emailProgress.querySelector('.progress-fill').style.width = progress + '%';
+
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        emailProgress.style.display = 'none';
+                        showEmailSuggestions();
+                    }, 200);
+                }
+            }, 150);
+        });
+
+        function showEmailSuggestions() {
+            emailSuggestions.innerHTML = '<p style="font-size: 0.75rem; font-weight: 600; color: #5f6368; margin-bottom: 8px;">Smart Compose Suggestions:</p>';
+
+            smartSuggestions.forEach(suggestion => {
+                const chip = document.createElement('span');
+                chip.className = 'smart-compose-chip';
+                chip.textContent = suggestion;
+                chip.setAttribute('role', 'button');
+                chip.setAttribute('tabindex', '0');
+                chip.onclick = () => {
+                    emailBody.value = suggestion;
+                    trackDemo('demo_interaction', { demo_type: 'email', suggestion });
+                    emailStatus.className = 'demo-status success';
+                    emailStatus.textContent = 'Smart compose applied! Email ready to send.';
+                    emailStatus.style.display = 'block';
+                    demoState.email.completed = true;
+                    saveState();
+                    trackDemo('demo_complete', { demo_type: 'email' });
+                };
+                chip.onkeypress = (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        chip.click();
+                    }
+                };
+                emailSuggestions.appendChild(chip);
+            });
+        }
+
+        document.getElementById('email-reset').addEventListener('click', function() {
+            emailBody.value = '';
+            document.getElementById('email-to').value = '';
+            document.getElementById('email-subject').value = '';
+            emailSuggestions.innerHTML = '';
+            emailStatus.style.display = 'none';
+        });
+
+        // Track page view
+        trackDemo('page_view', { page: 'workspace_interactive_demos' });
+
+        // Track time on demos
+        let startTime = Date.now();
+        window.addEventListener('beforeunload', () => {
+            const timeSpent = Math.round((Date.now() - startTime) / 1000);
+            trackDemo('interaction_time', { seconds: timeSpent });
+        });
+    </script>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX', {
+            page_path: window.location.pathname,
+            page_title: document.title
+        });
+    </script>
+</body>
+</html>

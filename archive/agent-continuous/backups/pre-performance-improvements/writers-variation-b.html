@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publish More. Write Less. | Gemini for Writers</title>
+    <meta name="description" content="From blank page to published piece in hours. Gemini helps you finish what you start—and get it out the door.">
+    <link rel="stylesheet" href="../assets/css/shared-styles.css">
+    <style>
+        /* Outcome-Focused Writer's Theme */
+        :root {
+            --writer-ink: #2c3e50;
+            --writer-parchment: #f8f5f0;
+            --writer-gold: #d4af37;
+            --writer-burgundy: #800020;
+            --success-green: #10b981;
+        }
+
+        .hero-writers-outcome {
+            background: linear-gradient(180deg, var(--writer-parchment) 0%, var(--white) 100%);
+            padding-top: calc(var(--header-height) + var(--space-16));
+        }
+
+        .outcome-card {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: var(--space-6);
+            box-shadow: var(--shadow-lg);
+            border-left: 6px solid var(--success-green);
+            transition: all var(--transition-base);
+        }
+
+        .outcome-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-2xl);
+        }
+
+        .outcome-number {
+            font-size: var(--text-5xl);
+            font-weight: var(--weight-bold);
+            color: var(--success-green);
+            display: block;
+            margin-bottom: var(--space-2);
+        }
+
+        .published-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: var(--radius-full);
+            background: var(--success-green);
+            color: var(--white);
+            font-weight: var(--weight-semibold);
+            font-size: var(--text-sm);
+        }
+
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-6);
+            margin: var(--space-6) 0;
+        }
+
+        .before-card {
+            background: #fee;
+            border: 2px solid #fcc;
+            border-radius: var(--radius-lg);
+            padding: var(--space-5);
+        }
+
+        .after-card {
+            background: #efe;
+            border: 2px solid #cfc;
+            border-radius: var(--radius-lg);
+            padding: var(--space-5);
+        }
+
+        .timeline-outcome {
+            position: relative;
+            padding: var(--space-6) 0;
+        }
+
+        .timeline-outcome::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, var(--success-green), var(--writer-gold));
+        }
+
+        .timeline-event {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: var(--space-6);
+        }
+
+        .timeline-event::before {
+            content: attr(data-time);
+            position: absolute;
+            left: -20px;
+            top: 0;
+            width: 80px;
+            text-align: right;
+            font-weight: var(--weight-bold);
+            color: var(--success-green);
+            font-size: var(--text-sm);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 10px;
+            top: 5px;
+            width: 24px;
+            height: 24px;
+            background: var(--success-green);
+            border-radius: 50%;
+            border: 4px solid var(--white);
+            box-shadow: 0 0 0 2px var(--success-green);
+        }
+
+        .finished-work-showcase {
+            background: var(--gray-50);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-8);
+            margin: var(--space-8) 0;
+        }
+
+        .work-sample {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-5);
+            margin-bottom: var(--space-4);
+            box-shadow: var(--shadow-md);
+            border-top: 4px solid var(--writer-gold);
+        }
+
+        .work-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--space-3);
+            font-size: var(--text-sm);
+            color: var(--gray-600);
+        }
+
+        .word-count {
+            font-weight: var(--weight-semibold);
+            color: var(--success-green);
+        }
+
+        .completion-bar {
+            background: var(--gray-200);
+            height: 8px;
+            border-radius: var(--radius-full);
+            overflow: hidden;
+            margin: var(--space-4) 0;
+        }
+
+        .completion-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--success-green), var(--writer-gold));
+            transition: width 1s ease;
+        }
+
+        .stat-outcome {
+            text-align: center;
+            padding: var(--space-5);
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        .gradient-text-outcome {
+            background: linear-gradient(135deg, var(--success-green), var(--writer-gold), var(--writer-burgundy));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .before-after {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+<!-- Google Analytics 4 - Performance Monitoring -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXXXXXXXXX', {
+    'send_page_view': true,
+    'page_path': window.location.pathname,
+    'page_title': document.title,
+    'custom_map': {
+      'dimension1': 'page_variant',
+      'dimension2': 'user_segment',
+      'dimension3': 'scroll_depth'
+    }
+  });
+
+  // CTA Click Tracking
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.cta-button, .cta, [data-cta]').forEach(button => {
+      button.addEventListener('click', function() {
+        gtag('event', 'cta_click', {
+          'cta_location': this.dataset.location || this.className,
+          'cta_text': this.textContent.trim(),
+          'page_variant': document.body.dataset.variant || 'control'
+        });
+      });
+    });
+
+    // Scroll Depth Tracking
+    let scrollDepths = [25, 50, 75, 90, 100];
+    let triggeredDepths = new Set();
+
+    window.addEventListener('scroll', function() {
+      const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+
+      scrollDepths.forEach(depth => {
+        if (scrollPercent >= depth && !triggeredDepths.has(depth)) {
+          triggeredDepths.add(depth);
+          gtag('event', 'scroll_depth', {
+            'scroll_percentage': depth,
+            'page_variant': document.body.dataset.variant || 'control'
+          });
+        }
+      });
+    });
+
+    // Time on Page Tracking
+    let startTime = Date.now();
+    window.addEventListener('beforeunload', function() {
+      const timeSpent = Math.round((Date.now() - startTime) / 1000);
+      gtag('event', 'time_on_page', {
+        'time_seconds': timeSpent,
+        'page_variant': document.body.dataset.variant || 'control'
+      });
+    });
+  });
+</script>
+
+
+<!-- Core Web Vitals Tracking -->
+<script type="module">
+  import {onCLS, onFID, onLCP, onFCP, onTTFB, onINP} from 'https://unpkg.com/web-vitals@3?module';
+
+  function sendToAnalytics({name, value, id, rating}) {
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'web_vitals', {
+        'metric_name': name,
+        'metric_value': Math.round(value),
+        'metric_id': id,
+        'metric_rating': rating,
+        'page_variant': document.body.dataset.variant || 'control'
+      });
+    }
+
+    // Log to console in development
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+      console.log(`[Web Vital] ${name}:`, {
+        value: Math.round(value) + (name === 'CLS' ? '' : 'ms'),
+        rating: rating,
+        id: id
+      });
+    }
+  }
+
+  onCLS(sendToAnalytics);
+  onFID(sendToAnalytics);
+  onLCP(sendToAnalytics);
+  onFCP(sendToAnalytics);
+  onTTFB(sendToAnalytics);
+  onINP(sendToAnalytics);
+</script>
+
+</head>
+<body>
+    <!-- Skip to main content link for keyboard users -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" style="font-weight: 600; font-size: 1.125rem; color: var(--gray-900);" aria-label="Gemini Home">Gemini</a>
+                <nav role="navigation" aria-label="Primary navigation">
+                    <a href="#results" style="margin-right: 2rem; color: var(--gray-700);">Results</a>
+                    <a href="https://gemini.google.com" class="btn btn-primary btn-small" aria-label="Try Gemini AI">Try Gemini</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+
+    <!-- Hero Section -->
+    <section class="hero hero-writers-outcome" aria-labelledby="hero-heading">
+        <div class="container">
+            <div class="hero-content" data-animate="fade-in">
+                <div class="badge badge-primary mb-4">Outcome-Focused Writing</div>
+                <h1 id="hero-heading" class="gradient-text-outcome">Publish More.<br>Write Less.</h1>
+                <p class="text-xl text-secondary mb-8" style="max-width: 700px; margin-left: auto; margin-right: auto;">
+                    Stop collecting drafts. Start collecting bylines. Gemini helps you finish what you start—and get it published.
+                </p>
+                <div class="flex gap-4 justify-center mb-8">
+                    <a href="https://gemini.google.com" class="btn btn-primary btn-large" aria-label="Finish Your First Piece">Finish Your First Piece</a>
+                    <a href="#results" class="btn btn-secondary btn-large" aria-label="See Results">See Results</a>
+                </div>
+                <p class="text-sm text-secondary mt-4">
+                    <span class="published-badge">✓ 500K+ pieces published with Gemini</span>
+                </p>
+
+                <!-- Quick Outcome Stats -->
+                <div class="grid grid-3 gap-6 mt-12" data-animate="scale-in" data-delay="300">
+                    <div class="stat-outcome">
+                        <span class="outcome-number">3.2x</span>
+                        <p class="text-secondary">More pieces finished per month</p>
+                    </div>
+                    <div class="stat-outcome">
+                        <span class="outcome-number">87%</span>
+                        <p class="text-secondary">Draft-to-publish rate</p>
+                    </div>
+                    <div class="stat-outcome">
+                        <span class="outcome-number">6hrs</span>
+                        <p class="text-secondary">Average time saved per piece</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Comparison -->
+    <section id="results" class="section bg-white">
+        <div class="container container-narrow">
+            <h2 class="text-center mb-4" data-animate="fade-in">Your Month: Before & After Gemini</h2>
+            <p class="text-xl text-secondary text-center mb-12" data-animate="fade-in" data-delay="100">
+                Real outcomes from real writers
+            </p>
+
+            <div class="before-after" data-animate="fade-in" data-delay="200">
+                <div class="before-card">
+                    <h3 class="text-xl mb-4" style="color: #c33;">❌ Before Gemini</h3>
+                    <ul style="list-style: none; padding: 0; line-height: 2;">
+                        <li>📝 <strong>12 pieces started</strong></li>
+                        <li>✓ <strong>3 pieces finished</strong></li>
+                        <li>📤 <strong>2 pieces published</strong></li>
+                        <li>😔 <strong>9 pieces abandoned</strong></li>
+                        <li>⏰ <strong>45 hours writing time</strong></li>
+                        <li>💰 <strong>$800 earned</strong></li>
+                    </ul>
+                    <div class="completion-bar mt-6">
+                        <div class="completion-fill" style="width: 25%; background: #c33;"></div>
+                    </div>
+                    <p class="text-center text-sm text-secondary mt-2">25% completion rate</p>
+                </div>
+
+                <div class="after-card">
+                    <h3 class="text-xl mb-4" style="color: #3c3;">✓ After Gemini</h3>
+                    <ul style="list-style: none; padding: 0; line-height: 2;">
+                        <li>📝 <strong>12 pieces started</strong></li>
+                        <li>✓ <strong>11 pieces finished</strong></li>
+                        <li>📤 <strong>10 pieces published</strong></li>
+                        <li>😊 <strong>1 piece in revision</strong></li>
+                        <li>⏰ <strong>38 hours writing time</strong></li>
+                        <li>💰 <strong>$4,200 earned</strong></li>
+                    </ul>
+                    <div class="completion-bar mt-6">
+                        <div class="completion-fill" style="width: 92%; background: #3c3;"></div>
+                    </div>
+                    <p class="text-center text-sm text-secondary mt-2">92% completion rate</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-8" data-animate="fade-in" data-delay="400">
+                <p class="text-xl" style="color: var(--success-green); font-weight: var(--weight-bold);">
+                    5x more published. 7 hours saved. 5.25x revenue increase.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline: Blank Page to Published -->
+    <section class="section bg-gray-50">
+        <div class="container container-narrow">
+            <h2 class="text-center mb-12" data-animate="fade-in">Blank Page to Published: Same Day</h2>
+
+            <div class="finished-work-showcase" data-animate="fade-in" data-delay="100">
+                <div class="timeline-outcome">
+                    <div class="timeline-event" data-time="9:00 AM">
+                        <div class="timeline-dot"></div>
+                        <h4 class="mb-2">Start: "Write an article about AI in healthcare"</h4>
+                        <p class="text-secondary">Gemini generates outline, suggests angles, identifies gaps</p>
+                    </div>
+
+                    <div class="timeline-event" data-time="10:30 AM">
+                        <div class="timeline-dot"></div>
+                        <h4 class="mb-2">First Draft Complete (2,200 words)</h4>
+                        <p class="text-secondary">Research integrated, sources cited, structure solid</p>
+                    </div>
+
+                    <div class="timeline-event" data-time="12:00 PM">
+                        <div class="timeline-dot"></div>
+                        <h4 class="mb-2">Revisions & Voice Matching</h4>
+                        <p class="text-secondary">Adjusted tone to match publication style, strengthened arguments</p>
+                    </div>
+
+                    <div class="timeline-event" data-time="2:00 PM">
+                        <div class="timeline-dot"></div>
+                        <h4 class="mb-2">Final Polish & SEO</h4>
+                        <p class="text-secondary">Headlines optimized, meta description written, subheads improved</p>
+                    </div>
+
+                    <div class="timeline-event" data-time="3:00 PM">
+                        <div class="timeline-dot" style="background: var(--writer-gold);"></div>
+                        <h4 class="mb-2">✓ Published & Promoted</h4>
+                        <p class="text-secondary">Article live, social posts drafted, newsletter excerpt ready</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-center text-xl mt-8" style="color: var(--success-green); font-weight: var(--weight-semibold);">
+                Total time: 6 hours. From idea to published piece.
+            </p>
+        </div>
+    </section>
+
+    <!-- Finished Work Examples -->
+    <section class="section">
+        <div class="container container-narrow">
+            <h2 class="text-center mb-12" data-animate="fade-in">Real Finished Work</h2>
+
+            <div class="work-sample" data-animate="fade-in" data-delay="100">
+                <div class="work-meta">
+                    <span>NYT Op-Ed Submission</span>
+                    <span class="word-count">1,200 words • Published</span>
+                </div>
+                <h3 class="mb-3">"Why AI Won't Replace Doctors—It Will Free Them"</h3>
+                <p class="text-secondary mb-3">
+                    A nuanced take on AI in healthcare that got accepted on first submission. Gemini helped structure the argument, find supporting research, and match the NYT's analytical-but-accessible tone.
+                </p>
+                <p class="text-sm text-secondary">
+                    <strong>Writer:</strong> Dr. Jennifer Chang • <strong>Time:</strong> 4 hours • <strong>Result:</strong> $400 payment + ongoing column opportunity
+                </p>
+            </div>
+
+            <div class="work-sample" data-animate="fade-in" data-delay="200">
+                <div class="work-meta">
+                    <span>Tech Blog Series</span>
+                    <span class="word-count">8,500 words • 5 posts published</span>
+                </div>
+                <h3 class="mb-3">"Building Scalable APIs: A Complete Guide"</h3>
+                <p class="text-secondary mb-3">
+                    Turned one messy brain dump into a comprehensive 5-part series. Gemini organized the flow, filled knowledge gaps, and created consistent examples across all posts.
+                </p>
+                <p class="text-sm text-secondary">
+                    <strong>Writer:</strong> Marcus Lee • <strong>Time:</strong> 12 hours total • <strong>Result:</strong> 15K+ views, 3 client inquiries
+                </p>
+            </div>
+
+            <div class="work-sample" data-animate="fade-in" data-delay="300">
+                <div class="work-meta">
+                    <span>Fiction Short Story</span>
+                    <span class="word-count">4,200 words • Published in Clarkesworld</span>
+                </div>
+                <h3 class="mb-3">"The Last Librarian of Mars"</h3>
+                <p class="text-secondary mb-3">
+                    Started with a vague concept. Gemini helped develop the world-building, maintain character consistency, and identify plot holes. Final story published in a top-tier sci-fi magazine.
+                </p>
+                <p class="text-sm text-secondary">
+                    <strong>Writer:</strong> Sarah Kim • <strong>Time:</strong> 18 hours • <strong>Result:</strong> $800 payment + Hugo eligibility
+                </p>
+            </div>
+
+            <div class="work-sample" data-animate="fade-in" data-delay="400">
+                <div class="work-meta">
+                    <span>Client White Paper</span>
+                    <span class="word-count">6,000 words • Delivered early</span>
+                </div>
+                <h3 class="mb-3">"The Future of Supply Chain Automation"</h3>
+                <p class="text-secondary mb-3">
+                    Enterprise client needed authoritative industry analysis. Gemini researched trends, cited 40+ sources, and maintained professional tone throughout. Delivered 3 days ahead of deadline.
+                </p>
+                <p class="text-sm text-secondary">
+                    <strong>Writer:</strong> Alex Rodriguez • <strong>Time:</strong> 16 hours (budgeted 30) • <strong>Result:</strong> $5,000 payment + repeat client
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outcomes by Writer Type -->
+    <section class="section bg-gray-50">
+        <div class="container container-narrow">
+            <h2 class="text-center mb-12" data-animate="fade-in">Results by Writer Type</h2>
+
+            <div class="grid grid-2 gap-6" role="list">
+                <article class="outcome-card" data-animate="slide-in-up" data-delay="0" role="listitem">
+                    <h3 class="text-xl mb-3">📚 Fiction Writers</h3>
+                    <p class="outcome-number">+127%</p>
+                    <p class="text-secondary mb-4">Stories completed and submitted</p>
+                    <ul class="text-secondary" style="line-height: 1.8;">
+                        <li>• Avg 2.3 stories/month (was 1.0)</li>
+                        <li>• 42% acceptance rate (was 28%)</li>
+                        <li>• $2,400/month avg earnings</li>
+                    </ul>
+                </article>
+
+                <article class="outcome-card" data-animate="slide-in-up" data-delay="100" role="listitem">
+                    <h3 class="text-xl mb-3">📰 Journalists</h3>
+                    <p class="outcome-number">+215%</p>
+                    <p class="text-secondary mb-4">Articles published per month</p>
+                    <ul class="text-secondary" style="line-height: 1.8;">
+                        <li>• Avg 8.5 articles/month (was 2.7)</li>
+                        <li>• 78% faster research-to-publish</li>
+                        <li>• $4,800/month avg earnings</li>
+                    </ul>
+                </article>
+
+                <article class="outcome-card" data-animate="slide-in-up" data-delay="200" role="listitem">
+                    <h3 class="text-xl mb-3">💼 Business Writers</h3>
+                    <p class="outcome-number">+183%</p>
+                    <p class="text-secondary mb-4">Client projects completed</p>
+                    <ul class="text-secondary" style="line-height: 1.8;">
+                        <li>• Avg 5.2 projects/month (was 1.8)</li>
+                        <li>• 89% on-time delivery (was 62%)</li>
+                        <li>• $8,200/month avg earnings</li>
+                    </ul>
+                </article>
+
+                <article class="outcome-card" data-animate="slide-in-up" data-delay="300" role="listitem">
+                    <h3 class="text-xl mb-3">✍️ Content Creators</h3>
+                    <p class="outcome-number">+264%</p>
+                    <p class="text-secondary mb-4">Blog posts and content published</p>
+                    <ul class="text-secondary" style="line-height: 1.8;">
+                        <li>• Avg 18 posts/month (was 5)</li>
+                        <li>• 3.2x faster production</li>
+                        <li>• $3,600/month avg earnings</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+        <div class="container container-narrow text-center">
+            <div data-animate="fade-in">
+                <h2 class="mb-4">Stop Drafting.<br>Start Publishing.</h2>
+                <p class="text-xl text-secondary mb-8">
+                    Join 500,000+ writers who finish what they start—and get paid for it.
+                </p>
+                <a href="https://gemini.google.com" class="btn btn-primary btn-large" aria-label="Publish Your First Piece">Publish Your First Piece</a>
+                <p class="text-sm text-secondary mt-4">
+                    Free trial • Finish your first piece in 24 hours • Cancel anytime
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    </main>
+
+    <footer role="contentinfo" style="background: var(--gray-50); padding: var(--space-6) 0; text-align: center; border-top: 1px solid var(--color-border);">
+        <div class="container">
+            <p class="text-sm text-secondary">
+                Powered by Gemini Advanced with VO3 | <a href="https://ai.google/responsibility/principles/">AI Principles</a> | <a href="https://policies.google.com/privacy">Privacy</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/animations.js"></script>
+
+<!-- User Feedback Widget -->
+<div id="feedback-widget" class="feedback-widget" style="display: none;">
+  <div class="feedback-prompt">Was this page helpful?</div>
+  <div class="feedback-buttons">
+    <button class="feedback-btn" data-rating="yes" aria-label="Yes, this page was helpful">
+      <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+        <path d="M10 1l2.5 5.5L18 7.5l-4 4 1 6-5-2.5-5 2.5 1-6-4-4 5.5-1z" fill="currentColor"/>
+      </svg>
+      Yes
+    </button>
+    <button class="feedback-btn" data-rating="no" aria-label="No, this page was not helpful">
+      <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+        <circle cx="10" cy="10" r="8" stroke="currentColor" fill="none" stroke-width="2"/>
+        <line x1="6" y1="6" x2="14" y2="14" stroke="currentColor" stroke-width="2"/>
+        <line x1="14" y1="6" x2="6" y2="14" stroke="currentColor" stroke-width="2"/>
+      </svg>
+      No
+    </button>
+  </div>
+  <div class="feedback-followup" style="display: none;">
+    <textarea placeholder="Tell us more (optional)" maxlength="500" aria-label="Additional feedback"></textarea>
+    <button class="feedback-submit">Send</button>
+    <button class="feedback-skip">Skip</button>
+  </div>
+  <div class="feedback-thanks" style="display: none;">
+    Thank you for your feedback! 🙏
+  </div>
+</div>
+
+<style>
+.feedback-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  padding: 16px 20px;
+  font-size: 14px;
+  max-width: 300px;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+.feedback-prompt {
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.feedback-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.feedback-btn {
+  flex: 1;
+  padding: 8px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+  transition: all 0.2s;
+  font-size: 14px;
+  color: #1a1a1a;
+}
+
+.feedback-btn:hover {
+  background: #f5f5f7;
+  border-color: #1a73e8;
+}
+
+.feedback-btn:focus {
+  outline: 2px solid #1a73e8;
+  outline-offset: 2px;
+}
+
+.feedback-followup textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin: 12px 0 8px;
+  font-family: inherit;
+  font-size: 13px;
+  resize: vertical;
+  min-height: 60px;
+}
+
+.feedback-followup textarea:focus {
+  outline: 2px solid #1a73e8;
+  border-color: #1a73e8;
+}
+
+.feedback-submit,
+.feedback-skip {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  margin-right: 8px;
+  transition: all 0.2s;
+}
+
+.feedback-submit {
+  background: #1a73e8;
+  color: white;
+}
+
+.feedback-submit:hover {
+  background: #1557b0;
+}
+
+.feedback-skip {
+  background: transparent;
+  color: #666;
+}
+
+.feedback-skip:hover {
+  background: #f5f5f7;
+}
+
+.feedback-thanks {
+  color: #1a73e8;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .feedback-widget {
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+    max-width: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .feedback-widget {
+    transition: none;
+  }
+}
+</style>
+
+<script>
+(function() {
+  // Show widget after 10 seconds on page
+  setTimeout(function() {
+    const widget = document.getElementById('feedback-widget');
+    if (widget && !sessionStorage.getItem('feedback_submitted')) {
+      widget.style.display = 'block';
+    }
+  }, 10000);
+
+  const widget = document.getElementById('feedback-widget');
+  if (!widget) return;
+
+  const buttons = widget.querySelectorAll('.feedback-btn');
+  const followup = widget.querySelector('.feedback-followup');
+  const thanks = widget.querySelector('.feedback-thanks');
+  const submitBtn = widget.querySelector('.feedback-submit');
+  const skipBtn = widget.querySelector('.feedback-skip');
+  const textarea = widget.querySelector('textarea');
+
+  let selectedRating = null;
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', function() {
+      selectedRating = this.dataset.rating;
+
+      // Track initial rating
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'feedback_rating', {
+          'rating': selectedRating,
+          'page_variant': document.body.dataset.variant || 'control',
+          'page_path': window.location.pathname
+        });
+      }
+
+      // Show followup
+      widget.querySelector('.feedback-buttons').style.display = 'none';
+      widget.querySelector('.feedback-prompt').textContent = 'Tell us more:';
+      followup.style.display = 'block';
+      textarea.focus();
+    });
+  });
+
+  submitBtn.addEventListener('click', function() {
+    const comment = textarea.value.trim();
+
+    // Track detailed feedback
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'feedback_comment', {
+        'rating': selectedRating,
+        'has_comment': comment.length > 0,
+        'comment_length': comment.length,
+        'page_variant': document.body.dataset.variant || 'control',
+        'page_path': window.location.pathname
+      });
+    }
+
+    // Log feedback (in production, send to backend)
+    console.log('User Feedback:', {
+      rating: selectedRating,
+      comment: comment,
+      page: window.location.pathname,
+      timestamp: new Date().toISOString()
+    });
+
+    sessionStorage.setItem('feedback_submitted', 'true');
+    showThanks();
+  });
+
+  skipBtn.addEventListener('click', function() {
+    sessionStorage.setItem('feedback_submitted', 'true');
+    showThanks();
+  });
+
+  function showThanks() {
+    followup.style.display = 'none';
+    widget.querySelector('.feedback-prompt').style.display = 'none';
+    thanks.style.display = 'block';
+
+    setTimeout(() => {
+      widget.style.opacity = '0';
+      setTimeout(() => widget.style.display = 'none', 300);
+    }, 2000);
+  }
+})();
+</script>
+
+</body>
+</html>

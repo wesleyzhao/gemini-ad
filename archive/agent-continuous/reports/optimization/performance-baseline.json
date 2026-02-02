@@ -1,0 +1,63 @@
+{
+  "initialScore": 75,
+  "currentScore": 78.5,
+  "targetScore": 95,
+  "history": [
+    {
+      "cycleId": "cycle_1_1769955502458",
+      "score": 80.5,
+      "timestamp": "2026-02-01T14:18:22.624Z"
+    },
+    {
+      "cycleId": "cycle_2_1769956016532",
+      "score": 78.5,
+      "timestamp": "2026-02-01T14:26:56.658Z"
+    },
+    {
+      "cycleId": "cycle_3_1769956016678",
+      "score": 78.5,
+      "timestamp": "2026-02-01T14:26:56.799Z"
+    },
+    {
+      "cycleId": "cycle_4_1769956016800",
+      "score": 78.5,
+      "timestamp": "2026-02-01T14:26:56.926Z"
+    },
+    {
+      "cycleId": "cycle_5_1769956016927",
+      "score": 78.5,
+      "timestamp": "2026-02-01T14:26:57.047Z"
+    },
+    {
+      "cycleId": "cycle_6_1769956017048",
+      "score": 78.5,
+      "timestamp": "2026-02-01T14:26:57.171Z"
+    },
+    {
+      "cycleId": "cycle_7_1769956017173",
+      "score": 78.5,
+      "timestamp": "2026-02-01T14:26:57.296Z"
+    },
+    {
+      "cycleId": "cycle_8_1769956017298",
+      "score": 78.5,
+      "timestamp": "2026-02-01T14:26:57.421Z"
+    },
+    {
+      "cycleId": "cycle_9_1769956017423",
+      "score": 78.5,
+      "timestamp": "2026-02-01T14:26:57.545Z"
+    },
+    {
+      "cycleId": "cycle_10_1769956017546",
+      "score": 78.5,
+      "timestamp": "2026-02-01T14:26:57.668Z"
+    },
+    {
+      "cycleId": "cycle_11_1769956017669",
+      "score": 78.5,
+      "timestamp": "2026-02-01T14:26:57.788Z"
+    }
+  ],
+  "trend": "stable"
+}

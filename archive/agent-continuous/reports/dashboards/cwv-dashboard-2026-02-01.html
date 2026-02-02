@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Core Web Vitals Dashboard - Gemini Landing Pages</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: #f5f5f7;
+      color: #1d1d1f;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1a73e8 0%, #4285f4 100%);
+      color: white;
+      padding: 40px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    .meta {
+      padding: 20px 40px;
+      background: #f8f9fa;
+      border-bottom: 1px solid #e0e0e0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .summary-card {
+      background: #f8f9fa;
+      padding: 24px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .summary-card h3 {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #5f6368;
+      margin-bottom: 8px;
+    }
+
+    .summary-card .value {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1a73e8;
+    }
+
+    .alerts {
+      padding: 40px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .alert {
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      border-left: 4px solid;
+    }
+
+    .alert.critical {
+      background: #fef3f2;
+      border-color: #ea4335;
+    }
+
+    .alert.warning {
+      background: #fef7e0;
+      border-color: #fbbc04;
+    }
+
+    .alert.info {
+      background: #e8f0fe;
+      border-color: #1a73e8;
+    }
+
+    .metrics {
+      padding: 40px;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    .metric-card {
+      background: #f8f9fa;
+      padding: 24px;
+      border-radius: 8px;
+    }
+
+    .metric-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .metric-value {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .metric-bar {
+      height: 8px;
+      background: #e0e0e0;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 12px 0;
+    }
+
+    .metric-bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.3s;
+    }
+
+    .metric-bar-fill.good { background: #34a853; }
+    .metric-bar-fill.needs-improvement { background: #fbbc04; }
+    .metric-bar-fill.poor { background: #ea4335; }
+
+    .metric-breakdown {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 8px;
+      font-size: 0.9rem;
+    }
+
+    .recommendations {
+      padding: 40px;
+      background: #f8f9fa;
+    }
+
+    .recommendation {
+      background: white;
+      padding: 24px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      border-left: 4px solid #1a73e8;
+    }
+
+    .recommendation h3 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      color: #1a73e8;
+    }
+
+    .priority-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-left: 8px;
+    }
+
+    .priority-critical {
+      background: #fef3f2;
+      color: #ea4335;
+    }
+
+    .priority-high {
+      background: #fef7e0;
+      color: #f9ab00;
+    }
+
+    .priority-medium {
+      background: #e8f0fe;
+      color: #1a73e8;
+    }
+
+    footer {
+      padding: 24px 40px;
+      text-align: center;
+      color: #5f6368;
+      font-size: 0.9rem;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .badge-excellent { background: #e6f4ea; color: #137333; }
+    .badge-good { background: #e8f0fe; color: #1967d2; }
+    .badge-needs-work { background: #fef7e0; color: #f9ab00; }
+    .badge-poor { background: #fef3f2; color: #c5221f; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📊 Core Web Vitals Dashboard</h1>
+      <p>Real User Metrics - Gemini Landing Pages</p>
+    </header>
+
+    <div class="meta">
+      <div>
+        <strong>Date Range:</strong> last7days<br>
+        <strong>Last Updated:</strong> 2/1/2026, 11:36:15 AM
+      </div>
+      <div style="text-align: right;">
+        <strong>Total Pages:</strong> 14<br>
+        <strong>Data Source:</strong> Simulated Data
+      </div>
+    </div>
+
+    <div class="summary">
+      <div class="summary-card">
+        <h3>Excellent</h3>
+        <div class="value" style="color: #34a853;">2</div>
+        <div class="badge badge-excellent">≥90% Good CWV</div>
+      </div>
+      <div class="summary-card">
+        <h3>Good</h3>
+        <div class="value" style="color: #1a73e8;">12</div>
+        <div class="badge badge-good">75-90% Good CWV</div>
+      </div>
+      <div class="summary-card">
+        <h3>Needs Work</h3>
+        <div class="value" style="color: #fbbc04;">0</div>
+        <div class="badge badge-needs-work">50-75% Good CWV</div>
+      </div>
+      <div class="summary-card">
+        <h3>Poor</h3>
+        <div class="value" style="color: #ea4335;">0</div>
+        <div class="badge badge-poor">&lt;50% Good CWV</div>
+      </div>
+    </div>
+
+    
+    <div class="alerts">
+      <h2 style="margin-bottom: 20px;">⚠️ Alerts (12)</h2>
+      
+        <div class="alert warning">
+          <strong>animations-demo.html</strong> - INP: 11% of users experiencing poor INP
+        </div>
+      
+        <div class="alert warning">
+          <strong>animations-demo.html</strong> - TTFB: 12% of users experiencing poor TTFB
+        </div>
+      
+        <div class="alert warning">
+          <strong>aspirational.html</strong> - LCP: 11% of users experiencing poor LCP
+        </div>
+      
+        <div class="alert warning">
+          <strong>automators.html</strong> - LCP: 13% of users experiencing poor LCP
+        </div>
+      
+        <div class="alert warning">
+          <strong>bundling.html</strong> - LCP: 14% of users experiencing poor LCP
+        </div>
+      
+        <div class="alert warning">
+          <strong>bundling.html</strong> - FCP: 11% of users experiencing poor FCP
+        </div>
+      
+        <div class="alert warning">
+          <strong>creators.html</strong> - LCP: 14% of users experiencing poor LCP
+        </div>
+      
+        <div class="alert warning">
+          <strong>operators.html</strong> - FCP: 11% of users experiencing poor FCP
+        </div>
+      
+        <div class="alert warning">
+          <strong>operators.html</strong> - TTFB: 13% of users experiencing poor TTFB
+        </div>
+      
+        <div class="alert warning">
+          <strong>valentines.html</strong> - LCP: 13% of users experiencing poor LCP
+        </div>
+      
+        <div class="alert warning">
+          <strong>workspace.html</strong> - LCP: 14% of users experiencing poor LCP
+        </div>
+      
+        <div class="alert warning">
+          <strong>workspace.html</strong> - TTFB: 13% of users experiencing poor TTFB
+        </div>
+      
+    </div>
+    
+
+    <div class="metrics">
+      <h2 style="margin-bottom: 24px;">📈 Core Web Vitals Overview</h2>
+      
+    <div class="metric-grid">
+      
+        <div class="metric-card">
+          <h3>LCP</h3>
+          <div class="metric-value" style="color: #34a853;">
+            81.02% Good
+          </div>
+          <div class="metric-bar">
+            <div class="metric-bar-fill good" style="width: 81.02%;"></div>
+          </div>
+          <div class="metric-breakdown">
+            <span style="color: #34a853;">✓ 81.02% Good</span>
+            <span style="color: #fbbc04;">~ 9.97% Needs Improvement</span>
+            <span style="color: #ea4335;">✗ 10.87% Poor</span>
+          </div>
+        </div>
+      
+        <div class="metric-card">
+          <h3>FID</h3>
+          <div class="metric-value" style="color: #34a853;">
+            90.7% Good
+          </div>
+          <div class="metric-bar">
+            <div class="metric-bar-fill good" style="width: 90.7%;"></div>
+          </div>
+          <div class="metric-breakdown">
+            <span style="color: #34a853;">✓ 90.7% Good</span>
+            <span style="color: #fbbc04;">~ 6.12% Needs Improvement</span>
+            <span style="color: #ea4335;">✗ 5.36% Poor</span>
+          </div>
+        </div>
+      
+        <div class="metric-card">
+          <h3>INP</h3>
+          <div class="metric-value" style="color: #34a853;">
+            85.6% Good
+          </div>
+          <div class="metric-bar">
+            <div class="metric-bar-fill good" style="width: 85.6%;"></div>
+          </div>
+          <div class="metric-breakdown">
+            <span style="color: #34a853;">✓ 85.6% Good</span>
+            <span style="color: #fbbc04;">~ 9.51% Needs Improvement</span>
+            <span style="color: #ea4335;">✗ 7.01% Poor</span>
+          </div>
+        </div>
+      
+        <div class="metric-card">
+          <h3>CLS</h3>
+          <div class="metric-value" style="color: #34a853;">
+            88.23% Good
+          </div>
+          <div class="metric-bar">
+            <div class="metric-bar-fill good" style="width: 88.23%;"></div>
+          </div>
+          <div class="metric-breakdown">
+            <span style="color: #34a853;">✓ 88.23% Good</span>
+            <span style="color: #fbbc04;">~ 8.8% Needs Improvement</span>
+            <span style="color: #ea4335;">✗ 5.38% Poor</span>
+          </div>
+        </div>
+      
+    </div>
+  
+    </div>
+
+    
+    <div class="recommendations">
+      <h2 style="margin-bottom: 24px;">💡 Recommendations</h2>
+      
+        <div class="recommendation">
+          <h3>
+            Optimize FCP across 7 pages
+            <span class="priority-badge priority-high">high</span>
+          </h3>
+          <p>FCP is the most common performance issue</p>
+          <p style="margin-top: 8px;"><strong>Action:</strong> Review FCP optimization guide and implement fixes</p>
+        </div>
+      
+        <div class="recommendation">
+          <h3>
+            Optimize LCP across 6 pages
+            <span class="priority-badge priority-high">high</span>
+          </h3>
+          <p>LCP is the most common performance issue</p>
+          <p style="margin-top: 8px;"><strong>Action:</strong> Review LCP optimization guide and implement fixes</p>
+        </div>
+      
+        <div class="recommendation">
+          <h3>
+            Optimize INP across 5 pages
+            <span class="priority-badge priority-high">high</span>
+          </h3>
+          <p>INP is the most common performance issue</p>
+          <p style="margin-top: 8px;"><strong>Action:</strong> Review INP optimization guide and implement fixes</p>
+        </div>
+      
+    </div>
+    
+
+    <footer>
+      Generated by Core Web Vitals Production Monitoring System<br>
+      Last updated: 2/1/2026, 11:36:15 AM
+    </footer>
+  </div>
+</body>
+</html>

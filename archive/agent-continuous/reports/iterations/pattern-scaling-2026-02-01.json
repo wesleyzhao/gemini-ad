@@ -1,0 +1,211 @@
+{
+  "timestamp": "2026-02-01T13:02:07.311Z",
+  "patternsApplied": [
+    "Call to Action"
+  ],
+  "pagesScaled": [
+    "apple-style.html",
+    "automators.html",
+    "comparison.html",
+    "creators-variation-b.html",
+    "creators.html",
+    "future.html",
+    "operators-variation-b.html",
+    "operators.html",
+    "productivity-variation-b.html",
+    "productivity.html",
+    "research.html",
+    "trust.html",
+    "valentine.html",
+    "workspace.html",
+    "writers-variation-b.html",
+    "writers.html"
+  ],
+  "results": [
+    {
+      "page": "apple-style.html",
+      "success": true,
+      "changesApplied": 0,
+      "changeLog": []
+    },
+    {
+      "page": "automators.html",
+      "success": true,
+      "changesApplied": 4,
+      "changeLog": [
+        {
+          "pattern": "Call to Action",
+          "changesApplied": 4,
+          "details": []
+        }
+      ]
+    },
+    {
+      "page": "comparison.html",
+      "success": true,
+      "changesApplied": 3,
+      "changeLog": [
+        {
+          "pattern": "Call to Action",
+          "changesApplied": 3,
+          "details": []
+        }
+      ]
+    },
+    {
+      "page": "creators-variation-b.html",
+      "success": true,
+      "changesApplied": 0,
+      "changeLog": []
+    },
+    {
+      "page": "creators.html",
+      "success": true,
+      "changesApplied": 4,
+      "changeLog": [
+        {
+          "pattern": "Call to Action",
+          "changesApplied": 4,
+          "details": []
+        }
+      ]
+    },
+    {
+      "page": "future.html",
+      "success": true,
+      "changesApplied": 1,
+      "changeLog": [
+        {
+          "pattern": "Call to Action",
+          "changesApplied": 1,
+          "details": []
+        }
+      ]
+    },
+    {
+      "page": "operators-variation-b.html",
+      "success": true,
+      "changesApplied": 4,
+      "changeLog": [
+        {
+          "pattern": "Call to Action",
+          "changesApplied": 4,
+          "details": []
+        }
+      ]
+    },
+    {
+      "page": "operators.html",
+      "success": true,
+      "changesApplied": 4,
+      "changeLog": [
+        {
+          "pattern": "Call to Action",
+          "changesApplied": 4,
+          "details": []
+        }
+      ]
+    },
+    {
+      "page": "productivity-variation-b.html",
+      "success": true,
+      "changesApplied": 5,
+      "changeLog": [
+        {
+          "pattern": "Call to Action",
+          "changesApplied": 5,
+          "details": []
+        }
+      ]
+    },
+    {
+      "page": "productivity.html",
+      "success": true,
+      "changesApplied": 4,
+      "changeLog": [
+        {
+          "pattern": "Call to Action",
+          "changesApplied": 4,
+          "details": []
+        }
+      ]
+    },
+    {
+      "page": "research.html",
+      "success": true,
+      "changesApplied": 4,
+      "changeLog": [
+        {
+          "pattern": "Call to Action",
+          "changesApplied": 4,
+          "details": []
+        }
+      ]
+    },
+    {
+      "page": "trust.html",
+      "success": true,
+      "changesApplied": 4,
+      "changeLog": [
+        {
+          "pattern": "Call to Action",
+          "changesApplied": 4,
+          "details": []
+        }
+      ]
+    },
+    {
+      "page": "valentine.html",
+      "success": true,
+      "changesApplied": 4,
+      "changeLog": [
+        {
+          "pattern": "Call to Action",
+          "changesApplied": 4,
+          "details": []
+        }
+      ]
+    },
+    {
+      "page": "workspace.html",
+      "success": true,
+      "changesApplied": 4,
+      "changeLog": [
+        {
+          "pattern": "Call to Action",
+          "changesApplied": 4,
+          "details": []
+        }
+      ]
+    },
+    {
+      "page": "writers-variation-b.html",
+      "success": true,
+      "changesApplied": 4,
+      "changeLog": [
+        {
+          "pattern": "Call to Action",
+          "changesApplied": 4,
+          "details": []
+        }
+      ]
+    },
+    {
+      "page": "writers.html",
+      "success": true,
+      "changesApplied": 4,
+      "changeLog": [
+        {
+          "pattern": "Call to Action",
+          "changesApplied": 4,
+          "details": []
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "pagesModified": 16,
+    "totalChanges": 53,
+    "estimatedTotalImpact": 140
+  }
+}

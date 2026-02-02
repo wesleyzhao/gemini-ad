@@ -1,0 +1,440 @@
+{
+  "timestamp": "2026-02-01T11:44:15.634Z",
+  "date": "2/1/2026",
+  "summary": {
+    "totalPages": 12,
+    "pagesOptimized": 0,
+    "totalOptimizationsApplied": 0
+  },
+  "optimizations": [
+    {
+      "page": "research.html",
+      "priorityScore": "26.00",
+      "issueCount": 3,
+      "metrics": {
+        "LCP": {
+          "value": 3132,
+          "threshold": 2500,
+          "severity": "medium",
+          "recommendations": [
+            "Add preconnect hints for external domains",
+            "Optimize font loading with font-display: swap",
+            "Consider lazy loading below-fold images",
+            "Minimize render-blocking resources"
+          ]
+        },
+        "INP": {
+          "value": 214,
+          "threshold": 200,
+          "severity": "medium",
+          "recommendations": [
+            "Profile slow interactions with DevTools",
+            "Optimize CSS animations (use transform/opacity)",
+            "Reduce DOM complexity",
+            "Minimize layout thrashing"
+          ]
+        },
+        "CLS": {
+          "value": "0.118",
+          "threshold": 0.1,
+          "severity": "medium",
+          "recommendations": [
+            "Audit layout shifts with DevTools",
+            "Preload web fonts",
+            "Avoid animations that cause layout changes",
+            "Set dimensions on video/iframe elements"
+          ]
+        }
+      },
+      "strategiesAvailable": 10,
+      "result": {
+        "success": false,
+        "applied": [],
+        "reason": "No applicable optimizations"
+      }
+    },
+    {
+      "page": "trust.html",
+      "priorityScore": "26.00",
+      "issueCount": 3,
+      "metrics": {
+        "LCP": {
+          "value": 3454,
+          "threshold": 2500,
+          "severity": "medium",
+          "recommendations": [
+            "Add preconnect hints for external domains",
+            "Optimize font loading with font-display: swap",
+            "Consider lazy loading below-fold images",
+            "Minimize render-blocking resources"
+          ]
+        },
+        "INP": {
+          "value": 216,
+          "threshold": 200,
+          "severity": "medium",
+          "recommendations": [
+            "Profile slow interactions with DevTools",
+            "Optimize CSS animations (use transform/opacity)",
+            "Reduce DOM complexity",
+            "Minimize layout thrashing"
+          ]
+        },
+        "CLS": {
+          "value": "0.128",
+          "threshold": 0.1,
+          "severity": "medium",
+          "recommendations": [
+            "Audit layout shifts with DevTools",
+            "Preload web fonts",
+            "Avoid animations that cause layout changes",
+            "Set dimensions on video/iframe elements"
+          ]
+        }
+      },
+      "strategiesAvailable": 10,
+      "result": {
+        "success": false,
+        "applied": [],
+        "reason": "No applicable optimizations"
+      }
+    },
+    {
+      "page": "automators.html",
+      "priorityScore": "24.00",
+      "issueCount": 3,
+      "metrics": {
+        "LCP": {
+          "value": 2908,
+          "threshold": 2500,
+          "severity": "medium",
+          "recommendations": [
+            "Add preconnect hints for external domains",
+            "Optimize font loading with font-display: swap",
+            "Consider lazy loading below-fold images",
+            "Minimize render-blocking resources"
+          ]
+        },
+        "FCP": {
+          "value": 2292,
+          "threshold": 1800,
+          "severity": "medium",
+          "recommendations": [
+            "Minimize CSS file size",
+            "Defer non-critical CSS",
+            "Optimize above-fold rendering"
+          ]
+        },
+        "TTFB": {
+          "value": 1054,
+          "threshold": 800,
+          "severity": "medium",
+          "recommendations": [
+            "Review server configuration",
+            "Optimize backend performance",
+            "Enable compression (gzip/brotli)"
+          ]
+        }
+      },
+      "strategiesAvailable": 10,
+      "result": {
+        "success": false,
+        "applied": [],
+        "reason": "No applicable optimizations"
+      }
+    },
+    {
+      "page": "index.html",
+      "priorityScore": "23.00",
+      "issueCount": 3,
+      "metrics": {
+        "INP": {
+          "value": 211,
+          "threshold": 200,
+          "severity": "medium",
+          "recommendations": [
+            "Profile slow interactions with DevTools",
+            "Optimize CSS animations (use transform/opacity)",
+            "Reduce DOM complexity",
+            "Minimize layout thrashing"
+          ]
+        },
+        "FCP": {
+          "value": 2438,
+          "threshold": 1800,
+          "severity": "medium",
+          "recommendations": [
+            "Minimize CSS file size",
+            "Defer non-critical CSS",
+            "Optimize above-fold rendering"
+          ]
+        },
+        "TTFB": {
+          "value": 809,
+          "threshold": 800,
+          "severity": "medium",
+          "recommendations": [
+            "Review server configuration",
+            "Optimize backend performance",
+            "Enable compression (gzip/brotli)"
+          ]
+        }
+      },
+      "strategiesAvailable": 9,
+      "result": {
+        "success": false,
+        "applied": [],
+        "reason": "No applicable optimizations"
+      }
+    },
+    {
+      "page": "creators.html",
+      "priorityScore": "21.00",
+      "issueCount": 3,
+      "metrics": {
+        "CLS": {
+          "value": "0.105",
+          "threshold": 0.1,
+          "severity": "medium",
+          "recommendations": [
+            "Audit layout shifts with DevTools",
+            "Preload web fonts",
+            "Avoid animations that cause layout changes",
+            "Set dimensions on video/iframe elements"
+          ]
+        },
+        "FCP": {
+          "value": 2349,
+          "threshold": 1800,
+          "severity": "medium",
+          "recommendations": [
+            "Minimize CSS file size",
+            "Defer non-critical CSS",
+            "Optimize above-fold rendering"
+          ]
+        },
+        "TTFB": {
+          "value": 984,
+          "threshold": 800,
+          "severity": "medium",
+          "recommendations": [
+            "Review server configuration",
+            "Optimize backend performance",
+            "Enable compression (gzip/brotli)"
+          ]
+        }
+      },
+      "strategiesAvailable": 9,
+      "result": {
+        "success": false,
+        "applied": [],
+        "reason": "No applicable optimizations"
+      }
+    },
+    {
+      "page": "animations-demo.html",
+      "priorityScore": "19.00",
+      "issueCount": 2,
+      "metrics": {
+        "LCP": {
+          "value": 2845,
+          "threshold": 2500,
+          "severity": "medium",
+          "recommendations": [
+            "Add preconnect hints for external domains",
+            "Optimize font loading with font-display: swap",
+            "Consider lazy loading below-fold images",
+            "Minimize render-blocking resources"
+          ]
+        },
+        "INP": {
+          "value": 219,
+          "threshold": 200,
+          "severity": "medium",
+          "recommendations": [
+            "Profile slow interactions with DevTools",
+            "Optimize CSS animations (use transform/opacity)",
+            "Reduce DOM complexity",
+            "Minimize layout thrashing"
+          ]
+        }
+      },
+      "strategiesAvailable": 7,
+      "result": {
+        "success": false,
+        "applied": [],
+        "reason": "No applicable optimizations"
+      }
+    },
+    {
+      "page": "comparison.html",
+      "priorityScore": "18.00",
+      "issueCount": 2,
+      "metrics": {
+        "LCP": {
+          "value": 3493,
+          "threshold": 2500,
+          "severity": "medium",
+          "recommendations": [
+            "Add preconnect hints for external domains",
+            "Optimize font loading with font-display: swap",
+            "Consider lazy loading below-fold images",
+            "Minimize render-blocking resources"
+          ]
+        },
+        "FCP": {
+          "value": 2291,
+          "threshold": 1800,
+          "severity": "medium",
+          "recommendations": [
+            "Minimize CSS file size",
+            "Defer non-critical CSS",
+            "Optimize above-fold rendering"
+          ]
+        }
+      },
+      "strategiesAvailable": 7,
+      "result": {
+        "success": false,
+        "applied": [],
+        "reason": "No applicable optimizations"
+      }
+    },
+    {
+      "page": "workspace.html",
+      "priorityScore": "17.00",
+      "issueCount": 2,
+      "metrics": {
+        "INP": {
+          "value": 249,
+          "threshold": 200,
+          "severity": "medium",
+          "recommendations": [
+            "Profile slow interactions with DevTools",
+            "Optimize CSS animations (use transform/opacity)",
+            "Reduce DOM complexity",
+            "Minimize layout thrashing"
+          ]
+        },
+        "FCP": {
+          "value": 2094,
+          "threshold": 1800,
+          "severity": "medium",
+          "recommendations": [
+            "Minimize CSS file size",
+            "Defer non-critical CSS",
+            "Optimize above-fold rendering"
+          ]
+        }
+      },
+      "strategiesAvailable": 6,
+      "result": {
+        "success": false,
+        "applied": [],
+        "reason": "No applicable optimizations"
+      }
+    },
+    {
+      "page": "aspirational.html",
+      "priorityScore": "14.00",
+      "issueCount": 2,
+      "metrics": {
+        "FCP": {
+          "value": 2205,
+          "threshold": 1800,
+          "severity": "medium",
+          "recommendations": [
+            "Minimize CSS file size",
+            "Defer non-critical CSS",
+            "Optimize above-fold rendering"
+          ]
+        },
+        "TTFB": {
+          "value": 875,
+          "threshold": 800,
+          "severity": "medium",
+          "recommendations": [
+            "Review server configuration",
+            "Optimize backend performance",
+            "Enable compression (gzip/brotli)"
+          ]
+        }
+      },
+      "strategiesAvailable": 6,
+      "result": {
+        "success": false,
+        "applied": [],
+        "reason": "Unknown error"
+      }
+    },
+    {
+      "page": "writers.html",
+      "priorityScore": "10.00",
+      "issueCount": 1,
+      "metrics": {
+        "LCP": {
+          "value": 3361,
+          "threshold": 2500,
+          "severity": "medium",
+          "recommendations": [
+            "Add preconnect hints for external domains",
+            "Optimize font loading with font-display: swap",
+            "Consider lazy loading below-fold images",
+            "Minimize render-blocking resources"
+          ]
+        }
+      },
+      "strategiesAvailable": 4,
+      "result": {
+        "success": false,
+        "applied": [],
+        "reason": "No applicable optimizations"
+      }
+    },
+    {
+      "page": "valentines.html",
+      "priorityScore": "8.00",
+      "issueCount": 1,
+      "metrics": {
+        "FCP": {
+          "value": 1814,
+          "threshold": 1800,
+          "severity": "medium",
+          "recommendations": [
+            "Minimize CSS file size",
+            "Defer non-critical CSS",
+            "Optimize above-fold rendering"
+          ]
+        }
+      },
+      "strategiesAvailable": 3
+    },
+    {
+      "page": "operators.html",
+      "priorityScore": "7.00",
+      "issueCount": 1,
+      "metrics": {
+        "CLS": {
+          "value": "0.149",
+          "threshold": 0.1,
+          "severity": "medium",
+          "recommendations": [
+            "Audit layout shifts with DevTools",
+            "Preload web fonts",
+            "Avoid animations that cause layout changes",
+            "Set dimensions on video/iframe elements"
+          ]
+        }
+      },
+      "strategiesAvailable": 3
+    }
+  ],
+  "nextSteps": [
+    "Review and test pages locally",
+    "Validate improvements with Lighthouse or PageSpeed Insights",
+    "Deploy to staging environment",
+    "Monitor Core Web Vitals for 7 days",
+    "Compare before/after metrics",
+    "Roll out successful optimizations to all pages"
+  ]
+}

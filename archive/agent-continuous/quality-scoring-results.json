@@ -1,0 +1,619 @@
+{
+  "timestamp": "2026-02-01T19:25:13.219Z",
+  "pages": [
+    {
+      "name": "Workspace Integration",
+      "file": "workspace.html",
+      "scores": {
+        "performance": 97,
+        "accessibility": 94,
+        "seo": 95,
+        "bestPractices": 96,
+        "mobileUX": 93
+      },
+      "overall": 95,
+      "grade": "A",
+      "status": "✅ Meets Target",
+      "improvements": [
+        {
+          "category": "mobileUX",
+          "current": 93,
+          "target": 95,
+          "gap": 2,
+          "priority": "Medium"
+        },
+        {
+          "category": "accessibility",
+          "current": 94,
+          "target": 95,
+          "gap": 1,
+          "priority": "Low"
+        }
+      ]
+    },
+    {
+      "name": "Research Professional",
+      "file": "research.html",
+      "scores": {
+        "performance": 98,
+        "accessibility": 96,
+        "seo": 96,
+        "bestPractices": 95,
+        "mobileUX": 94
+      },
+      "overall": 96,
+      "grade": "A",
+      "status": "✅ Meets Target",
+      "improvements": [
+        {
+          "category": "bestPractices",
+          "current": 95,
+          "target": 96,
+          "gap": 1,
+          "priority": "Low"
+        },
+        {
+          "category": "mobileUX",
+          "current": 94,
+          "target": 95,
+          "gap": 1,
+          "priority": "Low"
+        }
+      ]
+    },
+    {
+      "name": "Competitor Comparison",
+      "file": "comparison.html",
+      "scores": {
+        "performance": 96,
+        "accessibility": 93,
+        "seo": 94,
+        "bestPractices": 95,
+        "mobileUX": 93
+      },
+      "overall": 94,
+      "grade": "B",
+      "status": "⚠️ Close to Target",
+      "improvements": [
+        {
+          "category": "accessibility",
+          "current": 93,
+          "target": 95,
+          "gap": 2,
+          "priority": "Medium"
+        },
+        {
+          "category": "mobileUX",
+          "current": 93,
+          "target": 95,
+          "gap": 2,
+          "priority": "Medium"
+        },
+        {
+          "category": "performance",
+          "current": 96,
+          "target": 97,
+          "gap": 1,
+          "priority": "Low"
+        },
+        {
+          "category": "seo",
+          "current": 94,
+          "target": 95,
+          "gap": 1,
+          "priority": "Low"
+        },
+        {
+          "category": "bestPractices",
+          "current": 95,
+          "target": 96,
+          "gap": 1,
+          "priority": "Low"
+        }
+      ]
+    },
+    {
+      "name": "Writers Segment",
+      "file": "writers.html",
+      "scores": {
+        "performance": 95,
+        "accessibility": 92,
+        "seo": 93,
+        "bestPractices": 94,
+        "mobileUX": 91
+      },
+      "overall": 93,
+      "grade": "B",
+      "status": "⚠️ Close to Target",
+      "improvements": [
+        {
+          "category": "mobileUX",
+          "current": 91,
+          "target": 95,
+          "gap": 4,
+          "priority": "High"
+        },
+        {
+          "category": "accessibility",
+          "current": 92,
+          "target": 95,
+          "gap": 3,
+          "priority": "High"
+        },
+        {
+          "category": "performance",
+          "current": 95,
+          "target": 97,
+          "gap": 2,
+          "priority": "Medium"
+        },
+        {
+          "category": "seo",
+          "current": 93,
+          "target": 95,
+          "gap": 2,
+          "priority": "Medium"
+        },
+        {
+          "category": "bestPractices",
+          "current": 94,
+          "target": 96,
+          "gap": 2,
+          "priority": "Medium"
+        }
+      ]
+    },
+    {
+      "name": "Creators Segment",
+      "file": "creators.html",
+      "scores": {
+        "performance": 96,
+        "accessibility": 93,
+        "seo": 94,
+        "bestPractices": 95,
+        "mobileUX": 92
+      },
+      "overall": 94,
+      "grade": "B",
+      "status": "⚠️ Close to Target",
+      "improvements": [
+        {
+          "category": "mobileUX",
+          "current": 92,
+          "target": 95,
+          "gap": 3,
+          "priority": "High"
+        },
+        {
+          "category": "accessibility",
+          "current": 93,
+          "target": 95,
+          "gap": 2,
+          "priority": "Medium"
+        },
+        {
+          "category": "performance",
+          "current": 96,
+          "target": 97,
+          "gap": 1,
+          "priority": "Low"
+        },
+        {
+          "category": "seo",
+          "current": 94,
+          "target": 95,
+          "gap": 1,
+          "priority": "Low"
+        },
+        {
+          "category": "bestPractices",
+          "current": 95,
+          "target": 96,
+          "gap": 1,
+          "priority": "Low"
+        }
+      ]
+    },
+    {
+      "name": "Productivity Focus",
+      "file": "productivity.html",
+      "scores": {
+        "performance": 97,
+        "accessibility": 94,
+        "seo": 95,
+        "bestPractices": 96,
+        "mobileUX": 93
+      },
+      "overall": 95,
+      "grade": "A",
+      "status": "✅ Meets Target",
+      "improvements": [
+        {
+          "category": "mobileUX",
+          "current": 93,
+          "target": 95,
+          "gap": 2,
+          "priority": "Medium"
+        },
+        {
+          "category": "accessibility",
+          "current": 94,
+          "target": 95,
+          "gap": 1,
+          "priority": "Low"
+        }
+      ]
+    },
+    {
+      "name": "Future/Aspirational",
+      "file": "future.html",
+      "scores": {
+        "performance": 98,
+        "accessibility": 96,
+        "seo": 96,
+        "bestPractices": 95,
+        "mobileUX": 94
+      },
+      "overall": 96,
+      "grade": "A",
+      "status": "✅ Meets Target",
+      "improvements": [
+        {
+          "category": "bestPractices",
+          "current": 95,
+          "target": 96,
+          "gap": 1,
+          "priority": "Low"
+        },
+        {
+          "category": "mobileUX",
+          "current": 94,
+          "target": 95,
+          "gap": 1,
+          "priority": "Low"
+        }
+      ]
+    },
+    {
+      "name": "Homepage Hub",
+      "file": "index.html",
+      "scores": {
+        "performance": 96,
+        "accessibility": 93,
+        "seo": 94,
+        "bestPractices": 95,
+        "mobileUX": 93
+      },
+      "overall": 94,
+      "grade": "B",
+      "status": "⚠️ Close to Target",
+      "improvements": [
+        {
+          "category": "accessibility",
+          "current": 93,
+          "target": 95,
+          "gap": 2,
+          "priority": "Medium"
+        },
+        {
+          "category": "mobileUX",
+          "current": 93,
+          "target": 95,
+          "gap": 2,
+          "priority": "Medium"
+        },
+        {
+          "category": "performance",
+          "current": 96,
+          "target": 97,
+          "gap": 1,
+          "priority": "Low"
+        },
+        {
+          "category": "seo",
+          "current": 94,
+          "target": 95,
+          "gap": 1,
+          "priority": "Low"
+        },
+        {
+          "category": "bestPractices",
+          "current": 95,
+          "target": 96,
+          "gap": 1,
+          "priority": "Low"
+        }
+      ]
+    },
+    {
+      "name": "Apple-Style Minimalist",
+      "file": "apple-style.html",
+      "scores": {
+        "performance": 99,
+        "accessibility": 97,
+        "seo": 97,
+        "bestPractices": 96,
+        "mobileUX": 95
+      },
+      "overall": 97,
+      "grade": "A",
+      "status": "✅ Meets Target",
+      "improvements": []
+    },
+    {
+      "name": "Valentine's Day Hook",
+      "file": "valentine.html",
+      "scores": {
+        "performance": 94,
+        "accessibility": 91,
+        "seo": 92,
+        "bestPractices": 93,
+        "mobileUX": 90
+      },
+      "overall": 92,
+      "grade": "B",
+      "status": "🚨 Below Target",
+      "improvements": [
+        {
+          "category": "mobileUX",
+          "current": 90,
+          "target": 95,
+          "gap": 5,
+          "priority": "High"
+        },
+        {
+          "category": "accessibility",
+          "current": 91,
+          "target": 95,
+          "gap": 4,
+          "priority": "High"
+        },
+        {
+          "category": "performance",
+          "current": 94,
+          "target": 97,
+          "gap": 3,
+          "priority": "High"
+        },
+        {
+          "category": "seo",
+          "current": 92,
+          "target": 95,
+          "gap": 3,
+          "priority": "High"
+        },
+        {
+          "category": "bestPractices",
+          "current": 93,
+          "target": 96,
+          "gap": 3,
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "name": "Operators Segment",
+      "file": "operators.html",
+      "scores": {
+        "performance": 95,
+        "accessibility": 92,
+        "seo": 93,
+        "bestPractices": 94,
+        "mobileUX": 92
+      },
+      "overall": 93,
+      "grade": "B",
+      "status": "⚠️ Close to Target",
+      "improvements": [
+        {
+          "category": "accessibility",
+          "current": 92,
+          "target": 95,
+          "gap": 3,
+          "priority": "High"
+        },
+        {
+          "category": "mobileUX",
+          "current": 92,
+          "target": 95,
+          "gap": 3,
+          "priority": "High"
+        },
+        {
+          "category": "performance",
+          "current": 95,
+          "target": 97,
+          "gap": 2,
+          "priority": "Medium"
+        },
+        {
+          "category": "seo",
+          "current": 93,
+          "target": 95,
+          "gap": 2,
+          "priority": "Medium"
+        },
+        {
+          "category": "bestPractices",
+          "current": 94,
+          "target": 96,
+          "gap": 2,
+          "priority": "Medium"
+        }
+      ]
+    },
+    {
+      "name": "Automators Segment",
+      "file": "automators.html",
+      "scores": {
+        "performance": 96,
+        "accessibility": 93,
+        "seo": 94,
+        "bestPractices": 95,
+        "mobileUX": 93
+      },
+      "overall": 94,
+      "grade": "B",
+      "status": "⚠️ Close to Target",
+      "improvements": [
+        {
+          "category": "accessibility",
+          "current": 93,
+          "target": 95,
+          "gap": 2,
+          "priority": "Medium"
+        },
+        {
+          "category": "mobileUX",
+          "current": 93,
+          "target": 95,
+          "gap": 2,
+          "priority": "Medium"
+        },
+        {
+          "category": "performance",
+          "current": 96,
+          "target": 97,
+          "gap": 1,
+          "priority": "Low"
+        },
+        {
+          "category": "seo",
+          "current": 94,
+          "target": 95,
+          "gap": 1,
+          "priority": "Low"
+        },
+        {
+          "category": "bestPractices",
+          "current": 95,
+          "target": 96,
+          "gap": 1,
+          "priority": "Low"
+        }
+      ]
+    },
+    {
+      "name": "Trust & Citations",
+      "file": "trust.html",
+      "scores": {
+        "performance": 97,
+        "accessibility": 94,
+        "seo": 95,
+        "bestPractices": 96,
+        "mobileUX": 94
+      },
+      "overall": 95,
+      "grade": "A",
+      "status": "✅ Meets Target",
+      "improvements": [
+        {
+          "category": "accessibility",
+          "current": 94,
+          "target": 95,
+          "gap": 1,
+          "priority": "Low"
+        },
+        {
+          "category": "mobileUX",
+          "current": 94,
+          "target": 95,
+          "gap": 1,
+          "priority": "Low"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "totalPages": 13,
+    "averageOverall": 94.5,
+    "categoryAverages": {
+      "performance": 96,
+      "accessibility": 94,
+      "seo": 94,
+      "bestPractices": 95,
+      "mobileUX": 93
+    },
+    "meetsTarget": 6,
+    "needsImprovement": 7,
+    "gradeDistribution": {
+      "A": 6,
+      "B": 7,
+      "C": 0,
+      "D": 0,
+      "F": 0
+    }
+  },
+  "recommendations": [
+    {
+      "category": "mobileUX",
+      "affectedPages": 12,
+      "averageGap": 2.3,
+      "totalImpact": 28,
+      "priority": "High",
+      "actions": [
+        "Increase touch target sizes (≥ 48×48px)",
+        "Improve form spacing on mobile",
+        "Optimize modal dialogs for small screens",
+        "Ensure text legibility (≥ 12px)",
+        "Test on multiple devices and browsers"
+      ]
+    },
+    {
+      "category": "accessibility",
+      "affectedPages": 10,
+      "averageGap": 2.1,
+      "totalImpact": 21,
+      "priority": "High",
+      "actions": [
+        "Add aria-label to all icon-only buttons",
+        "Improve focus styles on interactive elements",
+        "Add skip-to-content links",
+        "Ensure color contrast ratio ≥ 4.5:1",
+        "Test with screen readers (NVDA, JAWS)"
+      ]
+    },
+    {
+      "category": "bestPractices",
+      "affectedPages": 9,
+      "averageGap": 1.4,
+      "totalImpact": 13,
+      "priority": "High",
+      "actions": [
+        "Update CSP headers to include all CDN sources",
+        "Fix console warnings and errors",
+        "Add security headers (X-Frame-Options, etc.)",
+        "Remove deprecated API usage",
+        "Ensure HTTPS for all resources"
+      ]
+    },
+    {
+      "category": "performance",
+      "affectedPages": 7,
+      "averageGap": 1.6,
+      "totalImpact": 11,
+      "priority": "High",
+      "actions": [
+        "Optimize images (convert to WebP, add srcset)",
+        "Implement lazy loading for below-fold content",
+        "Preload critical CSS and fonts",
+        "Minify CSS and JavaScript",
+        "Enable browser caching"
+      ]
+    },
+    {
+      "category": "seo",
+      "affectedPages": 7,
+      "averageGap": 1.6,
+      "totalImpact": 11,
+      "priority": "High",
+      "actions": [
+        "Enhance meta descriptions (150-160 chars)",
+        "Optimize title tags (50-60 chars)",
+        "Add FAQ schema markup",
+        "Implement breadcrumb navigation",
+        "Improve internal linking structure"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation System Test | Gemini Ads</title>
+  <link rel="stylesheet" href="../assets/css/design-system.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <style>
+    /* Test page specific styles */
+    body {
+      background: var(--color-surface);
+      padding: 0;
+      margin: 0;
+    }
+
+    .test-section {
+      min-height: 60vh;
+      padding: var(--space-3xl) var(--space-lg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .test-section-dark {
+      background: var(--color-surface-dark);
+      color: var(--color-text-on-dark);
+    }
+
+    .test-section-gradient {
+      background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+      color: white;
+    }
+
+    .test-header {
+      text-align: center;
+      margin-bottom: var(--space-2xl);
+    }
+
+    .test-header h2 {
+      font-size: var(--font-size-2xl);
+      font-weight: var(--font-weight-bold);
+      margin-bottom: var(--space-sm);
+    }
+
+    .test-header p {
+      font-size: var(--font-size-md);
+      color: var(--color-text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .test-section-dark .test-header p {
+      color: var(--color-text-secondary-on-dark);
+    }
+
+    .test-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--space-lg);
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .test-card {
+      background: white;
+      padding: var(--space-xl);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      text-align: center;
+    }
+
+    .test-section-dark .test-card {
+      background: var(--color-surface);
+      color: var(--color-text);
+    }
+
+    .test-section-gradient .test-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .test-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto var(--space-md);
+      background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--font-size-2xl);
+      font-weight: var(--font-weight-bold);
+      color: white;
+    }
+
+    .test-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+
+    .test-list-item {
+      background: white;
+      padding: var(--space-lg);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      text-align: left;
+    }
+
+    .parallax-demo {
+      position: relative;
+      height: 400px;
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      margin: var(--space-xl) 0;
+    }
+
+    .parallax-layer {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--font-size-3xl);
+      font-weight: var(--font-weight-bold);
+      border-radius: var(--radius-lg);
+    }
+
+    .parallax-bg {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      z-index: 1;
+    }
+
+    .parallax-mid {
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.8) 100%);
+      z-index: 2;
+    }
+
+    .parallax-fg {
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.6) 0%, rgba(118, 75, 162, 0.6) 100%);
+      z-index: 3;
+      color: white;
+    }
+
+    .hero-demo {
+      text-align: center;
+      padding: var(--space-3xl) var(--space-lg);
+    }
+
+    .hero-demo h1 {
+      font-size: clamp(2rem, 5vw, 4rem);
+      font-weight: var(--font-weight-bold);
+      line-height: 1.1;
+      margin-bottom: var(--space-lg);
+    }
+
+    .hero-demo p {
+      font-size: var(--font-size-xl);
+      max-width: 700px;
+      margin: 0 auto var(--space-xl);
+    }
+
+    .cta-group {
+      display: flex;
+      gap: var(--space-md);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: var(--space-md) var(--space-xl);
+      border-radius: var(--radius-full);
+      font-size: var(--font-size-md);
+      font-weight: var(--font-weight-semibold);
+      text-decoration: none;
+      display: inline-block;
+      transition: all var(--transition-normal);
+    }
+
+    .btn-primary {
+      background: var(--color-primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--color-primary-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--color-primary);
+      border: 2px solid var(--color-primary);
+    }
+
+    .btn-secondary:hover {
+      background: var(--color-primary);
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .test-section {
+        padding: var(--space-2xl) var(--space-md);
+      }
+
+      .test-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Scroll Progress Indicator (auto-created by animations.js) -->
+
+  <!-- Hero Section with Multiple Animations -->
+  <div class="test-section test-section-gradient hero-demo">
+    <h1 class="animate-hero">
+      Animation System Test
+    </h1>
+    <p class="animate-fade-slide-up animate-delay-200">
+      Scroll down to see various scroll-triggered animations, parallax effects, and Apple.com-inspired transitions.
+    </p>
+    <div class="cta-group animate-fade-in animate-delay-400">
+      <a href="#fade-animations" class="btn btn-primary hover-lift">Explore Animations</a>
+      <a href="#parallax-demo" class="btn btn-secondary hover-scale">See Parallax</a>
+    </div>
+  </div>
+
+  <!-- Fade Animations -->
+  <div id="fade-animations" class="test-section">
+    <div class="test-header">
+      <h2 class="animate-fade-in">Fade Animations</h2>
+      <p class="animate-fade-in animate-delay-100">Simple opacity transitions at different speeds</p>
+    </div>
+    <div class="test-grid">
+      <div class="test-card animate-fade-in">
+        <div class="test-icon">F</div>
+        <h3>Fade In</h3>
+        <p>Basic fade-in animation (600ms)</p>
+      </div>
+      <div class="test-card animate-fade-in-fast">
+        <div class="test-icon">⚡</div>
+        <h3>Fade In Fast</h3>
+        <p>Quick fade-in animation (300ms)</p>
+      </div>
+      <div class="test-card animate-fade-in-slow">
+        <div class="test-icon">🐌</div>
+        <h3>Fade In Slow</h3>
+        <p>Slow fade-in animation (900ms)</p>
+      </div>
+      <div class="test-card animate-fade-in-slower">
+        <div class="test-icon">⏱️</div>
+        <h3>Fade In Slower</h3>
+        <p>Very slow fade-in (1200ms)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide Animations -->
+  <div class="test-section test-section-dark">
+    <div class="test-header">
+      <h2 class="animate-slide-up">Slide Animations</h2>
+      <p class="animate-slide-up animate-delay-100">Elements sliding in from different directions</p>
+    </div>
+    <div class="test-grid">
+      <div class="test-card animate-slide-up">
+        <div class="test-icon">↑</div>
+        <h3>Slide Up</h3>
+        <p>Slides up from bottom (40px)</p>
+      </div>
+      <div class="test-card animate-slide-down">
+        <div class="test-icon">↓</div>
+        <h3>Slide Down</h3>
+        <p>Slides down from top (40px)</p>
+      </div>
+      <div class="test-card animate-slide-right">
+        <div class="test-icon">→</div>
+        <h3>Slide Right</h3>
+        <p>Slides from left to right</p>
+      </div>
+      <div class="test-card animate-slide-left">
+        <div class="test-icon">←</div>
+        <h3>Slide Left</h3>
+        <p>Slides from right to left</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scale Animations -->
+  <div class="test-section">
+    <div class="test-header">
+      <h2 class="animate-scale-up">Scale Animations</h2>
+      <p class="animate-scale-up animate-delay-100">Elements that scale in and out</p>
+    </div>
+    <div class="test-grid">
+      <div class="test-card animate-scale-up">
+        <div class="test-icon">📏</div>
+        <h3>Scale Up</h3>
+        <p>Scales from 0.9 to 1.0</p>
+      </div>
+      <div class="test-card animate-scale-up-lg">
+        <div class="test-icon">📐</div>
+        <h3>Scale Up Large</h3>
+        <p>Scales from 0.8 to 1.0</p>
+      </div>
+      <div class="test-card animate-scale-down">
+        <div class="test-icon">📉</div>
+        <h3>Scale Down</h3>
+        <p>Scales from 1.1 to 1.0</p>
+      </div>
+      <div class="test-card animate-fade-scale">
+        <div class="test-icon">✨</div>
+        <h3>Fade + Scale</h3>
+        <p>Combined fade and scale</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Combined Animations -->
+  <div class="test-section test-section-dark">
+    <div class="test-header">
+      <h2 class="animate-fade-slide-up">Combined Animations</h2>
+      <p class="animate-fade-slide-up animate-delay-100">Multiple animation effects combined</p>
+    </div>
+    <div class="test-grid">
+      <div class="test-card animate-fade-slide-up">
+        <div class="test-icon">🎭</div>
+        <h3>Fade + Slide Up</h3>
+        <p>Apple.com signature effect</p>
+      </div>
+      <div class="test-card animate-hero">
+        <div class="test-icon">🦸</div>
+        <h3>Hero Animation</h3>
+        <p>Fade + slide + scale combo</p>
+      </div>
+      <div class="test-card animate-rotate-in">
+        <div class="test-icon">🔄</div>
+        <h3>Rotate In</h3>
+        <p>Rotation + scale effect</p>
+      </div>
+      <div class="test-card animate-flip-in">
+        <div class="test-icon">🔃</div>
+        <h3>Flip In</h3>
+        <p>3D flip perspective</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stagger Animations -->
+  <div class="test-section">
+    <div class="test-header">
+      <h2 class="animate-fade-in">Stagger Animations</h2>
+      <p class="animate-fade-in animate-delay-100">Sequential animations with delays</p>
+    </div>
+    <div class="test-grid animate-stagger">
+      <div class="test-card animate-slide-up">
+        <div class="test-icon">1️⃣</div>
+        <h3>First Item</h3>
+        <p>No delay (0ms)</p>
+      </div>
+      <div class="test-card animate-slide-up">
+        <div class="test-icon">2️⃣</div>
+        <h3>Second Item</h3>
+        <p>Delay 100ms</p>
+      </div>
+      <div class="test-card animate-slide-up">
+        <div class="test-icon">3️⃣</div>
+        <h3>Third Item</h3>
+        <p>Delay 200ms</p>
+      </div>
+      <div class="test-card animate-slide-up">
+        <div class="test-icon">4️⃣</div>
+        <h3>Fourth Item</h3>
+        <p>Delay 300ms</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Keyframe Animations -->
+  <div class="test-section test-section-dark">
+    <div class="test-header">
+      <h2 class="animate-fade-in">Keyframe Animations</h2>
+      <p class="animate-fade-in animate-delay-100">CSS keyframe-based continuous animations</p>
+    </div>
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="test-icon animate-pulse">💓</div>
+        <h3>Pulse</h3>
+        <p>Continuous pulsing effect</p>
+      </div>
+      <div class="test-card">
+        <div class="test-icon animate-bounce">⚽</div>
+        <h3>Bounce</h3>
+        <p>Bouncing animation</p>
+      </div>
+      <div class="test-card">
+        <div class="test-icon animate-spin">⚙️</div>
+        <h3>Spin</h3>
+        <p>Continuous rotation</p>
+      </div>
+      <div class="test-card">
+        <div class="test-icon animate-float">☁️</div>
+        <h3>Float</h3>
+        <p>Gentle floating motion</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hover Animations -->
+  <div class="test-section">
+    <div class="test-header">
+      <h2 class="animate-fade-in">Hover Animations</h2>
+      <p class="animate-fade-in animate-delay-100">Interactive effects on hover</p>
+    </div>
+    <div class="test-grid">
+      <div class="test-card hover-lift animate-fade-in">
+        <div class="test-icon">🚀</div>
+        <h3>Hover Lift</h3>
+        <p>Lifts up on hover</p>
+      </div>
+      <div class="test-card hover-scale animate-fade-in">
+        <div class="test-icon">🔍</div>
+        <h3>Hover Scale</h3>
+        <p>Scales up on hover</p>
+      </div>
+      <div class="test-card hover-glow animate-fade-in">
+        <div class="test-icon">💡</div>
+        <h3>Hover Glow</h3>
+        <p>Glows on hover</p>
+      </div>
+      <div class="test-card hover-brighten animate-fade-in">
+        <div class="test-icon">☀️</div>
+        <h3>Hover Brighten</h3>
+        <p>Brightens on hover</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Parallax Demo -->
+  <div id="parallax-demo" class="test-section test-section-dark">
+    <div class="test-header">
+      <h2 class="animate-fade-in">Parallax Scroll Effects</h2>
+      <p class="animate-fade-in animate-delay-100">Layers moving at different speeds</p>
+    </div>
+    <div class="parallax-container">
+      <div class="parallax-demo">
+        <div class="parallax-layer parallax-bg parallax-slow">
+          Background (Slow)
+        </div>
+        <div class="parallax-layer parallax-mid parallax-medium">
+          Middle (Medium)
+        </div>
+        <div class="parallax-layer parallax-fg parallax-fast">
+          Foreground (Fast)
+        </div>
+      </div>
+    </div>
+    <p style="margin-top: var(--space-lg); text-align: center; color: var(--color-text-secondary-on-dark);">
+      Scroll to see the parallax effect (layers move at different speeds)
+    </p>
+  </div>
+
+  <!-- Sequential Text Animation -->
+  <div class="test-section">
+    <div class="test-header">
+      <h2 class="animate-fade-in">Text Word Animation</h2>
+      <p class="animate-fade-in animate-delay-100">Words appear sequentially</p>
+    </div>
+    <div style="max-width: 800px; margin: 0 auto;">
+      <h3 class="animate-text-words" style="font-size: var(--font-size-2xl); text-align: center; line-height: 1.4;">
+        Create amazing experiences with powerful animations
+      </h3>
+    </div>
+  </div>
+
+  <!-- List with Stagger -->
+  <div class="test-section test-section-dark">
+    <div class="test-header">
+      <h2 class="animate-fade-in">Staggered List</h2>
+      <p class="animate-fade-in animate-delay-100">List items appear one after another</p>
+    </div>
+    <div style="max-width: 600px; width: 100%;">
+      <ul class="test-list animate-stagger-fast">
+        <li class="test-list-item animate-slide-right">
+          <strong>✨ Smooth Transitions</strong><br>
+          Apple.com-inspired cubic-bezier easing curves
+        </li>
+        <li class="test-list-item animate-slide-right">
+          <strong>🎯 Scroll-Triggered</strong><br>
+          Animations trigger automatically as you scroll
+        </li>
+        <li class="test-list-item animate-slide-right">
+          <strong>⚡ Performance Optimized</strong><br>
+          GPU-accelerated with Intersection Observer
+        </li>
+        <li class="test-list-item animate-slide-right">
+          <strong>♿ Accessible</strong><br>
+          Respects prefers-reduced-motion setting
+        </li>
+        <li class="test-list-item animate-slide-right">
+          <strong>📱 Responsive</strong><br>
+          Optimized animations for mobile devices
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Gradient Background Animation -->
+  <div class="test-section test-section-gradient">
+    <div class="test-header">
+      <h2 class="animate-fade-in">Animated Gradient Background</h2>
+      <p class="animate-fade-in animate-delay-100">This section has a continuously shifting gradient</p>
+    </div>
+    <div style="max-width: 700px; text-align: center;">
+      <p class="animate-fade-slide-up" style="font-size: var(--font-size-lg); margin-bottom: var(--space-xl);">
+        The background gradient smoothly animates between positions, creating a dynamic, living interface
+        inspired by Apple's modern design language.
+      </p>
+      <div class="cta-group animate-fade-in animate-delay-300">
+        <a href="#" class="btn btn-primary hover-lift" style="background: white; color: var(--color-primary);">
+          Get Started
+        </a>
+        <a href="#" class="btn btn-secondary hover-scale" style="border-color: white; color: white;">
+          Learn More
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Final Section -->
+  <div class="test-section">
+    <div class="test-header">
+      <h2 class="animate-fade-in">Animation System Complete</h2>
+      <p class="animate-fade-in animate-delay-100">
+        All animations are triggered by scroll, respect user preferences, and are performance-optimized.
+      </p>
+    </div>
+    <div style="text-align: center; max-width: 700px;">
+      <p class="animate-fade-slide-up" style="margin-bottom: var(--space-xl);">
+        This animation system provides all the building blocks needed to create beautiful,
+        Apple.com-inspired landing pages for Gemini ads. Every animation is customizable,
+        responsive, and accessible.
+      </p>
+      <div class="animate-fade-in animate-delay-300">
+        <a href="#" class="btn btn-primary hover-lift" style="padding: var(--space-lg) var(--space-2xl); font-size: var(--font-size-lg);">
+          Start Building →
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Spacer to allow scrolling past last section -->
+  <div style="height: 50vh;"></div>
+
+  <!-- Load animations JavaScript -->
+  <script src="../assets/js/animations.js"></script>
+</body>
+</html>

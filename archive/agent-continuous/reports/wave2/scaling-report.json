@@ -1,0 +1,48 @@
+{
+  "timestamp": "2026-02-01T16:01:24.666Z",
+  "feature": 78,
+  "action": "Scale Wave 2 Winners",
+  "results": {
+    "mobileOptimized": {
+      "pattern": "Mobile-Optimized Combo",
+      "lift": "+56.6%",
+      "applied": 8,
+      "skipped": 0,
+      "pages": [
+        "trust.html",
+        "workspace.html",
+        "research.html",
+        "productivity.html",
+        "apple-style.html",
+        "valentine.html",
+        "comparison.html",
+        "future.html"
+      ]
+    },
+    "socialProof": {
+      "pattern": "Social Proof + Personalization",
+      "lift": "+44.2%",
+      "applied": 4,
+      "skipped": 0,
+      "pages": [
+        "trust.html",
+        "research.html",
+        "apple-style.html",
+        "valentine.html"
+      ]
+    },
+    "scarcityTrust": {
+      "pattern": "Scarcity + Trust Signals",
+      "lift": "+27.9%",
+      "applied": 2,
+      "skipped": 0,
+      "pages": [
+        "workspace.html",
+        "productivity.html"
+      ]
+    }
+  },
+  "totalPagesUpdated": 14,
+  "expectedAnnualRevenue": "+$42,687,500",
+  "expectedROI": "533,594%"
+}

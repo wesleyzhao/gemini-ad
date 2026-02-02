@@ -1,0 +1,106 @@
+{
+  "version": "2.1.0",
+  "lastUpdated": "2026-02-01T12:00:00.000Z",
+  "totalPatterns": 5,
+  "productionPatterns": 2,
+  "patterns": [
+    {
+      "id": "pattern_personalization_v1",
+      "name": "Segment-Specific Personalization",
+      "category": "personalization",
+      "type": "content",
+      "description": "Dynamically personalizes hero content based on user segment (video-creator, designer, musician, artist, blogger)",
+      "status": "production",
+      "targets": ["badge", "heading", "description", "cta-primary"],
+      "implementation": "Dynamic content injection based on URL segment parameter with fallback to default",
+      "performance": {
+        "average_lift": 18.5,
+        "best_segment": "fiction-writer (+35.2%)",
+        "worst_segment": "blogger (-2.1%)",
+        "confidence": 0.92,
+        "sample_size": 2547
+      },
+      "applications": ["creators.html"],
+      "createdAt": "2026-01-28T10:00:00.000Z",
+      "scaledTo": ["creators.html"]
+    },
+    {
+      "id": "pattern_urgency_v1",
+      "name": "Time-Limited Urgency Banner",
+      "category": "urgency",
+      "type": "banner",
+      "description": "Countdown timer with limited spots messaging to drive immediate action",
+      "status": "production",
+      "targets": ["urgency-banner"],
+      "implementation": "Sticky banner with 24-hour countdown and dynamic spot counter",
+      "performance": {
+        "average_lift": 18.7,
+        "conversion_rate_increase": 18.7,
+        "time_to_decision_reduction": 54.7,
+        "confidence": 0.94,
+        "sample_size": 1832
+      },
+      "applications": ["trust.html"],
+      "createdAt": "2026-01-28T11:00:00.000Z",
+      "scaledTo": ["trust.html"]
+    },
+    {
+      "id": "pattern_social_proof_v1",
+      "name": "Social Proof Testimonials",
+      "category": "social_proof",
+      "type": "content",
+      "description": "User testimonials and success stories from similar user segments",
+      "status": "testing",
+      "targets": ["testimonials-section"],
+      "implementation": "Rotating testimonials with segment-specific filtering",
+      "performance": {
+        "average_lift": 12.3,
+        "confidence": 0.85,
+        "sample_size": 1234
+      },
+      "applications": [],
+      "createdAt": "2026-01-25T09:00:00.000Z"
+    },
+    {
+      "id": "pattern_trust_signals_v1",
+      "name": "Trust Badges and Certifications",
+      "category": "trust",
+      "type": "visual",
+      "description": "Display security badges, privacy certifications, and Google trust indicators",
+      "status": "testing",
+      "targets": ["trust-badges"],
+      "implementation": "Badge grid with tooltips explaining each certification",
+      "performance": {
+        "average_lift": 8.7,
+        "confidence": 0.78,
+        "sample_size": 987
+      },
+      "applications": [],
+      "createdAt": "2026-01-26T14:00:00.000Z"
+    },
+    {
+      "id": "pattern_scarcity_v1",
+      "name": "Limited Availability Messaging",
+      "category": "scarcity",
+      "type": "content",
+      "description": "Dynamic messaging showing limited spots, beta access, or exclusive features",
+      "status": "experimental",
+      "targets": ["scarcity-badge"],
+      "implementation": "Real-time counter with threshold-based messaging",
+      "performance": {
+        "average_lift": 6.2,
+        "confidence": 0.65,
+        "sample_size": 543
+      },
+      "applications": [],
+      "createdAt": "2026-01-27T16:00:00.000Z"
+    }
+  ],
+  "metadata": {
+    "totalApplications": 2,
+    "avgLiftProduction": 18.6,
+    "avgLiftTesting": 10.5,
+    "highestLift": 35.2,
+    "lowestLift": -2.1
+  }
+}

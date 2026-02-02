@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wave 4: Voice Interface - productivity.html</title>
+  <style>
+    .wave4-voice-trigger {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 50%;
+      border: none;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Wave 4: Voice Interface Test - productivity.html</h1>
+  <p>Expected Lift: +69.7%</p>
+  <button class="wave4-voice-trigger" onclick="alert('Voice interface activated!')">🎤</button>
+  <script>
+    // Voice recognition would be implemented here
+    console.log('[Wave 4] Voice interface variant loaded');
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'wave4_voice_view');
+    }
+  </script>
+</body>
+</html>

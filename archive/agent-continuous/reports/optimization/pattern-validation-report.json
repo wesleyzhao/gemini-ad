@@ -1,0 +1,144 @@
+{
+  "timestamp": "2026-02-01T15:01:36.596Z",
+  "totalTests": 18,
+  "passed": 18,
+  "failed": 0,
+  "warnings": 0,
+  "patterns": {
+    "personalization": {
+      "status": "pass",
+      "tests": [
+        {
+          "name": "Data attributes present",
+          "status": "pass"
+        },
+        {
+          "name": "All personalization targets present",
+          "status": "pass"
+        },
+        {
+          "name": "Personalization rules defined",
+          "status": "pass"
+        },
+        {
+          "name": "All segments defined",
+          "status": "pass"
+        },
+        {
+          "name": "Segment detection function present",
+          "status": "pass"
+        },
+        {
+          "name": "Apply personalization function present",
+          "status": "pass"
+        },
+        {
+          "name": "Analytics tracking integrated",
+          "status": "pass"
+        },
+        {
+          "name": "URL parameter detection",
+          "status": "pass"
+        }
+      ],
+      "segments": [
+        {
+          "name": "video-creator",
+          "status": "present"
+        },
+        {
+          "name": "designer",
+          "status": "present"
+        },
+        {
+          "name": "musician",
+          "status": "present"
+        },
+        {
+          "name": "artist",
+          "status": "present"
+        },
+        {
+          "name": "default",
+          "status": "present"
+        }
+      ]
+    },
+    "urgency": {
+      "status": "pass",
+      "tests": [
+        {
+          "name": "Urgency banner present",
+          "status": "pass"
+        },
+        {
+          "name": "Countdown timer present",
+          "status": "pass"
+        },
+        {
+          "name": "Spots counter present",
+          "status": "pass"
+        },
+        {
+          "name": "Countdown update logic present",
+          "status": "pass"
+        },
+        {
+          "name": "Expiration handling present",
+          "status": "pass"
+        },
+        {
+          "name": "Banner animation present",
+          "status": "pass"
+        },
+        {
+          "name": "Analytics tracking integrated",
+          "status": "pass"
+        }
+      ],
+      "elements": [
+        "urgency-banner",
+        "countdown-timer",
+        "spots-counter"
+      ]
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "medium",
+      "category": "optimization",
+      "description": "Monitor segment-specific performance and refine underperforming segments (e.g., bloggers)",
+      "action": "Analyze real user data for each segment and adjust messaging"
+    },
+    {
+      "priority": "low",
+      "category": "expansion",
+      "description": "Scale personalization to additional pages (operators.html, automators.html)",
+      "action": "Use scale-winning-patterns.js to deploy to new targets"
+    },
+    {
+      "priority": "medium",
+      "category": "optimization",
+      "description": "Test different countdown durations (12h, 24h, 48h) to optimize urgency effectiveness",
+      "action": "Create A/B test variations with different time limits"
+    },
+    {
+      "priority": "low",
+      "category": "expansion",
+      "description": "Add urgency pattern to bundle.html and workspace.html",
+      "action": "Deploy urgency banner to additional high-traffic pages"
+    },
+    {
+      "priority": "medium",
+      "category": "testing",
+      "description": "Test pattern combinations for synergistic effects",
+      "action": "Apply both personalization and urgency to a test page and measure combined impact"
+    },
+    {
+      "priority": "high",
+      "category": "monitoring",
+      "description": "Set up continuous monitoring of scaled pattern performance",
+      "action": "Monitor Google Analytics daily for the first week, then weekly"
+    }
+  ]
+}

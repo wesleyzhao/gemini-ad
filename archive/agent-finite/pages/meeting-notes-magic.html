@@ -1,0 +1,845 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Meeting Notes - Never Miss a Detail</title>
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Gemini Meeting Notes - Never Miss a Detail">
+    <meta name="description" content="Focus on the conversation, not note-taking. Gemini captures every detail, creates action items, and shares summaries automatically.">
+    <meta name="keywords" content="meeting notes, ai note-taking, meeting assistant, productivity">
+    <meta name="author" content="Google">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://wesleyzhao.github.io/gemini-ad/pages/meeting-notes-magic.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wesleyzhao.github.io/gemini-ad/pages/meeting-notes-magic.html">
+    <meta property="og:title" content="Gemini Meeting Notes - Never Miss a Detail">
+    <meta property="og:description" content="Focus on the conversation, not note-taking. Gemini captures every detail, creates action items, and shares summaries automatically.">
+    <meta property="og:image" content="https://wesleyzhao.github.io/gemini-ad/assets/images/og-meeting-notes-magic.jpg">
+    <meta property="og:site_name" content="Gemini">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://wesleyzhao.github.io/gemini-ad/pages/meeting-notes-magic.html">
+    <meta name="twitter:title" content="Gemini Meeting Notes - Never Miss a Detail">
+    <meta name="twitter:description" content="Focus on the conversation, not note-taking. Gemini captures every detail, creates action items, and shares summaries automatically.">
+    <meta name="twitter:image" content="https://wesleyzhao.github.io/gemini-ad/assets/images/og-meeting-notes-magic.jpg">
+    <meta name="twitter:site" content="@Google">
+    <meta name="twitter:creator" content="@Google">
+
+    <!-- Additional Meta Tags -->
+    <meta name="theme-color" content="#4285f4">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Gemini">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Gemini Meeting Notes - Never Miss a Detail",
+      "description": "Focus on the conversation, not note-taking. Gemini captures every detail, creates action items, and shares summaries automatically.",
+      "url": "https://wesleyzhao.github.io/gemini-ad/pages/meeting-notes-magic.html",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Gemini",
+        "url": "https://wesleyzhao.github.io/gemini-ad",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Google",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://wesleyzhao.github.io/gemini-ad/assets/images/gemini-logo.png"
+          }
+        }
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://wesleyzhao.github.io/gemini-ad"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Gemini Meeting Notes - Never Miss a Detail",
+            "item": "https://wesleyzhao.github.io/gemini-ad/pages/meeting-notes-magic.html"
+          }
+        ]
+      },
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "Gemini",
+        "applicationCategory": "ProductivityApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    }
+    </script>
+
+    
+
+    <!-- Open Graph / Social Media -->
+    
+    
+    
+
+    <!-- Design System & Components -->
+    <link rel="stylesheet" href="../assets/css/design-system.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=SF+Pro+Display:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+
+    <style>
+        /* Google Brand Colors */
+        :root {
+            --google-blue: #4285F4;
+            --google-red: #EA4335;
+            --google-yellow: #FBBC04;
+            --google-green: #34A853;
+            --calendar-border: #DADCE0;
+            --calendar-bg: #FFFFFF;
+            --calendar-text: #3C4043;
+            --calendar-light: #F8F9FA;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #F8F9FA 0%, #E8F0FE 100%);
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 24px 80px;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            text-align: center;
+            margin-bottom: 64px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .kicker {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: var(--google-blue);
+            margin-bottom: 16px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+        }
+
+        h1 {
+            font-size: clamp(48px, 7vw, 72px);
+            font-weight: 700;
+            line-height: 1.1;
+            color: var(--calendar-text);
+            margin: 0 0 24px;
+            letter-spacing: -0.02em;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.4s forwards;
+        }
+
+        .subtitle {
+            font-size: clamp(20px, 3vw, 28px);
+            font-weight: 400;
+            color: #5F6368;
+            line-height: 1.4;
+            margin-bottom: 40px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.6s forwards;
+        }
+
+        /* Calendar UI Mockup */
+        .calendar-container {
+            background: var(--calendar-bg);
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 0 0 1px var(--calendar-border);
+            max-width: 1000px;
+            width: 100%;
+            overflow: hidden;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.8s forwards;
+        }
+
+        /* Calendar Header */
+        .calendar-header {
+            display: flex;
+            align-items: center;
+            padding: 20px 24px;
+            border-bottom: 1px solid var(--calendar-border);
+            background: var(--calendar-light);
+        }
+
+        .calendar-logo {
+            width: 24px;
+            height: 24px;
+            margin-right: 12px;
+            background: var(--google-blue);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .calendar-logo svg {
+            width: 16px;
+            height: 16px;
+            fill: white;
+        }
+
+        .calendar-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--calendar-text);
+            flex: 1;
+        }
+
+        .calendar-date {
+            font-size: 14px;
+            color: #5F6368;
+            font-weight: 500;
+        }
+
+        /* Calendar Body */
+        .calendar-body {
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            min-height: 500px;
+            position: relative;
+        }
+
+        /* Meeting List */
+        .meeting-list {
+            padding: 24px;
+            border-right: 1px solid var(--calendar-border);
+        }
+
+        .meeting-item {
+            background: white;
+            border: 1px solid var(--calendar-border);
+            border-left: 4px solid var(--google-blue);
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 12px;
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            opacity: 0;
+            animation: fadeInLeft 0.5s ease forwards;
+        }
+
+        .meeting-item:nth-child(1) { animation-delay: 1s; }
+        .meeting-item:nth-child(2) { animation-delay: 1.2s; border-left-color: var(--google-red); }
+        .meeting-item:nth-child(3) { animation-delay: 1.4s; border-left-color: var(--google-green); }
+        .meeting-item:nth-child(4) { animation-delay: 1.6s; border-left-color: var(--google-yellow); }
+
+        .meeting-item.processing {
+            background: linear-gradient(135deg, #E8F0FE 0%, #F8F9FA 100%);
+            border-color: var(--google-blue);
+            transform: scale(1.02);
+        }
+
+        .meeting-time {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--google-blue);
+            margin-bottom: 4px;
+        }
+
+        .meeting-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--calendar-text);
+            margin-bottom: 4px;
+        }
+
+        .meeting-attendees {
+            font-size: 13px;
+            color: #5F6368;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .meeting-attendees svg {
+            width: 14px;
+            height: 14px;
+            fill: #5F6368;
+        }
+
+        /* AI Processing Badge */
+        .ai-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: linear-gradient(135deg, var(--google-blue) 0%, #5E97F6 100%);
+            color: white;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 4px 8px;
+            border-radius: 12px;
+            opacity: 0;
+            animation: fadeIn 0.3s ease forwards;
+        }
+
+        /* Notes Panel */
+        .notes-panel {
+            background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%);
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            position: relative;
+        }
+
+        .notes-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--calendar-border);
+        }
+
+        .gemini-icon {
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, var(--google-blue) 0%, var(--google-green) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .gemini-icon svg {
+            width: 16px;
+            height: 16px;
+            fill: white;
+        }
+
+        .notes-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--calendar-text);
+        }
+
+        /* Generated Content */
+        .generated-note {
+            background: white;
+            border: 1px solid var(--calendar-border);
+            border-radius: 8px;
+            padding: 16px;
+            opacity: 0;
+            animation: fadeInRight 0.5s ease forwards;
+        }
+
+        .generated-note:nth-child(2) { animation-delay: 2s; }
+        .generated-note:nth-child(3) { animation-delay: 2.3s; }
+        .generated-note:nth-child(4) { animation-delay: 2.6s; }
+
+        .note-label {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--google-blue);
+            margin-bottom: 8px;
+        }
+
+        .note-content {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--calendar-text);
+        }
+
+        .note-content strong {
+            font-weight: 600;
+            color: var(--calendar-text);
+        }
+
+        /* Action Items */
+        .action-items {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .action-items li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 8px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: var(--calendar-text);
+        }
+
+        .action-items li::before {
+            content: "✓";
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 18px;
+            height: 18px;
+            background: var(--google-green);
+            color: white;
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* Integration Badges */
+        .integration-flow {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid var(--calendar-border);
+            opacity: 0;
+            animation: fadeIn 0.5s ease 2.9s forwards;
+        }
+
+        .integration-badge {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: white;
+            border: 1px solid var(--calendar-border);
+            border-radius: 20px;
+            padding: 6px 12px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--calendar-text);
+        }
+
+        .integration-badge svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            margin-top: 64px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 3.2s forwards;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--google-blue) 0%, #5E97F6 100%);
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 16px 48px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 4px 16px rgba(66, 133, 244, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 8px 24px rgba(66, 133, 244, 0.4);
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            max-width: 1000px;
+            margin: 80px auto 0;
+            padding: 0 24px;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .feature-card:nth-child(1) { animation-delay: 3.4s; }
+        .feature-card:nth-child(2) { animation-delay: 3.6s; }
+        .feature-card:nth-child(3) { animation-delay: 3.8s; }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--google-blue) 0%, var(--google-green) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        .feature-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: white;
+            fill: none;
+        }
+
+        .feature-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--calendar-text);
+            margin-bottom: 12px;
+        }
+
+        .feature-description {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #5F6368;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(66, 133, 244, 0.4);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 8px rgba(66, 133, 244, 0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 80px 20px 60px;
+            }
+
+            h1 {
+                font-size: 48px;
+            }
+
+            .subtitle {
+                font-size: 20px;
+            }
+
+            .calendar-body {
+                grid-template-columns: 1fr;
+            }
+
+            .meeting-list {
+                border-right: none;
+                border-bottom: 1px solid var(--calendar-border);
+            }
+
+            .notes-panel {
+                padding: 20px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+                margin-top: 60px;
+            }
+        }
+
+        /* Accessibility: Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+  
+    <style>
+      .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background: #000;
+        color: #fff;
+        padding: 8px 16px;
+        text-decoration: none;
+        z-index: 100;
+        font-weight: 600;
+        border-radius: 0 0 4px 0;
+      }
+      .skip-link:focus {
+        top: 0;
+      }
+    </style>
+  
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX', {
+    'anonymize_ip': true,
+    'cookie_flags': 'SameSite=None;Secure'
+  });
+</script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+<main id="main-content"><section class="hero">
+        <div class="hero-content">
+            <div class="kicker">Google Workspace Integration</div>
+            <h1>Meeting Notes Magic</h1>
+            <p class="subtitle">Attend fewer meetings. Miss nothing.</p>
+        </div>
+
+        <!-- Calendar UI Mockup -->
+        <div class="calendar-container">
+            <!-- Calendar Header -->
+            <div class="calendar-header">
+                <div class="calendar-logo">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"></path>
+                    </svg>
+                </div>
+                <div class="calendar-title">Today's Schedule</div>
+                <div class="calendar-date">Monday, February 3</div>
+            </div>
+
+            <!-- Calendar Body -->
+            <div class="calendar-body">
+                <!-- Meeting List -->
+                <div class="meeting-list">
+                    <div class="meeting-item">
+                        <div class="meeting-time">9:00 AM - 10:00 AM</div>
+                        <div class="meeting-title">Product Strategy Review</div>
+                        <div class="meeting-attendees">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"></path>
+                            </svg>
+                            6 people
+                        </div>
+                        <div class="ai-badge">✨ Notes ready</div>
+                    </div>
+
+                    <div class="meeting-item">
+                        <div class="meeting-time">11:00 AM - 11:30 AM</div>
+                        <div class="meeting-title">Marketing Sync</div>
+                        <div class="meeting-attendees">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"></path>
+                            </svg>
+                            3 people
+                        </div>
+                        <div class="ai-badge">✨ Processing</div>
+                    </div>
+
+                    <div class="meeting-item">
+                        <div class="meeting-time">2:00 PM - 3:00 PM</div>
+                        <div class="meeting-title">Client Presentation</div>
+                        <div class="meeting-attendees">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"></path>
+                            </svg>
+                            8 people
+                        </div>
+                        <div class="ai-badge">⏱️ Scheduled</div>
+                    </div>
+
+                    <div class="meeting-item">
+                        <div class="meeting-time">4:00 PM - 4:30 PM</div>
+                        <div class="meeting-title">Team Standup</div>
+                        <div class="meeting-attendees">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"></path>
+                            </svg>
+                            5 people
+                        </div>
+                        <div class="ai-badge">⏱️ Scheduled</div>
+                    </div>
+                </div>
+
+                <!-- AI Notes Panel -->
+                <div class="notes-panel">
+                    <div class="notes-header">
+                        <div class="gemini-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"></path>
+                            </svg>
+                        </div>
+                        <div class="notes-title">Auto-Generated Notes</div>
+                    </div>
+
+                    <div class="generated-note">
+                        <div class="note-label">📝 Summary</div>
+                        <div class="note-content">
+                            Discussed Q2 product roadmap priorities. Team agreed to focus on mobile optimization and new collaboration features. Target launch: May 15.
+                        </div>
+                    </div>
+
+                    <div class="generated-note">
+                        <div class="note-label">✅ Action Items</div>
+                        <ul class="action-items">
+                            <li>Sarah: Draft technical spec by Feb 10</li>
+                            <li>Mike: Schedule design review for Feb 12</li>
+                            <li>Team: Review competitors by Feb 8</li>
+                        </ul>
+                    </div>
+
+                    <div class="generated-note">
+                        <div class="note-label">🔑 Key Decisions</div>
+                        <div class="note-content">
+                            <strong>Approved:</strong> $50K budget increase for Q2 development<br>
+                            <strong>Decided:</strong> Weekly sprints starting March 1
+                        </div>
+                    </div>
+
+                    <div class="integration-flow">
+                        <div class="integration-badge">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="var(--google-red)">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
+                            </svg>
+                            Sent to Gmail
+                        </div>
+                        <div class="integration-badge">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="var(--google-blue)">
+                                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"></path>
+                            </svg>
+                            Saved to Docs
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-section">
+            <a href="https://gemini.google.com" class="cta-button">Master Meetings</a>
+        </div>
+    </section><div class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 11l3 3L22 4"></path>
+                    <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path>
+                </svg>
+            </div>
+            <div class="feature-title">Auto-Capture Everything</div>
+            <div class="feature-description">
+                Never take notes again. Gemini automatically captures key points, decisions, and action items from every meeting.
+            </div>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+            </div>
+            <div class="feature-title">Get Hours Back</div>
+            <div class="description">
+                Skip non-essential meetings. Read AI summaries in 30 seconds instead of sitting in hour-long calls.
+            </div>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 00-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 010 7.75"></path>
+                </svg>
+            </div>
+            <div class="feature-title">Share Seamlessly</div>
+            <div class="feature-description">
+                Auto-send notes to attendees via Gmail, save to Google Docs, and update task lists - all without lifting a finger.
+            </div>
+        </div>
+    </div></main>
+    <!-- Hero Section -->
+    
+
+    <!-- Features Grid -->
+    
+
+    <script src="../assets/js/animations.js"></script>
+
+
+
+<!-- Gemini Analytics Tracking -->
+<script src="../assets/js/analytics.js" defer></script>
+</body></html>

@@ -1,0 +1,1281 @@
+{
+  "timestamp": "2026-02-01T11:36:15.373Z",
+  "dateRange": "last7days",
+  "summary": {
+    "totalPages": 14,
+    "excellentPages": 2,
+    "goodPages": 12,
+    "needsWorkPages": 0,
+    "poorPages": 0
+  },
+  "alerts": [
+    {
+      "severity": "warning",
+      "page": "animations-demo.html",
+      "metric": "INP",
+      "message": "11% of users experiencing poor INP",
+      "value": 219
+    },
+    {
+      "severity": "warning",
+      "page": "animations-demo.html",
+      "metric": "TTFB",
+      "message": "12% of users experiencing poor TTFB",
+      "value": 364
+    },
+    {
+      "severity": "warning",
+      "page": "aspirational.html",
+      "metric": "LCP",
+      "message": "11% of users experiencing poor LCP",
+      "value": 1979
+    },
+    {
+      "severity": "warning",
+      "page": "automators.html",
+      "metric": "LCP",
+      "message": "13% of users experiencing poor LCP",
+      "value": 2908
+    },
+    {
+      "severity": "warning",
+      "page": "bundling.html",
+      "metric": "LCP",
+      "message": "14% of users experiencing poor LCP",
+      "value": 2280
+    },
+    {
+      "severity": "warning",
+      "page": "bundling.html",
+      "metric": "FCP",
+      "message": "11% of users experiencing poor FCP",
+      "value": 1196
+    },
+    {
+      "severity": "warning",
+      "page": "creators.html",
+      "metric": "LCP",
+      "message": "14% of users experiencing poor LCP",
+      "value": 2401
+    },
+    {
+      "severity": "warning",
+      "page": "operators.html",
+      "metric": "FCP",
+      "message": "11% of users experiencing poor FCP",
+      "value": 1152
+    },
+    {
+      "severity": "warning",
+      "page": "operators.html",
+      "metric": "TTFB",
+      "message": "13% of users experiencing poor TTFB",
+      "value": 497
+    },
+    {
+      "severity": "warning",
+      "page": "valentines.html",
+      "metric": "LCP",
+      "message": "13% of users experiencing poor LCP",
+      "value": 2354
+    },
+    {
+      "severity": "warning",
+      "page": "workspace.html",
+      "metric": "LCP",
+      "message": "14% of users experiencing poor LCP",
+      "value": 2091
+    },
+    {
+      "severity": "warning",
+      "page": "workspace.html",
+      "metric": "TTFB",
+      "message": "13% of users experiencing poor TTFB",
+      "value": 427
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "high",
+      "title": "Optimize FCP across 7 pages",
+      "description": "FCP is the most common performance issue",
+      "action": "Review FCP optimization guide and implement fixes",
+      "affectedPages": 7
+    },
+    {
+      "priority": "high",
+      "title": "Optimize LCP across 6 pages",
+      "description": "LCP is the most common performance issue",
+      "action": "Review LCP optimization guide and implement fixes",
+      "affectedPages": 6
+    },
+    {
+      "priority": "high",
+      "title": "Optimize INP across 5 pages",
+      "description": "INP is the most common performance issue",
+      "action": "Review INP optimization guide and implement fixes",
+      "affectedPages": 5
+    }
+  ],
+  "issues": [
+    {
+      "page": "animations-demo.html",
+      "metric": "LCP",
+      "value": 2845,
+      "threshold": 2500,
+      "severity": "medium",
+      "recommendation": [
+        "Add preconnect hints for external domains",
+        "Optimize font loading with font-display: swap",
+        "Consider lazy loading below-fold images",
+        "Minimize render-blocking resources"
+      ]
+    },
+    {
+      "page": "animations-demo.html",
+      "metric": "INP",
+      "value": 219,
+      "threshold": 200,
+      "severity": "medium",
+      "recommendation": [
+        "Profile slow interactions with DevTools",
+        "Optimize CSS animations (use transform/opacity)",
+        "Reduce DOM complexity",
+        "Minimize layout thrashing"
+      ]
+    },
+    {
+      "page": "aspirational.html",
+      "metric": "FCP",
+      "value": 2205,
+      "threshold": 1800,
+      "severity": "medium",
+      "recommendation": [
+        "Minimize CSS file size",
+        "Defer non-critical CSS",
+        "Optimize above-fold rendering"
+      ]
+    },
+    {
+      "page": "aspirational.html",
+      "metric": "TTFB",
+      "value": 875,
+      "threshold": 800,
+      "severity": "medium",
+      "recommendation": [
+        "Review server configuration",
+        "Optimize backend performance",
+        "Enable compression (gzip/brotli)"
+      ]
+    },
+    {
+      "page": "automators.html",
+      "metric": "LCP",
+      "value": 2908,
+      "threshold": 2500,
+      "severity": "medium",
+      "recommendation": [
+        "Add preconnect hints for external domains",
+        "Optimize font loading with font-display: swap",
+        "Consider lazy loading below-fold images",
+        "Minimize render-blocking resources"
+      ]
+    },
+    {
+      "page": "automators.html",
+      "metric": "FCP",
+      "value": 2292,
+      "threshold": 1800,
+      "severity": "medium",
+      "recommendation": [
+        "Minimize CSS file size",
+        "Defer non-critical CSS",
+        "Optimize above-fold rendering"
+      ]
+    },
+    {
+      "page": "automators.html",
+      "metric": "TTFB",
+      "value": 1054,
+      "threshold": 800,
+      "severity": "medium",
+      "recommendation": [
+        "Review server configuration",
+        "Optimize backend performance",
+        "Enable compression (gzip/brotli)"
+      ]
+    },
+    {
+      "page": "comparison.html",
+      "metric": "LCP",
+      "value": 3493,
+      "threshold": 2500,
+      "severity": "medium",
+      "recommendation": [
+        "Add preconnect hints for external domains",
+        "Optimize font loading with font-display: swap",
+        "Consider lazy loading below-fold images",
+        "Minimize render-blocking resources"
+      ]
+    },
+    {
+      "page": "comparison.html",
+      "metric": "FCP",
+      "value": 2291,
+      "threshold": 1800,
+      "severity": "medium",
+      "recommendation": [
+        "Minimize CSS file size",
+        "Defer non-critical CSS",
+        "Optimize above-fold rendering"
+      ]
+    },
+    {
+      "page": "creators.html",
+      "metric": "CLS",
+      "value": "0.105",
+      "threshold": 0.1,
+      "severity": "medium",
+      "recommendation": [
+        "Audit layout shifts with DevTools",
+        "Preload web fonts",
+        "Avoid animations that cause layout changes",
+        "Set dimensions on video/iframe elements"
+      ]
+    },
+    {
+      "page": "creators.html",
+      "metric": "FCP",
+      "value": 2349,
+      "threshold": 1800,
+      "severity": "medium",
+      "recommendation": [
+        "Minimize CSS file size",
+        "Defer non-critical CSS",
+        "Optimize above-fold rendering"
+      ]
+    },
+    {
+      "page": "creators.html",
+      "metric": "TTFB",
+      "value": 984,
+      "threshold": 800,
+      "severity": "medium",
+      "recommendation": [
+        "Review server configuration",
+        "Optimize backend performance",
+        "Enable compression (gzip/brotli)"
+      ]
+    },
+    {
+      "page": "operators.html",
+      "metric": "CLS",
+      "value": "0.149",
+      "threshold": 0.1,
+      "severity": "medium",
+      "recommendation": [
+        "Audit layout shifts with DevTools",
+        "Preload web fonts",
+        "Avoid animations that cause layout changes",
+        "Set dimensions on video/iframe elements"
+      ]
+    },
+    {
+      "page": "research.html",
+      "metric": "LCP",
+      "value": 3132,
+      "threshold": 2500,
+      "severity": "medium",
+      "recommendation": [
+        "Add preconnect hints for external domains",
+        "Optimize font loading with font-display: swap",
+        "Consider lazy loading below-fold images",
+        "Minimize render-blocking resources"
+      ]
+    },
+    {
+      "page": "research.html",
+      "metric": "INP",
+      "value": 214,
+      "threshold": 200,
+      "severity": "medium",
+      "recommendation": [
+        "Profile slow interactions with DevTools",
+        "Optimize CSS animations (use transform/opacity)",
+        "Reduce DOM complexity",
+        "Minimize layout thrashing"
+      ]
+    },
+    {
+      "page": "research.html",
+      "metric": "CLS",
+      "value": "0.118",
+      "threshold": 0.1,
+      "severity": "medium",
+      "recommendation": [
+        "Audit layout shifts with DevTools",
+        "Preload web fonts",
+        "Avoid animations that cause layout changes",
+        "Set dimensions on video/iframe elements"
+      ]
+    },
+    {
+      "page": "trust.html",
+      "metric": "LCP",
+      "value": 3454,
+      "threshold": 2500,
+      "severity": "medium",
+      "recommendation": [
+        "Add preconnect hints for external domains",
+        "Optimize font loading with font-display: swap",
+        "Consider lazy loading below-fold images",
+        "Minimize render-blocking resources"
+      ]
+    },
+    {
+      "page": "trust.html",
+      "metric": "INP",
+      "value": 216,
+      "threshold": 200,
+      "severity": "medium",
+      "recommendation": [
+        "Profile slow interactions with DevTools",
+        "Optimize CSS animations (use transform/opacity)",
+        "Reduce DOM complexity",
+        "Minimize layout thrashing"
+      ]
+    },
+    {
+      "page": "trust.html",
+      "metric": "CLS",
+      "value": "0.128",
+      "threshold": 0.1,
+      "severity": "medium",
+      "recommendation": [
+        "Audit layout shifts with DevTools",
+        "Preload web fonts",
+        "Avoid animations that cause layout changes",
+        "Set dimensions on video/iframe elements"
+      ]
+    },
+    {
+      "page": "valentines.html",
+      "metric": "FCP",
+      "value": 1814,
+      "threshold": 1800,
+      "severity": "medium",
+      "recommendation": [
+        "Minimize CSS file size",
+        "Defer non-critical CSS",
+        "Optimize above-fold rendering"
+      ]
+    },
+    {
+      "page": "workspace.html",
+      "metric": "INP",
+      "value": 249,
+      "threshold": 200,
+      "severity": "medium",
+      "recommendation": [
+        "Profile slow interactions with DevTools",
+        "Optimize CSS animations (use transform/opacity)",
+        "Reduce DOM complexity",
+        "Minimize layout thrashing"
+      ]
+    },
+    {
+      "page": "workspace.html",
+      "metric": "FCP",
+      "value": 2094,
+      "threshold": 1800,
+      "severity": "medium",
+      "recommendation": [
+        "Minimize CSS file size",
+        "Defer non-critical CSS",
+        "Optimize above-fold rendering"
+      ]
+    },
+    {
+      "page": "writers.html",
+      "metric": "LCP",
+      "value": 3361,
+      "threshold": 2500,
+      "severity": "medium",
+      "recommendation": [
+        "Add preconnect hints for external domains",
+        "Optimize font loading with font-display: swap",
+        "Consider lazy loading below-fold images",
+        "Minimize render-blocking resources"
+      ]
+    },
+    {
+      "page": "index.html",
+      "metric": "INP",
+      "value": 211,
+      "threshold": 200,
+      "severity": "medium",
+      "recommendation": [
+        "Profile slow interactions with DevTools",
+        "Optimize CSS animations (use transform/opacity)",
+        "Reduce DOM complexity",
+        "Minimize layout thrashing"
+      ]
+    },
+    {
+      "page": "index.html",
+      "metric": "FCP",
+      "value": 2438,
+      "threshold": 1800,
+      "severity": "medium",
+      "recommendation": [
+        "Minimize CSS file size",
+        "Defer non-critical CSS",
+        "Optimize above-fold rendering"
+      ]
+    },
+    {
+      "page": "index.html",
+      "metric": "TTFB",
+      "value": 809,
+      "threshold": 800,
+      "severity": "medium",
+      "recommendation": [
+        "Review server configuration",
+        "Optimize backend performance",
+        "Enable compression (gzip/brotli)"
+      ]
+    }
+  ],
+  "pages": {
+    "animations-demo.html": {
+      "metrics": {
+        "lcp": {
+          "p75": 2845,
+          "good": 83,
+          "needsImprovement": 10,
+          "poor": 10,
+          "samples": 1504
+        },
+        "fid": {
+          "p75": 23,
+          "good": 93,
+          "needsImprovement": 3,
+          "poor": 5,
+          "samples": 1236
+        },
+        "inp": {
+          "p75": 219,
+          "good": 79,
+          "needsImprovement": 5,
+          "poor": 11,
+          "samples": 846
+        },
+        "cls": {
+          "p75": "0.045",
+          "good": 82,
+          "needsImprovement": 6,
+          "poor": 9,
+          "samples": 1027
+        },
+        "fcp": {
+          "p75": 1135,
+          "good": 83,
+          "needsImprovement": 10,
+          "poor": 10,
+          "samples": 1623
+        },
+        "ttfb": {
+          "p75": 364,
+          "good": 83,
+          "needsImprovement": 17,
+          "poor": 12,
+          "samples": 1973
+        }
+      },
+      "devices": {
+        "mobile": 74,
+        "desktop": 31,
+        "tablet": 8
+      },
+      "connections": {
+        "4g": 66,
+        "wifi": 43,
+        "3g": 8,
+        "5g": 12
+      }
+    },
+    "aspirational.html": {
+      "metrics": {
+        "lcp": {
+          "p75": 1979,
+          "good": 76,
+          "needsImprovement": 7,
+          "poor": 11,
+          "samples": 1310
+        },
+        "fid": {
+          "p75": 94,
+          "good": 89,
+          "needsImprovement": 5,
+          "poor": 3,
+          "samples": 638
+        },
+        "inp": {
+          "p75": 153,
+          "good": 87,
+          "needsImprovement": 5,
+          "poor": 8,
+          "samples": 501
+        },
+        "cls": {
+          "p75": "0.043",
+          "good": 84,
+          "needsImprovement": 11,
+          "poor": 3,
+          "samples": 1402
+        },
+        "fcp": {
+          "p75": 2205,
+          "good": 83,
+          "needsImprovement": 6,
+          "poor": 8,
+          "samples": 1232
+        },
+        "ttfb": {
+          "p75": 875,
+          "good": 89,
+          "needsImprovement": 12,
+          "poor": 6,
+          "samples": 627
+        }
+      },
+      "devices": {
+        "mobile": 61,
+        "desktop": 33,
+        "tablet": 11
+      },
+      "connections": {
+        "4g": 60,
+        "wifi": 33,
+        "3g": 9,
+        "5g": 7
+      }
+    },
+    "automators.html": {
+      "metrics": {
+        "lcp": {
+          "p75": 2908,
+          "good": 77,
+          "needsImprovement": 18,
+          "poor": 13,
+          "samples": 746
+        },
+        "fid": {
+          "p75": 56,
+          "good": 90,
+          "needsImprovement": 7,
+          "poor": 6,
+          "samples": 990
+        },
+        "inp": {
+          "p75": 150,
+          "good": 82,
+          "needsImprovement": 10,
+          "poor": 3,
+          "samples": 604
+        },
+        "cls": {
+          "p75": "0.018",
+          "good": 93,
+          "needsImprovement": 4,
+          "poor": 7,
+          "samples": 1641
+        },
+        "fcp": {
+          "p75": 2292,
+          "good": 94,
+          "needsImprovement": 16,
+          "poor": 7,
+          "samples": 956
+        },
+        "ttfb": {
+          "p75": 1054,
+          "good": 74,
+          "needsImprovement": 12,
+          "poor": 5,
+          "samples": 922
+        }
+      },
+      "devices": {
+        "mobile": 62,
+        "desktop": 25,
+        "tablet": 6
+      },
+      "connections": {
+        "4g": 50,
+        "wifi": 41,
+        "3g": 12,
+        "5g": 8
+      }
+    },
+    "bundling.html": {
+      "metrics": {
+        "lcp": {
+          "p75": 2280,
+          "good": 79,
+          "needsImprovement": 9,
+          "poor": 14,
+          "samples": 1652
+        },
+        "fid": {
+          "p75": 65,
+          "good": 86,
+          "needsImprovement": 7,
+          "poor": 6,
+          "samples": 832
+        },
+        "inp": {
+          "p75": 106,
+          "good": 90,
+          "needsImprovement": 11,
+          "poor": 7,
+          "samples": 1221
+        },
+        "cls": {
+          "p75": "0.037",
+          "good": 87,
+          "needsImprovement": 6,
+          "poor": 7,
+          "samples": 514
+        },
+        "fcp": {
+          "p75": 1196,
+          "good": 87,
+          "needsImprovement": 12,
+          "poor": 11,
+          "samples": 1957
+        },
+        "ttfb": {
+          "p75": 312,
+          "good": 89,
+          "needsImprovement": 11,
+          "poor": 9,
+          "samples": 854
+        }
+      },
+      "devices": {
+        "mobile": 63,
+        "desktop": 34,
+        "tablet": 10
+      },
+      "connections": {
+        "4g": 56,
+        "wifi": 40,
+        "3g": 11,
+        "5g": 12
+      }
+    },
+    "comparison.html": {
+      "metrics": {
+        "lcp": {
+          "p75": 3493,
+          "good": 71,
+          "needsImprovement": 5,
+          "poor": 10,
+          "samples": 1477
+        },
+        "fid": {
+          "p75": 61,
+          "good": 88,
+          "needsImprovement": 5,
+          "poor": 5,
+          "samples": 1224
+        },
+        "inp": {
+          "p75": 110,
+          "good": 81,
+          "needsImprovement": 11,
+          "poor": 7,
+          "samples": 790
+        },
+        "cls": {
+          "p75": "0.070",
+          "good": 80,
+          "needsImprovement": 4,
+          "poor": 3,
+          "samples": 1047
+        },
+        "fcp": {
+          "p75": 2291,
+          "good": 84,
+          "needsImprovement": 15,
+          "poor": 8,
+          "samples": 638
+        },
+        "ttfb": {
+          "p75": 595,
+          "good": 77,
+          "needsImprovement": 12,
+          "poor": 5,
+          "samples": 716
+        }
+      },
+      "devices": {
+        "mobile": 65,
+        "desktop": 21,
+        "tablet": 8
+      },
+      "connections": {
+        "4g": 58,
+        "wifi": 33,
+        "3g": 8,
+        "5g": 9
+      }
+    },
+    "creators.html": {
+      "metrics": {
+        "lcp": {
+          "p75": 2401,
+          "good": 89,
+          "needsImprovement": 16,
+          "poor": 14,
+          "samples": 1091
+        },
+        "fid": {
+          "p75": 41,
+          "good": 93,
+          "needsImprovement": 6,
+          "poor": 7,
+          "samples": 1572
+        },
+        "inp": {
+          "p75": 186,
+          "good": 86,
+          "needsImprovement": 13,
+          "poor": 9,
+          "samples": 678
+        },
+        "cls": {
+          "p75": "0.105",
+          "good": 92,
+          "needsImprovement": 9,
+          "poor": 7,
+          "samples": 1088
+        },
+        "fcp": {
+          "p75": 2349,
+          "good": 84,
+          "needsImprovement": 16,
+          "poor": 8,
+          "samples": 1435
+        },
+        "ttfb": {
+          "p75": 984,
+          "good": 75,
+          "needsImprovement": 24,
+          "poor": 10,
+          "samples": 1559
+        }
+      },
+      "devices": {
+        "mobile": 73,
+        "desktop": 29,
+        "tablet": 13
+      },
+      "connections": {
+        "4g": 57,
+        "wifi": 35,
+        "3g": 8,
+        "5g": 8
+      }
+    },
+    "operators.html": {
+      "metrics": {
+        "lcp": {
+          "p75": 1982,
+          "good": 86,
+          "needsImprovement": 12,
+          "poor": 10,
+          "samples": 1936
+        },
+        "fid": {
+          "p75": 28,
+          "good": 94,
+          "needsImprovement": 8,
+          "poor": 3,
+          "samples": 565
+        },
+        "inp": {
+          "p75": 161,
+          "good": 94,
+          "needsImprovement": 4,
+          "poor": 9,
+          "samples": 1271
+        },
+        "cls": {
+          "p75": "0.149",
+          "good": 93,
+          "needsImprovement": 8,
+          "poor": 4,
+          "samples": 1470
+        },
+        "fcp": {
+          "p75": 1152,
+          "good": 88,
+          "needsImprovement": 10,
+          "poor": 11,
+          "samples": 617
+        },
+        "ttfb": {
+          "p75": 497,
+          "good": 87,
+          "needsImprovement": 23,
+          "poor": 13,
+          "samples": 722
+        }
+      },
+      "devices": {
+        "mobile": 62,
+        "desktop": 25,
+        "tablet": 13
+      },
+      "connections": {
+        "4g": 62,
+        "wifi": 36,
+        "3g": 6,
+        "5g": 10
+      }
+    },
+    "productivity.html": {
+      "metrics": {
+        "lcp": {
+          "p75": 2194,
+          "good": 87,
+          "needsImprovement": 5,
+          "poor": 10,
+          "samples": 1104
+        },
+        "fid": {
+          "p75": 95,
+          "good": 85,
+          "needsImprovement": 5,
+          "poor": 6,
+          "samples": 1152
+        },
+        "inp": {
+          "p75": 145,
+          "good": 90,
+          "needsImprovement": 5,
+          "poor": 8,
+          "samples": 617
+        },
+        "cls": {
+          "p75": "0.096",
+          "good": 82,
+          "needsImprovement": 9,
+          "poor": 7,
+          "samples": 1729
+        },
+        "fcp": {
+          "p75": 1751,
+          "good": 91,
+          "needsImprovement": 12,
+          "poor": 10,
+          "samples": 842
+        },
+        "ttfb": {
+          "p75": 498,
+          "good": 89,
+          "needsImprovement": 13,
+          "poor": 9,
+          "samples": 1223
+        }
+      },
+      "devices": {
+        "mobile": 80,
+        "desktop": 22,
+        "tablet": 14
+      },
+      "connections": {
+        "4g": 64,
+        "wifi": 34,
+        "3g": 6,
+        "5g": 10
+      }
+    },
+    "research.html": {
+      "metrics": {
+        "lcp": {
+          "p75": 3132,
+          "good": 73,
+          "needsImprovement": 8,
+          "poor": 9,
+          "samples": 1310
+        },
+        "fid": {
+          "p75": 34,
+          "good": 88,
+          "needsImprovement": 4,
+          "poor": 5,
+          "samples": 831
+        },
+        "inp": {
+          "p75": 214,
+          "good": 84,
+          "needsImprovement": 14,
+          "poor": 4,
+          "samples": 1202
+        },
+        "cls": {
+          "p75": "0.118",
+          "good": 82,
+          "needsImprovement": 12,
+          "poor": 3,
+          "samples": 750
+        },
+        "fcp": {
+          "p75": 1549,
+          "good": 92,
+          "needsImprovement": 5,
+          "poor": 10,
+          "samples": 752
+        },
+        "ttfb": {
+          "p75": 723,
+          "good": 82,
+          "needsImprovement": 20,
+          "poor": 8,
+          "samples": 1386
+        }
+      },
+      "devices": {
+        "mobile": 63,
+        "desktop": 30,
+        "tablet": 10
+      },
+      "connections": {
+        "4g": 57,
+        "wifi": 41,
+        "3g": 10,
+        "5g": 6
+      }
+    },
+    "trust.html": {
+      "metrics": {
+        "lcp": {
+          "p75": 3454,
+          "good": 86,
+          "needsImprovement": 15,
+          "poor": 10,
+          "samples": 1530
+        },
+        "fid": {
+          "p75": 57,
+          "good": 95,
+          "needsImprovement": 9,
+          "poor": 7,
+          "samples": 1119
+        },
+        "inp": {
+          "p75": 216,
+          "good": 76,
+          "needsImprovement": 7,
+          "poor": 9,
+          "samples": 1129
+        },
+        "cls": {
+          "p75": "0.128",
+          "good": 89,
+          "needsImprovement": 12,
+          "poor": 5,
+          "samples": 1430
+        },
+        "fcp": {
+          "p75": 1662,
+          "good": 82,
+          "needsImprovement": 14,
+          "poor": 9,
+          "samples": 1918
+        },
+        "ttfb": {
+          "p75": 643,
+          "good": 75,
+          "needsImprovement": 12,
+          "poor": 7,
+          "samples": 984
+        }
+      },
+      "devices": {
+        "mobile": 78,
+        "desktop": 29,
+        "tablet": 6
+      },
+      "connections": {
+        "4g": 63,
+        "wifi": 41,
+        "3g": 10,
+        "5g": 12
+      }
+    },
+    "valentines.html": {
+      "metrics": {
+        "lcp": {
+          "p75": 2354,
+          "good": 74,
+          "needsImprovement": 9,
+          "poor": 13,
+          "samples": 1708
+        },
+        "fid": {
+          "p75": 42,
+          "good": 94,
+          "needsImprovement": 7,
+          "poor": 6,
+          "samples": 1338
+        },
+        "inp": {
+          "p75": 184,
+          "good": 94,
+          "needsImprovement": 8,
+          "poor": 10,
+          "samples": 753
+        },
+        "cls": {
+          "p75": "0.064",
+          "good": 91,
+          "needsImprovement": 10,
+          "poor": 4,
+          "samples": 1671
+        },
+        "fcp": {
+          "p75": 1814,
+          "good": 81,
+          "needsImprovement": 11,
+          "poor": 10,
+          "samples": 532
+        },
+        "ttfb": {
+          "p75": 726,
+          "good": 77,
+          "needsImprovement": 22,
+          "poor": 9,
+          "samples": 1015
+        }
+      },
+      "devices": {
+        "mobile": 76,
+        "desktop": 34,
+        "tablet": 5
+      },
+      "connections": {
+        "4g": 65,
+        "wifi": 41,
+        "3g": 8,
+        "5g": 7
+      }
+    },
+    "workspace.html": {
+      "metrics": {
+        "lcp": {
+          "p75": 2091,
+          "good": 88,
+          "needsImprovement": 9,
+          "poor": 14,
+          "samples": 1066
+        },
+        "fid": {
+          "p75": 64,
+          "good": 88,
+          "needsImprovement": 4,
+          "poor": 4,
+          "samples": 407
+        },
+        "inp": {
+          "p75": 249,
+          "good": 92,
+          "needsImprovement": 13,
+          "poor": 4,
+          "samples": 717
+        },
+        "cls": {
+          "p75": "0.084",
+          "good": 90,
+          "needsImprovement": 11,
+          "poor": 8,
+          "samples": 1141
+        },
+        "fcp": {
+          "p75": 2094,
+          "good": 91,
+          "needsImprovement": 15,
+          "poor": 7,
+          "samples": 1713
+        },
+        "ttfb": {
+          "p75": 427,
+          "good": 79,
+          "needsImprovement": 14,
+          "poor": 13,
+          "samples": 1610
+        }
+      },
+      "devices": {
+        "mobile": 74,
+        "desktop": 30,
+        "tablet": 8
+      },
+      "connections": {
+        "4g": 67,
+        "wifi": 33,
+        "3g": 13,
+        "5g": 12
+      }
+    },
+    "writers.html": {
+      "metrics": {
+        "lcp": {
+          "p75": 3361,
+          "good": 82,
+          "needsImprovement": 14,
+          "poor": 6,
+          "samples": 556
+        },
+        "fid": {
+          "p75": 70,
+          "good": 85,
+          "needsImprovement": 5,
+          "poor": 6,
+          "samples": 469
+        },
+        "inp": {
+          "p75": 177,
+          "good": 87,
+          "needsImprovement": 8,
+          "poor": 8,
+          "samples": 422
+        },
+        "cls": {
+          "p75": "0.046",
+          "good": 95,
+          "needsImprovement": 11,
+          "poor": 4,
+          "samples": 1209
+        },
+        "fcp": {
+          "p75": 1300,
+          "good": 91,
+          "needsImprovement": 10,
+          "poor": 9,
+          "samples": 731
+        },
+        "ttfb": {
+          "p75": 341,
+          "good": 84,
+          "needsImprovement": 10,
+          "poor": 10,
+          "samples": 983
+        }
+      },
+      "devices": {
+        "mobile": 75,
+        "desktop": 22,
+        "tablet": 9
+      },
+      "connections": {
+        "4g": 50,
+        "wifi": 40,
+        "3g": 14,
+        "5g": 14
+      }
+    },
+    "index.html": {
+      "metrics": {
+        "lcp": {
+          "p75": 1518,
+          "good": 88,
+          "needsImprovement": 7,
+          "poor": 5,
+          "samples": 944
+        },
+        "fid": {
+          "p75": 61,
+          "good": 94,
+          "needsImprovement": 9,
+          "poor": 3,
+          "samples": 1217
+        },
+        "inp": {
+          "p75": 211,
+          "good": 80,
+          "needsImprovement": 15,
+          "poor": 3,
+          "samples": 1257
+        },
+        "cls": {
+          "p75": "0.043",
+          "good": 93,
+          "needsImprovement": 10,
+          "poor": 4,
+          "samples": 450
+        },
+        "fcp": {
+          "p75": 2438,
+          "good": 77,
+          "needsImprovement": 16,
+          "poor": 4,
+          "samples": 1502
+        },
+        "ttfb": {
+          "p75": 809,
+          "good": 71,
+          "needsImprovement": 19,
+          "poor": 9,
+          "samples": 875
+        }
+      },
+      "devices": {
+        "mobile": 66,
+        "desktop": 34,
+        "tablet": 8
+      },
+      "connections": {
+        "4g": 69,
+        "wifi": 43,
+        "3g": 7,
+        "5g": 15
+      }
+    }
+  },
+  "configuration": {
+    "thresholds": {
+      "lcp": {
+        "good": 2500,
+        "poor": 4000
+      },
+      "fid": {
+        "good": 100,
+        "poor": 300
+      },
+      "inp": {
+        "good": 200,
+        "poor": 500
+      },
+      "cls": {
+        "good": 0.1,
+        "poor": 0.25
+      },
+      "fcp": {
+        "good": 1800,
+        "poor": 3000
+      },
+      "ttfb": {
+        "good": 800,
+        "poor": 1800
+      }
+    },
+    "alertThresholds": {
+      "critical": 25,
+      "warning": 10
+    }
+  }
+}

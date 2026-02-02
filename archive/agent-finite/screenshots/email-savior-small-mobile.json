@@ -1,0 +1,11 @@
+{
+  "filename": "email-savior-small-mobile.png",
+  "page": "Email Savior",
+  "pagePath": "/pages/email-savior.html",
+  "viewport": {
+    "width": 320,
+    "height": 568
+  },
+  "timestamp": "2026-02-01T11:36:41.541Z",
+  "note": "This is a placeholder file. Run actual screenshot generation with system dependencies installed or use Docker."
+}

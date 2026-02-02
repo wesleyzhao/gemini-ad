@@ -1,0 +1,11 @@
+{
+  "filename": "workflow-wizard-desktop-quick.png",
+  "page": "Workflow Wizard",
+  "pagePath": "/pages/workflow-wizard.html",
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  },
+  "timestamp": "2026-02-01T11:36:41.536Z",
+  "note": "This is a placeholder file. Run actual screenshot generation with system dependencies installed or use Docker."
+}

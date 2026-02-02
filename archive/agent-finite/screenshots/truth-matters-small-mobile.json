@@ -1,0 +1,11 @@
+{
+  "filename": "truth-matters-small-mobile.png",
+  "page": "Truth Matters",
+  "pagePath": "/pages/truth-matters.html",
+  "viewport": {
+    "width": 320,
+    "height": 568
+  },
+  "timestamp": "2026-02-01T11:36:41.540Z",
+  "note": "This is a placeholder file. Run actual screenshot generation with system dependencies installed or use Docker."
+}
