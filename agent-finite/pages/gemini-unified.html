@@ -1302,19 +1302,56 @@
       z-index: 1;
     }
 
-    /* Auto-blur animation for Others */
+    /* Auto-blur animation for Others - stays blurred longer */
     .comparison-card.other-ai .comparison-text {
-      animation: blurPulse 3s ease-in-out infinite;
+      animation: blurPulse 5s ease-in-out infinite;
     }
 
     @keyframes blurPulse {
-      0%, 100% {
+      0%, 15% {
         filter: blur(0);
         opacity: 1;
       }
+      25%, 85% {
+        filter: blur(4px);
+        opacity: 0.6;
+      }
+      100% {
+        filter: blur(0);
+        opacity: 1;
+      }
+    }
+
+    /* Warning shake on Others card */
+    .comparison-card.other-ai {
+      animation: warningShake 5s ease-in-out infinite;
+    }
+
+    @keyframes warningShake {
+      0%, 20%, 100% {
+        transform: translateX(0);
+      }
+      25%, 27%, 29% {
+        transform: translateX(-3px);
+      }
+      26%, 28%, 30% {
+        transform: translateX(3px);
+      }
+    }
+
+    /* Others badge pulse warning */
+    .comparison-card.other-ai .comparison-badge {
+      animation: warningPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes warningPulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(234, 67, 53, 0);
+      }
       50% {
-        filter: blur(3px);
-        opacity: 0.7;
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(234, 67, 53, 0.5);
       }
     }
 
@@ -1335,6 +1372,16 @@
     .comparison-card.gemini {
       position: relative;
       overflow: hidden;
+      animation: geminiHighlight 3s ease-in-out infinite;
+    }
+
+    @keyframes geminiHighlight {
+      0%, 100% {
+        box-shadow: 0 0 0 rgba(52, 168, 83, 0);
+      }
+      50% {
+        box-shadow: 0 0 30px rgba(52, 168, 83, 0.2);
+      }
     }
 
     .comparison-card.gemini::after {
@@ -1347,10 +1394,10 @@
       background: linear-gradient(
         45deg,
         transparent 40%,
-        rgba(66, 133, 244, 0.1) 50%,
+        rgba(66, 133, 244, 0.15) 50%,
         transparent 60%
       );
-      animation: shimmerSlide 4s ease-in-out infinite;
+      animation: shimmerSlide 3s ease-in-out infinite;
       pointer-events: none;
     }
 
@@ -1391,8 +1438,8 @@
         box-shadow: 0 0 0 rgba(52, 168, 83, 0);
       }
       50% {
-        transform: scale(1.05);
-        box-shadow: 0 0 20px rgba(52, 168, 83, 0.4);
+        transform: scale(1.08);
+        box-shadow: 0 0 25px rgba(52, 168, 83, 0.5);
       }
     }
 
@@ -1901,7 +1948,7 @@
         <span class="typing-cursor"></span>
       </div>
       <p class="hero-subtitle hero-animate" style="animation-delay: 0.3s;">Google's Gemini is now yours</p>
-      <a href="#create-section" class="hero-cta hero-animate" style="animation-delay: 0.4s;">Discover More</a>
+      <a href="#create-section" class="hero-cta hero-animate" style="animation-delay: 0.4s;">Discover Gemini</a>
     </div>
     <div class="scroll-indicator">
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
