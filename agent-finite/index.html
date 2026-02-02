@@ -71,6 +71,16 @@
       border: 1px solid rgba(0, 0, 0, 0.05);
     }
 
+    /* ===== RAINBOW TEXT ===== */
+    .rainbow-text {
+      background: linear-gradient(90deg, #4285F4, #EA4335, #FBBC04, #34A853, #4285F4);
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: rainbowShift 4s ease-in-out infinite;
+    }
+
     /* ===== TYPOGRAPHY ANIMATIONS ===== */
     @keyframes titleGlow {
       0%, 100% {
@@ -2291,7 +2301,7 @@
   <section class="meetings-section">
     <div class="container">
       <div class="section-header">
-        <h2 class="text-reveal">Meeting Notes Summary and Search</h2>
+        <h2 class="text-reveal">Summarize & search <span class="rainbow-text">meeting notes</span></h2>
         <p class="text-reveal text-reveal-delay-1">Automatically connects to your Google Meetings and Calendar. Never miss an action item again.</p>
       </div>
       <div class="meetings-demo">
