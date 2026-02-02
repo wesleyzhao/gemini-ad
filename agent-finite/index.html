@@ -2870,6 +2870,39 @@
     enableTextReveal();
     initParticles();
     enableMagneticButtons();
+
+    // iOS video autoplay fix - try to play on first user interaction
+    function initVideoAutoplay() {
+      const videos = document.querySelectorAll('video');
+
+      // Add webkit-playsinline for older iOS
+      videos.forEach(video => {
+        video.setAttribute('webkit-playsinline', '');
+        video.setAttribute('x5-playsinline', '');
+
+        // Try to play immediately
+        video.play().catch(() => {});
+      });
+
+      // On first user interaction, try to play all videos
+      const playVideos = () => {
+        videos.forEach(video => {
+          if (video.paused) {
+            video.play().catch(() => {});
+          }
+        });
+        // Remove listeners after first interaction
+        document.removeEventListener('touchstart', playVideos);
+        document.removeEventListener('scroll', playVideos);
+        document.removeEventListener('click', playVideos);
+      };
+
+      document.addEventListener('touchstart', playVideos, { once: true, passive: true });
+      document.addEventListener('scroll', playVideos, { once: true, passive: true });
+      document.addEventListener('click', playVideos, { once: true });
+    }
+
+    initVideoAutoplay();
   </script>
 </body>
 </html>
