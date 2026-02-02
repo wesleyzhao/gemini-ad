@@ -2672,8 +2672,8 @@
     const phraseItems = Array.from(carouselWrapper.querySelectorAll('.phrase-item'));
     const phrases = ['Emails', 'Meetings', 'Photos', 'Writing', 'Truth'];
     let activeIndex = 0;
-    const typeSpeed = 40;
-    const pauseAfterTyping = 800;
+    const typeSpeed = 45;
+    const pauseAfterTyping = 1000;
     const spacing = 170; // Pixels between items (increased for better separation)
 
     // Wrap characters in spans for typing effect
@@ -2707,7 +2707,7 @@
         const x = offset * spacing;
         const absOffset = Math.abs(offset);
         const scale = offset === 0 ? 1.12 : (1 - absOffset * 0.06);
-        const opacity = offset === 0 ? 1 : (0.65 - absOffset * 0.08); // More visible
+        const opacity = offset === 0 ? 1 : (0.7 - absOffset * 0.08); // More visible
 
         item.style.transform = `translate(calc(-50% + ${x}px), -50%) scale(${scale})`;
         item.style.opacity = opacity;
