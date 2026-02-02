@@ -421,15 +421,47 @@
       bottom: 30px;
       left: 50%;
       transform: translateX(-50%);
-      z-index: 2;
+      z-index: 10;
       animation: bounce 2s infinite;
       opacity: 0.7;
+      cursor: pointer;
+      padding: 12px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .scroll-indicator:hover {
+      background: rgba(255, 255, 255, 0.2);
+      opacity: 1;
+      transform: translateX(-50%) scale(1.1);
     }
 
     .scroll-indicator svg {
-      width: 32px;
-      height: 32px;
-      fill: white;
+      width: 28px;
+      height: 28px;
+      display: block;
+    }
+
+    /* Light background variant */
+    .scroll-indicator-light {
+      background: rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .scroll-indicator-light:hover {
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    .scroll-indicator-light svg {
+      stroke: var(--text-primary);
     }
 
     @keyframes bounce {
@@ -490,6 +522,7 @@
       max-width: 600px;
       margin: 0 auto;
     }
+
 
     /* ========================================
        SECTION 3: EMAIL - Inbox Animation
@@ -1272,15 +1305,6 @@
       margin-bottom: 12px;
     }
 
-    .savings-number {
-      font-size: clamp(32px, 6vw, 44px);
-      font-weight: 800;
-      background: linear-gradient(90deg, var(--google-blue), var(--google-green));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
     .savings-text {
       font-size: clamp(18px, 3vw, 24px);
       font-weight: 500;
@@ -1337,13 +1361,39 @@
     }
 
     .before-bar {
-      width: 100%;
+      width: 0%;
       background: rgba(255,255,255,0.25);
     }
 
+    .before-bar.animate {
+      width: 100%;
+    }
+
     .after-bar {
-      width: 40%;
+      width: 0%;
       background: linear-gradient(90deg, var(--google-blue), var(--google-green));
+    }
+
+    .after-bar.animate {
+      width: 40%;
+    }
+
+    /* Savings number count-up animation */
+    .savings-number {
+      font-size: clamp(32px, 6vw, 44px);
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--google-blue), var(--google-green));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .savings-number.animate {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .time-value {
@@ -1423,6 +1473,14 @@
       border-radius: 16px;
       margin-bottom: 20px;
       font-size: 15px;
+      opacity: 0;
+      transform: translateX(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .user-message.animate {
+      opacity: 1;
+      transform: translateX(0);
     }
 
     .ai-message {
@@ -1432,6 +1490,14 @@
       font-size: 15px;
       line-height: 1.7;
       margin-bottom: 20px;
+      opacity: 0;
+      transform: translateX(-30px);
+      transition: opacity 0.6s ease 0.3s, transform 0.6s ease 0.3s;
+    }
+
+    .ai-message.animate {
+      opacity: 1;
+      transform: translateX(0);
     }
 
     .citation {
@@ -1443,11 +1509,30 @@
       font-size: 11px;
       font-weight: 600;
       cursor: pointer;
-      transition: background 0.2s;
+      transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
     }
 
     .citation:hover {
       background: rgba(66, 133, 244, 0.3);
+    }
+
+    .citation.pulse {
+      animation: citationPulse 0.6s ease;
+    }
+
+    @keyframes citationPulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(66, 133, 244, 0);
+      }
+      50% {
+        transform: scale(1.2);
+        box-shadow: 0 0 12px rgba(66, 133, 244, 0.5);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(66, 133, 244, 0);
+      }
     }
 
     /* Full sources section */
@@ -1474,8 +1559,19 @@
       background: white;
       border-radius: 8px;
       margin-bottom: 8px;
-      transition: all 0.2s ease;
+      transition: all 0.3s ease;
+      opacity: 0;
+      transform: translateY(15px);
     }
+
+    .source-item.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .source-item:nth-child(2) { transition-delay: 0.1s; }
+    .source-item:nth-child(3) { transition-delay: 0.2s; }
+    .source-item:nth-child(4) { transition-delay: 0.3s; }
 
     .source-item:hover {
       background: #E8F0FE;
@@ -1782,12 +1878,48 @@
       background: linear-gradient(180deg, var(--google-blue) 0%, #3367d6 100%);
     }
 
+    .comparison-table tbody tr {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .comparison-table tbody tr.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .comparison-table tbody tr:nth-child(1) { transition-delay: 0s; }
+    .comparison-table tbody tr:nth-child(2) { transition-delay: 0.08s; }
+    .comparison-table tbody tr:nth-child(3) { transition-delay: 0.16s; }
+    .comparison-table tbody tr:nth-child(4) { transition-delay: 0.24s; }
+    .comparison-table tbody tr:nth-child(5) { transition-delay: 0.32s; }
+    .comparison-table tbody tr:nth-child(6) { transition-delay: 0.4s; }
+
     .comparison-table td {
       padding: 18px;
       border-bottom: 1px solid rgba(0,0,0,0.06);
       text-align: center;
       font-size: 14px;
       transition: all 0.3s ease;
+    }
+
+    /* Checkmark bounce animation */
+    .comparison-table .check {
+      display: inline-block;
+      transform: scale(0);
+      transition: none;
+    }
+
+    .comparison-table tbody tr.animate .check {
+      animation: checkBounce 0.5s ease forwards;
+      animation-delay: inherit;
+    }
+
+    @keyframes checkBounce {
+      0% { transform: scale(0); }
+      60% { transform: scale(1.3); }
+      100% { transform: scale(1); }
     }
 
     .comparison-table td:first-child {
@@ -1856,13 +1988,39 @@
       transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       position: relative;
       box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+      opacity: 0;
+      transform: translateY(40px) scale(0.95);
     }
+
+    .pricing-card.animate {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .pricing-card:nth-child(1) { transition-delay: 0s; }
+    .pricing-card:nth-child(2) { transition-delay: 0.1s; }
+    .pricing-card:nth-child(3) { transition-delay: 0.2s; }
+    .pricing-card:nth-child(4) { transition-delay: 0.3s; }
 
     .pricing-card:hover {
       transform: translateY(-12px) scale(1.02);
       box-shadow:
         0 30px 60px -15px rgba(0,0,0,0.15),
         0 0 0 1px rgba(0,0,0,0.05);
+    }
+
+    /* Featured card glow pulse */
+    .pricing-card.featured.animate {
+      animation: featuredGlow 2s ease-in-out 0.5s;
+    }
+
+    @keyframes featuredGlow {
+      0%, 100% {
+        box-shadow: 0 8px 40px rgba(66, 133, 244, 0.25);
+      }
+      50% {
+        box-shadow: 0 8px 60px rgba(66, 133, 244, 0.5), 0 0 30px rgba(52, 168, 83, 0.3);
+      }
     }
 
     .pricing-card.featured {
@@ -2274,6 +2432,29 @@
         opacity: 1;
         transform: none;
       }
+      .create-scroll-indicator {
+        animation: none;
+        opacity: 1;
+      }
+      .user-message,
+      .ai-message,
+      .source-item,
+      .comparison-table tbody tr,
+      .pricing-card,
+      .savings-number {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+      .before-bar {
+        width: 100%;
+      }
+      .after-bar {
+        width: 40%;
+      }
+      .citation.pulse {
+        animation: none;
+      }
     }
   </style>
 </head>
@@ -2300,11 +2481,11 @@
       <p class="hero-subtitle hero-animate" style="animation-delay: 0.3s;">Google Gemini is now yours</p>
       <a href="#create-section" class="hero-cta hero-animate" style="animation-delay: 0.4s;">Discover Gemini</a>
     </div>
-    <div class="scroll-indicator">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M7 10l5 5 5-5" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <a href="#create-section" class="scroll-indicator" aria-label="Scroll to next section">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7 10l5 5 5-5"/>
       </svg>
-    </div>
+    </a>
   </section>
 
   <!-- ===== SECTION 2: CREATE ===== -->
@@ -2317,10 +2498,15 @@
       <h2 class="text-reveal">Create beautiful<br>photos, videos</h2>
       <p class="text-reveal text-reveal-delay-1">Transform your ideas into stunning visuals with Gemini</p>
     </div>
+    <a href="#email-section" class="scroll-indicator" aria-label="Scroll to next section">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7 10l5 5 5-5"/>
+      </svg>
+    </a>
   </section>
 
   <!-- ===== SECTION 3: EMAIL ===== -->
-  <section class="email-section section-dark">
+  <section id="email-section" class="email-section section-dark">
     <div class="container">
       <div class="email-demo-container">
         <div class="email-visual">
@@ -2413,10 +2599,15 @@
         </div>
       </div>
     </div>
+    <a href="#meetings-section" class="scroll-indicator" aria-label="Scroll to next section">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7 10l5 5 5-5"/>
+      </svg>
+    </a>
   </section>
 
   <!-- ===== SECTION 4: MEETINGS ===== -->
-  <section class="meetings-section">
+  <section id="meetings-section" class="meetings-section">
     <div class="container">
       <div class="section-header">
         <h2 class="text-reveal">Summarize & search <span class="rainbow-text">meeting notes</span></h2>
@@ -2473,10 +2664,15 @@
         </div>
       </div>
     </div>
+    <a href="#ecosystem-section" class="scroll-indicator scroll-indicator-light" aria-label="Scroll to next section">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7 10l5 5 5-5"/>
+      </svg>
+    </a>
   </section>
 
   <!-- ===== SECTION 5: ECOSYSTEM ===== -->
-  <section class="ecosystem-section">
+  <section id="ecosystem-section" class="ecosystem-section">
     <div class="container">
       <h2 class="ecosystem-title" id="ecosystem-title">Gemini across Google's Ecosystem</h2>
       <p class="ecosystem-subtitle text-reveal text-reveal-delay-1">AI intelligence in every app you use</p>
@@ -2550,10 +2746,15 @@
         </div>
       </div>
     </div>
+    <a href="#truth-section" class="scroll-indicator" aria-label="Scroll to next section">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7 10l5 5 5-5"/>
+      </svg>
+    </a>
   </section>
 
   <!-- ===== SECTION 6: TRUTH ===== -->
-  <section class="truth-section">
+  <section id="truth-section" class="truth-section">
     <div class="container">
       <div class="section-header">
         <h2 class="text-reveal">Truth matters</h2>
@@ -2636,10 +2837,15 @@
         </div>
       </div>
     </div>
+    <a href="#comparison-section" class="scroll-indicator scroll-indicator-light" aria-label="Scroll to next section">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7 10l5 5 5-5"/>
+      </svg>
+    </a>
   </section>
 
   <!-- ===== SECTION 7: COMPARISON ===== -->
-  <section class="comparison-section section-gray">
+  <section id="comparison-section" class="comparison-section section-gray">
     <div class="container">
       <div class="section-header">
         <h2 class="text-reveal">How Gemini compares</h2>
@@ -2716,10 +2922,15 @@
         </table>
       </div>
     </div>
+    <a href="#pricing-section" class="scroll-indicator scroll-indicator-light" aria-label="Scroll to next section">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7 10l5 5 5-5"/>
+      </svg>
+    </a>
   </section>
 
   <!-- ===== SECTION 8: PRICING ===== -->
-  <section class="pricing-section">
+  <section id="pricing-section" class="pricing-section">
     <div class="container">
       <div class="section-header">
         <h2 class="text-reveal">Choose your plan</h2>
@@ -2811,10 +3022,15 @@
         </div>
       </div>
     </div>
+    <a href="#closing-section" class="scroll-indicator scroll-indicator-light" aria-label="Scroll to next section">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7 10l5 5 5-5"/>
+      </svg>
+    </a>
   </section>
 
   <!-- ===== SECTION 9: CLOSING ===== -->
-  <section class="closing-section section-dark">
+  <section id="closing-section" class="closing-section section-dark">
     <canvas class="particles-canvas" id="particles-canvas"></canvas>
     <div class="gemini-gem-wrapper">
       <div class="gemini-gem" role="img" aria-label="Gemini AI Logo"></div>
@@ -3225,6 +3441,168 @@
     }
 
     initCharReveal();
+
+    // ===== NEW SCROLL-TRIGGERED ANIMATIONS (LOOPING) =====
+
+    // Helper: Create looping animation controller
+    function createLoopingAnimation(options) {
+      const { element, onAnimate, onReset, animationDuration, pauseDuration = 1000 } = options;
+      let isVisible = false;
+      let loopTimeout = null;
+
+      function startLoop() {
+        if (!isVisible) return;
+
+        onAnimate();
+
+        // After animation completes + pause, reset and replay
+        loopTimeout = setTimeout(() => {
+          if (!isVisible) return;
+          onReset();
+          // Gap after reset to allow CSS to process before replaying
+          loopTimeout = setTimeout(() => {
+            if (isVisible) startLoop();
+          }, 300);
+        }, animationDuration + pauseDuration);
+      }
+
+      function stopLoop() {
+        if (loopTimeout) {
+          clearTimeout(loopTimeout);
+          loopTimeout = null;
+        }
+        onReset();
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            isVisible = true;
+            startLoop();
+          } else {
+            isVisible = false;
+            stopLoop();
+          }
+        });
+      }, { threshold: 0.3 });
+
+      observer.observe(element);
+    }
+
+    // Ecosystem: Animate time bars when visible (looping)
+    function initTimeBarAnimation() {
+      const timeComparison = document.querySelector('.time-comparison');
+      const beforeBar = document.querySelector('.before-bar');
+      const afterBar = document.querySelector('.after-bar');
+      const savingsNumber = document.querySelector('.savings-number');
+
+      if (!timeComparison) return;
+
+      createLoopingAnimation({
+        element: timeComparison,
+        animationDuration: 2000,
+        pauseDuration: 500,
+        onAnimate: () => {
+          if (savingsNumber) savingsNumber.classList.add('animate');
+          setTimeout(() => {
+            if (beforeBar) beforeBar.classList.add('animate');
+          }, 200);
+          setTimeout(() => {
+            if (afterBar) afterBar.classList.add('animate');
+          }, 600);
+        },
+        onReset: () => {
+          if (savingsNumber) savingsNumber.classList.remove('animate');
+          if (beforeBar) beforeBar.classList.remove('animate');
+          if (afterBar) afterBar.classList.remove('animate');
+        }
+      });
+    }
+
+    // Truth: Animate chat messages and sources (looping)
+    function initTruthAnimations() {
+      const truthDemo = document.querySelector('.truth-demo');
+      const userMessage = document.querySelector('.user-message');
+      const aiMessage = document.querySelector('.ai-message');
+      const citations = document.querySelectorAll('.ai-message .citation');
+      const sourceItems = document.querySelectorAll('.source-item');
+
+      if (!truthDemo) return;
+
+      createLoopingAnimation({
+        element: truthDemo,
+        animationDuration: 2500,
+        pauseDuration: 500,
+        onAnimate: () => {
+          if (userMessage) userMessage.classList.add('animate');
+          if (aiMessage) aiMessage.classList.add('animate');
+
+          setTimeout(() => {
+            citations.forEach((citation, i) => {
+              setTimeout(() => {
+                citation.classList.add('pulse');
+              }, i * 200);
+            });
+          }, 800);
+
+          setTimeout(() => {
+            sourceItems.forEach(item => item.classList.add('animate'));
+          }, 600);
+        },
+        onReset: () => {
+          if (userMessage) userMessage.classList.remove('animate');
+          if (aiMessage) aiMessage.classList.remove('animate');
+          citations.forEach(c => c.classList.remove('pulse'));
+          sourceItems.forEach(item => item.classList.remove('animate'));
+        }
+      });
+    }
+
+    // Comparison table: Animate rows on scroll (looping)
+    function initComparisonAnimation() {
+      const comparisonTable = document.querySelector('.comparison-table');
+      const rows = document.querySelectorAll('.comparison-table tbody tr');
+
+      if (!comparisonTable || rows.length === 0) return;
+
+      createLoopingAnimation({
+        element: comparisonTable,
+        animationDuration: 1500,
+        pauseDuration: 500,
+        onAnimate: () => {
+          rows.forEach(row => row.classList.add('animate'));
+        },
+        onReset: () => {
+          rows.forEach(row => row.classList.remove('animate'));
+        }
+      });
+    }
+
+    // Pricing: Animate cards on scroll (looping)
+    function initPricingAnimation() {
+      const pricingGrid = document.querySelector('.pricing-grid');
+      const cards = document.querySelectorAll('.pricing-card');
+
+      if (!pricingGrid || cards.length === 0) return;
+
+      createLoopingAnimation({
+        element: pricingGrid,
+        animationDuration: 2000,
+        pauseDuration: 500,
+        onAnimate: () => {
+          cards.forEach(card => card.classList.add('animate'));
+        },
+        onReset: () => {
+          cards.forEach(card => card.classList.remove('animate'));
+        }
+      });
+    }
+
+    // Initialize all new animations
+    initTimeBarAnimation();
+    initTruthAnimations();
+    initComparisonAnimation();
+    initPricingAnimation();
   </script>
 </body>
 </html>
