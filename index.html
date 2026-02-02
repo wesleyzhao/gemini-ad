@@ -259,11 +259,12 @@
     }
 
     .hero-title {
-      font-size: clamp(48px, 10vw, 96px);
+      font-size: clamp(36px, 7vw, 72px);
       font-weight: 900;
       line-height: 1.05;
-      letter-spacing: -0.03em;
-      margin-bottom: 24px;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+      white-space: nowrap;
       background: linear-gradient(90deg, #4285F4, #EA4335, #FBBC04, #34A853, #4285F4);
       background-size: 200% 100%;
       -webkit-background-clip: text;
@@ -288,35 +289,77 @@
       50% { background-position: 100% 50%; }
     }
 
+    .phrase-for {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: clamp(18px, 2.5vw, 28px);
+      font-weight: 400;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
     .hero-rotating-text {
-      font-size: clamp(24px, 4vw, 40px);
+      font-size: clamp(20px, 3.5vw, 36px);
       font-weight: 500;
-      color: var(--text-light);
       margin-bottom: 24px;
-      height: 50px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    .rotating-word {
-      display: inline-block;
-      min-width: 200px;
-      text-align: left;
+    .phrase-carousel-wrapper {
+      position: relative;
+      height: 50px;
+      width: 600px;
+      overflow: visible;
     }
 
-    .typing-cursor {
-      display: inline-block;
-      width: 3px;
-      height: 1em;
-      background: var(--google-blue);
-      margin-left: 4px;
-      animation: blink 1s step-end infinite;
+    .phrase-item {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      color: rgba(255, 255, 255, 0.25);
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      white-space: nowrap;
     }
 
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
+    .phrase-item.active {
+      background: linear-gradient(90deg, var(--google-blue), var(--google-red), var(--google-yellow), var(--google-green), var(--google-blue));
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: rainbowShift 2s ease-in-out infinite;
+      font-weight: 600;
+    }
+
+    .phrase-char {
+      display: inline-block;
+      opacity: 0;
+      transition: opacity 0.05s ease;
+    }
+
+    .phrase-char.visible {
+      opacity: 1;
+    }
+
+    /* Non-active phrases show full text */
+    .phrase-item:not(.active) .phrase-char {
+      opacity: 1;
+    }
+
+    @keyframes rainbowShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    /* Mobile: smaller font */
+    @media (max-width: 600px) {
+      .hero-rotating-text {
+        font-size: clamp(14px, 4.5vw, 20px);
+      }
+      .phrase-carousel-wrapper {
+        width: 280px;
+      }
     }
 
     .hero-subtitle {
@@ -2115,9 +2158,15 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1 class="hero-title">Google's Secret Weapon</h1>
+      <div class="phrase-for hero-animate" style="animation-delay: 0.15s;">for</div>
       <div class="hero-rotating-text hero-animate" style="animation-delay: 0.2s;">
-        <span class="rotating-word" id="rotating-text">for Emails</span>
-        <span class="typing-cursor"></span>
+        <div class="phrase-carousel-wrapper" id="phrase-carousel">
+          <span class="phrase-item" data-phrase="Emails">Emails</span>
+          <span class="phrase-item" data-phrase="Meetings">Meetings</span>
+          <span class="phrase-item" data-phrase="Photos">Photos</span>
+          <span class="phrase-item" data-phrase="Writing">Writing</span>
+          <span class="phrase-item" data-phrase="Truth">Truth</span>
+        </div>
       </div>
       <p class="hero-subtitle hero-animate" style="animation-delay: 0.3s;">Google's Gemini is now yours</p>
       <a href="#create-section" class="hero-cta hero-animate" style="animation-delay: 0.4s;">Discover Gemini</a>
@@ -2618,44 +2667,96 @@
 
   <!-- ===== SCRIPTS ===== -->
   <script>
-    // Typewriter rotating text effect - show first phrase immediately, fast cycling
-    const phrases = ['for Emails', 'for Meetings', 'for Photos', 'for Writing', 'for Truth'];
-    let phraseIndex = 0;
-    let charIndex = phrases[0].length; // Start with full phrase shown
-    let isDeleting = true; // Start deleting after pause
-    const rotatingText = document.getElementById('rotating-text');
+    // Circular carousel with typing animation - smooth transforms
+    const carouselWrapper = document.getElementById('phrase-carousel');
+    const phraseItems = Array.from(carouselWrapper.querySelectorAll('.phrase-item'));
+    const phrases = ['Emails', 'Meetings', 'Photos', 'Writing', 'Truth'];
+    let activeIndex = 0;
+    const typeSpeed = 40;
+    const pauseAfterTyping = 800;
+    const spacing = 170; // Pixels between items (increased for better separation)
 
-    // Show first phrase immediately
-    rotatingText.textContent = phrases[0];
-
-    function typeWriter() {
-      const currentPhrase = phrases[phraseIndex];
-
-      if (isDeleting) {
-        rotatingText.textContent = currentPhrase.substring(0, charIndex - 1);
-        charIndex--;
-      } else {
-        rotatingText.textContent = currentPhrase.substring(0, charIndex + 1);
-        charIndex++;
-      }
-
-      // Super fast typing speed
-      let typeSpeed = isDeleting ? 20 : 35;
-
-      if (!isDeleting && charIndex === currentPhrase.length) {
-        typeSpeed = 600; // Brief pause at end
-        isDeleting = true;
-      } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        phraseIndex = (phraseIndex + 1) % phrases.length;
-        typeSpeed = 100; // Quick pause before next word
-      }
-
-      setTimeout(typeWriter, typeSpeed);
+    // Wrap characters in spans for typing effect
+    function setupCharSpans() {
+      phraseItems.forEach(item => {
+        if (item.querySelector('.phrase-char')) return;
+        const text = item.textContent;
+        item.textContent = '';
+        text.split('').forEach(char => {
+          const span = document.createElement('span');
+          span.className = 'phrase-char visible';
+          span.textContent = char;
+          item.appendChild(span);
+        });
+      });
     }
 
-    // Start after brief initial pause to show first phrase
-    setTimeout(typeWriter, 1200);
+    // Position all items based on current active index
+    function positionItems() {
+      const len = phrases.length;
+
+      phraseItems.forEach((item, i) => {
+        // Calculate position relative to active (-2, -1, 0, 1, 2)
+        let offset = i - activeIndex;
+
+        // Wrap around for circular effect
+        if (offset > 2) offset -= len;
+        if (offset < -2) offset += len;
+
+        // Calculate x position and styling
+        const x = offset * spacing;
+        const absOffset = Math.abs(offset);
+        const scale = offset === 0 ? 1.12 : (1 - absOffset * 0.06);
+        const opacity = offset === 0 ? 1 : (0.65 - absOffset * 0.08); // More visible
+
+        item.style.transform = `translate(calc(-50% + ${x}px), -50%) scale(${scale})`;
+        item.style.opacity = opacity;
+        item.style.zIndex = 10 - absOffset;
+
+        // Toggle active class
+        if (offset === 0) {
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+          // Show all chars for non-active
+          item.querySelectorAll('.phrase-char').forEach(c => c.classList.add('visible'));
+        }
+      });
+    }
+
+    function typePhrase(phraseEl, callback) {
+      const chars = phraseEl.querySelectorAll('.phrase-char');
+      let i = 0;
+
+      chars.forEach(c => c.classList.remove('visible'));
+
+      function typeNext() {
+        if (i < chars.length) {
+          chars[i].classList.add('visible');
+          i++;
+          setTimeout(typeNext, typeSpeed);
+        } else {
+          setTimeout(callback, pauseAfterTyping);
+        }
+      }
+      typeNext();
+    }
+
+    function cycleCarousel() {
+      positionItems();
+
+      const activeItem = phraseItems[activeIndex];
+
+      typePhrase(activeItem, () => {
+        activeIndex = (activeIndex + 1) % phrases.length;
+        cycleCarousel();
+      });
+    }
+
+    // Initialize
+    setupCharSpans();
+    positionItems();
+    setTimeout(cycleCarousel, 1000);
 
     // Email animation with 4 emails
     const emailItems = document.querySelectorAll('.email-item');
