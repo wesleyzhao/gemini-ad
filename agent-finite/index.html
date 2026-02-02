@@ -258,12 +258,6 @@
       animation: textReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards, ctaPulse 2s ease-in-out 1s infinite;
     }
 
-    .hero-cta::after {
-      content: ' ↓';
-      display: inline-block;
-      animation: ctaArrow 1.5s ease-in-out infinite;
-    }
-
     @keyframes ctaPulse {
       0%, 100% {
         transform: scale(1);
@@ -273,11 +267,6 @@
         transform: scale(1.05);
         box-shadow: 0 8px 30px rgba(66, 133, 244, 0.4);
       }
-    }
-
-    @keyframes ctaArrow {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(4px); }
     }
 
     .hero-cta:hover {
